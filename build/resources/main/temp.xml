@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ASTM WCMSI Automation Suite">
+    <listeners>
+        <listener class-name="TestListeners.TestListener"/>
+    </listeners>
+    <parameter name="platform" value="local"/>
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="env" value="QA"/>
+    <!--   <parameter name ="testExecutionId" value="000000"/>-->
+    <!--    <parameter name="updateJira" value="true"></parameter>-->
+
+
+    <test name="Test">
+        <classes>
+            <class name="tests.ui.WCMS.VerifyAboutPageNavigationFromHomePage"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

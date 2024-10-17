@@ -1,0 +1,21 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "",
+    "children" : [ {
+      "name" : "ValidateTheAboutPage",
+      "uid" : "fc767a632633fb35",
+      "parentUid" : "cc481a6b16e017ad87bb089a75f26fac",
+      "status" : "passed",
+      "time" : {
+        "start" : 1729161331032,
+        "stop" : 1729161405828,
+        "duration" : 74796
+      },
+      "flaky" : false,
+      "parameters" : [ "Chrome", "QA", "local" ]
+    } ],
+    "uid" : "cc481a6b16e017ad87bb089a75f26fac"
+  } ],
+  "name" : "behaviors"
+}

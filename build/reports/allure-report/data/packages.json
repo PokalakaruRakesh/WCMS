@@ -1,0 +1,21 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "tests.ui.WCMS.VerifyAboutPageNavigationFromHomePage",
+    "children" : [ {
+      "name" : "ValidateTheAboutPage",
+      "uid" : "fc767a632633fb35",
+      "parentUid" : "da2ee8d8b0f2f64fcb62a2894c970fb8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1729161331032,
+        "stop" : 1729161405828,
+        "duration" : 74796
+      },
+      "flaky" : false,
+      "parameters" : [ "Chrome", "QA", "local" ]
+    } ],
+    "uid" : "tests.ui.WCMS.VerifyAboutPageNavigationFromHomePage"
+  } ],
+  "name" : "packages"
+}

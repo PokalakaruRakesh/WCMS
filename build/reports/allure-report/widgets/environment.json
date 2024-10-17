@@ -1,0 +1,13 @@
+[ {
+  "values" : [ "null" ],
+  "name" : "TestEnvironmentURL"
+}, {
+  "values" : [ "local" ],
+  "name" : "Platform"
+}, {
+  "values" : [ "QA" ],
+  "name" : "Environment"
+}, {
+  "values" : [ "Chrome" ],
+  "name" : "Browser"
+} ]
