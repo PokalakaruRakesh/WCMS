@@ -3,9 +3,12 @@ package base.utils;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 
@@ -13,7 +16,7 @@ import java.net.URLDecoder;
 public class JsonFileReader {
 
 	protected ObjectMapper objectMapper = null;
-
+	private String JiraID;
 	/**
 	 * This method reads json file under resources folder and return input stream
 	 * 
@@ -87,5 +90,25 @@ public class JsonFileReader {
 		}
 		return null;
 	}
+	public JsonObject readJsonData() throws FileNotFoundException {
 
+		String filePath = getClass().getClassLoader().getResource("jsons/" + JiraID + ".json").getFile().replaceFirst("\\/", "");
+		JsonParser jsonParser = new JsonParser();
+		JsonObject jsonObject = (JsonObject) jsonParser.parse(new FileReader(filePath));
+
+		return jsonObject.getAsJsonObject(JiraID);
+	}
+	public JsonObject readJsonData(String JsonfileName, String JsonPrimeElement) throws FileNotFoundException {
+
+		String filePath = getClass().getClassLoader().getResource("jsons/" + JsonfileName + ".json").getFile().replaceFirst("\\/", "");
+		JsonParser jsonParser = new JsonParser();
+		JsonObject jsonObject = (JsonObject) jsonParser.parse(new FileReader(filePath));
+
+		return jsonObject.getAsJsonObject(JsonPrimeElement);
+	}
+	public void setJiraID(String JiraID) {
+		this.JiraID = JiraID;
+	}
+	public String getJsonString(String JsonElement) throws FileNotFoundException { return readJsonData().get(JsonElement).getAsString();}
+	public String getJsonString(String JsonfileName, String JsonPrimeElement, String JsonElement) throws FileNotFoundException { return readJsonData(JsonfileName, JsonPrimeElement).get(JsonElement).getAsString();}
 }

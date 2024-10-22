@@ -1,0 +1,146 @@
+{
+  "WCMSI-483": {
+    "Menu": "Membership & Participation",
+    "Submenu": "Membership & Participation Overview"
+  },
+    "MembershipParticipation": {
+      "Header": "Membership & Participation",
+      "Text1": "Further your professional growth and strengthen your expertise as a member of one of the world�s most respected standards development organizations. Our members collaborate together in a trusted, open, and transparent process to create the test methods, specifications, classifications, guides, and practices that support industries and governments worldwide. You�ll have the unique opportunity to work alongside global technical experts from industry, governments, academia, trade groups, small and medium-sized enterprises, consumers, and more.",
+      "Subheader1": "13,000+",
+      "Subheader2": "Global ASTM standards",
+      "Text2": "Positively impact public health and safety, consumer confidence, and overall quality of life",
+      "Subheader3": "150+",
+      "Subheader4": "Partner countries",
+      "Text3": "8,700 citations in 75+ nations contribute to and benefit from ASTMs accepted standards",
+      "Subheader5": "35,000+",
+      "Subheader6": "Volunteer Members",
+      "Text4": "Collaborate daily to create and update market-relevant industry standards",
+      "Text5": "For a modest fee, members help create and update standards while gaining knowledge, leadership skills, professional networks, and more.",
+      "Text6": "Benefits include a free volume of standards, Standardization News magazine, access to meeting minutes and agendas, and more."
+    },
+    "Membership": {
+      "Header": "Membership",
+      "Text1": "Join the more than 35,000 industry professionals working to help our world work better through standardization. Our open consensus process, using advanced web and cloud-based standards development tools, ensures worldwide access for all interested individuals.",
+      "Text2": "Our 150+ ASTM technical committees and more than 2,100 subcommittees meet both in-person and virtually, using custom-built applications for electronic balloting and online collaboration areas, to develop global standards used every day.",
+      "Text3": "Choose the type of membership that works for you and enjoy a host of benefits, from access to the latest standards you need to outstanding networking opportunities and global visibility for your business.",
+      "Subheader1": "Participating Membership",
+      "Price1": "$115",
+      "Text4": "per year",
+      "Text5": "Work with your peers to contribute to and vote on new standards and revisions to existing standards that impact your industry. ",
+      "Subheader2": "Benefits include",
+      "Text6": "Join any ASTM committee",
+      "Text7": "Free standards volume",
+      "Text8": "Standardization News",
+      "Text9": "Publication discounts",
+      "Button1" : "Learn More",
+
+      "Subheader3": "Organizational Membership",
+      "Price2": "$400",
+      "Text10": "per year",
+      "Text11": "Expand your business footprintand show your commitment to global standardization.",
+      "Subheader4": "Benefits include",
+      "Text12": "Join any ASTM committee",
+      "Text13": "Free standards volume",
+      "Text14": "Standardization News",
+      "Text15": "Publication discounts",
+      "Button2" : "Learn More",
+
+      "Subheader5": "Organizational Membership",
+      "Price3": "$115",
+      "Text16": "per year",
+      "Text17": "Stay abreast of important standards development for your industry.",
+      "Subheader6": "Benefits include",
+      "Text18": "Standardization News",
+      "Text19": "Publication discounts",
+      "Button3" : "Learn More",
+
+      "Subheader7": "Student Membership",
+      "Text20": "No annual fee",
+      "Text21": "Get a front row seat to the standards development  process, enhancing your knowledge before you start using them in the workplace.",
+      "Subheader8": "Benefits include",
+      "Text22": "Scholarships and grants",
+      "Text23": "Standardization News",
+      "Text24": "Event discounts",
+      "Button4" : "Learn More"
+    },
+    "Benefits": {
+      "Header": "Benefits",
+      "Subheader1": "Direct Committee Participation",
+      "Text1": "Lend your expertise to one or more of 150+ technical committees and make your voice heard.",
+      "LinkText1": "Learn More",
+      "Subheader2": "Publication Discounts",
+      "Text2": "Get instant access to your free standards volume online and enjoy discounted publications from our extensive Digital Library.",
+      "LinkText2": "Learn More",
+      "Subheader3": "Standardization News",
+      "Text3": "Never miss the news that impacts your industry with the pre-eminent standards magazine.",
+      "LinkText3": "Learn More",
+      "Button1": "Explore Benefits - Join"
+    },
+    "MyCommitteesASTMCompass": {
+      "Header": "My Committees & ASTM Compass",
+      "Subheader1": "My Committees",
+      "Text1": "View your committee ballots, meeting agendas and minutes, and use custom standards development tools in our members-only portal.",
+      "LinkText1": "Learn More",
+      "Subheader2": "ASTM Compass",
+      "Text2": "Get direct access to the most up-to-date standards and research, along with productivity tools for sharing, version comparison, and annotating.",
+      "LinkText2": "Learn More"
+    },
+    "GetPublished ": {
+      "Header": "Get Published ",
+      "Text1": "Elevate your professional profile and get the recognition you deserve when you publish with one of the world’s most respected standards organizations. Our extensive peer-review process and relationships with top indexing providers ensures only the highest quality publications. Take the unique opportunity to have your content added to our extensive ASTM Digital Library, ensuring wide distribution and visibility of your important work.  ",
+      "Button1": "Learn More"
+    },
+    "TechnicalCommittees": {
+      "Header": "Technical Committees",
+      "Subheader1": "Committees develop and maintain ASTM standards",
+      "Text1": "Any interested individual can participate on a Technical Committee through ASTM membership.",
+      "Button1": "Learn More"
+    },
+    "MeetingsSymposiaWorkshops": {
+      "Header": "Meetings, Symposia & Workshops",
+      "Subheader1": "Meetings bring experts together",
+      "Text1": "Contribute your expertise and network at committee meetings held during ASTM committee week or independently. Symposia and Workshops provide an opportunity to exchange information, present research findings, and more.",
+      "Button1": "Learn More"
+    },
+    "MemberOfficerTraining": {
+      "Header": "Member & Officer Training",
+      "Subheader1": "Member training helps you understand and participate in ASTMs voluntary consensus process",
+      "Text1": "Learn how to make your voice heard and effectively participate in the development ofdevelopment of technical standards.",
+      "Button1": "Learn More"
+    },
+    "Students": {
+      "Header": "Students",
+      "Subheader1": "Students get a front-row seat to the standards development process",
+      "Text1": "ASTM understands the importance of educating the next generation of standards professionals.",
+      "Button1": "Learn More"
+    },
+    "ConsumerParticipation": {
+      "Header": "Consumer Participation",
+      "Subheader1": "Consumers know first-hand how products, processes and services are used",
+      "Text1": "Having consumers at the same standards-setting table opens the door for important discussions about health and safety.",
+      "Button1": "Learn More"
+    },
+    "LatestNews": {
+      "Header": "Latest News",
+      "Subheader1": "Proposed Sensory Evaluation Standard Would Foreground Temporal Experience",
+      "Text1": "ASTM International’s sensory evaluation committee (",
+      "Text2": ") is developing a proposed standard that will be used by sensory and consumer researchers who need to conduct multiple-attribute sensory research. The proposed standard (",
+      "Text3": ") includes five methods, each of which focuses on distinct aspects of the sensory experience: description, order, appearance/disappearance, duration, and intensity. ",
+      "Text4": "The proposed standard includes these temporal methods:",
+      "Button1": "",
+
+      "Subheader2": "Solar Panel Cleaning Addressed by Proposed Robotics Standard",
+      "Text5": "ASTM International’s robotics, automation, and autonomous systems committee (",
+      "Text6": ") is developing a proposed standard that will evaluate robotic systems for cleaning solar panels. The proposed standard (",
+      "Text7": ") will help to modernize solar panel cleaning systems.",
+      "Button2": "",
+
+      "Subheader3": "Electric Vehicle Standards tt Ease Range Anxiety and Overheating Challenge",
+      "Text8": "",
+      "Text9": "",
+      "Text10": "",
+      "Button3": ""
+
+
+    }
+  }

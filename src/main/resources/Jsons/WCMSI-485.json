@@ -1,0 +1,111 @@
+{
+  "WCMSI-485": {
+    "Menu": "Help",
+    "Submenu": "Help Overview",
+    "Mainheader": "Help Center"
+  },
+    "General": {
+      "Header": "General",
+      "Subheader1": "Invoice Requests",
+      "Button1": "Learn More",
+      "Subheader2": "Login Problems/Password Reset",
+      "Button2": "Learn More",
+      "Subheader3": "ASTM Online Payment Portal FAQ Page",
+      "Button3": "Learn More"
+    },
+    "AboutASTM": {
+      "Header": "About ASTM",
+      "Link1": "Privacy Policy",
+      "Link2": "What is ASTM? / ASTM Fact Sheet",
+      "Link3": "What’s new at ASTM",
+      "Link4": "Electronic License Agreement",
+      "Link5": "Terms and Conditions Chart"
+    },
+    "Policies ": {
+      "Header": "Policies",
+      "Link1": "Privacy Policy",
+      "Link2": "Copyright and Permissions",
+      "Link3": "AI Policy",
+      "Link4": "Other Policies"
+    },
+    "AccountsAndOrderInformation": {
+      "Header": "Accounts and Order Information",
+      "Text": "My organization has purchased a multi-user Compass license, how do I access my content if we have:",
+      "Subheader1": "SingleSignOn (SSO) ",
+      "Text1": "If your Organization uses Single Sign On you will have a dedicated URL for ASTM Compass that will allow you to use your Organization Credentials to gain access to the COMPASS platform.  ",
+      "Text2": "You may have an Administrator in your Organization who has the URL, or it may be posted on an internal webpage",
+      "Text3": "You may also need to be granted access to the Application for Single Sign On by your IT administrator. ",
+      "Subheader2": "Applet",
+      "Text4": "The ASTM Applet is a configuration that is built to allow users to navigate from a link on a non-public facing website, most likely an intranet page that only authorized users can access. ",
+      "Text5": "This allows users to follow the link and be taken directly in to the COMPASS platform from any location bypassing IP authentication.  ",
+      "Text6": "If you are unable to locate the link or have issues accessing it please contact your administrator.",
+      "Subheader3": "Username and Password",
+      "Text7": "If your Organization utilizes our Username and Password option you will need to contact your administrator to request an invitation to the platform.  ",
+      "Text8": "Users register in the platform with their work email and create a unique password for the COMPASS Platform. ",
+      "Text9": "If you cannot recall your password please follow this link https://secure.astm.org/forgot-password to request a password reset ",
+      "Text10": "If you do not receive the reset link please check your spam folder, if no email is there you may not be registered and will need to request an invitation to the platform from your administrator. ",
+      "Subheader4": "IP Authentication",
+      "Text11": "For organizations that use IP verification you must originate from an IP address that is on file with us.  ",
+      "Text12": "You can navigate directly to https://compass.astm.org and then either register for the platform or sign in if you are an existing user. ",
+      "Text13": "The registration button will appear below the password area for new users coming from the correct IP address.",
+      "Text14": "If you receive an error that includes an IP address in it please contact your administrator. "
+    },
+    "IPurchasedSubscription": {
+      "Header": "I purchased a subscription, how do I access it?",
+      "Text1": " ASTM International offers subscription access via single and multi-user license.",
+      "Text2": "Singler-user license holders may access their subscription by using the following instructions.",
+      "Text3": "Multi-user license holders must contact their organization’s administrator to receive access instructions.",
+      "Text4": "1. Email subscription settings: ",
+      "Link1": "https://www.astm.org/email-subscription-settings",
+      "Text5": "2. How do I Add/Remove myself to ASTM Marketing:",
+      "Link2": "https://www.astm.org/contact/",
+      "Text6": "3. I’m having trouble placing an order online:",
+      "Link3": "https://www.astm.org/contact/",
+      "Text7": "4. Return Policy",
+      "Text8": "ALL SALES ARE FINAL, with the following limited exceptions:\nASTM will (1) replace defective products and (2) reship orders improperly filled or electronically downloaded, only if an authorization number is first obtained from ASTM's Inside Sales and Technical Support Department.",
+      "Text9": "ASTM will not accept returns: (1) without prior authorization; or (2) after 30 days from shipment of the order. All materials, including the original accompanying packing list, must be returned. The authorization number must be clearly annotated and displayed on the return package.",
+      "Text10": "ASTM reserves the right to determine if an improper or incomplete return will be destroyed or returned to the consumer at the consumer's expense. No funds will be refunded or credited to an account without the return authorization number. To contact the Inside Sales and Technical Support Department, call (610) 832-9585 or email using our webform."
+    },
+    "InternationalAndDomesticShipping ": {
+      "Subheader1": "International Shipping",
+      "Text1": "International Standard Shipping: International orders are delivered via courier post services which can be either a postal service, courier service, or a combination of both. Please allow up to 2 weeks for delivery. International Expedited Shipping: Expedited shipping moves via (DHL or UPS) at ASTM's discretion and there is a $25.00 charge in addition to the shipping and handling table fee schedule. Please allow 3-5 business days for delivery. Note: Sets and Sections of the Annual ASTM Book Of Standards and subscriptions are not eligible for expedited shipping. Please be aware that carriers will not deliver packages to Post Office Boxes. Because of the variability of customs processes and procedures in different countries, ASTM International cannot guarantee transit times to international destinations. Customs duty and taxes are the responsibility of the consignee. ",
+      "Subheader2": "Domestic Shipping ",
+      "Text2": "Domestic orders are delivered via United Parcel Service or United Sates Postal Service depending on product. Transit times average 5 - 7 business days. Please be aware that (UPS) will not deliver packages to Post Office Boxes. Domestic Rush Orders: To place Rush Orders please contact Inside Sales & Support at 877-909-2786 to arrange overnight delivery. There is a $25.00 charge in addition to the shipping and handling table fee schedule. Note: Sets and Sections of the ASTM Annual Book of Standards and subscriptions are not eligible for rush shipping. International Shipping ",
+      "LinkText1": "Invoice Requests"
+    },
+    "Payments ": {
+      "LinkText1": "How do I pay my invoice online with a credit card",
+      "LinkText2": "Online Payment (Billtrust) FAQ Page",
+      "LinkText3": "How do I submit a refund request"
+    },
+    "PaymentMethods": {
+      "Header": "What are accepted payment methods",
+      "Subheader1": "Credit Card :",
+      "Text1": "To pay by major credit card:",
+      "Text2": "Fax credit card information to our secure line, (610) 832-9555, or call our Service line at (610) 832-9585. ",
+      "Text3": "ASTM accepts American Express, MasterCard, and Visa. ",
+
+      "Subheader2": "Check :",
+      "Text4": "The remit to address that checks should be sent to when customers are using USPS (Postal System) is: ",
+      "Text5": "REMIT TO: \nASTM INTERNATIONAL \nP.O. Box 45758 \nBaltimore, MD 21297-5758 ",
+
+      "Subheader3": "Wire Transfer :",
+      "Text7": "TRUIST Bank \n214 N Tyron Street \nCharlotte, NC 28202 ",
+      "Text8": "Account # 1390004241750 \nRoute # 031309123 \n\nSWIFT Code BRBTUS33 "
+    },
+    "Membership": {
+      "LinkText1": "Membership Types and Benefits",
+      "LinkText2": "Member Training and New Member Orientation"
+    },
+    "RegionalOfficesAndSupport": {
+      "Header": "Membership Types and Benefits",
+      "Text": "ASTM has multiple office locations around the world serving regions such as Latin America, Europe, and China.",
+      "button": "Learn More"
+    },
+    "Troubleshooting": {
+      "Header": "Troubleshooting",
+      "LinkText1": "EZProxy",
+      "LinkText2": "Deleting Cookies and Cache",
+      "LinkText3": "W-9 Form"
+    }
+  }

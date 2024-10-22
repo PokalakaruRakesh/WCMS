@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import base.utils.ReusableMethods;
+import base.utils.ScreenshotUtil;
 import com.db.util.QueryUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -236,5 +238,17 @@ public class Common {
 		}
 
 		return dbResultList ;
+	}
+	public static boolean isElementDisplayed(WebDriver driver, By locator) {
+		try {
+			ReusableMethods.scrollToElement(driver,locator);
+			ScreenshotUtil.takeScreenshotForAllure(driver);
+			new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(locator));
+			WebElement elm = driver.findElement(locator);
+			return elm.isDisplayed();
+		} catch (Exception e) {
+			return false;
+		}
+
 	}
 }

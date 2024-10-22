@@ -15,15 +15,11 @@ import java.util.Date;
 import java.util.List;
 
 import org.apache.poi.ss.usermodel.Sheet;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import io.qameta.allure.Step;
-
-import org.openqa.selenium.WebDriver;
 
 public class ReusableMethods {
 	
@@ -228,5 +224,16 @@ static Object[][] obj;
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("scroll(0,-250)", "Top");
 
+	}
+	public static boolean scrollToElement(WebDriver driver, By locator) {
+		try {
+			WebElement elm = driver.findElement(locator);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].scrollIntoView(false);", elm);
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 }
