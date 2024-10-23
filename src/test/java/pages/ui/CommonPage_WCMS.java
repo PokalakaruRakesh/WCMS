@@ -63,6 +63,7 @@ public class CommonPage_WCMS extends BasePage {
         }
     }
 
+
     @Step("Validate {message} redirects to the correct page")
     public Boolean ValidateLink(By locator, String link, String expectedTitle, String message) {
         try {
@@ -75,6 +76,42 @@ public class CommonPage_WCMS extends BasePage {
             Assert.assertEquals(driver.getTitle(), expectedTitle);
             ScreenshotUtil.takeScreenshotForAllure(driver);
             driver.navigate().back();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+    @Step("Validate {message} redirects to the correct page")
+    public Boolean ValidateLinkNewtab(By locator, String link, String expectedTitle, String message) {
+        try {
+            ReusableMethods.scrollIntoView(getElement(locator), driver);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(locator));
+            // Validate that the href contains the correct link
+            Assert.assertTrue(getElement(locator).getAttribute("href").contains(link));
+            ScreenshotUtil.takeScreenshotForAllure(driver);
+
+            // Click on the element
+            Assert.assertTrue(Common.clickonWebElement(driver, locator));
+            WCMSICommon.waitForSec(3);
+
+            // Switch to the new tab
+            String originalWindow = driver.getWindowHandle();
+            for (String windowHandle : driver.getWindowHandles()) {
+                if (!originalWindow.contentEquals(windowHandle)) {
+                    driver.switchTo().window(windowHandle);
+                    break;
+                }
+            }
+
+            // Validate the title of the new tab
+            Assert.assertEquals(driver.getTitle(), expectedTitle);
+            ScreenshotUtil.takeScreenshotForAllure(driver);
+
+            // Close the new tab and switch back to the original tab
+            driver.close();
+            driver.switchTo().window(originalWindow);
+            //driver.switchTo().defaultContent();
             return true;
         } catch (Exception e) {
             e.printStackTrace();

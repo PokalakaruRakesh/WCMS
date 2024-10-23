@@ -28,7 +28,7 @@ public class VerifyAboutPageNavigationFromHomePage_WCMSI_561 extends BaseTest {
     @TmsLink(jiraTestID)
     @Story("WCMSI-327: Set 1: About ASTM, M&P, S&S, Help and FAQ")
     @Description("To validate the About page navigation and content on the page")
-    @Test(description = jiraTestID + "Auto: {WCMSI-463, WCMSI-480, WCMSI-482, WCMSI-488, WCMSI-490}")
+    @Test(description = jiraTestID + "Auto: {WCMSI-463, WCMSI-480, WCMSI-482}")
     public void ValidateTheAboutPage() {
         try{
             aboutPage = page.getInstance(AboutPage.class);
