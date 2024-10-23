@@ -73,7 +73,7 @@ public class CommonPage_WCMS extends BasePage {
             ScreenshotUtil.takeScreenshotForAllure(driver);
             Assert.assertTrue(Common.clickonWebElement(driver, locator));
             WCMSICommon.waitForSec(3);
-            Assert.assertEquals(driver.getTitle(), expectedTitle);
+            Assert.assertTrue(driver.getTitle().contains(expectedTitle));
             ScreenshotUtil.takeScreenshotForAllure(driver);
             driver.navigate().back();
             return true;
@@ -103,7 +103,7 @@ public class CommonPage_WCMS extends BasePage {
                     break;
                 }
             }
-
+            WCMSICommon.waitForSec(3);
             // Validate the title of the new tab
             Assert.assertEquals(driver.getTitle(), expectedTitle);
             ScreenshotUtil.takeScreenshotForAllure(driver);

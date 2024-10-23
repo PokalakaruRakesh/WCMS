@@ -18,7 +18,7 @@ public class HomePage_WCMS extends BasePage {
     public By aboutAstmLearnMore = By.xpath("//a[@class='d-block mt-auto'][normalize-space()='Learn More About ASTM']");
     public By membershipAndPartnershipLearnMore = By.xpath("//a[normalize-space()='Learn More About Membership & Participation']");
     //Standards & Solutions
-    public By astmCompassLearnMore = By.xpath("//a[@title='Learn More About ASTM Compass®']");
+    public By astmCompassLearnMore = By.xpath("//a[contains(@title,'Learn More About ASTM Compass')]");
     public By annualBookLearnMore = By.xpath("//a[contains(@href,'/standards-and-solutions/bos')]");
     public By astmDigitalLearnMore = By.xpath("//a[contains(@href,'/standards-and-solutions/digital-library/astm-digital-library-on-silverchair')]");
     public By astmSpeacBuilderLearnMore = By.xpath("//a[@href='/standards-and-solutions/enterprise-solutions'][normalize-space()='Learn More']");

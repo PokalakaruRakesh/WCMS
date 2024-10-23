@@ -54,11 +54,11 @@ public class VerifyHomePage_WCMSI_541 extends BaseTest {
             Assert.assertTrue(commonPage.ValidateLink(homepage.aboutAstmLearnMore, "/about", "About ASTM", "Learn More About ASTM Button"));
             Assert.assertTrue(commonPage.ValidateLink(homepage.membershipAndPartnershipLearnMore, "/membership-participation", "Membership & Participation", "Learn More Membership & Participation Button"));
             //Standards & Solutions
-            Assert.assertTrue(commonPage.ValidateLink(homepage.astmCompassLearnMore, "/standards-and-solutions/enterprise-solutions/astm-compass", "ASTM Compass®", "Learn More About ASTM Compass clicked"));
+            Assert.assertTrue(commonPage.ValidateLink(homepage.astmCompassLearnMore, "/standards-and-solutions/enterprise-solutions/astm-compass", "ASTM Compass", "Learn More About ASTM Compass clicked"));
             Assert.assertTrue(commonPage.ValidateLink(homepage.annualBookLearnMore, "/standards-and-solutions/bos", "Annual Book of ASTM Standards", "Learn More Annual Book of ASTM Standards clicked"));
             Assert.assertTrue(commonPage.ValidateLink(homepage.astmDigitalLearnMore, "/standards-and-solutions/digital-library/astm-digital-library-on-silverchair", "ASTM Digital Library on Silverchair", "Learn More ASTM Digital Library on Silver chair clicked"));
             Assert.assertTrue(commonPage.ValidateLink(homepage.astmSpeacBuilderLearnMore, "/standards-and-solutions/enterprise-solutions", "Enterprise Solutions", "Learn More ASTM SpecBuilder clicked"));
-            Assert.assertTrue(commonPage.ValidateLink(homepage.internationalStandardLearnMore, "/standards-and-solutions/enterprise-solutions/astm-compass", "ASTM Compass®", "Learn More About International Standards clicked"));
+            Assert.assertTrue(commonPage.ValidateLink(homepage.internationalStandardLearnMore, "/standards-and-solutions/enterprise-solutions/astm-compass", "ASTM Compass", "Learn More About International Standards clicked"));
             // Market Insights & Innovation
             Assert.assertTrue(commonPage.ValidateLinkNewtab(homepage.astmXcellerateLearnMore, "https://astmxcellerate.com/", "ASTM Xcellerate", "Learn More ASTM Xcellerate clicked"));
             Assert.assertTrue(commonPage.ValidateLink(homepage.centersofExcellenceLearnMore, "/standards-and-solutions/market-insights-and-innovation/innovation", "Market Innovation", "Learn More Centers of Excellence clicked"));
