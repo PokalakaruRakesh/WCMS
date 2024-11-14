@@ -13,6 +13,7 @@ public class CookiePage extends BasePage {
 	public By cookieAcceptAllBtn = By.xpath("//button[@id='onetrust-accept-btn-handler']");
 	public void handleOneTrustCookie() {
 		try {
+			WaitStatementUtils.explicitWaitForVisibility(driver,getElement(cookieAcceptAllBtn));
 			WaitStatementUtils.waitForElementToBeClickable(driver,getElement(cookieAcceptAllBtn));
 			Common.clickonWebElement(driver, cookieAcceptAllBtn);
 		} catch (Exception e) {

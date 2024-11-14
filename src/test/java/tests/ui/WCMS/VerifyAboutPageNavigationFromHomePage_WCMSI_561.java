@@ -64,6 +64,8 @@ public class VerifyAboutPageNavigationFromHomePage_WCMSI_561 extends BaseTest {
             //Validate Learn More link In Governance cards
             List<String> expectedLink = Arrays.asList("2024-Board-Book-Web.pdf", "Senior-Staff-2024.pdf", "2023-ASTM-Annual-Report.pdf");
             Assert.assertTrue(commonPage.ValidateLinksUnderTiles(aboutPage.getLearnMoreLinksUnderTiles("Governance"),expectedLink,"Governance"));
+            Assert.assertTrue(commonPage.ValidateLinksUnderTiles(aboutPage.getLearnMoreLinksUnderTiles("Global Cooperation"),expectedLink,"Governance"));
+
         }catch (Exception e){
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to Validate the Link and button available on About page", e);

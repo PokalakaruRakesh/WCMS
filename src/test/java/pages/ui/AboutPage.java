@@ -18,6 +18,10 @@ public class AboutPage extends BasePage {
     public By viewBtnUnderHistory = By.xpath("//a[@title='View']");
     public By learnMoreBtnUnderGlobalCooperation = By.xpath("//h4[text()='Global Cooperation']/../a[text()='Learn More']");
 
+    public By viewBtnUnderGovernance= By.xpath("//a[@title='VIEW']");
+    public By governanceBoardOfdirectors= By.xpath("//h4[text()='Governance']/../div//a[text()='Learn More']");
+
+
     public By videoLink = By.xpath("(//iframe[@title='Video'])[1]");
     public WebElement getVideoLink(){
         return  driver.findElement(videoLink);
