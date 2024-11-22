@@ -1,0 +1,33 @@
+{
+  "WCMSI-493": {
+    "Menu": "About ASTM",
+    "Submenu": "About ASTM Overview",
+    "SubmenuList": "125th Anniversary Case Studies"
+  },
+    "125thAnniversaryCaseStudies": {
+      "Mainheader": "125th Anniversary Case Studies",
+      "text": "As part of its 125th anniversary celebration",
+      "Text": "As part of its 125th anniversary celebration, ASTM International invited case study submissions from committee members around the world, highlighting standards that have made a significant impact in society - and that have bettered the world around us. Numerous exceptional submissions were received, making the work of ASTMs panel of judges even more difficult in narrowing down the list of eight winners. Case Study Compilation"
+    },
+    "TheWinnersWereFollows": {
+      "Header1": "Aircraft Braking Measurements",
+      "Text1": "A standard for aircraft braking measurements from the committee on vehicle pavement systems (E17): Standard guide for friction-limited aircraft braking measurement and reporting (E3266) ",
+      "Header2": "Amusement Rides",
+      "Text2": "A standard from the committee on amusement rides and devices (F24): Standard practice for ownership, operation, maintenance, and inspection of amusement rides and devices (F770) ",
+      "Header3": "Baby Cribs",
+      "Text3": "A standard for baby cribs from the committee on consumer products (F15): Standard consumer safety specification for full-size baby cribs (F1169) ",
+      "Header4": "Barrier Face Coverings",
+      "Text4": "A standard for barrier face coverings from the committee on personal protective clothing and equipment (F23): The standard specification for barrier face coverings (F3502) ",
+      "Header5": "Biodegradable Plastic",
+      "Text5": "A set of standards for biodegradable plastic from the committee on plastics (D20) that have helped make our environment cleaner, our landfills less toxic, and our future brighter. ",
+      "Header6": "Biodiesel Fuel Blend",
+      "Text6": "A standard for biodiesel fuel blends from the committee on petroleum products, liquid fuels, and lubricants (D02): Standard specification for biodiesel fuel blend stock (B100) for middle distillate fuels (D6751) ",
+      "Header7": "Disinfection",
+      "Text7": "A standard for disinfection of environmental surfaces from the committee on pesticides, antimicrobials, and alternative control agents (E35).",
+      "Header8": "Infrastructure",
+      "text8": "Two infrastructural standards that are essential",
+      "Text8": "Two infrastructural standards that are essential to the worlds built environment, both from the committee on soil and rock (D18). ",
+      "Linktext": "Link"
+    }
+
+}

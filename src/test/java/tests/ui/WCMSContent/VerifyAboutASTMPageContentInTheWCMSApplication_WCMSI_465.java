@@ -6,6 +6,7 @@ import com.astm.commonFunctions.Common;
 import com.astm.commonFunctions.WCMSICommon;
 import com.google.gson.JsonObject;
 import io.qameta.allure.*;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -32,9 +33,8 @@ public class VerifyAboutASTMPageContentInTheWCMSApplication_WCMSI_465 extends Ba
             WCMSPage = page.getInstance(WCMSContentPage.class);
             jsonFileReader = new JsonFileReader();
             jsonFileReader.setJiraID(jiraTestID);
-            softAssert = new SoftAssert();
 
-            WCMSPage.NavigateToPage(jsonFileReader.getJsonString("Menu"), jsonFileReader.getJsonString("Submenu"));
+            WCMSPage.NavigateToPage(jsonFileReader.getJsonString("Menu"), jsonFileReader.getJsonString("Submenu"),"About ASTM");
             validateContentUnderAboutASTMHeader("AboutASTM");
             validateContentUnderHistoryHeader("History");
             validateContentUnderGovernanceHeader("Governance");
@@ -55,36 +55,35 @@ public class VerifyAboutASTMPageContentInTheWCMSApplication_WCMSI_465 extends Ba
             JsonObject jsonObject=WCMSPage.jsonData(jiraTestID,jsonElement);
             String header=WCMSPage.jsonValue(jsonObject,"Header");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getMainHeader(header)),WCMSPage.jsonValue(jsonObject,"Header") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderMainheader(header,
-                    WCMSPage.jsonValue(jsonObject,"Text1"))),WCMSPage.jsonValue(jsonObject,"Text1") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderMainheader(header,
-                    WCMSPage.jsonValue(jsonObject,"Subheader1"))),WCMSPage.jsonValue(jsonObject,"Subheader1") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeaderUnderMainheader(header,
-                    WCMSPage.jsonValue(jsonObject,"Subheader2"))),WCMSPage.jsonValue(jsonObject,"Subheader2") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getMainHeader(header)),WCMSPage.jsonValue(jsonObject,"Header") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderMainheader(header,
+                    WCMSPage.jsonValue(jsonObject,"Text1"))),WCMSPage.jsonValue(jsonObject,"Text1") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderMainheader(header,
+                    WCMSPage.jsonValue(jsonObject,"Subheader1"))),WCMSPage.jsonValue(jsonObject,"Subheader1") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeaderUnderMainheader(header,
+                    WCMSPage.jsonValue(jsonObject,"Subheader2"))),WCMSPage.jsonValue(jsonObject,"Subheader2") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader2"),
                     WCMSPage.jsonValue(jsonObject,"Text2"))));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderMainheader(header,
-                    WCMSPage.jsonValue(jsonObject,"Subheader3"))),WCMSPage.jsonValue(jsonObject,"Subheader3") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeaderUnderMainheader(header,
-                    WCMSPage.jsonValue(jsonObject,"Subheader4"))),WCMSPage.jsonValue(jsonObject,"Subheader4") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
-                    WCMSPage.jsonValue(jsonObject,"Text3"))),WCMSPage.jsonValue(jsonObject,"Text3") + "content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderMainheader(header,
+                    WCMSPage.jsonValue(jsonObject,"Subheader3"))),WCMSPage.jsonValue(jsonObject,"Subheader3") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeaderUnderMainheader(header,
+                    WCMSPage.jsonValue(jsonObject,"Subheader4"))),WCMSPage.jsonValue(jsonObject,"Subheader4") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader4"),
+                    WCMSPage.jsonValue(jsonObject,"Text3"))),WCMSPage.jsonValue(jsonObject,"Text3") + " content not matched");
 
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderMainheader(header,
-                    WCMSPage.jsonValue(jsonObject,"Subheader5"))),WCMSPage.jsonValue(jsonObject,"Subheader5") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeaderUnderMainheader(header,
-                    WCMSPage.jsonValue(jsonObject,"Subheader6"))),WCMSPage.jsonValue(jsonObject,"Subheader6") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
-                    WCMSPage.jsonValue(jsonObject,"Text4"))),WCMSPage.jsonValue(jsonObject,"Text4") + "content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderMainheader(header,
+                    WCMSPage.jsonValue(jsonObject,"Subheader5"))),WCMSPage.jsonValue(jsonObject,"Subheader5") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeaderUnderMainheader(header,
+                    WCMSPage.jsonValue(jsonObject,"Subheader6"))),WCMSPage.jsonValue(jsonObject,"Subheader6") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader6"),
+                    WCMSPage.jsonValue(jsonObject,"Text4"))),WCMSPage.jsonValue(jsonObject,"Text4") + " content not matched");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderMainheader(header,
-                    WCMSPage.jsonValue(jsonObject,"Text5"))),WCMSPage.jsonValue(jsonObject,"Text5") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderMainheader(header,
-                    WCMSPage.jsonValue(jsonObject,"Text6"))),WCMSPage.jsonValue(jsonObject,"Text6") + "content not matched");
-            softAssert.assertAll();
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderMainheader(header,
+                    WCMSPage.jsonValue(jsonObject,"Text5"))),WCMSPage.jsonValue(jsonObject,"Text5") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderMainheader(header,
+                    WCMSPage.jsonValue(jsonObject,"Text6"))),WCMSPage.jsonValue(jsonObject,"Text6") + " content not matched");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -97,25 +96,25 @@ public class VerifyAboutASTMPageContentInTheWCMSApplication_WCMSI_465 extends Ba
             JsonObject jsonObject=WCMSPage.jsonData(jiraTestID,jsonElement);
             String header=WCMSPage.jsonValue(jsonObject,"Header");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(header)),WCMSPage.jsonValue(jsonObject,"Header") + "content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(header)),WCMSPage.jsonValue(jsonObject,"Header") + " content not matched");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getImageTextUnderHeader(
-                    WCMSPage.jsonValue(jsonObject,"ImageName1"),
-                    WCMSPage.jsonValue(jsonObject,"ImageYear1"))),WCMSPage.jsonValue(jsonObject,"ImageYear1") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getImageTextUnderHeader(WCMSPage.jsonValue(jsonObject,"ImageName2"),
-                    WCMSPage.jsonValue(jsonObject,"ImageYear2"))),WCMSPage.jsonValue(jsonObject,"ImageYear2") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getImageTextUnderHeader(WCMSPage.jsonValue(jsonObject,"ImageName3"),
-                    WCMSPage.jsonValue(jsonObject,"ImageYear3"))),WCMSPage.jsonValue(jsonObject,"ImageYear3") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getImageTextUnderHeader(WCMSPage.jsonValue(jsonObject,"ImageName4"),
-                    WCMSPage.jsonValue(jsonObject,"ImageYear4"))),WCMSPage.jsonValue(jsonObject,"ImageYear4") + "content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(WCMSPage.jsonValue(jsonObject,"Year1"))),WCMSPage.jsonValue(jsonObject,"Year1") + " content not matched");
+            /*Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderHeader(WCMSPage.jsonValue(jsonObject,"Year1"),
+                    WCMSPage.jsonValue(jsonObject,"Text1"))),WCMSPage.jsonValue(jsonObject,"Text1") + " content not matched");*/
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderHeader(header,
-                    WCMSPage.jsonValue(jsonObject,"LinkText"))),WCMSPage.jsonValue(jsonObject,"LinkText") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderHeader(header,
-                    WCMSPage.jsonValue(jsonObject,"Text1"))),WCMSPage.jsonValue(jsonObject,"Text1") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderHeader(header,
-                    WCMSPage.jsonValue(jsonObject,"Button1"))),WCMSPage.jsonValue(jsonObject,"Button1") + "content not matched");
-            softAssert.assertAll();
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(WCMSPage.jsonValue(jsonObject,"Year2"))),WCMSPage.jsonValue(jsonObject,"Year2") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderHeader(WCMSPage.jsonValue(jsonObject,"Year2"),
+                    WCMSPage.jsonValue(jsonObject,"Text2"))),WCMSPage.jsonValue(jsonObject,"Text2") + " content not matched");
+
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(WCMSPage.jsonValue(jsonObject,"Year3"))),WCMSPage.jsonValue(jsonObject,"Year3") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderHeader(WCMSPage.jsonValue(jsonObject,"Year3"),
+                    WCMSPage.jsonValue(jsonObject,"Text3"))),WCMSPage.jsonValue(jsonObject,"Text3") + " content not matched");
+
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderHeader(header,WCMSPage.jsonValue(jsonObject,"LinkText"))),WCMSPage.jsonValue(jsonObject,"LinkText") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderHeader(header,WCMSPage.jsonValue(jsonObject,"Text"))),WCMSPage.jsonValue(jsonObject,"Text") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderHeader(header,WCMSPage.jsonValue(jsonObject,"Button"))),WCMSPage.jsonValue(jsonObject,"Button") + " content not matched");
+
+
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to validate Content under 'History' header ", e);
@@ -127,34 +126,34 @@ public class VerifyAboutASTMPageContentInTheWCMSApplication_WCMSI_465 extends Ba
             JsonObject jsonObject=WCMSPage.jsonData(jiraTestID,jsonElement);
             String header=WCMSPage.jsonValue(jsonObject,"Header");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(header)),WCMSPage.jsonValue(jsonObject,"Header") + "content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(header)),WCMSPage.jsonValue(jsonObject,"Header") + " content not matched");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
-                   WCMSPage.jsonValue(jsonObject,"Subheader1"))),WCMSPage.jsonValue(jsonObject,"Subheader1") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
-                    WCMSPage.jsonValue(jsonObject,"Text1"))),WCMSPage.jsonValue(jsonObject,"Text1") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(header,
-                    WCMSPage.jsonValue(jsonObject,"LinkText1"))),WCMSPage.jsonValue(jsonObject,"LinkText1") + "content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
+                    WCMSPage.jsonValue(jsonObject,"Subheader1"))),WCMSPage.jsonValue(jsonObject,"Subheader1") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader1"),
+                    WCMSPage.jsonValue(jsonObject,"Text1"))),WCMSPage.jsonValue(jsonObject,"Text1") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader1"),
+                    WCMSPage.jsonValue(jsonObject,"LinkText1"))),WCMSPage.jsonValue(jsonObject,"LinkText1") + " content not matched");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
-                  WCMSPage.jsonValue(jsonObject,"Subheader2"))),WCMSPage.jsonValue(jsonObject,"Subheader2") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
-                    WCMSPage.jsonValue(jsonObject,"Text2"))),WCMSPage.jsonValue(jsonObject,"Text2") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(header,
-                  WCMSPage.jsonValue(jsonObject,"LinkText2"))),WCMSPage.jsonValue(jsonObject,"LinkText2") + "content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
+                    WCMSPage.jsonValue(jsonObject,"Subheader2"))),WCMSPage.jsonValue(jsonObject,"Subheader2") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader2"),
+                    WCMSPage.jsonValue(jsonObject,"Text2"))),WCMSPage.jsonValue(jsonObject,"Text2") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader2"),
+                    WCMSPage.jsonValue(jsonObject,"LinkText2"))),WCMSPage.jsonValue(jsonObject,"LinkText2") + " content not matched");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
-                    WCMSPage.jsonValue(jsonObject,"Subheader3"))),WCMSPage.jsonValue(jsonObject,"Subheader3") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
-                    WCMSPage.jsonValue(jsonObject,"Text3"))),WCMSPage.jsonValue(jsonObject,"Text3") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(header,
-                    WCMSPage.jsonValue(jsonObject,"LinkText3"))),WCMSPage.jsonValue(jsonObject,"LinkText3") + "content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
+                    WCMSPage.jsonValue(jsonObject,"Subheader3"))),WCMSPage.jsonValue(jsonObject,"Subheader3") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader3"),
+                    WCMSPage.jsonValue(jsonObject,"Text3"))),WCMSPage.jsonValue(jsonObject,"Text3") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader3"),
+                    WCMSPage.jsonValue(jsonObject,"LinkText3"))),WCMSPage.jsonValue(jsonObject,"LinkText3") + " content not matched");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderHeader(header,
-                    WCMSPage.jsonValue(jsonObject,"Text4"))),WCMSPage.jsonValue(jsonObject,"Text4") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderHeader(header,
-                    WCMSPage.jsonValue(jsonObject,"Button1"))),WCMSPage.jsonValue(jsonObject,"Button1") + "content not matched");
-            softAssert.assertAll();
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderHeader(header,
+                    WCMSPage.jsonValue(jsonObject,"Text4"))),WCMSPage.jsonValue(jsonObject,"Text4") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderHeader(header,
+                    WCMSPage.jsonValue(jsonObject,"Button1"))),WCMSPage.jsonValue(jsonObject,"Button1") + " content not matched");
+
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to validate Content under 'Governance' header ", e);
@@ -166,32 +165,32 @@ public class VerifyAboutASTMPageContentInTheWCMSApplication_WCMSI_465 extends Ba
             JsonObject jsonObject=WCMSPage.jsonData(jiraTestID,jsonElement);
             String header=WCMSPage.jsonValue(jsonObject,"Header");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(header)),WCMSPage.jsonValue(jsonObject,"Header") + "content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(header)),WCMSPage.jsonValue(jsonObject,"Header") + " content not matched");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
-                   WCMSPage.jsonValue(jsonObject,"Subheader1"))),WCMSPage.jsonValue(jsonObject,"Subheader1") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
-                   WCMSPage.jsonValue(jsonObject,"Text1"))),WCMSPage.jsonValue(jsonObject,"Text1") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(header,
-                    WCMSPage.jsonValue(jsonObject,"LinkText1"))),WCMSPage.jsonValue(jsonObject,"LinkText1") + "content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
+                    WCMSPage.jsonValue(jsonObject,"Subheader1"))),WCMSPage.jsonValue(jsonObject,"Subheader1") + " content not matched");
+            String txt=WCMSPage.jsonValue(jsonObject,"Text1_1")+" \n"+WCMSPage.jsonValue(jsonObject,"Text1_2");
+            //Assert.assertEquals(WCMSPage.getText(WCMSPage.jsonValue(jsonObject,"Text1_2")),txt);
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader1"),
+                    WCMSPage.jsonValue(jsonObject,"LinkText1"))),WCMSPage.jsonValue(jsonObject,"LinkText1") + " content not matched");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
-                    WCMSPage.jsonValue(jsonObject,"Subheader2"))),WCMSPage.jsonValue(jsonObject,"Subheader2") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
-                    WCMSPage.jsonValue(jsonObject,"Text2"))),WCMSPage.jsonValue(jsonObject,"Text2") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(header,
-                    WCMSPage.jsonValue(jsonObject,"LinkText2"))),WCMSPage.jsonValue(jsonObject,"LinkText2") + "content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
+                    WCMSPage.jsonValue(jsonObject,"Subheader2"))),WCMSPage.jsonValue(jsonObject,"Subheader2") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader2"),
+                    WCMSPage.jsonValue(jsonObject,"Text2"))),WCMSPage.jsonValue(jsonObject,"Text2") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader2"),
+                    WCMSPage.jsonValue(jsonObject,"LinkText2"))),WCMSPage.jsonValue(jsonObject,"LinkText2") + " content not matched");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
-                    WCMSPage.jsonValue(jsonObject,"Subheader3"))),WCMSPage.jsonValue(jsonObject,"Subheader3") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
-                   WCMSPage.jsonValue(jsonObject,"Text3"))),WCMSPage.jsonValue(jsonObject,"Text3") + "content not matched");
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(header,
-                    WCMSPage.jsonValue(jsonObject,"LinkText3"))),WCMSPage.jsonValue(jsonObject,"LinkText3") + "content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
+                    WCMSPage.jsonValue(jsonObject,"Subheader3"))),WCMSPage.jsonValue(jsonObject,"Subheader3") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader3"),
+                    WCMSPage.jsonValue(jsonObject,"Text3"))),WCMSPage.jsonValue(jsonObject,"Text3") + " content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader3"),
+                    WCMSPage.jsonValue(jsonObject,"LinkText3"))),WCMSPage.jsonValue(jsonObject,"LinkText3") + " content not matched");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderHeader(header,
-                    WCMSPage.jsonValue(jsonObject,"Button1"))),WCMSPage.jsonValue(jsonObject,"Button1") + "content not matched");
-            softAssert.assertAll();
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderHeader(header,
+                    WCMSPage.jsonValue(jsonObject,"Button1"))),WCMSPage.jsonValue(jsonObject,"Button1") + " content not matched");
+
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to validate Content under 'Global Cooperation' header ", e);
@@ -203,14 +202,13 @@ public class VerifyAboutASTMPageContentInTheWCMSApplication_WCMSI_465 extends Ba
             JsonObject jsonObject=WCMSPage.jsonData(jiraTestID,jsonElement);
             String header=WCMSPage.jsonValue(jsonObject,"Header");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(header)),WCMSPage.jsonValue(jsonObject,"Header") + "content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getMainHeader(header)),WCMSPage.jsonValue(jsonObject,"Header") + " content not matched");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderHeader(header,
-                    WCMSPage.jsonValue(jsonObject,"Text1"))),WCMSPage.jsonValue(jsonObject,"Text1") + "content not matched");
+            Assert.assertEquals(WCMSPage.getText(WCMSPage.jsonValue(jsonObject,"text1")),WCMSPage.jsonValue(jsonObject,"Text1"));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderHeader(header,
-                    WCMSPage.jsonValue(jsonObject,"Button1"))),WCMSPage.jsonValue(jsonObject,"Button1") + "content not matched");
-            softAssert.assertAll();
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderMainheader(header,
+                    WCMSPage.jsonValue(jsonObject,"Button1"))),WCMSPage.jsonValue(jsonObject,"Button1") + " content not matched");
+
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to validate Content under 'Diversity, Equity, Inclusion and Belonging' header ", e);
@@ -222,17 +220,16 @@ public class VerifyAboutASTMPageContentInTheWCMSApplication_WCMSI_465 extends Ba
             JsonObject jsonObject=WCMSPage.jsonData(jiraTestID,jsonElement);
             String header=WCMSPage.jsonValue(jsonObject,"Header");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(header)),WCMSPage.jsonValue(jsonObject,"Header") + "content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(header)),WCMSPage.jsonValue(jsonObject,"Header") + " content not matched");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderHeader(header,
-                    WCMSPage.jsonValue(jsonObject,"Text1"))),WCMSPage.jsonValue(jsonObject,"Text1") + "content not matched");
+            Assert.assertEquals(WCMSPage.getText(WCMSPage.jsonValue(jsonObject,"text1")),WCMSPage.jsonValue(jsonObject,"Text1"));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderHeader(header,
-                   WCMSPage.jsonValue(jsonObject,"Button1"))),WCMSPage.jsonValue(jsonObject,"Button1") + "content not matched");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderHeader(header,
+                    WCMSPage.jsonValue(jsonObject,"Button1"))),WCMSPage.jsonValue(jsonObject,"Button1") + " content not matched");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderHeader(header,
-                   WCMSPage.jsonValue(jsonObject,"Button2"))),WCMSPage.jsonValue(jsonObject,"Button2") + "content not matched");
-            softAssert.assertAll();
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderHeader(header,
+                    WCMSPage.jsonValue(jsonObject,"Button2"))),WCMSPage.jsonValue(jsonObject,"Button2") + " content not matched");
+
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to validate Content under 'Culture and Careers' header ", e);

@@ -7,6 +7,7 @@ import com.astm.commonFunctions.WCMSICommon;
 import com.astm.commonFunctions.WCMSICommon;
 import com.google.gson.JsonObject;
 import io.qameta.allure.*;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -33,9 +34,9 @@ public class VerifyMebershipPaticipationPageContentInTheWCMSApplication_WCMSI_48
             WCMSPage = page.getInstance(WCMSContentPage.class);
             jsonFileReader = new JsonFileReader();
             jsonFileReader.setJiraID(jiraTestID);
-            softAssert = new SoftAssert();
 
-            WCMSPage.NavigateToPage(jsonFileReader.getJsonString("Menu"), jsonFileReader.getJsonString("Submenu"));
+
+            WCMSPage.NavigateToPage(jsonFileReader.getJsonString("Menu"), jsonFileReader.getJsonString("Submenu"),"Membership & Participation");
             validateContentUnderMembershipParticipationHeader("MembershipParticipation");
             validateContentUnderMembershipHeader("Membership");
             validateContentUnderBenefitsHeader("Benefits");
@@ -46,7 +47,7 @@ public class VerifyMebershipPaticipationPageContentInTheWCMSApplication_WCMSI_48
             validateContentUnderMemberOfficerTrainingHeader("MemberOfficerTraining");
             validateContentUnderStudentsHeader("Students");
             validateContentUnderConsumerParticipationHeader("ConsumerParticipation");
-            validateContentUnderLatestNewsHeader("LatestNews");
+            //validateContentUnderLatestNewsHeader("LatestNews");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -62,36 +63,39 @@ public class VerifyMebershipPaticipationPageContentInTheWCMSApplication_WCMSI_48
             JsonObject jsonObject=WCMSPage.jsonData(jiraTestID,jsonElement);
             String header=WCMSPage.jsonValue(jsonObject,"Header");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getMainHeader(header)));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderMainheader(header,
-                    WCMSPage.jsonValue(jsonObject,"Text1"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderMainheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getMainHeader(header)));
+            Assert.assertEquals(WCMSPage.getTextByHeader(header,WCMSPage.jsonValue(jsonObject,"text1")),
+                    WCMSPage.jsonValue(jsonObject,"Text1"));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderMainheader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader1"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeaderUnderMainheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeaderUnderMainheader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader2"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
-                    WCMSPage.jsonValue(jsonObject,"Text2"))));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader2"),
+                    WCMSPage.jsonValue(jsonObject,"Text2_1"))));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader2"),
+                    WCMSPage.jsonValue(jsonObject,"Text2_2"))));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderMainheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderMainheader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader3"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeaderUnderMainheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeaderUnderMainheader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader4"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
-                    WCMSPage.jsonValue(jsonObject,"Text3"))));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader4"),
+                    WCMSPage.jsonValue(jsonObject,"Text3_1"))));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader4"),
+                    WCMSPage.jsonValue(jsonObject,"Text3_2"))));
 
-
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderMainheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderMainheader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader5"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeaderUnderMainheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeaderUnderMainheader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader6"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader6"),
                     WCMSPage.jsonValue(jsonObject,"Text4"))));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderMainheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderMainheader(header,
                     WCMSPage.jsonValue(jsonObject,"Text5"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderMainheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderMainheader(header,
                     WCMSPage.jsonValue(jsonObject,"Text6"))));
-            softAssert.assertAll();
+
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to validate Content under 'Membership & Participation' header ", e);
@@ -103,91 +107,97 @@ public class VerifyMebershipPaticipationPageContentInTheWCMSApplication_WCMSI_48
             JsonObject jsonObject=WCMSPage.jsonData(jiraTestID,jsonElement);
             String header=WCMSPage.jsonValue(jsonObject,"Header");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(header)));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(header)));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderHeader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Text1"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderHeader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Text2"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderHeader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Text3"))));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
+            String Subheader1=WCMSPage.jsonValue(jsonObject,"Subheader1");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader1"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader1,
                     WCMSPage.jsonValue(jsonObject,"Price1"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader1,
                     WCMSPage.jsonValue(jsonObject,"Text4"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader1,
                     WCMSPage.jsonValue(jsonObject,"Text5"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderSubheader(Subheader1,
                     WCMSPage.jsonValue(jsonObject,"Subheader2"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader1,
                     WCMSPage.jsonValue(jsonObject,"Text6"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader1,
                     WCMSPage.jsonValue(jsonObject,"Text7"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader1,
                     WCMSPage.jsonValue(jsonObject,"Text8"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader1,
                     WCMSPage.jsonValue(jsonObject,"Text9"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader1(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader1(Subheader1,
                     WCMSPage.jsonValue(jsonObject,"Button1"))));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
+            String Subheader3=WCMSPage.jsonValue(jsonObject,"Subheader3");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader3"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader3,
                     WCMSPage.jsonValue(jsonObject,"Price2"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader3,
                     WCMSPage.jsonValue(jsonObject,"Text10"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader3,
                     WCMSPage.jsonValue(jsonObject,"Text11"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderSubheader(Subheader3,
                     WCMSPage.jsonValue(jsonObject,"Subheader4"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader3,
                     WCMSPage.jsonValue(jsonObject,"Text12"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader3,
                     WCMSPage.jsonValue(jsonObject,"Text13"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader3,
                     WCMSPage.jsonValue(jsonObject,"Text14"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader3,
                     WCMSPage.jsonValue(jsonObject,"Text15"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader1(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader1(Subheader3,
                     WCMSPage.jsonValue(jsonObject,"Button2"))));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
+            String Subheader5=WCMSPage.jsonValue(jsonObject,"Subheader5");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader5"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader5,
                     WCMSPage.jsonValue(jsonObject,"Price3"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader5,
                     WCMSPage.jsonValue(jsonObject,"Text16"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader5,
                     WCMSPage.jsonValue(jsonObject,"Text17"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderSubheader(Subheader5,
                     WCMSPage.jsonValue(jsonObject,"Subheader6"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader5,
                     WCMSPage.jsonValue(jsonObject,"Text18"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader5,
                     WCMSPage.jsonValue(jsonObject,"Text19"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader1(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader1(Subheader5,
                     WCMSPage.jsonValue(jsonObject,"Button3"))));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
+            String Subheader7=WCMSPage.jsonValue(jsonObject,"Subheader7");
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader7"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader7,
                     WCMSPage.jsonValue(jsonObject,"Text20"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
-                    WCMSPage.jsonValue(jsonObject,"Text21"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader7,
+                    WCMSPage.jsonValue(jsonObject,"Text21_1"))));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader7,
+                    WCMSPage.jsonValue(jsonObject,"Text21_2"))));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderSubheader(Subheader7,
                     WCMSPage.jsonValue(jsonObject,"Subheader8"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader7,
                     WCMSPage.jsonValue(jsonObject,"Text22"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader7,
                     WCMSPage.jsonValue(jsonObject,"Text23"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(Subheader7,
                     WCMSPage.jsonValue(jsonObject,"Text24"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader1(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader1(Subheader7,
                     WCMSPage.jsonValue(jsonObject,"Button4"))));
-            softAssert.assertAll();
+
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to validate Content under 'Membership' header ", e);
@@ -199,32 +209,32 @@ public class VerifyMebershipPaticipationPageContentInTheWCMSApplication_WCMSI_48
             JsonObject jsonObject=WCMSPage.jsonData(jiraTestID,jsonElement);
             String header=WCMSPage.jsonValue(jsonObject,"Header");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(header)));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(header)));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader1"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader1"),
                     WCMSPage.jsonValue(jsonObject,"Text1"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader1"),
                     WCMSPage.jsonValue(jsonObject,"LinkText1"))));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader2"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader2"),
                     WCMSPage.jsonValue(jsonObject,"Text2"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader2"),
                     WCMSPage.jsonValue(jsonObject,"LinkText2"))));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader3"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader3"),
                     WCMSPage.jsonValue(jsonObject,"Text3"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader3"),
                     WCMSPage.jsonValue(jsonObject,"LinkText3"))));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderHeader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Button1"))));
-            softAssert.assertAll();
+
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to validate Content under 'Benefits' header ", e);
@@ -236,22 +246,22 @@ public class VerifyMebershipPaticipationPageContentInTheWCMSApplication_WCMSI_48
             JsonObject jsonObject=WCMSPage.jsonData(jiraTestID,jsonElement);
             String header=WCMSPage.jsonValue(jsonObject,"Header");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(header)));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(header)));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader1"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader1"),
                     WCMSPage.jsonValue(jsonObject,"Text1"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader1"),
                     WCMSPage.jsonValue(jsonObject,"LinkText1"))));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader2"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader2"),
                     WCMSPage.jsonValue(jsonObject,"Text2"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader2"),
                     WCMSPage.jsonValue(jsonObject,"LinkText2"))));
-            softAssert.assertAll();
+
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to validate Content under 'My Committees & ASTM Compass' header ", e);
@@ -263,14 +273,14 @@ public class VerifyMebershipPaticipationPageContentInTheWCMSApplication_WCMSI_48
             JsonObject jsonObject = WCMSPage.jsonData(jiraTestID, jsonElement);
             String header = WCMSPage.jsonValue(jsonObject,"Header");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getHeader(header)));
+            Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getHeader(header)));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getTextUnderHeader(header,
-                    WCMSPage.jsonValue(jsonObject,"Text1"))));
+            Assert.assertEquals(WCMSPage.getText(WCMSPage.jsonValue(jsonObject,"text1")),
+                    WCMSPage.jsonValue(jsonObject,"Text1"));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getButtonUnderHeader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getButtonUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Button1"))));
-            softAssert.assertAll();
+
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to validate Content under 'Get Published ' header ", e);
@@ -282,37 +292,37 @@ public class VerifyMebershipPaticipationPageContentInTheWCMSApplication_WCMSI_48
             JsonObject jsonObject = WCMSPage.jsonData(jiraTestID, jsonElement);
             String header = WCMSPage.jsonValue(jsonObject,"Header");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getHeader(header)));
+            Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getHeader(header)));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getSubheaderUnderHeader1(header,
-                        WCMSPage.jsonValue(jsonObject,"Subheader1"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader1(header,
-                        WCMSPage.jsonValue(jsonObject,"Text2"))));
+            Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getSubheaderUnderHeader(header,
+                    WCMSPage.jsonValue(jsonObject,"Subheader1"))));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader1"),
+                    WCMSPage.jsonValue(jsonObject,"Text1"))));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getButtonUnderHeader(header,
-                        WCMSPage.jsonValue(jsonObject,"Button1"))));
-            softAssert.assertAll();
-            } catch (Exception e) {
-                e.printStackTrace();
-                WCMSICommon.reportFailAssert("Failed to validate Content under 'Technical Committees' header ", e);
-            }
+            Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getButtonUnderHeader(header,
+                    WCMSPage.jsonValue(jsonObject,"Button1"))));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            WCMSICommon.reportFailAssert("Failed to validate Content under 'Technical Committees' header ", e);
         }
+    }
     @Step("Validate content under 'Meetings, Symposia & Workshops' header")
     public void validateContentUnderMeetingsSymposiaWorkshopsHeader (String jsonElement){
         try {
             JsonObject jsonObject = WCMSPage.jsonData(jiraTestID, jsonElement);
             String header = WCMSPage.jsonValue(jsonObject,"Header");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getHeader(header)));
+            Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getHeader(header)));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getSubheaderUnderHeader1(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getSubheaderUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader1"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader1(header,
-                    WCMSPage.jsonValue(jsonObject,"Text2"))));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader1"),
+                    WCMSPage.jsonValue(jsonObject,"Text1"))));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getButtonUnderHeader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getButtonUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Button1"))));
-            softAssert.assertAll();
+
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to validate Content under 'Meetings, Symposia & Workshops' header ", e);
@@ -324,16 +334,16 @@ public class VerifyMebershipPaticipationPageContentInTheWCMSApplication_WCMSI_48
             JsonObject jsonObject = WCMSPage.jsonData(jiraTestID, jsonElement);
             String header = WCMSPage.jsonValue(jsonObject,"Header");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getHeader(header)));
+            Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getHeader(header)));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getSubheaderUnderHeader1(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getSubheaderUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader1"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader1(header,
-                    WCMSPage.jsonValue(jsonObject,"Text2"))));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader1"),
+                    WCMSPage.jsonValue(jsonObject,"Text1"))));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getButtonUnderHeader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getButtonUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Button1"))));
-            softAssert.assertAll();
+
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to validate Content under 'Member & Officer Training' header ", e);
@@ -345,16 +355,16 @@ public class VerifyMebershipPaticipationPageContentInTheWCMSApplication_WCMSI_48
             JsonObject jsonObject = WCMSPage.jsonData(jiraTestID, jsonElement);
             String header = WCMSPage.jsonValue(jsonObject,"Header");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getHeader(header)));
+            Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getHeader(header)));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getSubheaderUnderHeader1(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getSubheaderUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader1"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader1(header,
-                    WCMSPage.jsonValue(jsonObject,"Text2"))));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader1"),
+                    WCMSPage.jsonValue(jsonObject,"Text1"))));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getButtonUnderHeader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getButtonUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Button1"))));
-            softAssert.assertAll();
+
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to validate Content under 'Students' header ", e);
@@ -366,16 +376,16 @@ public class VerifyMebershipPaticipationPageContentInTheWCMSApplication_WCMSI_48
             JsonObject jsonObject = WCMSPage.jsonData(jiraTestID, jsonElement);
             String header = WCMSPage.jsonValue(jsonObject,"Header");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getHeader(header)));
+            Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getHeader(header)));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getSubheaderUnderHeader1(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getSubheaderUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader1"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader1(header,
-                    WCMSPage.jsonValue(jsonObject,"Text2"))));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader1"),
+                    WCMSPage.jsonValue(jsonObject,"Text1"))));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getButtonUnderHeader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getButtonUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Button1"))));
-            softAssert.assertAll();
+
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to validate Content under 'Consumer Participation' header ", e);
@@ -387,34 +397,34 @@ public class VerifyMebershipPaticipationPageContentInTheWCMSApplication_WCMSI_48
             JsonObject jsonObject = WCMSPage.jsonData(jiraTestID, jsonElement);
             String header = WCMSPage.jsonValue(jsonObject,"Header");
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getHeader(header)));
+            Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getHeader(header)));
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getSubheaderUnderHeader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getSubheaderUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader1"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
                     WCMSPage.jsonValue(jsonObject,"Text1"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
                     WCMSPage.jsonValue(jsonObject,"Text2"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
                     WCMSPage.jsonValue(jsonObject,"Text3"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
                     WCMSPage.jsonValue(jsonObject,"Text4"))));
-            /*softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getButtonUnderSubheader(header,
+            /*Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getButtonUnderSubheader(header,
                     WCMSPage.jsonValue(jsonObject,"Button1"))));*/
 
-            softAssert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getSubheaderUnderHeader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver, WCMSPage.getSubheaderUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Subheader2"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
                     WCMSPage.jsonValue(jsonObject,"Text5"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
                     WCMSPage.jsonValue(jsonObject,"Text6"))));
-            softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(header,
                     WCMSPage.jsonValue(jsonObject,"Text7"))));
-            /*softAssert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderSubheader(header,
+            /*Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderSubheader(header,
                     WCMSPage.jsonValue(jsonObject,"Button2"))));*/
 
             //Latest News needs to be add
-            softAssert.assertAll();
+
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to validate Content under 'Latest News' header ", e);

@@ -26,8 +26,6 @@ appium/util/CapabilityFactory.java
  appium.util.CapabilityFactory
 base/utils/ScreenshotUtil.java
  base.utils.ScreenshotUtil
-com/astm/commonFunctions/IntegrationCommon.java
- com.astm.commonFunctions.IntegrationCommon
 base/utils/WebEventListener.java
  base.utils.WebEventListener
 com/db/util/QueryUtil.java
@@ -42,12 +40,12 @@ base/utils/ConfigReader.java
  base.utils.ConfigReader
 TestListeners/TestListener.java
  TestListeners.TestListener
+com/astm/commonFunctions/Common.java
+ com.astm.commonFunctions.Common
 base/utils/MethodType.java
  base.utils.MethodType
 base/utils/ScreenRecorderUtil.java
  base.utils.ScreenRecorderUtil
-base/utils/MailinatorUtils.java
- base.utils.MailinatorUtils
 base/utils/ExcelDataConfig.java
  base.utils.ExcelDataConfig
 base/utils/XrayUtilOld.java
@@ -62,16 +60,12 @@ com/db/util/OracleDBUtil.java
  com.db.util.OracleDBUtil
 appium/util/OptionsManager.java
  appium.util.OptionsManager
-com/astm/commonFunctions/EbsManualVerificationFileWriter.java
- com.astm.commonFunctions.EbsManualVerificationFileWriter
 base/utils/XrayUtil.java
  base.utils.XrayUtil
 base/utils/JSONUtilities.java
  base.utils.JSONUtilities
 base/utils/WaitStatementUtils.java
  base.utils.WaitStatementUtils
-com/astm/commonFunctions/PublicAdminCommons.java
- com.astm.commonFunctions.PublicAdminCommons
 base/utils/RandomStringUtils.java
  base.utils.RandomStringUtils
 base/utils/SendEmail.java

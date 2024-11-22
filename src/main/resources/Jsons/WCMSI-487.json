@@ -1,0 +1,120 @@
+{
+  "WCMSI-487": {
+    "Menu": "FAQ"
+  },
+    "FrequentlyAskedQuestions": {
+      "Mainheader": "Frequently Asked Questions",
+      "Text": "Get answers to common questions about ASTM standards, copyright, meetings, membership, and more"
+    },
+    "General": {
+      "Header": "General",
+      "Dropdown1": "What is ASTM International?",
+      "Text1": "> Formed in 1898, ASTM International (formerly the American Society for Testing and Materials) is a not-for-profit global leader in the development and delivery of voluntary consensus standards.",
+      "Dropdown2": "Who are the members of ASTM International?",
+      "Text2": "> ASTM members represent producers of materials/products/systems/services, users of those materials/products/systems/services other than for household use, testing labs, government agencies, trade groups, medical professionals, engineers, consumers and consumer advocacy groups, and academia."
+    },
+  "Standards": {
+    "Header": "Standards",
+    "Dropdown1": "What is an ASTM standard? ",
+    "Text1": "> A standard is a document that has been developed and established within the consensus principles of ASTMs procedures and regulations. Standards provide information to  manufacturers, laboratories, retailers, and consumers. In ASTM International, the term standard serves as a nominative adjective in the title of documents, such as test methods or specifications, to connote specified consensus and approval. The various types of standard documents are based on the needs and usages as prescribed by the technical committees of the Society.  ",
+    "Dropdown2": "Who creates the standards?",
+    "Text2": "> More than 30,000 volunteer members from across 150 countries come together to develop, write, and support standards through their service on one or more of our nearly 150 technical committees. ",
+    "Dropdown3": "What are the benefits of using standards?",
+    "Text3": "> The benefits of standards are many and include aligning best practices, enhancing safety, maintaining uniformity, avoiding duplication of efforts, and building trust. ",
+    "Dropdown4": "Why are standards important?",
+    "Text4": "> Standards make us feel safer, protect our children, enable products to enter into the marketplace faster, provide consumer confidence, protect the environment and much more. Standards make their mark on almost every product, process, and service, including housing (building codes), food (organic food, sanitary requirements, and can sizes), clothing (sizing and labeling), household appliances (safety, energy consumption, and reliability), customer services (protection of personal information), consumer products (toys, furniture, sports equipment), and much more. ",
+    "Dropdown5": "How long does it take to develop an ASTM standard?",
+    "Text5": "> This depends on several factors including the length of the document, complexity of the technology, research and testing needs, and marketplace urgency. The average is about 16 months, but new standards have been approved in as little as 9 months. With advanced technology, we try to get new high-quality, relevant standards into the marketplace as quickly as possible.  ",
+    "Dropdown6": "What is the process for developing an ASTM standard?",
+    "Text6": "> ASTM International standards are developed within one of our nearly 150 technical committees. The work typically begins with an informal task group preparing a draft which can then be forwarded into the balloting process. For a standard to be published as an ASTM International standard, the document must successfully move through and pass ASTMs rigorous consensus requirements. Balloting begins within a subcommittee before moving to the main committee/society/public review where all members have an opportunity to vote. If the consensus requirements at all levels are met, it then moves on to the Committee on Standards (COS) to ensure proper procedures were followed and due process is achieved. ",
+    "Dropdown7": "Who governs ASTM International’s standards development procedures?",
+    "dropdown7": "Who governs ASTM International",
+    "Text7": "> ASTMs governing body is our board of directors, which is elected by the entire membership. The board and its standing committees have established procedures to ensure that standards are developed on a consensus basis, that all dissenting parties receive due process, and that all our standards follow style and format requirements. "
+  },
+  "CopyrightAndPermissions": {
+    "Header": "Copyright and Permissions",
+    "Dropdown1": "Can a company indicate that their product conforms to an ASTM standard?",
+    "Text1": "> An organization may do their own testing/verification and represent that their product meets an ASTM standard by referencing the specific designation (e.g.,Complies with or meets ASTM AXXX-YY [and, where possible, the title of the relevant standard]). ",
+    "Dropdown2": "Where can I obtain information about copying or distributing copies of ASTM standards?",
+    "Text2": "> ASTM International provides the ability for customers who have already purchased an individual ASTM product or subscription service to get authorized permission to share content or make reproductions of its copyrighted materials in two offerings: PAY PER USE and ANNUAL LICENSE. Learn more. "
+  },
+  "TrainingCertification": {
+    "Header": "Training and Certification",
+    "Dropdown1": "Does ASTM offer Continuing Education Credits (CEUs)?",
+    "Text1": "> ASTMs Training and eLearning Department is proud to offer continuing education units (CEUs), professional development hours (PDHs), and CPD hours for our expansive catalog of training courses. Learn more. ",
+    "Dropdown2": "Does ASTM certify products?",
+    "Text2": "> ASTM does not certify products.  We offer voluntary certification programs for materials, products, systems, services based on globally-recognized standards, including ASTM, ANSI, CSA, NFPA, NIJ, and NOCSAE. These certification programs are offered through the Safety Equipment Institute, an ASTM International affiliate. Learn more. ",
+    "Dropdown3": "Does ASTM certify personnel?",
+    "Text3": "> Our Training and eLearning Division offers several personnel certification programs designed to assess the knowledge and ability to perform, record, and report the results of ASTM standards. Learn more. "
+  },
+  "RegulationsGovernment": {
+    "Header": "Regulations and Government",
+    "Dropdown1": " How are standards used in laws and regulations?",
+    "Text1": "> When compliance with a standard is not mandated by law, market participants observe standards simply because it is in their interest to do so.  The content of voluntary standards may be incorporated by reference directly into government statutes and regulations and then must be followed as a matter of law.  ",
+    "Dropdown2": "How do federal government agencies use standards?",
+    "Text2": "> The National Technology Transfer and Advancement Act of 1995 (NTTAA) requires federal government agencies to use standards developed by voluntary consensus standards organization such as ASTM. Using voluntary consensus standards means the government can avoid the costs of developing its own standards.",
+    "Dropdown3": "Do federal government regulators participate in standards development?",
+    "Text3": "> Yes, federal government agencies are encouraged to participate in standards development organizations per the National Technology Transfer and Advancement Act of 1995 (NTTAA). Additionally, OMB Circular A-119 reinforces the goals of the NTTAA and clarifies that agency representatives can participate, vote, and even lead activities. ",
+    "Dropdown4": "Do state regulators participate in standards development?",
+    "Text4": "> While on the state level there is no uniform policy like the NTTAA, state government employees regularly participate in ASTM committees. Currently, more than 300 state government employees from departments such as transportation, agriculture, and healthcare are members of ASTM committees. "
+  },
+  "Membership": {
+    "Header": "Membership",
+    "Dropdown1": "Who can join ASTM International?",
+    "Text1": "> Anyone who has interest in the field covered by a committees scope is eligible to become a committee member. ",
+    "Dropdown2": "How do I become an ASTM International member?",
+    "Text2": "> View the types of ASTM membership and join online. Your annual membership fee comes with one complimentary volume of the Annual Book of Standards in print or online. ",
+    "Dropdown3": "Are membership fees taxable?",
+    "Text3": "> The taxability of membership fees is subject to the applicable sales tax rules and regulations of your jurisdiction. ",
+    "Dropdown4": "How long is my ASTM International membership active?",
+    "Text4": "> ASTM memberships are based on a yearly renewal cycle. The renewal period for the annual membership is between October and March. Members who do not renew their membership during that period will have their membership dropped. A lapsed membership can be reinstated at any time.  ",
+    "Dropdown5": "Does ASTM offer training for new members?",
+    "Text5": "> Yes, ASTM offers several options for new members to learn the ASTM process and expectations. Visit the Virtual Classroom for Members. ",
+    "Dropdown6": " Does ASTM offer a Member Discount?",
+    "Text6": "> ASTM Members receive a 10% discount on all publications, subject to verification of membership number. If you are an ASTM Member, please login when you come to the ASTM website so that we recognize your membership and apply the 10% discount to your order. If members do not login, download products will be charged at list price. Discounts do not apply to all products and cannot be combined. When discounts overlap, the higher discount will be applied. For example, a member who orders 10 copies of a publication will receive the 25% discount. ",
+    "Dropdown7": "What is the difference between a non-voting member and a voting member?",
+    "Text7": "> A voting interest is defined as an organization, a subsidiary of an organization or an unassociated individual member having a distinctly separate interest from any other interests with regard to the scope of a committee or subcommittee, while a voting member has the official vote on ballots and motions concerned with ASTM standards. While each voting interest is allowed one voting member, the Regulations also define non-official voting member as one whose votes and comments on all ballots or motions shall be fully considered, but whose votes are not included in the calculation of the numerical voting requirements for standards. Each ASTM member, whether an official voting member or not, can vote on all Society Review items as well as on each ballot of a main committee and subcommittee to which the member belongs. Negatives and comments submitted from all ballot returns, from official and non-official voting members alike, must be considered. ",
+    "Dropdown8": "Where can I find additional member training documents and guidance?",
+    "Text8": "> Visit the Member Resources section. "
+  },
+  "Meetings": {
+    "Header": "Meetings",
+    "Dropdown1": "Who conducts ASTM International committee meetings?",
+    "Text1": "> Volunteer members, with guidance from ASTM staff, are elected or appointed to serve in various leadership positions and conduct the meetings in accordance with the ASTM Regulations Governing Technical Committee Operations. ",
+    "Dropdown2": "Who can attend ASTM committee meetings?",
+    "Text2": "> Any person who has an interest in the subject matter can attend an ASTM meeting. There is no requirement that you be a member of ASTM to attend, but registration is required. ",
+    "Dropdown3": "Is there a meeting registration fee?",
+    "Text3": "> No. ASTM Internationals free meeting registration ensures fees are not a barrier to participation. Some committees collect a nominal voluntary activity fee to support committee activities like symposia. ",
+    "Dropdown4": "How can I register for a meeting?",
+    "Text4": "> You can register for upcoming meetings in several ways: Check the full list of upcoming events and register through our website or in your member portal My ASTM ",
+    "Dropdown5": "How can I download an agenda for the upcoming meeting?",
+    "Text5": "> If an agenda is available for an upcoming meeting, you can access it by logging in to your My ASTM account. Go to your My Committees page and click on the link for Agendas under the appropriate committee heading. ",
+    "Dropdown6": "How are committee meetings conducted?",
+    "Text6": "> The chair leading the group will adhere to an agenda. Important actions are listed on the agenda. Attendees can bring any matter of importance before the group during the New Business portion. ",
+    "Dropdown7": "When do committees regularly meet and where can I learn more about the next meeting?",
+    "Text7": "> Most ASTM International technical committees meet in-person bi-annually and hold virtual meetings throughout the year. Visit the ASTM meetings page to search for a committee or contact your staff manager. "
+  },
+  "Symposia": {
+    "Header": "Symposia",
+    "Dropdown1": "How do I propose an ASTM symposia, workshop, conference or symposia?",
+    "Text1": "> The event chair or subcommittee representative must complete an official proposal and submit it to the committee representative, ASTM Staff Manager, and the Symposia Manager. The sponsoring technical committees executive subcommittee will review the proposal for approval of the event. Submit your form here. ",
+    "Dropdown2": "What are the responsibilities of a symposia chair?",
+    "Text2": "> View Symposia Chair Duties and Responsibilities list here. "
+  },
+  "SubscriptionsOrderSupport": {
+    "Header": "Subscriptions and Order Support",
+    "Dropdown1": "How do I order a single standard in PDF format?",
+    "Text1": ">  Locate your standard by typing the standard designation number (no space, dash or year) into the search box. On the search results page, click the title of the standard to go to the standards webpage where you can Add to Cart. After your payment has been authorized, a Go To My PDF Download link will appear. This link will allow you to save your purchased  standard(s) to your computer. You will also receive an email confirmation with a link that will provide access to the standard(s) for 24 hours. If you prefer not to order online, you may contact ASTM Inside Sales directly at +1.877.909.2786. ",
+    "Dropdown2": "I purchased a subscription, how do I access it?",
+    "Text2": "ASTM International offers subscription access via single and multi-user license.  Single-user license holders may access their subscription by using the following instructions.  Multi-user license holders must contact their organizations administrator to receive access instructions. ",
+    "Dropdown3": "What is your Return Policy?",
+    "Text3": "ALL SALES ARE FINAL, with the following limited exceptions:  ASTM will (1) replace defective products and (2) reship orders improperly filled or electronically downloaded, only if an authorization number is first obtained from ASTMs Inside Sales and Technical Support Department.  ASTM will not accept returns: (1) without prior authorization; or (2) after 30 days from shipment of the order. All materials, including the original accompanying packing list, must be returned. The authorization number must be clearly annotated and displayed on the return package.  ASTM reserves the right to determine if an improper or incomplete return will be destroyed or returned to the consumer at the consumers expense. No funds will be refunded or credited to an account without the return authorization number. To contact the Inside Sales and Technical Support Department, call (610) 832-9585 or email using our webform. Domestic Shipping ",
+    "Dropdown4": " I need an invoice for a recent order, how do I get it?",
+    "Text4": "Our Inside Sales and Support (ISS) team will be able to provide you with a copy of your invoice. Please submit a request here. ",
+    "dropdown5": "My organization has purchased a multi-user ASTM Compass",
+    "Dropdown5": "My organization has purchased a multi-user ASTM Compass® license, how do I access my content if we have:",
+    "Text5": "SingleSignOn (SSO)  - If your Organization uses Single Sign On you will have a dedicated URL for ASTM Compass that will allow you to use your Organization Credentials to gain access to the COMPASS platform.  - You may have an Administrator in your Organization who has the URL, or it may be posted on an internal webpage.  - You may also need to be granted access to the Application for Single Sign On by your IT administrator.  Username and Password  - If your Organization utilizes our Username and Password option you will need to contact your administrator to request an invitation to the platform.  - Users register in the platform with their work email and create a unique password for the COMPASS Platform. - If you cannot recall your password please follow this link https://secure.astm.org/forgot-password to request a password reset - If you do not receive the reset link please check your spam folder, if no email is there you may not be registered and will need to request an invitation to the platform from your administrator. IP Authentication  - For organizations that use IP verification you must originate from an IP address that is on file with us.  - You can navigate directly to https://compass.astm.org and then either register for the platform or sign in if you are an existing user. - The registration button will appear below the password area for new users coming from the correct IP address.  - If you receive an error that includes an IP address in it please contact your administrator.  Applet  - The ASTM Applet is a configuration that is built to allow users to navigate from a link on a non-public facing website, most likely an intranet page that only authorized users can access. - This allows users to follow the link and be taken directly in to the COMPASS platform from any location bypassing IP authentication.  - If you are unable to locate the link or have issues accessing it please contact your administrator. ",
+    "Dropdown6": "having trouble logging into my account, how do I reset my password",
+    "Text6": "View instructions on resetting your password here. "
+  }
+}

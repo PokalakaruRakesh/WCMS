@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>7/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Oct 17 16:05:18 IST 2024</td>
+<td>Started on:</td><td>Fri Nov 22 16:04:47 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>87 seconds (87362 ms)</td>
+<tr><td>Total time:</td><td>409 seconds (409557 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,87 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.ui.WCMSContent.VerifyHelpContentInTheWCMSApplication_WCMSI_485.verifyHelpContentInTheWCMSApplication()'><b>verifyHelpContentInTheWCMSApplication</b><br>Test class: tests.ui.WCMSContent.VerifyHelpContentInTheWCMSApplication_WCMSI_485<br>Test method: WCMSI-485: Verify the Help content in the WCMS application - Set 1</td>
+<td><div><pre>java.lang.AssertionError: Other Policies content not matched did not expect to find [true] but found [false]
+	at tests.ui.WCMSContent.VerifyHelpContentInTheWCMSApplication_WCMSI_485.validateContentUnderPoliciesHeader(VerifyHelpContentInTheWCMSApplication_WCMSI_485.java:128)
+	at tests.ui.WCMSContent.VerifyHelpContentInTheWCMSApplication_WCMSI_485.verifyHelpContentInTheWCMSApplication(VerifyHelpContentInTheWCMSApplication_WCMSI_485.java:39)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 51 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1472150283", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1472150283'><pre>java.lang.AssertionError: Other Policies content not matched did not expect to find [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at tests.ui.WCMSContent.VerifyHelpContentInTheWCMSApplication_WCMSI_485.validateContentUnderPoliciesHeader(VerifyHelpContentInTheWCMSApplication_WCMSI_485.java:128)
+	at tests.ui.WCMSContent.VerifyHelpContentInTheWCMSApplication_WCMSI_485.verifyHelpContentInTheWCMSApplication(VerifyHelpContentInTheWCMSApplication_WCMSI_485.java:39)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:133)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>70</td>
+<td>tests.ui.WCMSContent.VerifyHelpContentInTheWCMSApplication_WCMSI_485@61d589e4</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,10 +156,40 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.ui.WCMS.VerifyAboutPageNavigationFromHomePage.ValidateTheAboutPage()'><b>ValidateTheAboutPage</b><br>Test class: tests.ui.WCMS.VerifyAboutPageNavigationFromHomePage</td>
+<td title='tests.ui.WCMSContent.Verify125thAnniversaryCaseStudiesPageContentInTheWCMSApplication_WCMSI_493.verify125thAnniversaryCaseStudiesContentInTheWCMSApplication()'><b>verify125thAnniversaryCaseStudiesContentInTheWCMSApplication</b><br>Test class: tests.ui.WCMSContent.Verify125thAnniversaryCaseStudiesPageContentInTheWCMSApplication_WCMSI_493<br>Test method: WCMSI-493: Verify the 125th Anniversary Case Studies content in the WCMS application - Set 2</td>
 <td></td>
-<td>75</td>
-<td>tests.ui.WCMS.VerifyAboutPageNavigationFromHomePage@44398ff7</td></tr>
+<td>27</td>
+<td>tests.ui.WCMSContent.Verify125thAnniversaryCaseStudiesPageContentInTheWCMSApplication_WCMSI_493@16bb0379</td></tr>
+<tr>
+<td title='tests.ui.WCMSContent.VerifyAboutASTMPageContentInTheWCMSApplication_WCMSI_465.verifyAboutASTMPageContentInTheWCMSApplication()'><b>verifyAboutASTMPageContentInTheWCMSApplication</b><br>Test class: tests.ui.WCMSContent.VerifyAboutASTMPageContentInTheWCMSApplication_WCMSI_465<br>Test method: WCMSI-465: Verify the About ASTM page content in the WCMS application - Set 1</td>
+<td></td>
+<td>21</td>
+<td>tests.ui.WCMSContent.VerifyAboutASTMPageContentInTheWCMSApplication_WCMSI_465@2450d33f</td></tr>
+<tr>
+<td title='tests.ui.WCMSContent.VerifyAboutStandardsAndSolutionsContentInTheWCMSApplication_WCMSI_484.verifyAboutStandardsAndSolutionsContentInTheWCMSApplication()'><b>verifyAboutStandardsAndSolutionsContentInTheWCMSApplication</b><br>Test class: tests.ui.WCMSContent.VerifyAboutStandardsAndSolutionsContentInTheWCMSApplication_WCMSI_484<br>Test method: WCMSI-484: Verify the Standards and Solutions page content in the WCMS application - Set 1</td>
+<td></td>
+<td>23</td>
+<td>tests.ui.WCMSContent.VerifyAboutStandardsAndSolutionsContentInTheWCMSApplication_WCMSI_484@78d44d57</td></tr>
+<tr>
+<td title='tests.ui.WCMSContent.VerifyConsumerParticipationPageContentInTheWCMSApplication_WCMSI_506.verifyConsumerParticipationPageContent()'><b>verifyConsumerParticipationPageContent</b><br>Test class: tests.ui.WCMSContent.VerifyConsumerParticipationPageContentInTheWCMSApplication_WCMSI_506<br>Test method: WCMSI-506: Verify the Consumer Participation content in the WCMS application - Set 2</td>
+<td></td>
+<td>24</td>
+<td>tests.ui.WCMSContent.VerifyConsumerParticipationPageContentInTheWCMSApplication_WCMSI_506@5bec32e3</td></tr>
+<tr>
+<td title='tests.ui.WCMSContent.VerifyFAQContentInTheWCMSApplication_WCMSI_487.verifyFAQContentInTheWCMSApplication()'><b>verifyFAQContentInTheWCMSApplication</b><br>Test class: tests.ui.WCMSContent.VerifyFAQContentInTheWCMSApplication_WCMSI_487<br>Test method: WCMSI-487: Verify the FAQ content in the WCMS application - Set 1</td>
+<td></td>
+<td>108</td>
+<td>tests.ui.WCMSContent.VerifyFAQContentInTheWCMSApplication_WCMSI_487@43be67ca</td></tr>
+<tr>
+<td title='tests.ui.WCMSContent.VerifyHistoryContentInTheWCMSApplication_WCMSI_489.verifyHistoryContentInTheWCMSApplication()'><b>verifyHistoryContentInTheWCMSApplication</b><br>Test class: tests.ui.WCMSContent.VerifyHistoryContentInTheWCMSApplication_WCMSI_489<br>Test method: WCMSI-489: Verify the History content in the WCMS application - Set 2</td>
+<td></td>
+<td>33</td>
+<td>tests.ui.WCMSContent.VerifyHistoryContentInTheWCMSApplication_WCMSI_489@4cdf5140</td></tr>
+<tr>
+<td title='tests.ui.WCMSContent.VerifyMebershipPaticipationPageContentInTheWCMSApplication_WCMSI_483.verifyMebershipPaticipationPageContentInTheWCMSApplication()'><b>verifyMebershipPaticipationPageContentInTheWCMSApplication</b><br>Test class: tests.ui.WCMSContent.VerifyMebershipPaticipationPageContentInTheWCMSApplication_WCMSI_483<br>Test method: WCMSI-483: Verify the Mebership & Paticipation page content in the WCMS application - Set 1</td>
+<td></td>
+<td>42</td>
+<td>tests.ui.WCMSContent.VerifyMebershipPaticipationPageContentInTheWCMSApplication_WCMSI_483@522ba8bd</td></tr>
 </table><p>
 </body>
 </html>

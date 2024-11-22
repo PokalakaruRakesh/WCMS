@@ -9,7 +9,7 @@ public class LaboratoryServices_WCMS extends BasePage {
         super(driver);
     }
     public static By videolink=By.xpath("//a[text()='ASTM International Laboratory Services']']");
-    public static WebElement getVideoLink(){
+    public  WebElement getVideoLink(){
         return  driver.findElement(videolink);
     }
     public By LaboratoryServicesOverview= By.xpath("//a[@title='Laboratory Services Overview']");

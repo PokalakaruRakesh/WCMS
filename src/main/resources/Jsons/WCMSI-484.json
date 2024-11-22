@@ -3,93 +3,93 @@
     "Menu": "Standards & Solutions",
     "Submenu": "Standards & Solutions Overview"
   },
-    "StandardsSolutions": {
-      "Header": "Standards & Solutions",
-      "Text1": "ASTM provides the standards and solutions you need to achieve the highest levels of quality, safety and performance. View the standards you need instantly from any location with our subscription-based platforms and enterprise solutions. Our cutting-edge technology puts you in full control of how and where you get your content. Not only will you enjoy ease of access, but you’ll also benefit from customized user tools to help you avoid errors, simplify processes, and collaborate more efficiently. Whether as an individual or an enterprise, out in the field or in the laboratory or a classroom, our comprehensive solutions are built to help you work smarter."
-    },
-    "Standards": {
-      "Header": "Standards",
-      "Text1": "More than 13,000 ASTM standards are used worldwide to improve product quality, enhance safety, and facilitate trade. Organized in 80+ volumes, published ASTM standards are available individually, as print or online volumes, or as entire sections covering an industry.",
-      "Text2": "Get full access to online volumes that are updated weekly using our state-of-the-art ASTM Compass® platform. Enjoy a host of benefits when you subscribe to online standards, including custom workflow tools like annotations, version comparisons, bookmarks, and more. Plus view historical, withdrawn, and redlined versions of standards so you can compare versions. In addition, see which standards are currently being balloted for updates with the current list of work items. ",
-      "Button1": "Learn More",
-      "Button2": "Find an individual standard",
-      "Text3": "Or"
-    },
-    "EnterpriseSolutions": {
-      "Header": "Enterprise Solutions",
-      "Text": "Our expansive business offerings empower organizations and their teams to consistently work more effectively, removing common roadblocks that can affect productivity and profit. How? By bringing our tested and established technical infrastructure to you. Whether you’re seeking to make your own content more accessible, expand your brand awareness, or collaborate more efficiently, we have your solution.",
-      "Header1": "Subscription Portals",
-      "Text1": "Create your own enterprise subscription-based content platform for your users using the highly-developed ASTM Compass® design and leveraging its robust functionality.",
-      "Header2": "ASTM Compass",
-      "Text2": "Bring your content to a whole new audience when you add it to one of the most comprehensive online libraries of technical information in the world.",
-      "Header3": "ASTM SpecBuilder",
-      "Text3": "Collaborate, create, and publish internal documents using the same intelligent digital collaboration tool used to develop thousands of ASTM standards. ",
-      "Header4": "Third-Party Content",
-      "Text4": "Explore a broad selection of content from leading standards development organizations such as AASHTO, AATCC, UNE (AENOR), API, AWWA, CGA, IES, and UOP.",
-      "Header5": "Multimedia Services",
-      "Text5": "Reimagine your technical content with custom digital media that engages your stakeholders, improves your internal methods, and boosts your brand."
-    },
-    "DigitalLibrary": {
-      "Header": "Global Cooperation",
-      "Text1": "Get on-demand access to every published ASTM book, paper, and journal article dating back to 1932 in the ASTM Digital Library. These publications provide critical insight on the proper applications and interpretation of our standards, industry-specific research and development, and the future need for new standards in emerging industries",
-      "Text2": "Thousands of papers and articles cover a broad range of engineering disciplines, including aerospace, biomedical, chemical, civil, environmental, geological, health and safety, industrial, materials science, mechanical, nuclear, petroleum, soil science, and solar engineering.",
-      "Text3": "Now available on the ASME Digital Collections, powered by Silverchair."
-    },
-    "MarketInsightsInnovation": {
-      "Header": "Market Insights & Innovation",
-      "Subheader1": "Empowering Emerging Sectors and Steering Innovation",
-      "Text1": "Navigating trends is key to ASTM’s mission as a global standards organization at the forefront of innovation in all industries. We offer innovative products and services for businesses that provide crucial and relevant insights to help you confidently make impactful decisions, generate new opportunities, and improve performance.",
-      "Subheader2": "ASTM Xcellerate",
-      "Text2": "Xcellerate helps new innovations quickly demonstrate their safety, reliability, quality, and relevance through standards.",
-      "Button1": "Learn More",
-      "Subheader3": "Centers of Excellence",
-      "Text3": "Our Centers of Excellence conduct strategic R&D that enables different emerging technologies to make better use of standards to drive up quality and accelerate commercial success.",
-      "Button2": "Learn More",
-      "Subheader4": "Standardization Impact Report",
-      "Text4": "Get a strategic overview of global innovation trends and the role that standards and several key ASTM committees play in supporting them.",
-      "Button3": "Learn More",
-      "Subheader5": "Market Intelligence & Wohlers Reports",
-      "Text5": "In-depth coverage of the latest research and development topics, plus the most current information on growth, trends, and new developments in additive manufacturing.",
-      "Button3": "Learn More"
-    },
-    "LaboratoryServices": {
-      "Header": "Laboratory Services",
-      "Subheader1": "Comprehensive Solutions for All Your QA/QC Needs",
-      "Text1": "From proficiency testing programs, data management, and reference materials to test method training and standard operating procedures, we provide cost-effective, integrated products for all types of laboratories.",
-      "Button1": "Learn More"
-    },
-    "TrainingCertification": {
-      "Header": "Training & Certification",
-      "Subheader1": "Training",
-      "Text1": "Learn how to perform and use the standards you need to know with a host of industry training opportunities, both online and in-person.",
-      "Button1": "Learn More",
-      "Subheader2": "Certification",
-      "Text2": "Satisfy regulatory requirements with third-party certification for your products. Advance your career and improve team performance with online personnel certification and certification programs.",
-      "Button2": "Learn More"
-    },
-    "CementandConcreteReferenceLaboratory": {
-      "Header": "Cement and Concrete Reference Laboratory",
-      "Subheader1": "Training",
-      "Text1": "Improve the quality of your testing in the construction materials industry through the ASTM Cement and Concrete Reference Laboratory (CCRL). Through its Laboratory Inspection and Proficiency Sample Programs, CCRL provides the instruction, guidance and clarification you need to apply ASTM standards in a professional, accurate, and consistent manner.",
-      "Button1": "Learn More"
-    },
-    "LatestNews": {
-      "Header": "Latest News",
-      "Subheader1": "",
-      "Text1": "",
-      "Text2": "",
-      "Text3": "",
-      "Text4": "",
-      "Button1": "",
-      "Subheader2": "",
-      "Text5": "",
-      "Text6": "",
-      "Text7": "",
-      "Button2": "",
-      "Subheader3": "",
-      "Text8": "",
-      "Text9": "",
-      "Text10": "",
-      "Button3": ""
-    }
+  "StandardsSolutions": {
+    "Header": "Standards & Solutions",
+    "text1": "ASTM provides the standards and solutions",
+    "Text1": "ASTM provides the standards and solutions you need to achieve the highest levels of quality, safety and performance. View the standards you need instantly from any location with our subscription-based platforms and enterprise solutions. Our cutting-edge technology puts you in full control of how and where you get your content. Not only will you enjoy ease of access, but youll also benefit from customized user tools to help you avoid errors, simplify processes, and collaborate more efficiently. Whether as an individual or an enterprise, out in the field or in the laboratory or a classroom, our comprehensive solutions are built to help you work smarter."
+  },
+  "Standards": {
+    "Header": "Standards",
+    "Text1": "More than 13,000 ASTM standards are used worldwide to improve product quality, enhance safety, and facilitate trade. Organized in 80+ volumes, published ASTM standards are available individually, as print or online volumes, or as entire sections covering an industry.",
+    "Text2": "Get full access to online volumes that are updated weekly using our state-of-the-art ASTM Compass® platform. Enjoy a host of benefits when you subscribe to online standards, including custom workflow tools like annotations, version comparisons, bookmarks, and more. Plus view historical, withdrawn, and redlined versions of standards so you can compare versions. In addition, see which standards are currently being balloted for updates with the current list of work items. ",
+    "Button1": "Learn More",
+    "Button2": "Find an individual standard",
+    "Text3": "Or"
+  },
+  "EnterpriseSolutions": {
+    "Header": "Enterprise Solutions",
+    "text": "Our expansive business offerings",
+    "Text": "Our expansive business offerings empower organizations and their teams to consistently work more effectively, removing common roadblocks that can affect productivity and profit. How? By bringing our tested and established technical infrastructure to you. Whether youre seeking to make your own content more accessible, expand your brand awareness, or collaborate more efficiently, we have your solution.",
+    "Header1": "Subscription Portals",
+    "text1": "Create your own enterprise subscription-based",
+    "Text1": "Create your own enterprise subscription-based content platform for your users using the highly-developed ASTM Compass design and leveraging its robust functionality.",
+    "Header2": "ASTM Compass",
+    "Text2": "Bring your content to a whole new audience when you add it to one of the most comprehensive online libraries of technical information in the world.",
+    "Header3": "ASTM SpecBuilder",
+    "Text3": "Collaborate, create, and publish internal documents using the same intelligent digital collaboration tool used to develop thousands of ASTM standards. ",
+    "Header4": "Third-Party Content",
+    "Text4": "Explore a broad selection of content from leading standards development organizations such as AASHTO, AATCC, UNE (AENOR), API, AWWA, CGA, IES, and UOP.",
+    "Header5": "Multimedia Services",
+    "Text5": "Reimagine your technical content with custom digital media that engages your stakeholders, improves your internal methods, and boosts your brand."
+  },
+  "DigitalLibrary": {
+    "Header": "Digital Library",
+    "Text1": "Get on-demand access to every published ASTM book, paper, and journal article dating back to 1932 in the ASTM Digital Library. These publications provide critical insight on the proper applications and interpretation of our standards, industry-specific research and development, and the future need for new standards in emerging industries",
+    "Text2": "Thousands of papers and articles cover a broad range of engineering disciplines, including aerospace, biomedical, chemical, civil, environmental, geological, health and safety, industrial, materials science, mechanical, nuclear, petroleum, soil science, and solar engineering.",
+    "Text3": "Now available on the ASME Digital Collections, powered by Silverchair."
+  },
+  "MarketInsightsInnovation": {
+    "Header": "Market Insights & Innovation",
+    "Subheader1": "Empowering Emerging Sectors and Steering Innovation",
+    "text1": "Navigating trends is key to",
+    "Text1": "Navigating trends is key to ASTMs mission as a global standards organization at the forefront of innovation in all industries. We offer innovative products and services for businesses that provide crucial and relevant insights to help you confidently make impactful decisions, generate new opportunities, and improve performance.",
+    "Subheader2": "ASTM Xcellerate",
+    "Text2": "Xcellerate helps new innovations quickly demonstrate their safety, reliability, quality, and relevance through standards.",
+    "Subheader3": "Centers of Excellence",
+    "Text3": "Our Centers of Excellence conduct strategic R&D that enables different emerging technologies to make better use of standards to drive up quality and accelerate commercial success.",
+    "Subheader4": "Standardization Impact Report",
+    "Text4": "Get a strategic overview of global innovation trends and the role that standards and several key ASTM committees play in supporting them.",
+    "Subheader5": "Market Intelligence & Wohlers Reports",
+    "Text5": "In-depth coverage of the latest research and development topics, plus the most current information on growth, trends, and new developments in additive manufacturing.",
+    "Button": "Learn More"
+  },
+  "LaboratoryServices": {
+    "Header": "Laboratory Services",
+    "Subheader1": "Comprehensive Solutions for All Your QA/QC Needs",
+    "Text1": "From proficiency testing programs, data management, and reference materials to test method training and standard operating procedures, we provide cost-effective, integrated products for all types of laboratories.",
+    "Button1": "Learn More"
+  },
+  "TrainingCertification": {
+    "Header": "Training & Certification",
+    "Subheader1": "Training",
+    "Text1": "Learn how to perform and use the standards you need to know with a host of industry training opportunities, both online and in-person.",
+    "Button1": "Learn More",
+    "Subheader2": "Certification",
+    "Text2": "Satisfy regulatory requirements with third-party certification for your products. Advance your career and improve team performance with online personnel certification and certification programs.",
+    "Button2": "Learn More"
+  },
+  "CementandConcreteReferenceLaboratory": {
+    "Header": "Cement and Concrete Reference Laboratory",
+    "Text": "Improve the quality of your testing in the construction materials industry through the ASTM Cement and Concrete Reference Laboratory (CCRL). Through its Laboratory Inspection and Proficiency Sample Programs, CCRL provides the instruction, guidance and clarification you need to apply ASTM standards in a professional, accurate, and consistent manner.",
+    "Button": "Learn More"
+  },
+  "LatestNews": {
+    "Header": "Latest News",
+    "Subheader1": "",
+    "Text1": "",
+    "Text2": "",
+    "Text3": "",
+    "Text4": "",
+    "Button1": "",
+    "Subheader2": "",
+    "Text5": "",
+    "Text6": "",
+    "Text7": "",
+    "Button2": "",
+    "Subheader3": "",
+    "Text8": "",
+    "Text9": "",
+    "Text10": "",
+    "Button3": ""
+  }
   }

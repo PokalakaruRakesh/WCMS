@@ -1,0 +1,81 @@
+{
+  "WCMSI-497": {
+    "Menu": "Membership & Participation",
+    "Submenu": "Membership & Participation Overview",
+    "SubmenuList": "Membership"
+  },
+    "ASTMMembership": {
+      "Mainheader": "ASTM Membership",
+      "Subheader":"Strengthen your expertise, build your network, expand your business",
+      "Text1":"We welcome all who have an interest in the standards development process to join ASTM. Our volunteer members collaborate daily to create and update market-relevant industry standards.",
+      "Text2": "Our 150+ ASTM technical committees and more than 2,100 subcommittees meet both in-person and virtually, using custom-built applications for electronic balloting and online collaboration areas, to develop global standards used every day.",
+      "Text3": "Choose the type of membership that works for you and enjoy a host of benefits, from access to the latest standards you need to outstanding networking opportunities and global visibility for your business."
+    },
+  "Membership": {
+    "Header": "Membership",
+    "Text1": "Join the more than 35,000 industry professionals working to help our world work better through standardization. Our open consensus process, using advanced web and cloud-based standards development tools, ensures worldwide access for all interested individuals.",
+    "Text2": "Our 150+ ASTM technical committees and more than 2,100 subcommittees meet both in-person and virtually, using custom-built applications for electronic balloting and online collaboration areas, to develop global standards used every day.",
+    "Text3": "Choose the type of membership that works for you and enjoy a host of benefits, from access to the latest standards you need to outstanding networking opportunities and global visibility for your business.",
+    "Subheader1": "Participating Membership",
+    "Price1": "$115",
+    "Text4": "per year",
+    "Text5": "Work with your peers to contribute to and vote on new standards and revisions to existing standards that impact your industry. ",
+    "Subheader2": "Benefits include",
+    "Text6": "Join any ASTM committee",
+    "Text7": "Free standards volume",
+    "Text8": "Standardization News",
+    "Text9": "Publication discounts",
+    "Button1" : "Learn More",
+
+    "Subheader3": "Organizational Membership",
+    "Price2": "$400",
+    "Text10": "per year",
+    "Text11": "Expand your business footprintand show your commitment to global standardization.",
+    "Subheader4": "Benefits include",
+    "Text12": "Join any ASTM committee",
+    "Text13": "Free standards volume",
+    "Text14": "Standardization News",
+    "Text15": "Publication discounts",
+    "Button2" : "Learn More",
+
+    "Subheader5": "Informational Membership",
+    "Price3": "$115",
+    "Text16": "per year",
+    "Text17": "Stay abreast of important standards development for your industry.",
+    "Subheader6": "Benefits include",
+    "Text18": "Standardization News",
+    "Text19": "Publication discounts",
+    "Button3" : "Learn More",
+
+    "Subheader7": "Student Membership",
+    "Text20": "No annual fee",
+    "Text21_1": "Get a front row seat to the standards development",
+    "Text21_2": "process, enhancing your knowledge before you start using them in the workplace.",
+    "Subheader8": "Benefits include",
+    "Text22": "Scholarships and grants",
+    "Text23": "Standardization News",
+    "Text24": "Event discounts",
+    "Button4" : "Learn More"
+  },
+  "JoinASTMTechnicalCommittee": {
+    "Header": "Join an ASTM Technical Committee",
+    "Text": "Help develop the standards that impact your industry",
+    "Text1": "Wondering if ASTM has a committee for your industry? ASTM technical committees are grouped by designation according to related activities within a particular scope of work, from building and construction materials and petroleum to consumer products, aerospace, additive manufacturing and much more. ASTM members can participate on one or more committees.",
+    "Button1": "Search ASTM Technical Committees",
+    "Text2": "Wondering if ASTM has a committee for your industry? ASTM technical committees are grouped by designation according to related activities within a particular scope of work, from building and construction materials and petroleum to consumer products, aerospace, additive manufacturing and much more. ASTM members can participate on one or more committees.",
+    "Button2": "Submit a Nomination"
+  },
+  "MemberTrainingTools": {
+    "Header": "Member Training & Tools",
+    "Subheader1": "Virtual Classroom for Members",
+    "Subheader2":"New Member Orientation",
+    "Subheader3":"ASTM 101: Intro to Standards",
+    "Subheader4":"Technical Committee Resources",
+    "Subheader5":"Key Documents & Forms",
+    "Subheader6":"Membership FAQs",
+    "Subheader7":"Renew or Reinstate Membership",
+    "Subheader8": "Contact ASTM Member",
+    "LinkText": "Learn More"
+  }
+
+}

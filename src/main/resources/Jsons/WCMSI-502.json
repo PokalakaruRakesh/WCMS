@@ -1,0 +1,86 @@
+{
+  "WCMSI-502": {
+    "Menu": "Membership & Participation",
+    "Submenu": "Membership & Participation Overview",
+    "SubmenuList": "Emerging Professionals"
+  },
+  "EmergingProfessionalsProgram": {
+    "Mainheader": "Emerging Professionals Program"
+  },
+  "EmpoweringTomorrowStandardsLeaders": {
+    "header": "Empowering Tomorrow",
+    "Header": "Empowering Tomorrows Standards Leaders",
+    "text1": "The Emerging Professionals",
+    "Text1": "The Emerging Professionals (EPs) program seeks to create opportunities that facilitate participation for new members who have demonstrated the potential to be industry and committee leaders.",
+    "text2": "ASTM Committees are invited ",
+    "Text2": "ASTM Committees are invited to nominate candidates who exhibit the desire to advance in their field and become more active on their committee.",
+    "text3":"Up to ten selected",
+    "Text3": "Up to ten selected candidates per Committee Week will:",
+    "text4":"Receive round",
+    "Text4": "Receive roundtrip domestic economy airfare to and from the committee week (*up to $650)",
+    "text5":"Be provided with complimentary",
+    "Text5": "Be provided with complimentary participation in CliftonStrengths Assessment*",
+    "text6":"Attend an Emerging Professionals",
+    "Text6": "Attend an Emerging Professionals Workshop for a comprehensive introduction to ASTM and its standards development process",
+    "text7":"Receive leadership development",
+    "Text7": "Receive leadership development training from a professional facilitator and learn skills such as negotiation, consensus building, and problem solving",
+    "text8":"Participate in technical",
+    "Text8": "Participate in technical committee meetings with a committee mentor",
+    "text9":"committee week hotel",
+    "Text9": "Get twonight accommodations in the committee week hotel",
+    "text10":"The CliftonStrengths assessment, created by",
+    "Text10": "The CliftonStrengths assessment, created by Gallup and administered by McKinley Advisors, will be offered for incoming and former members of the Emerging Professionals Program.",
+    "text11":"This assessment identifies an individuals",
+    "Text11": "This assessment identifies an individuals top five strengths to help EPs discover their inherent strengths and leverage this knowledge to develop, grow, and contribute to their workplace, volunteer, and personal interactions. In addition to receiving the assessment results and analysis, EPs will be invited to a virtual workshop facilitated by McKinley to discuss how to integrate this insight into their career development plans.",
+    "text12":"This assessment adds another leadership",
+    "Text12": "This assessment adds another leadership development element to the Emerging Professionals program, and we look forward to the rich discussions it will enable."
+  },
+  "Criteria": {
+    "Header": "Criteria",
+    "Text": "Potential candidates for the program shall meet the following criteria:",
+    "SubHeader1": "Experience",
+    "text1": "ASTM standards in their work",
+    "Text1": "One to five years experience in standards development or in using ASTM standards in their work",
+    "SubHeader2": "Employment",
+    "Text2": "works for a company, association, or government agency, that is currently using and /or developing ASTM standards",
+    "SubHeader3": "Availability",
+    "Text3": "Is available to attend the appropriate technical committee meeting",
+    "SubHeader4": "Membership",
+    "Text4": "ASTM International membership is required for the candidate and mentor.Student membership is acceptable for the nominee.",
+    "Text5": "Now Accepting Nominations:",
+    "Button": "Click here for a nomination form"
+  },
+  "WorkshopSpeakers": {
+    "Header": "Workshop Speakers",
+    "SubHeader": "Mission-Driven Workshops",
+    "text": "Guest speakers at all workshops are provided",
+    "Text": "Guest speakers at all workshops are provided by McKinley Advisors in Washington,DC. McKinley has decades of experience and a steadfast commitment to advancing the work of mission-driven organizations."
+  },
+  "WorkshopDates2025": {
+    "Header": "Workshop Dates 2025",
+    "text1": "June 23-24, 2025 Toronto",
+    "Text1": "June 23-24, 2025 Toronto, Canada (nominations due by April 18, 2025)",
+    "Text2": "June D02 – June 23-24, 2025 Kansas City, MO (nominations due by April 18, 2025)",
+    "Text3": "October 6-7, 2025 – Atlanta, GA (nominations due by August 4, 2025)",
+    "Text4": "November 10-11, 2025 – Atlanta, GA (nominations due by August 28, 2025)"
+  },
+  "Testimonials": {
+    "Header": "Testimonials",
+    "SubHeader1": "Nima Shamsaei",
+    "Text1": "Auburn University",
+    "text2": "This was a great experience to become",
+    "Text2": "\"This was a great experience to become familiar with the elements of standard development as well as to meet peers, ASTM management and staff.\"",
+    "SubHeader2": "Ash Kotwal",
+    "Text3": "Martin Marietta",
+    "text4": "The program exceeded my expectations",
+    "Text4": "\"The program exceeded my expectations by providing a balanced combination of networking opportunities, committee meetings and learning experiences.\"",
+    "SubHeader3": "Carla Divieto",
+    "Text5": "National Institute of Metrological Research, Italy",
+    "text6": "I have submitted my first standard",
+    "Text6": "\"I have submitted my first standard and the first ballot went very well! 100% of acceptance! Thank you for your support and training!\""
+  },
+  "Questions": {
+    "Header": "Questions",
+    "Text": "Contact Katerina Koperna at +1.610.832.9728 or email kkoperna@astm.org"
+  }
+}

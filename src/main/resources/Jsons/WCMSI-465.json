@@ -3,71 +3,73 @@
     "Menu": "About ASTM",
     "Submenu": "About ASTM Overview"
   },
-    "AboutASTM": {
-      "Header": "About ASTM",
-      "Text1": "Over 13,000 ASTM standards operate globally. Defined and set by us, they improve the lives of millions every day. Combined with our innovative business services, they enhance performance and help everyone have confidence in the things they buy and use.",
-      "Subheader1": "13,000+ABCD",
-      "Subheader2": "Global ASTM standards",
-      "Text2": "Positively impact public health and safety, consumer confidence, and overall quality of life",
-      "Subheader3": "120+",
-      "Subheader4": "Partner countries",
-      "Text3": "8,700 citations in 75+ nations contribute to and benefit from globally accepted standards",
-      "Subheader5": "30,000+",
-      "Subheader6": "Volunteer Members",
-      "Text4": "Collaborate daily to create and update market-relevant industry standards",
-      "Text5": "For a modest fee, members help create and update standards while gaining knowledge, leadership skills, professional networks, and more.",
-      "Text6": "Benefits include a free volume of standards, Standardization News magazine, access to meeting minutes and agendas, and more."
-    },
-    "History": {
-      "Header": "History",
-      "ImageName1": "Founder Charles Dudley",
-      "ImageYear1": "1898",
-      "ImageName2": "First standard on steel rail",
-      "ImageYear2": "1901",
-      "ImageName3": "CCRL established",
-      "ImageYear3": "1929",
-      "ImageName4": "Emergency standards introduced to support WWII efforts",
-      "ImageYear4": "1942",
-      "LinkText": "Interactive Timeline",
-      "Text1": "For over 125 years, ASTM International standards and services have enhanced industry performance and empowered consumer confidence.",
-      "Button1": "View"
-    },
-    "Governance": {
-      "Header": "Governance",
-      "Subheader1": "Board of Directors",
-      "Text1": "Bios for board members and list of ASTM standing committees.",
-      "LinkText1": "Learn More",
-      "Subheader2": "Senior Staff",
-      "Text2": "Bios for ASTM senior staff, including their contact information.",
-      "LinkText2": "Learn More",
-      "Subheader3": "Annual Report",
-      "Text3": "Latest work of committees, new products and services, global outreach, and more.",
-      "LinkText3": "Learn More",
-      "Text4": "Our mission statement. Our core values. Our strategic objectives. Links to documents, and more.",
-      "Button1": "Learn More"
-    },
-    "GlobalCooperation": {
-      "Header": "Global Cooperation",
-      "Subheader1": "In-Residence Training Programs",
-      "Text1": "Capacity building for national standards bodies and others.",
-      "LinkText1": "Learn More",
-      "Subheader2": "Online Training",
-      "Text2": "A series of free online training courses for MoU members and partners.",
-      "LinkText2": "Learn More",
-      "Subheader3": "International Partners",
-      "Text3": "Global partnerships with a wide diversity of international organizations.",
-      "LinkText3": "Learn More",
-      "Button1": "Learn More"
-    },
-    "DiversityEquityInclusionBelonging": {
-      "Header": "Diversity, Equity, Inclusion, and Belonging",
-      "Text1": "ASTM International is committed to diversity, equity, inclusion, and belonging efforts within our offices, across our governance structure, and throughout our global communities. We value every voice, bringing together people from various backgrounds, cultures, experiences, and genders.",
-      "Button1": "Learn More"
-    },
-    "CultureandCareers": {
-      "Header": "Culture and Careers",
-      "Text1": "Join a team of people committed to serving global societal needs. Interested in our job openings? Our benefits? Our Core Values, and More? ",
-      "Button1": "Learn More",
-      "Button2": "VIEW OPEN OPPORTUNITIES"
-    }
+  "AboutASTM": {
+    "Header": "About ASTM",
+    "Text1": "Over 13,000 ASTM standards operate globally. Defined and set by us, they improve the lives of millions every day. Combined with our innovative business services, they enhance performance and help everyone have confidence in the things they buy and use.",
+    "Subheader1": "13,000+",
+    "Subheader2": "Global ASTM standards",
+    "Text2": "Positively impact public health and safety, consumer confidence, and overall quality of life",
+    "Subheader3": "120+",
+    "Subheader4": "Partner countries",
+    "Text3": "8,700 citations in 75+ nations contribute to and benefit from globally accepted standards",
+    "Subheader5": "30,000+",
+    "Subheader6": "Volunteer Members",
+    "Text4": "Collaborate daily to create and update market-relevant industry standards",
+    "Text5": "For a modest fee, members help create and update standards while gaining knowledge, leadership skills, professional networks, and more.",
+    "Text6": "Benefits include a free volume of standards, Standardization News magazine, access to meeting minutes and agendas, and more."
+  },
+  "History": {
+    "Header": "History",
+    "Year1": "2023",
+    "Text1": "ASTM International celebrates 125 years as one of the world’s leading standards organizations.",
+    "Year2": "2022",
+    "Text2": "ASTM Xcellerate, an emerging technology program supporting research to standards, launches",
+    "Year3": "2021",
+    "Text3": "ASTM establishes new office in Singapore.",
+    "LinkText": "Interactive Timeline",
+    "Text": "For over 125 years, ASTM International standards and services have enhanced industry performance and empowered consumer confidence.",
+    "Button": "View"
+  },
+  "Governance": {
+    "Header": "Governance",
+    "Subheader1": "Board of Directors",
+    "Text1": "Bios for board members and list of ASTM standing committees.",
+    "LinkText1": "Learn More",
+    "Subheader2": "Senior Staff",
+    "Text2": "Bios for ASTM senior staff, including their contact information.",
+    "LinkText2": "Learn More",
+    "Subheader3": "Annual Report",
+    "Text3": "Latest work of committees, new products and services, global outreach, and more.",
+    "LinkText3": "Learn More",
+    "Text4": "Our mission statement. Our core values. Our strategic objectives. Links to documents, and more.",
+    "Button1": "Learn More"
+  },
+  "GlobalCooperation": {
+    "Header": "Global Cooperation",
+    "Subheader1": "In-Residence Training Programs",
+    "Text1_1": "Capacity building for national",
+    "Text1_2": "standards bodies and others.",
+
+    "LinkText1": "Learn More",
+    "Subheader2": "Online Training",
+    "Text2": "A series of free online training courses for MoU members and partners.",
+    "LinkText2": "Learn More",
+    "Subheader3": "International Partners",
+    "Text3": "Global partnerships with a wide diversity of international organizations.",
+    "LinkText3": "Learn More",
+    "Button1": "Learn More"
+  },
+  "DiversityEquityInclusionBelonging": {
+    "Header": "Diversity, Equity, Inclusion, and Belonging",
+    "text1": "ASTM International is committed to diversity",
+    "Text1": "ASTM International is committed to diversity, equity, inclusion, and belonging efforts within our offices, across our governance structure, and throughout our global communities. We value every voice, bringing together people from various backgrounds, cultures, experiences, and genders.",
+    "Button1": "Learn More"
+  },
+  "CultureandCareers": {
+    "Header": "Culture and Careers",
+    "text1": "Join a team of people committed",
+    "Text1": "Join a team of people committed to serving global societal needs. Interested in our job openings? Our benefits? Our Core Values, and More?",
+    "Button1": "Learn More",
+    "Button2": "VIEW OPEN OPPORTUNITIES"
+  }
   }

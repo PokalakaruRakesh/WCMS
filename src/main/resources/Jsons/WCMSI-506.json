@@ -1,0 +1,74 @@
+{
+  "WCMSI-506": {
+    "Menu": "Membership & Participation",
+    "Submenu": "Membership & Participation Overview",
+    "SubmenuList": "Consumer Participation"
+  },
+    "ConsumersandASTMInternational": {
+      "Mainheader": "Consumers and ASTM International"
+    },
+    "StandardsHelpOurWorldWorkBetter": {
+      "Header": "Standards help our world work better.",
+      "Text1":"Standards underpin the safety of those who use the product or service.",
+      "Text2":"Standards set a level of expectation for how products will perform.",
+      "Text3":"Standards enhance confidence that products from different sources are interchangeable and work together.",
+      "Text4":"Standards promote quality and reliability, and support protections.",
+      "text5": "Since 1898, ASTM has been developing standards",
+      "Text5":"Since 1898, ASTM has been developing standards that meet real-world issues. From railroads to space travel and everything in between, we bring stakeholders together to create standards that are based on good science, good engineering, and good judgment. Consumers are a very important voice in ASTM."
+    },
+  "WhyConsumerVoiceMatters": {
+    "Header1": "Why the Consumer Voice Matters.",
+    "Header2":"Consumers know first-hand how products, processes and services are used.",
+    "text1_1": "Sometimes a product or service may not perform the way",
+    "Text1_1": "Sometimes a product or service may not perform the way it was intended. This could be the result of poor design or an unintended or inappropriate use. In the standards-setting process, consumers provide",
+    "text1_2": "important perspective of how products",
+    "Text1_2": "important perspective of how products and services are really used.",
+    "text2":"It was consumer members, for example",
+    "Text2":"It was consumer members, for example, who identified the dangers of drop side cribs, called for improving and strengthening warnings for liquid laundry packet hazards, demanded a new label and additional safety requirements for shopping carts, and launched the development of standards for consumer beach umbrellas after flyaway incidents led to serious and fatal injuries.",
+    "text3":"The toy safety (ASTM F963) establishes",
+    "Text3":"The toy safety (ASTM F963) establishes safety requirements for toys for children under the age of 14. The standard sets guidelines and test methods to prevent injuries related to choking, sharp edges, magnet ingestion, flammability, and much more.",
+    "text4":"Having consumers at the same standards",
+    "Text4":"Having consumers at the same standards-setting table with manufacturers opens the door for important discussions about who and how a product or service may be used in real life, risks that may have been missed by the manufacturers, and suggestions for practical solutions. This input can be especially helpful when considering safety warnings and labels, evaluating acceptable levels of risk, and suggesting features needed by consumers with special needs such as children, older adults, or people with disabilities.",
+    "Button":"Download the Consumer Industry Overview PDF"
+  },
+  "SettingASTMStandards": {
+    "Header": "Learn how you can get involved in setting ASTM standards.",
+    "text1": "ASTM International Committee F15 on Consumer",
+    "Text1":"ASTM International Committee F15 on Consumer Products was developed in 1973 at the request of the U.S. Consumer Product Safety Commission (CPSC) to help keep dangerous products out of the hands of consumers through the development of voluntary consensus. Today, more than 1,000 members participate, overseeing the development and maintenance of over 100 standards.",
+    "Text2":"Want to Learn Even More About Your Voice in ASTM?",
+    "Text3_1":"Watch This Video",
+    "Text3_2":"Every Member Has a Voice"
+
+  },
+  "GetInvolvedMakeDifference": {
+    "Header":"Get involved. Make a difference.",
+    "text1": "Help set the standards that will make",
+    "Text1":"Help set the standards that will make products and services better for your family and friends.In ASTM, consumers can be individuals or organizations.",
+    "Text2":"An individual who primarily purchases products and services for personal use.",
+    "Text3":"Consumer advocate or advocacy organization representing consumer interests.",
+    "Text4":"A public interest organization.",
+    "text5": "Some consumer members are retired engineers",
+    "Text5_1": "Some consumer members are retired engineers or experts with technical knowledge. Others provide input that is based solely on their passions, ",
+    "Text5_2": "personal experiences",
+    "Text5_3": "and perspectives. All are welcome!",
+    "Button": "Get Involved"
+  },
+  "ClientTestimonials": {
+    "Header": "Client Testimonials",
+    "SubHeader1": "Lisa Trofe",
+    "text1": "Managing Director",
+    "Text1":"Managing Director, Juvenile Products Manufacturers Association Committee F15 Member",
+    "text2": "One of the ways that consumers can become involved",
+    "Text2":"One of the ways that consumers can become involved is to participate in an advocacy group, attend ASTM meetings, and join a task group. We welcome all voices. Everyones perspective is treated fairly and equally.",
+    "SubHeader2":"Richard Rosati",
+    "text3": "Vice President of Governmental ",
+    "Text3":"Vice President of Governmental Affairs and Industry Standards, Bureau Veritas Consumer Products Services Committee F15 Member",
+    "text4": "Consumer product safety standards are developed",
+    "Text4":"Consumer product safety standards are developed by a variety of stakeholders, and all of them play an important role. The variety of stakeholders provides for different levels and types of experience and knowledge and also provides the checks and balances needed during the development process.",
+    "SubHeader3":"Rachel Weintraub,",
+    "text5": "Legislative Director and General",
+    "Text5":"Legislative Director and General Counsel, Consumer Federation of America Committee F15 Member",
+    "text6": "Some consumer advocates may assume that policy",
+    "Text6":"Some consumer advocates may assume that policy changes are the only way to effect change in product safety. Thats not necessarily the case. Voluntary standards play an incredibly important role in effectively pushing for change."
+  }
+}
