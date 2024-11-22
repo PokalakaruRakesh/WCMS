@@ -93,7 +93,7 @@ public class BaseTest {
 	@AfterClass(alwaysRun=true)
 	public void TearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }
