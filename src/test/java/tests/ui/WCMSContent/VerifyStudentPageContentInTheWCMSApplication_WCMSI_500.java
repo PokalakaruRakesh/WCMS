@@ -50,7 +50,6 @@ public class VerifyStudentPageContentInTheWCMSApplication_WCMSI_500 extends Base
     public void validateContentUnderStudentMembersHeader(String jsonElement) {
         try {
             JsonObject jsonObject=WCMSPage.jsonData(jiraTestID,jsonElement);
-
             Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getMainHeader(WCMSPage.jsonValue(jsonObject,"Mainheader"))));
             Assert.assertEquals(WCMSPage.getTextByHeader(WCMSPage.jsonValue(jsonObject,"Mainheader"),WCMSPage.jsonValue(jsonObject,"text")),
                     WCMSPage.jsonValue(jsonObject,"Text"));
