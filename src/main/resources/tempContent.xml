@@ -13,7 +13,7 @@
     <test name="Test">
         <classes>
 
-            <class name="tests.ui.WCMSContent.VerifyConsumerParticipationPageContentInTheWCMSApplication_WCMSI_506"/>
+            <class name="tests.ui.WCMSContent.VerifyAboutASTMPageContentInTheWCMSApplication_WCMSI_465"/>
 
         </classes>
     </test> <!-- Test -->

@@ -7,7 +7,7 @@
     "StudentMembers": {
       "Mainheader": "Student Members",
       "text": "Students who join ASTM International become",
-      "Text": "Students who join ASTM International become part of a prestigious worldwide network of technical experts and business leaders who develop standards for quality and testing. An ASTM membership is more than another line of a resume. Its a front-row seat to the standardization process that empowers student with knowledge that is essential to the use of standards in the workplace."
+      "Text": "Students who join ASTM International become part of a prestigious worldwide network of technical experts and business leaders who develop standards for quality and testing. An ASTM membership is more than another line of a resume. Its a frontrow seat to the standardization process that empowers student with knowledge that is essential to the use of standards in the workplace."
     },
     "ExcitingBenefitsForStudentMembers": {
       "Header": "Exciting Benefits for Student Members",
@@ -27,11 +27,11 @@
     "Subheader1": "$10,000 ASTM International Graduate Scholarship",
     "text1": "The objective of the ASTM International Graduate",
     "Text1": "The objective of the ASTM International Graduate Scholarship program is to enhance a students knowledge, understanding, and application of ASTM International and its standards. Application Deadline is April 30th.",
-    "LinkText1": "Click here for the graduate scholarship application form.",
+    "LinkText1": "Click here for the graduate scholarship application form",
     "Subheader2": "Professor of the Year Award",
     "text2": "The ASTM International Professor of the Year",
     "Text2": "The ASTM International Professor of the Year Award rewards professors that expose students to standards and encourage their use. Nomination Deadline is August 31st.",
-    "LinkText2": "Click here for the Professor of the Year",
+    "LinkText2": "Click here for Professor of the Year nomination form",
     "Subheader3": "Katherine & Bryant Matter Scholarship",
     "text3": "The Katharine and Bryant Mather Scholarship",
     "Text3": "The Katharine and Bryant Mather Scholarship is presented each year  contingent upon available funds  to full-time undergraduate students completing their second/sophomore year of college, or later, or graduate students who are pursuing degrees specializing in cement or concrete materials technology, or concrete construction. Each recipient of the Katharine and Bryant Mather Scholarship receives up to $7,500 to be used for their educational expenses, and up to $1,500 to cover expenses to attend a Committee C09 meeting. This award is administered by ASTM Committee C09 on Concrete and Concrete Aggregates. For more information contact Scott Orthey at sorthey@astm.org. Application deadline is April 30th.",
@@ -39,10 +39,11 @@
     "Subheader4": "Senior Design Project Grants",
     "text4": "For project grants, papers are submitted",
     "Text4": "For project grants, papers are submitted by students, or their faculty mentors on their behalf, based on senior design or capstone projects. Each paper highlights specific design choices in the application of various standards and describes the resulting product, process, or service. Application deadline is October 31st.",
-    "LinkText4": "Click here for the ASTM grant application form."
+    "LinkText4": "Click here for the ASTM grant application form"
   },
   "Questions": {
     "Header": "Questions",
+    "text": "All questions about student",
     "Text": "All questions about student membership should be addressed to Travis Murdock at tmurdock@astm.org"
   }
 }

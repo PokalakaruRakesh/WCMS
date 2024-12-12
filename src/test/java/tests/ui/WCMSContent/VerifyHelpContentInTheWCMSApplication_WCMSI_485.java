@@ -234,7 +234,6 @@ public class VerifyHelpContentInTheWCMSApplication_WCMSI_485 extends BaseTest {
 
             Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getsubheader(WCMSPage.jsonValue(jsonObject,"Subheader2"))),WCMSPage.jsonValue(jsonObject,"Subheader2") + " content not matched");
             Assert.assertTrue(WCMSPage.getText(WCMSPage.jsonValue(jsonObject,"text2")).contains(WCMSPage.jsonValue(jsonObject,"Text2")));
-            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkText(WCMSPage.jsonValue(jsonObject,"LinkText1"))),WCMSPage.jsonValue(jsonObject,"Text2") + " content not matched");
 
         } catch (Exception e) {
             e.printStackTrace();

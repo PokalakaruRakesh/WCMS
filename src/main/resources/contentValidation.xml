@@ -23,7 +23,9 @@
             <!--Set2-->
             <class name="tests.ui.WCMSContent.VerifyHistoryContentInTheWCMSApplication_WCMSI_489"/>
             <class name="tests.ui.WCMSContent.Verify125thAnniversaryCaseStudiesPageContentInTheWCMSApplication_WCMSI_493"/>
-
+            <class name="tests.ui.WCMSContent.VerifyMembershipPageContentInTheWCMSApplication_WCMSI_497"/>
+            <class name="tests.ui.WCMSContent.VerifyStudentPageContentInTheWCMSApplication_WCMSI_500"/>
+            <class name="tests.ui.WCMSContent.VerifyEmergingProfessionalsPageContentInTheWCMSApplication_WCMSI_502"/>
             <class name="tests.ui.WCMSContent.VerifyConsumerParticipationPageContentInTheWCMSApplication_WCMSI_506"/>
 
         </classes>

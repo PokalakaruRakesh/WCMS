@@ -963,7 +963,6 @@ public class WCMSICommon {
 		}
 	}
 
-
 	public static boolean openUrl(WebDriver driver, String url) {
 		try {
 			driver.get(url);
@@ -1038,7 +1037,16 @@ public class WCMSICommon {
             return "";
         }
 	}
-
+	public static boolean switchTabs(WebDriver driver,int tab) {
+		try {
+			ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs.get(tab));
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
 
 
 

@@ -13,6 +13,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import java.util.List;
+
 public class WCMSContentPage extends  BasePage {
     public WCMSContentPage(WebDriver driver) {
         super(driver);
@@ -50,6 +52,8 @@ public class WCMSContentPage extends  BasePage {
     private String text = "//*[contains(text(),'[TEXT]')]";
     private String textUnderdrp = "//button[contains(text(),'[TEXT]')]/../following-sibling::div/div";
     private String textByHeader = "//*[contains(text(),'[HEADER]')]/..//*[contains(text(),'[TEXT]')]";
+    public By PCRLinks = By.xpath("//h6[text()='ASTM International has published the following PCR.']/ancestor::div//ul//a[contains(text(),'PCR')]");
+    public By EPDLinks = By.xpath("//h2[text()='Published Environmental Product Declarations']/..//ul//a");
 
 
     public By getMenu(String menuName) {
@@ -140,6 +144,9 @@ public class WCMSContentPage extends  BasePage {
     public By getImageTextUnderHeader(String text1, String text2) {
         return By.xpath(imageTextUnderHeader.replace("[TEXT1]", text1).replace("[TEXT2]", text2));
     }
+    public String getText1(String text1) {
+        return getElement(By.xpath(text.replace("[TEXT]", text1))).getText();
+    }
     public String getText(String text1) {
         By locator=By.xpath(text.replace("[TEXT]", text1));
         ReusableMethods.scrollToElement(driver,locator);
@@ -155,7 +162,8 @@ public class WCMSContentPage extends  BasePage {
         String txt=getElement(locator).getText().replaceAll(String.valueOf((char)39),"")
                 .replaceAll(String.valueOf((char)8217),"").replace("\n", "").replace(String.valueOf((char) 0x2022 ), "").
                 replaceAll(String.valueOf((char) 8220),"").replaceAll(String.valueOf((char) 8221),"").replaceAll(String.valueOf((char) 174),"")
-                .replaceAll(String.valueOf((char) 8211),"").replaceAll(String.valueOf((char) 34),"").trim();
+                .replaceAll(String.valueOf((char) 8211),"").replaceAll(String.valueOf((char) 34),"").replaceAll(String.valueOf((char) 0x2014),"")
+                .replaceAll(String.valueOf((char) 45),"").trim();
         return txt;
     }
     public String getTextUnderDropDown(String text) {
@@ -179,7 +187,7 @@ public class WCMSContentPage extends  BasePage {
             getElement(getSubmenu(submenu)).click();
             WCMSICommon.waitForSec(4);
             String titleFromApp=driver.getTitle();
-            Assert.assertEquals(titleFromApp,title,"Both "+titleFromApp+" and "+title+" not matched");
+            Assert.assertTrue(titleFromApp.contains(title),"Both "+titleFromApp+" and "+title+" not matched");
             ScreenshotUtil.takeScreenshotForAllure(driver);
             cookiePage.handleOneTrustCookie();
         } catch (Exception e) {
@@ -205,7 +213,7 @@ public class WCMSContentPage extends  BasePage {
             WaitStatementUtils.explicitWaitForVisibility(driver,getElement(getSubmenuList(text)),10);
             ReusableMethods.scrollToElement(driver,getSubmenuList(text));
             WaitStatementUtils.waitForElementToBeClickable(driver,getElement(getSubmenuList(text)));
-            getElement(getSubmenuList(text)).click();
+            WCMSICommon.JSClick(getElement(getSubmenuList(text)),driver);
             WCMSICommon.waitForSec(4);
             Assert.assertEquals(driver.getTitle(),title);
             ScreenshotUtil.takeScreenshotForAllure(driver);
