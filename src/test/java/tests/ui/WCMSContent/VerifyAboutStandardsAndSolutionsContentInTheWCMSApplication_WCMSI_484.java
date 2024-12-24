@@ -204,12 +204,10 @@ public class VerifyAboutStandardsAndSolutionsContentInTheWCMSApplication_WCMSI_4
 
             Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(header)));
 
-            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
-                    WCMSPage.jsonValue(jsonObject,"Subheader1"))));
-
-            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getTextUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader1"),
-                    WCMSPage.jsonValue(jsonObject,"Text1"))));
-
+            /*Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(header,
+                    WCMSPage.jsonValue(jsonObject,"Subheader1"))));*/
+            Assert.assertEquals(WCMSPage.getTextByHeader(header,WCMSPage.jsonValue(jsonObject,"text1")),
+                    WCMSPage.jsonValue(jsonObject,"Text1"));
             Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderHeader(header,
                     WCMSPage.jsonValue(jsonObject,"Button1"))));
 

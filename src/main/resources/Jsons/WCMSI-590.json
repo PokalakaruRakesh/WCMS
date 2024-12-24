@@ -1,0 +1,65 @@
+{
+  "WCMSI-590": {
+    "Menu": "Standards & Solutions",
+    "Submenu": "Standards & Solutions Overview",
+    "SubmenuList": "Laboratory Services"
+  },
+  "Laboratory Services": {
+    "Header": "ASTM International Laboratory Services",
+    "subHeader1": "Comprehensive Solutions for All Your",
+    "text1": "Get the tools and services",
+    "Text1": "Get the tools and services you need to achieve your goals of laboratory certification, accreditation, and customer satisfaction.",
+    "text2": "With our suite of cost",
+    "Text2": "With our suite of costsaving laboratory services, ASTM has a comprehensive solution for managing and improving quality control across all your laboratory locations.",
+    "text3": "From test methods",
+    "Text3": "From test methods and training to proficiency testing and data management, we provide costeffective, integrated products and solutions for all types of labs. See how you can benefit from the credibility and stability thousands of labs have come to depend on.",
+    "Button1":"Laboratory Services Overview",
+    "Button2":"OnDemand Webinar",
+    "Button3":"Subscribe to Newsletter",
+    "Button4":"Contact",
+    "subHeader2": "Proficiency Testing",
+    "text4": "Improve proficiency",
+    "Text4": "Improve proficiency, maintain accreditation, and compare with laboratories worldwide with 60+ ISO 17043Accredited Proficiency Testing Programs.",
+    "Button5":"Learn More"
+  },
+  "Laboratory Services1": {
+    "subHeader1": "ASTM Insight SQC",
+    "subHeader2": "Standard Operating Procedures (SOPs)",
+    "subHeader3": "Test Method Assessment Checklists",
+    "subHeader4": "Cement and Concrete Reference Laboratory (CCRL)",
+    "text1": "Get concise chart",
+    "Text1": "Get concise chart construction, automatic statistical calculations and notifications, and configurable control strategies with our cloudbased solution period",
+    "text2": "Get critical information",
+    "Text2": "Get critical information your test methods may be missing, like detailed instructions on how to operate various equipment, with our always current SOPs.",
+    "text3": "Verify test performance",
+    "Text3": "Verify test performance and resolve issues sooner with clear and easytouse TMAs developed by the experts.",
+    "text4": "Improve the quality of",
+    "Text4": "Improve the quality of your construction materials testing with specialized laboratory inspection and proficiency sample programs.",
+    "Button1":"Learn More",
+    "Button2":"Learn More",
+    "Button3":"Learn More",
+    "Button4":"Learn More"
+      },
+  "Laboratory Services2": {
+    "subHeader1": "Reference Materials",
+    "text1": "Validate equipment and test performance",
+    "Text1": "Validate equipment and test performance and establish analyst competence with Reference Materials featuring highly accurate reference values and low uncertainty estimates.",
+    "subHeader2": "Develop Internal Documents with ASTM SpecBuilder",
+    "subHeader3": "Get Standards Online with ASTM Compass",
+    "subHeader4": "Train with the Experts",
+    "text2": "Collaborate with colleagues ",
+    "Text2": "Collaborate with colleagues and create and maintain your labs internal practices, procedures, and other technical documents.",
+    "text3": "Access thousands of the most",
+    "Text3": "Access thousands of the most uptodate ASTM International test methods from any of your labs locations with the online standards platform ASTM Compass.",
+    "text4": "Increase understanding of the",
+    "Text4": "Increase understanding of the ASTM test methods you rely on and earn CEUs with inperson and eLearning courses from our subjectmatter experts.",
+    "Button1":"Learn More",
+    "Button2":"Learn More",
+    "Button3":"Learn More",
+    "Button4":"Learn More"
+  },
+  "Ordering Assistance": {
+    "Header": "Need ordering assistance? Contact our Customer Support team.",
+    "Button1": "Contact Us"
+  }
+}

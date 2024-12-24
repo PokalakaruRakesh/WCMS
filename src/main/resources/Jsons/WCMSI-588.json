@@ -1,0 +1,79 @@
+{
+  "WCMSI-588": {
+    "Menu": "Standards & Solutions",
+    "Submenu": "Standards & Solutions Overview",
+    "SubmenuList": "Book of Standards"
+  },
+  "Book of Standards": {
+    "Header": "Annual Book of ASTM Standards",
+    "text1": "Organized",
+    "Text1": "Organized in 80+ volumes, 13,000+ ASTM standards are available individually, as print or online volumes, or as entire sections covering an industry. Discounts are available for full sections and the complete set.",
+    "text2": "single standard",
+    "Text2": "Download a single standard instantly or subscribe to an online volume via ASTM Compass. We offer convenient enterprise subscriptions for multiple users."
+  },
+  "Benefits": {
+    "Header": "Benefits of online standards volumes include:",
+    "text1": "Weekly content updates",
+    "Text1": "Weekly content updates",
+    "text2": "Tools for annotations and bookmarks",
+    "Text2": "Tools for annotations and bookmarks",
+    "text3": "Version comparisons",
+    "Text3": "Version comparisons",
+    "text4": "Historical, withdrawn, and redlined standards",
+    "Text4": "Historical, withdrawn, and redlined standards",
+    "text5": "Standards under ballot",
+    "Text5": "Standards under ballot"
+      },
+  "ASTM Standard Section": {
+    "header": "Book of ASTM Standards by Section",
+    "Header": "Book of ASTM Standards by Section",
+    "text1": "Complete Set - All sections and volumes",
+    "Text1": "Complete Set - All sections and volumes",
+    "text2": "Iron and Steel Products",
+    "Text2": "Iron and Steel Products",
+    "text3": "Nonferrous Metal Products",
+    "Text3": "Nonferrous Metal Products",
+    "text4": "Metals Test Methods and Analytical Procedures",
+    "Text4": "Metals Test Methods and Analytical Procedures",
+    "text5": "Construction",
+    "Text5": "Construction",
+    "text6": "Petroleum Products, Lubricants, and Fossil Fuels",
+    "Text6": "Petroleum Products, Lubricants, and Fossil Fuels",
+    "text7": "Paints, Related Coatings, and Aromatics",
+    "Text7": "Paints, Related Coatings, and Aromatics",
+    "text8": "Textiles",
+    "Text8": "Textiles",
+    "text9": "Plastics",
+    "Text9": "Plastics",
+    "text10": "Rubber",
+    "Text10": "Rubber",
+    "text11": "Electrical Insulation and Electronics",
+    "Text11": "Electrical Insulation and Electronics",
+    "text12": "Water and Environmental Technology",
+    "Text12": "Water and Environmental Technology",
+    "text13": "Nuclear, Solar, and Geothermal Energy",
+    "Text13": "Nuclear, Solar, and Geothermal Energy",
+    "text14": "Medical Device and Services",
+    "Text14": "Medical Device and Services",
+    "text15": "General Methods and Instrumentation",
+    "Text15": "General Methods and Instrumentation",
+    "text16": "General Products, Chemical Specialties, and End Use Products",
+    "Text16": "General Products, Chemical Specialties, and End Use Products"
+  },
+  "Enterprise Subscriptions": {
+    "header": "Enterprise Subscriptions with ASTM Compass",
+    "Header": "Enterprise Subscriptions with ASTM Compass",
+    "text1": "Do you need standards access for your staff across multiple locations?",
+    "Text1": "Do you need standards access for your staff across multiple locations?",
+    "text2": "is our state-of-the-art",
+    "Text2": "ASTM Compass is our stateoftheart content platform providing you companywide access to 13,000+ ASTM standards, as well as content from AASHTO, AATCC, Aenor, API, AWWA, CGA, IES, and UOP. Search in your own language, add your own content, and much more.",
+    "text3": "With tools to ",
+    "Text3": "With tools to add notes, attachments, and even your own standards, it is the key to your team working smarter and faster.",
+    "Button1": "Discover ASTM Compass"
+  },
+  "Ordering Assistance": {
+    "Header": "Need ordering assistance? Contact our Customer Support team.",
+    "Button1": "Contact Us"
+  }
+
+  }

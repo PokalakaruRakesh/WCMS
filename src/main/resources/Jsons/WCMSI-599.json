@@ -1,0 +1,57 @@
+{
+  "WCMSI-599": {
+    "Menu": "Standards & Solutions",
+    "Submenu": "Standards & Solutions Overview",
+    "SubmenuList": "Enterprise Solutions"
+  },
+  "Enterprise Solutions": {
+    "Header": "Enterprise  Solutions",
+    "subHeader": "Streamline your systems, save time and resources, and generate new revenue using the same platforms created, tested, and proven through our years of working with organizations just like yours.",
+    "text1": "partnering with organizations to provide",
+    "Text1": "At ASTM, were partnering with organizations to provide the technical infrastructure to help your team work smarter, collaborate more effectively, and expand your brand.",
+    "text2": "Whether you need to access ",
+    "Text2": "Whether you need to access and promote or collaborate and comply, we have a solution to upgrade your current technology and increase your productivity.",
+    "text3": "Our modern solutions for collaboration",
+    "Text3": "Our modern solutions for collaboration and content delivery have been custombuilt by a team of internal experts. A team that has spent decades working with and listening to the most important needs of our members and customers who use standards every day.",
+    "Button1":"Why ASTM?",
+    "Button2":"The ASTM advantage"
+  },
+  "Enterprise Solutions1": {
+    "subHeader1": "ASTM Compass",
+    "subHeader2": "Subscription Portals",
+    "subHeader3": "ASTM SpecBuilder",
+    "subHeader4": "Multimedia Services",
+    "text1": "Give your staff all the content ",
+    "Text1": "Give your staff all the content they need with companywide digital access to 13,000+ ASTM standards, as well as content from",
+    "text2": "Expand your audience to thousands",
+    "Text2": "Expand your audience to thousands of potential customers when you add your standards, codes, and other technical documents to ASTM Compass. Or create your own licensebased content portal powered by ASTM Compass technology, for your subscribers only.",
+    "text3": "Collaborate, create",
+    "Text3": "Collaborate, create, and publish internal documents using the same intelligent digital collaboration tool used to develop thousands of ASTM standards.",
+    "text4": "Take advantage of a full suite",
+    "Text4": "Take advantage of a full suite of multimedia services to create professional digital media to help streamline your internal training processes and preserve institutional knowledge.",
+    "Button1":"Learn More",
+    "Button2":"Learn More",
+    "Button3":"Learn More",
+    "Button4":"Learn More"
+      },
+  "ASTM Advantage": {
+    "Header": "Get the ASTM Advantage.",
+    "subHeader": "Contact us today to learn how our",
+    "Button1":"Contact Us"
+  },
+  "Also Available": {
+    "Header": "Also Available",
+    "subHeader1": "Improve Your Laboratory",
+    "subHeader2": "Train with Standards Experts",
+    "subHeader3": "ASTM Digital Library ",
+    "text1": "Achieve your goals",
+    "Text1": "Achieve your goals of laboratory certification, accreditation, and customer satisfaction a comprehensive suite of solutions.",
+    "text2": "Increase understanding ",
+    "Text2": "Increase understanding of the ASTM test methods you rely on and earn CEUs with inperson and eLearning courses from our subjectmatter experts.",
+    "text3": "Get on-demand access",
+    "Text3": "Get ondemand access to the digital edition of every book, paper, and journal article published by ASTM dating back to 1932. ",
+    "Button1":"Learn More",
+    "Button2": "Learn More",
+    "Button3": "Learn More"
+  }
+}

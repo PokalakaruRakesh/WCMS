@@ -1,0 +1,51 @@
+{
+  "WCMSI-603": {
+    "Menu": "Standards & Solutions",
+    "Submenu": "Standards & Solutions Overview",
+    "SubmenuList": "Multimedia Services"
+  },
+  "ASTM Multimedia Solutions": {
+    "MainHeader": "ASTM Multimedia Solutions",
+    "Button1": "Request an Appointment",
+    "Button2": "Quick Guide"
+  },
+  "Cost-Effective Media": {
+    "Header": "Cost-Effective Media Production Services to Elevate",
+    "text1": "Reimagine your technical",
+    "Text1": "Reimagine your technical content with custom digital media that engages your stakeholders, improves your internal methods, and boosts your brand.",
+    "text2": "Work directly with",
+    "Text2": "Work directly with a trusted team of media experts that has created all types of exemplary media content for organizations just like yours.",
+    "subHeader1": "How can custom promotional and instructional media help your organization?",
+    "text3": "Reduce risk and avoid inconsistencies",
+    "Text3": "Reduce risk and avoid inconsistencies",
+    "text4": "Unify standard operating procedures",
+    "Text4": "Unify standard operating procedures",
+    "text5": "Improve comprehension and competency",
+    "Text5": "Improve comprehension and competency",
+    "text6": "Elevate sales and business performance",
+    "Text6": "Elevate sales and business performance",
+    "text7": "Train and retain staff",
+    "Text7": "Train and retain staff",
+    "text8": "Preserve institutional knowledge",
+    "Text8": "Preserve institutional knowledge",
+    "text9": "Strengthen messaging",
+    "Text9": "Strengthen messaging",
+    "text10": "Increase exposure and amplify your brand",
+    "Text10": "Increase exposure and amplify your brand",
+    "text11": "Help you stay audit ready",
+    "Text11": "Help you stay audit ready"
+  },
+  "Streamline Training": {
+    "Header1": "Streamline Training and Improve Comprehension with Instructional Media",
+    "text1": "Give your staff, members",
+    "Text1": "Give your staff, members, and customers the benefit of seeing your technical procedures and tests performed live. Get high-quality instructional videos that will enhance your written procedures.",
+    "Header2": "Viewers retain",
+    "subHeader1": "Source – Forbes Magazine"
+  },
+  "Revolutionize": {
+    "Header": "Revolutionize Your Content with CGI",
+    "text1": "Start collaborating",
+    "Text1": "Start collaborating with ASTM SpecBuilder today. Request a demo to see how SpecBuilder can help your team.",
+    "Button1": "Get Started"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "WCMSI-602": {
+    "Menu": "Standards & Solutions",
+    "Submenu": "Standards & Solutions Overview",
+    "SubmenuList": "ASTM SpecBuilder"
+  },
+  "ASTM SpecBuilder": {
+    "MainHeader": "ASTM SpecBuilder",
+    "subHeader1": "Streamline collaboration and document development",
+    "Header": "Why SpecBuilder",
+    "subHeader2": "Goodbye Spreadsheets, Missed Comments, Late Votes",
+    "text1": "Imagine your staff developing",
+    "Text1": "Imagine your staff developing your organizations documents using a single platform that ensures all drafts, comments, voting, and supporting documents are uploaded, acted on and archived within the same, secure tool that is accessible to all staff 24/7.",
+    "text2": "Your teams will collaborate",
+    "Text2": "Your teams will collaborate, vote, be more informed, and act faster than ever before. This saves you time, money, resources, and headaches.",
+    "text3": "Now, after 100+",
+    "Text3": "Now, after 100+ years of refinements, ASTMs worldrenowned process for creating and maintaining technical documents is available to you.",
+    "Button1": "Request Demo",
+    "Button2": "View eBook: ASTM SpecBuilder"
+  },
+  "SpecBuilder Resources": {
+    "Header": "SpecBuilder Resources",
+    "subHeader1": "Archive",
+    "subHeader2": "Create",
+    "subHeader3": "Collaborate",
+    "subHeader4": "Manage",
+    "subHeader5": "Vote",
+    "subHeader6": "Track",
+    "subHeader7": "Reference",
+    "subHeader8": "Publish",
+    "text1": "Preserve and protect",
+    "Text1": "Preserve and protect corporate knowledge by saving a detailed history of documents, comments, votes, and revisions in a secure archive section.",
+    "text2": "Upload your files",
+    "Text2": "Upload your files and drafts to develop or revise internal specifications, codes and regulations on one single, secure platform.",
+    "text3": "Form task groups",
+    "Text3": "Form task groups and subgroups, start discussions, and track. See draft updates and comments in real time with 24/7 group access.",
+    "text4": "Use multiple administrators ",
+    "Text4": "Use multiple administrators to manage workflow. Customize ballot and voting parameters to your organizations style.",
+    "text5": "Enjoy higher return levels ",
+    "Text5": "Enjoy higher return levels with a centralized electronic balloting system. Tailor voting process to match your needs. Ensure all employees are equally heard.",
+    "text6": "Automatically track",
+    "Text6": "Automatically track ballot progress and voting trends and record responses. Send customized alerts to group members to leave feedback and meet deadlines.",
+    "text7": "Reference and insert hyperlinks ",
+    "Text7": "Reference and insert hyperlinks to easily reference and access ASTM standards.",
+    "text8": "Publish your final documents and ",
+    "Text8": "Publish your final documents and share with employees, vendors, contractors and other stakeholders."
+  },
+  "SpecBuilder Testimonial": {
+    "Header": "SpecBuilder Testimonial",
+    "subHeader1": "Debora Bechtloff, Plastics Pipe Institute",
+    "text1": "ASTM SpecBuilder ",
+    "Text1": "ASTM SpecBuilder provides a contemporary solution for collaboration, balloting and publishing. Since adopting SpecBuilder, the number of PPI ballots has increased, member involvement in collaboration and balloting efforts has improved, and PPI publishes documentation more quickly."
+  },
+  "Request a Demo": {
+    "subHeader": "Request a Demo",
+    "text1": "Start collaborating",
+    "Text1": "Start collaborating with ASTM SpecBuilder today. Request a demo to see how SpecBuilder can help your team.",
+    "Button1": "Get Started"
+  }
+}

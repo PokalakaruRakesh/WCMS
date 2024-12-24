@@ -2,12 +2,12 @@
   "WCMSI-493": {
     "Menu": "About ASTM",
     "Submenu": "About ASTM Overview",
-    "SubmenuList": "125th Anniversary Case Studies"
+    "SubmenuList": "Anniversary Case Studies"
   },
     "125thAnniversaryCaseStudies": {
       "Mainheader": "125th Anniversary Case Studies",
       "text": "As part of its 125th anniversary celebration",
-      "Text": "As part of its 125th anniversary celebration, ASTM International invited case study submissions from committee members around the world, highlighting standards that have made a significant impact in society - and that have bettered the world around us. Numerous exceptional submissions were received, making the work of ASTMs panel of judges even more difficult in narrowing down the list of eight winners. Case Study Compilation"
+      "Text": "As part of its 125th anniversary celebration, ASTM International invited case study submissions from committee members around the world, highlighting standards that have made a significant impact in society - and that have bettered the world around us. Numerous exceptional submissions were received, making the work of ASTMs panel of judges even more difficult in narrowing down the list of eight winners. Case Study Compilation (PDF)"
     },
     "TheWinnersWereFollows": {
       "Header1": "Aircraft Braking Measurements",
@@ -27,7 +27,7 @@
       "Header8": "Infrastructure",
       "text8": "Two infrastructural standards that are essential",
       "Text8": "Two infrastructural standards that are essential to the worlds built environment, both from the committee on soil and rock (D18). ",
-      "Linktext": "Link"
+      "Linktext": "Learn More"
     }
 
 }

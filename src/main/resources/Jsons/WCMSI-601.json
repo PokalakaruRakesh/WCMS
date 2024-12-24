@@ -1,0 +1,68 @@
+{
+  "WCMSI-601": {
+    "Menu": "Standards & Solutions",
+    "Submenu": "Standards & Solutions Overview",
+    "SubmenuList": "Subscription Portal"
+  },
+  "Subscription Portal": {
+    "MainHeader": "Subscription Portals",
+    "text1": "Need a better way to get your organization",
+    "Text1": "Need a better way to get your organizations documents into the right hands but dont know where to begin? Unleash the power of a robust document delivery service used by thousands of satisfied members and customers every day.",
+    "Button1": "Why ASTM?",
+    "Button2": "Contact ASTM"
+  },
+  "Your Content": {
+    "Header": "Your Content. Our Powerful Platform.",
+    "text1": "Whether you",
+    "Text1": "Whether youre a trade association, standards development organization, government agency, lab, or private business, your goal remains the same  to deliver optimal service to your stakeholders. This means providing immediate critical content like standards and technical documents to members and customers on a trusted platform.",
+    "text2": "Our experienced team",
+    "Text2": "Our experienced team of IT experts developed the dynamic ASTM Compass platform to help our members and customers access thousands of standards and an extensive digital library in one place from anywhere at any time, with a userfriendly and convenient interface.",
+    "text3": "Now, ASTM International",
+    "Text3": "Now, ASTM International is ready to bring this successful platform to your organization. If you are struggling with getting content into the right hands and managing the complicated process that can go along with it, we can help."
+  },
+  "Your Content on ASTM Compass": {
+    "Header": "Your Content on ASTM Compass",
+    "text1": "Expand your visibility",
+    "Text1": "Expand your visibility and elevate your brand when you feature your content on one of the most comprehensive libraries of technical information in the world. Our 100,000+ Compass customers, including academic and government users, can subscribe to and access your documents without ever leaving the platform. Join the other top standards organizations who have added their content and introduce your content to a new audience.",
+    "subHeader1": "Benefits include:",
+    "text2": "Choose only the content you want to feature",
+    "Text2": "Choose only the content you want to feature",
+    "text3": "Work with an established standards provider",
+    "Text3": "Work with an established standards provider",
+    "text4": "Grow viewership of your content",
+    "Text4": "Grow viewership of your content",
+    "text5": "Improve brand recognition",
+    "Text5": "Improve brand recognition",
+    "text6": "Safe and secure content platform",
+    "Text6": "Safe and secure content platform",
+    "text7": "Custom user tools for subscribers",
+    "Text7": "Custom user tools for subscribers",
+    "text8": "Strict copyright and permissions protocols",
+    "Text8": "Strict copyright and permissions protocols",
+    "subHeader2": "Contact our Sales Team to learn more.",
+    "Button1": "Contact ASTM"
+  },
+  "Create a Company Subscription Portal": {
+    "Header": "Create a Company Subscription Portal",
+    "text1": "Our team of technical experts",
+    "Text1": "Our team of technical experts will work with you to create your very own subscriptionbased distribution platform using the popular ASTM Compass design and leveraging its robust functionality.",
+    "text2": "Your stakeholders can go",
+    "Text2": "Your stakeholders can go directly to the source for your important standards and documents, avoiding thirdparties. Choose only the documents you wish to include, maintain your brand identity, and enjoy all the builtin benefits of our wellestablished content delivery platform.",
+    "text3": "Subscribers will enjoy seamless access",
+    "Text3": "Subscribers will enjoy seamless access to your own digital library, with dynamic documents in PDF plus optional support for HTML formats. Plus users can manage, change, and share content using powerful tools for version comparison and hyperlinking.",
+    "subHeader": "Contact our Sales Team to learn more",
+    "Button": "Contact ASTM"
+  },
+  "Also Available": {
+    "Header": "Also Available",
+    "subHeader1": "Improve Your Laboratory",
+    "subHeader2": "Train with Standards Experts",
+    "subHeader3": "ASTM Digital Library",
+    "text1": "Achieve your goals",
+    "Text1": "Achieve your goals of laboratory certification, accreditation, and customer satisfaction a comprehensive suite of solutions.",
+    "text2": "Increase understanding",
+    "Text2": "Increase understanding of the ASTM test methods you rely on and earn CEUs with inperson and eLearning courses from our subjectmatter experts.",
+    "text3": "demand access to the",
+    "Text3": "Get ondemand access to the digital edition of every book, paper, and journal article published by ASTM dating back to 1932."
+  }
+}

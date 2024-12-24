@@ -1,0 +1,43 @@
+{
+  "WCMSI-508": {
+    "Menu": "About ASTM",
+    "Submenu": "About ASTM Overview",
+    "SubmenuList": "Regional Offices and Support"
+  },
+  "RegionalOffices": {
+    "Mainheader": "Regional Offices and Support",
+    "Header": "ASTM Headquarters",
+    "text": "100 Barr Harbor Drive",
+    "Text": "ASTM Headquarters100 Barr Harbor DriveP.O. Box C700West Conshohocken, PA19428-2959, USATel: +1.610.832.9500",
+    "Button": "Directions",
+    "Subheader1": "Washington Office",
+    "text1": "1120 20th Street",
+    "Text1": "1120 20th Street NWSuite 390Washington, DC 20036Jeffrey GroveTel: +1.202.223.8505",
+    "Subheader2": "Latin America Office",
+    "text2": "EnginZone",
+    "Text2": "EnginZone Monterosa 233 of. 402 Chacarilla del Estanque Surco, Lima 33 PERU Maria Isabel Barrios Tel: +51.1.205.5502 ",
+    "Subheader3": "Canada Office",
+    "text3": "Tel: +34.622.25.12.25",
+    "Text3": "Louis Fredricks Tel: +34.622.25.12.25",
+    "Subheader4": "Brussels Office",
+    "text4": "Rue de la Loi 67",
+    "Text4": "Rue de la Loi 67 B-1040 Brussels, Belgium Sara Gobbi Tel: +32.(0)2.8405127",
+    "Subheader5": "China Office",
+    "text5": "Twin Towers",
+    "Text5": "Suite-EF02, EF Floor, Twin TowersEast, B-12 Jianguomenwai Ave. Chaoyang District, Beijing, P.R. China100022 HU Yanan Tel: +86.10.5109.6033 Fax: +86.10.5109.6039",
+    "Subheader6": "Singapore Office",
+    "text6": "Raffles Place",
+    "Text6": "1 Raffles Place, Tower 2, #27-64 Singapore048616 Elvin Chia Tel: +65.8778.4200"
+  },
+    "RegionalWebsites": {
+      "Header": "Regional Websites",
+      "text": "This assessment adds another",
+      "Text": "This assessment adds another leadership development element to the Emerging Professionals program, and we look forward to the rich discussions it will enable.",
+      "LinkText1": "ASTM in the America Latina Region",
+      "LinkText2": "ASTM in Portuguese",
+      "LinkText3": "ASTM in Japanese",
+      "LinkText4": "ASTM in Korea",
+      "LinkText5": "ASTM in Mandarin"
+    }
+
+}

@@ -1,0 +1,36 @@
+{
+  "WCMSI-591": {
+    "Menu": "Standards & Solutions",
+    "Submenu": "Standards & Solutions Overview",
+    "SubmenuList": "ASTM Standards Tracker"
+  },
+  "ASTMStandardsTracker": {
+    "Mainheader": "ASTM Standards Tracker",
+    "text": "Get automatic email alerts",
+    "Text": "Get automatic email alerts for new or revised standards with our free standards tracker service. Track individual standards, work items or groups of standards by committee or industry."
+  },
+    "HowToTrackStandards": {
+      "Header": "How to Track Standards",
+      "text": "Start your standards tracker today",
+      "Text": "Start your standards tracker today, by using the options below and guarantee youre using the latest standards.",
+      "Subheader1": "Track Individual Standards",
+      "text1": "Search for a standard using",
+      "Text1": "Search for a standard using the title or designation. Select pin icon to add to your tracker list.",
+      "Subheader2": "Add to or Change Your Tracker",
+      "text2": "Simply log in and visit the Tracker",
+      "Text2": "Simply log in and visit the Tracker page to add, delete, and manage your tracked standards list.",
+      "Subheader3": "Track by Committee, Work Item and Industry",
+      "text3": "you can track by Technical Committee",
+      "Text3": "Once youre logged into Tracker, you can track by Technical Committee, Work Item, Industry and more. Choose as many items as you need",
+      "Subheader4": "Get Automatic Email Alerts",
+      "text4": "Once your selections are complete",
+      "Text4": "Once your selections are complete, youll begin to receive automatic email alerts when new, updated, amended, withdrawn or replaced documents related to your tracked standards/categories are available. Edit your selections at any time."
+    },
+  "EmailSubscriptionSettings": {
+    "Header": "Email Subscription Settings",
+    "text1": "To unsubscribe from ASTM Standards Tracker",
+    "Text1": "To unsubscribe from ASTM Standards Tracker, log in to your Tracker Account",
+    "text2": "To unsubscribe from ASTM marketing emails",
+    "Text2": "To unsubscribe from ASTM marketing emails, click here"
+  }
+}

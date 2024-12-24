@@ -27,6 +27,8 @@
             <class name="tests.ui.WCMSContent.VerifyStudentPageContentInTheWCMSApplication_WCMSI_500"/>
             <class name="tests.ui.WCMSContent.VerifyEmergingProfessionalsPageContentInTheWCMSApplication_WCMSI_502"/>
             <class name="tests.ui.WCMSContent.VerifyConsumerParticipationPageContentInTheWCMSApplication_WCMSI_506"/>
+            <class name="tests.ui.WCMSContent.VerifyTechnicalCommitteesPageContentInTheWCMSApplication_WCMSI_507"/>
+            <class name="tests.ui.WCMSContent.VerifyRegionalOfficesPageContentInWCMSApplication_WCMSI_508"/>
 
         </classes>
     </test> <!-- Test -->

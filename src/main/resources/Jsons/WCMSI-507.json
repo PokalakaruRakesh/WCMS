@@ -1,0 +1,47 @@
+{
+  "WCMSI-507": {
+    "Menu": "Membership & Participation",
+    "Submenu": "Membership & Participation Overview",
+    "SubmenuList": "Technical Committees"
+  },
+    "TechnicalCommittees": {
+      "Mainheader": "Technical Committees",
+      "text": "Technical Committees develop",
+      "Text": "Technical Committees develop and maintain ASTM standards. They are grouped by designation according to related activities within a particular scope of work (e.g., A01 on Steel, Stainless Steel and Related Alloys). ASTM Committees are made up of over 35,000 volunteers from industry and include manufacturers and consumers, as well as other interest groups such as government or academia. Any interested individual can participate on a Technical Committee through ASTM membership.",
+      "Button1":"Join Now",
+      "Button2":"Technical Committeee Full List"
+    },
+    "StandardsDevelopment": {
+      "Header": "Standards Development",
+      "Subheader1": "Work Items Full List",
+      "Text1":"Proposed new standards or revisions to existing standards",
+      "Subheader2": "Initiate a New Standards Activity",
+      "Text2":"Activities ranging from a single standard to a new main technical committee",
+      "Subheader3": "How Standards Get Developed",
+      "Text3":"Do you have an idea for a new standard?",
+      "Subheader4": "Society (Public) Review",
+      "Text4":"Items that are currently being balloted by the corresponding main committee and are submitted for review",
+      "Subheader5": "ANSI Public Review",
+      "Text5":"ANSI Standards Action Review Site for the review of ASTM actions resulting in American National Standards",
+      "Subheader6": "SCC Public Review",
+      "Text6":"ASTM Standards for Canada",
+      "LinkText": "View"
+    },
+  "OtherProgramsServices": {
+    "Header": "Other Programs & Services",
+    "text": "Related to the work",
+    "Text": "Related to the work of its technical committees, ASTM offers many innovative programs and services.",
+    "Subheader1":"Interlaboratory Study Program (ILS)",
+    "Text1":"No cost benefit for members to help you meet precision statement requirements in ASTM test methods.",
+    "Subheader2":"Product Certification Process & Checklist",
+    "Text2":"Help ensure product performance",
+    "Subheader3":"Emerging Professionals Program",
+    "Text3":"For new members who have the potential to be industry and committee leaders",
+    "Subheader4":"Lab Services",
+    "Text4":"From test methods and training to proficiency testing and data management",
+    "Subheader5":"Sustainability Reference Database",
+    "Text5":"A variety of resources to assist with assessing sustainable practices, products, programs, and development",
+    "LinkText":"Learn More",
+    "Button": "Policies & Procedures"
+  }
+}
