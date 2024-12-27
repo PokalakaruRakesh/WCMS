@@ -6,7 +6,11 @@
 # Node artifact files
 node_modules/
 dist/
-
+.gradle/
+build/
+testngOutput/
+test-recordings/
+.allure/
 # Compiled Java class files
 *.class
 

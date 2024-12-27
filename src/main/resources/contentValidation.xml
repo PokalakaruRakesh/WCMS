@@ -30,6 +30,12 @@
             <class name="tests.ui.WCMSContent.VerifyTechnicalCommitteesPageContentInTheWCMSApplication_WCMSI_507"/>
             <class name="tests.ui.WCMSContent.VerifyRegionalOfficesPageContentInWCMSApplication_WCMSI_508"/>
 
+            <class name="tests.ui.WCMSContent.VerifyASTMSpecBuilder_StandardSolutionsInTheWCMSApplication_WCMSI_602"/>
+            <class name="tests.ui.WCMSContent.VerifyBookofStandards_StandardSolutionsInTheWCMSApplication_WCMSI_588"/>
+            <class name="tests.ui.WCMSContent.VerifyDigitalLibrary_StandardSolutionsInTheWCMSApplication_WCMSI_589"/>
+            <class name="tests.ui.WCMSContent.VerifyEnterpriseSolutions_StandardSolutionsInTheWCMSApplication_WCMSI_599"/>
+            <class name="tests.ui.WCMSContent.VerifyLaboratoryServices_StandardSolutionsInTheWCMSApplication_WCMSI_590"/>
+            <class name="tests.ui.WCMSContent.VerifySubscriptionPortal_StandardSolutionsInTheWCMSApplication_WCMSI_601"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
