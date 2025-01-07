@@ -1,0 +1,27 @@
+{
+  "WCMSI-1060": {
+    "Menu": "News",
+    "Submenu": "STANDARDIZATION NEWS",
+    "AddURL": "news/press-releases"
+  },
+    "PressReleases": {
+      "Header": "Press Releases",
+      "SubHeader1": "ASTM International to Host 5th Symposium on Autonomy in Aviation",
+      "SubHeader2": "Manuel Lascarro Honored ",
+      "SubHeader3": "ANAB and ASTM International Join Together for Training Partnership",
+      "SubHeader4": "ASTM International Honors Richard Eppler with Ceramics Award",
+      "SubHeader5":"Key Standard Maritime Terminology Review Started by ASTM",
+      "SubHeader6":"Papers Invited for ASTM Workshop on Hydrogel Medical Products",
+      "SubHeader7":"ASTM to Attend BOLAT and ARABLAB 2024 Trade Shows",
+      "SubHeader8":"Papers Invited for ASTM ASTM/ESIS Fatigue and Fracture Symposium",
+      "SubHeader9":"Scholarships to Four 2024 Graduate Students",
+      "SubHeader10":"ASTM International Honors Stephen Wilcox with Cement Standards Award",
+      "SubHeader11":"ASTM International to Participate in UN COP29 Conference",
+      "SubHeader12":"ASTM and AAMI Partner for Healthcare Innovation Workshop",
+      "SubHeader13":"New Standard for Test Methods in the Biofuel Industry",
+      "SubHeader14":"Proposed Standards for Diversity, Equity, and Inclusion",
+      "SubHeader15":"Proposed Standard to Support Commercial Real Estate Transactions",
+      "SubHeader16":"ASTM International Honors Barry Christopher with Geosynthetics Award",
+      "Button":"Load More"
+    }
+}

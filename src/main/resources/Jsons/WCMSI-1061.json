@@ -1,0 +1,28 @@
+{
+  "WCMSI-1061": {
+    "Menu": "News",
+    "Submenu": "Podcasts",
+    "AddURL": "news/podcasts"
+  },
+    "StandardsImpactPodcasts": {
+      "Header": "Standards Impact Podcasts",
+      "SubHeader1": "Focused Exo Games Brings Students and Experts Together",
+      "SubHeader2": "How Olympic Sports are Made Safer by",
+      "SubHeader3": "Why Waterparks Are Surging in Popularity",
+      "SubHeader4": "Following Asbestos Ban, What Is Next for Workers and Families",
+      "SubHeader5":"What TV Gets Wrong About Forensic Science"
+    },
+  "ASTMPodcast": {
+    "Header": "ASTM Podcast",
+    "Text1": "Standards Impact",
+    "Text2": "Preview",
+    "Text3": "Standards Impact",
+    "Text4": "Save on Spotify"
+  },
+  "RelatedStories": {
+    "Header": "Related Stories",
+    "SubHeader1": "ASTM Establishes Presence on Social Media Networks",
+    "SubHeader2": "Electric Vehicle Standards Ease Range Anxiety and Overheating Challenges",
+    "SubHeader3": "How Olympic Sports are Made Safer by"
+  }
+}

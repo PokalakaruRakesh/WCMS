@@ -8,6 +8,7 @@ import com.google.gson.JsonObject;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.ui.WCMSContentPage;
@@ -23,11 +24,13 @@ public class VerifyAboutASTMPageContentInTheWCMSApplication_WCMSI_465 extends Ba
     public void beforeLoginTest() {
         driver.get(ConfigReader.getValue("BASE_URL_WCMS_ASTM"));
     }
+
     @Severity(SeverityLevel.NORMAL)
     @TmsLink(jiraTestID)
     @Description("Verify the About ASTM page content in the WCMS application - Set 1")
     @Test(description = jiraTestID
             + ": Verify the About ASTM page content in the WCMS application - Set 1", groups = {""})
+    @Parameters({"browser", "platform", "env", "updateJira", "testExecutionId"})
     public void verifyAboutASTMPageContentInTheWCMSApplication() {
         try {
             WCMSPage = page.getInstance(WCMSContentPage.class);

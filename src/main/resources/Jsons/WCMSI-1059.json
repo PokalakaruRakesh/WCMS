@@ -1,0 +1,59 @@
+{
+  "WCMSI-1059": {
+    "Menu": "News",
+    "Submenu": "STANDARDIZATION NEWS",
+    "AddURL": "standardization-news"
+  },
+  "STANDARDIZATIONNEWS": {
+    "Mainheader": "STANDARDIZATION NEWS",
+    "text1": "Biobased Plastic",
+    "Text1": "Biobased Plastic vs. Biodegradable Plastic  Whats the Difference? Podcast",
+    "text2": "In the latest episode",
+    "Text2": "In the latest episode of Standards Impact, we break down the difference between biobased plastic, biodegradable plastic, and compostable plastic.",
+    "LinkText": "Read More",
+    "text3": "How Roller Coasters",
+    "Text3": "How Roller Coasters Are Using Technology to Reach New Heights  Podcast",
+    "text4": "On the latest episode of Standards",
+    "Text4": "On the latest episode of Standards Impact, industry experts talk about exciting developments in amusement rides  and how standards contribute to safer development."
+  },
+  "FeaturedStories": {
+    "Header": "Featured Stories",
+    "SubHeader1": "3D Printing Transforms Construction",
+    "Button1": "xcellerate",
+    "SubHeader2": "Agricultural Fiber in Construction",
+    "Button2": "update",
+    "SubHeader3": "Radial Light Truck Tires",
+    "Button3": "update",
+    "SubHeader4": "Measure for Measure",
+    "Button4": "spotlight"
+  },
+    "LatestArticles": {
+      "Header": "Latest Articles",
+      "SubHeader1": "First Responder",
+      "SubHeader2": "How Olympic Sports",
+      "SubHeader3": "Electric Vehicle Standards",
+      "SubHeader4": "Why Waterparks Are Surging",
+      "SubHeader5":"Following Asbestos Ban",
+      "SubHeader6":"What is Resilience",
+      "SubHeader7":"What TV Gets Wrong About",
+      "SubHeader8":"What Does a Beer Sensory",
+      "SubHeader9":"Building the Standards",
+      "SubHeader10":"Tiny Houses",
+      "SubHeader11":"3D Printing Transforms Construction",
+      "SubHeader12":"The People Behind Standards",
+      "Button":"Load More"
+    },
+  "ASTMPodcast": {
+    "Header": "ASTM Podcast",
+    "Text1": "Standards Impact",
+    "Text2": "Preview",
+    "Text3": "Standards Impact",
+    "Text4": "Save on Spotify"
+  },
+  "TrendingStories": {
+    "Header": "Trending Stories",
+    "SubHeader1": "Tiny Houses",
+    "SubHeader2": "ASTM Contributes to Development of White House Executive Order",
+    "SubHeader3": "ASTM Donates to Fellowship House Summer Camp"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "WCMSI-1040": {
+    "Menu": "News",
+    "Submenu": "News",
+    "AddURL": "news"
+  },
+  "News": {
+    "Mainheader": "News",
+    "text1": "Biobased Plastic",
+    "Text1": "Biobased Plastic vs. Biodegradable Plastic  Whats the Difference? Podcast",
+    "text2": "In the latest episode",
+    "Text2": "In the latest episode of Standards Impact, we break down the difference between biobased plastic, biodegradable plastic, and compostable plastic.",
+    "LinkText": "Read More",
+    "text3": "How Roller Coasters",
+    "Text3": "How Roller Coasters Are Using Technology to Reach New Heights  Podcast",
+    "text4": "On the latest episode of Standards",
+    "Text4": "On the latest episode of Standards Impact, industry experts talk about exciting developments in amusement rides  and how standards contribute to safer development.",
+    "Header1": "Issue: 4217439",
+    "Text1_1": "Sep / Oct 2024",
+    "LinkText1": "View Issue",
+    "SubHeader": "Life Cycle Cost Analysis of Corrosion Protection System",
+    "Button": "update"
+  },
+    "WhatsHappening": {
+      "Header": "Happening",
+      "SubHeader1": "ASTM Establishes Presence on Social Media Networks",
+      "Button1": "outreach",
+      "SubHeader2": "Electric Vehicle Standards Ease Range Anxiety and Overheating Challenges",
+      "Button2": "features",
+      "SubHeader3": "Aerial Adventure Courses",
+      "Button3": "update",
+      "SubHeader4": "Tiny Houses",
+      "Button4": "update"
+    },
+  "STANDARDIZATIONNEWS": {
+    "SubHeader1": "STANDARDIZATION NEWS",
+    "SubHeader2": "STANDARDIZATION NEWSJuly / AUGUST 2024",
+    "text1": "From welcoming a new president",
+    "Text1": "From welcoming a new president to exploring the many standards that underpin many Olympic games, the latest issue of our flagship magazine is packed with ASTM news. Get the digital edition today!",
+    "SubHeader3": "In this Issue",
+    "text2": "Standards for the Olympic games",
+    "Text2": "Standards for the Olympic gamesCommercial spaceflight committeeElectric vehiclesMicroplastics detectionAnd more!"
+  },
+  "ASTMPodcast": {
+    "Header": "ASTM Podcast",
+    "Text1": "Standards Impact",
+    "Text2": "Preview",
+    "Text3": "Standards Impact",
+    "Text4": "Save on Spotify"
+  },
+  "TrendingStories": {
+    "Header": "Trending Stories",
+    "SubHeader1": "Measuring Slip Properties Using Tribometers",
+    "SubHeader2": "Tracking and Traceability of Natural Gas Distribution Components",
+    "SubHeader3": "Aerial Adventure Courses",
+    "Button": "update"
+  },
+  "PublicityRequestForm": {
+    "Header": "Publicity Request Form",
+    "text": "Looking to publicize an ASTM activity",
+    "Text": "Looking to publicize an ASTM activity through a press release or Standardization News article? Fill out this form to start the process."
+  }
+}

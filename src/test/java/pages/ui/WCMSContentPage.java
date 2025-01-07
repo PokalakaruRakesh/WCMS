@@ -55,7 +55,10 @@ public class WCMSContentPage extends  BasePage {
     public By PCRLinks = By.xpath("//h6[text()='ASTM International has published the following PCR.']/ancestor::div//ul//a[contains(text(),'PCR')]");
     public By EPDLinks = By.xpath("//h2[text()='Published Environmental Product Declarations']/..//ul//a");
     public By ASTMHeadquarters = By.xpath("//h4[text()='ASTM Headquarters']/..");
-
+    public String Spotify = "(//*[contains(@id,'next')]//*[text()='[TEXT]'])[1]";
+    public By frame = By.xpath("//iframe[@title='ASTM Podcast']");
+    public By languageDrp = By.xpath("//button[@data-testid='selected-language']");
+    public By englishlanguage = By.xpath("//button[@data-testid='language-change-button']//*[text()='English']");
 
     public By getMenu(String menuName) {
         return By.xpath(menu.replace("[MENU]", menuName));
@@ -147,6 +150,12 @@ public class WCMSContentPage extends  BasePage {
     }
     public String getText1(String text1) {
         return getElement(By.xpath(text.replace("[TEXT]", text1))).getText();
+    }
+    public WebElement getFrame() {
+        return getElement(frame);
+    }
+    public By getSpotify(String text1) {
+        return By.xpath(Spotify.replace("[TEXT]", text1));
     }
     public String getText(String text1) {
         By locator=By.xpath(text.replace("[TEXT]", text1));
@@ -273,6 +282,22 @@ public class WCMSContentPage extends  BasePage {
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to click On Dropdown", e);
+        }
+    }
+    @Step("Click On Change Language")
+    public void changeLanguage() {
+        try {
+            WaitStatementUtils.explicitWaitForVisibility(driver,getElement(languageDrp),10);
+            ReusableMethods.scrollToElement(driver,languageDrp);
+            WaitStatementUtils.waitForElementToBeClickable(driver,getElement(languageDrp));
+            WCMSICommon.JSClick(getElement(languageDrp),driver);
+            WCMSICommon.waitForSec(2);
+            WaitStatementUtils.waitForElementToBeClickable(driver,getElement(englishlanguage));
+            WCMSICommon.JSClick(getElement(englishlanguage),driver);
+            ScreenshotUtil.takeScreenshotForAllure(driver);
+        } catch (Exception e) {
+            e.printStackTrace();
+            WCMSICommon.reportFailAssert("Failed to change Language", e);
         }
     }
 }
