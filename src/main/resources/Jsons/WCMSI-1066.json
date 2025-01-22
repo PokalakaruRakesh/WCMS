@@ -1,0 +1,16 @@
+{
+  "WCMSI-1066": {
+    "Menu": "News",
+    "AddURL": "news"
+  },
+  "News": {
+    "Mainheader": "News",
+    "text1": "Biobased Plastic",
+    "LinkText1": "Biobased Plastic vs. Biodegradable Plastic",
+    "URL1": "news/biobased-plastic-vs-biodegradable-plastic-what-s-the-difference-podcast",
+    "Header1":"Related Stories",
+    "LinkText2": "How Roller Coasters Are Using Technology",
+    "URL2": "news/how-roller-coasters-are-using-technology-to-reach-new-heights-podcast",
+    "Header2": "Related Stories"
+  }
+}

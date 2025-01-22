@@ -1,0 +1,108 @@
+{
+  "WCMSI-604": {
+    "Menu": "Standards & Solutions",
+    "Submenu": "Standards & Solutions Overview",
+    "SubmenuList": "Training Courses"
+  },
+  "ASTMIndustry": {
+    "MainHeader": "ASTM Industry Training Solutions",
+    "Subheader": "Live, Virtual, & OnDemand Standards Training",
+    "text1": "Learn how to properly use",
+    "Text1": "Learn how to properly use and apply the standards you use every day with thousands of accredited industry training courses. Our esteemed group of instructors are experts in their industries and the standards that improve them. Train from anywhere in the world with learning options that fit into your busy schedule.",
+    "Button1": "Train Your Whole Team",
+    "Button2": "eBook: Expertly Driven Training",
+    "Button3": "Learning Support & FAQs"
+  },
+  "WhatsNew": {
+    "Header": "New",
+    "Subheader": "Lab Manager Academy",
+    "text": "Whether you",
+    "Text": "Whether youre a seasoned Lab Manager or seeking career advancement, the Lab Management Certificate Program will equip you with the tools you need to effectively lead and manage your lab.",
+    "LinkText": "Learn More"
+  },
+  "CostEffectiveInteractive": {
+    "Header": "Cost-Effective, Interactive Training Solutions",
+    "SubHeader1": "In-Person Training",
+    "text1": "Expand your standards",
+    "Text1": "Expand your standards knowledge with live instructor-led hands-on courses in-person and online.",
+    "SubHeader2": "OnDemand Training",
+    "text2": "Learn on your own",
+    "Text2": "Learn on your own schedule with interactive self-paced courses featuring detailed video demonstrations and more.",
+    "SubHeader3": "Group Training",
+    "text3": "Mitigate staff turnover",
+    "Text3": "Mitigate staff turnover and enhance team performance with group training at our location or yours.",
+    "SubHeader4": "Certification Programs",
+    "text4": "Advance your career",
+    "Text4": "Advance your career and professional profile with personnel certification programs."
+  },
+  "Industries": {
+    "Header": "Industries",
+    "text": "We offer 500+ training",
+    "Text": "We offer 500+ training products for multiple industries and standards. Select your industry to explore our course listings and schedule your training. Contact us to learn about bringing our training to your location.",
+    "LinkText1": "Additive Manufacturing",
+    "LinkText2": "Building & Construction",
+    "LinkText3": "Cannabis",
+    "LinkText4": "Coal",
+    "LinkText5": "Corrosion",
+    "LinkText6": "D4057 Sampling",
+    "LinkText7": "Emerging Technologies",
+    "LinkText8": "Energy (Petroleum)",
+    "LinkText9": "Environment",
+    "LinkText10": "Lab & Field Fundamentals",
+    "LinkText11": "Light Sport Aircraft",
+    "LinkText12": "LPG",
+    "LinkText13": "Metals",
+    "LinkText14": "Oxygen",
+    "LinkText15": "Plastics",
+    "LinkText16": "Statistics",
+    "LinkText17": "Textiles",
+    "Button": "View Training Catalog"
+  },
+  "ASTMMemberTraining": {
+    "Header": "ASTM Member Training",
+    "text": "Learn how to effectively",
+    "Text": "Learn how to effectively participate in standards development and get the most value out of your ASTM membership in our Classroom for Members."
+  },
+  "PersonnelCertification": {
+    "Header": "Personnel Certification and Certificate Programs",
+    "text1": "Demonstrate your commitment",
+    "Text1": "Demonstrate your commitment to quality and get the credentials you need to advance your career.",
+    "text2": "Our personnel certification",
+    "Text2": "Our personnel certification programs are designed to assess your knowledge and ability to perform, record, and report the results of ASTM standards. All programs include proctored, online written examinations and require the submission of evidence of satisfactorily completed performance evaluations.",
+    "LinkText1": "Construction Material Testing (CMT)",
+    "LinkText2": "ASTM Certified Environmental Liabilities Professionals",
+    "LinkText3": "Petroleum Laboratory Professionals"
+  },
+  "TrainingAndELearning": {
+    "Header": "Training and eLearning Accreditations",
+    "text": "We are proud",
+    "Text": "We are proud to offer continuing education units (CEUs), professional development hours (PDHs), and CPD hours for our expansive standards training catalog.",
+    "Subheader1": "Accreditations",
+    "Button1": "Learn More",
+    "Subheader2": "Digital Badging for eLearning",
+    "Button2": "Learn More",
+    "Subheader3": "Continuing Education",
+    "Button3": "Learn More",
+    "Subheader4": "Credentialing Program Registry",
+    "Button4": "Learn More"
+  },
+  "BrandingAndSponsorship": {
+    "Header": "Branding and Sponsorship Opportunities",
+    "text": "Get exposure for your",
+    "Text": "Get exposure for your company when you sponsor one of our live industry training events held throughout the year. Boost your brand and introduce your services to fellow industry stakeholders at these well-attended courses.",
+    "Button": "Contact Us"
+  },
+  "PersonnelCertifications": {
+    "Header": "Personnel Certification and Certificate Programs",
+    "LinkText1": "Internal Auditing to ISO/IEC 17025:2017 (Non-forensic)",
+    "LinkText2": "Understanding the Requirements and Concepts of ANSI/ASTM E2659:2018",
+    "LinkText3": "Understanding the Requirements and Concepts of ISO/IEC 17024:2012",
+    "LinkText4": "Corrective Action Process and Cause Analysis",
+    "LinkText5": "ANAB Forensic Technical Assessor Training"
+  },
+  "SuggestATrainingProgram": {
+    "Header": "Suggest a Training Program",
+    "subheader": "Do you have a suggestion or need for training on an ASTM standard?",
+    "Button": "Contact Us"
+  }
+}

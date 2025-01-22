@@ -1,0 +1,23 @@
+{
+  "WCMSI-1064": {
+    "Menu": "News",
+    "Submenu": "Editorial Calendar and Media Kit",
+    "AddURL": "keyword?cat=update&contentType=news"
+  },
+    "QueriedCategory": {
+      "Header": "Queried Category",
+      "Subheader1": "Aerial Adventure Courses",
+      "Subheader2": "Operating Handbook",
+      "Subheader3": "Chemical Composition Analysis of Gaseous Fuels",
+      "Subheader4": "Guided Wave Testing",
+      "Subheader5": "D19 Workshop on Performance Verification",
+      "Subheader6": "Thermocouple Connectors",
+      "Subheader7": "Disinfectant Efficacy",
+      "Subheader8": "Characterization of Hydrogels",
+      "Subheader9": "Synthetic Turf Permeability",
+      "Subheader10": "Sewer Basins and Fittings",
+      "Subheader11": "Corrosion Test Panel Preparation",
+      "Subheader12": "Fluorine and Chlorine",
+      "Button": "Load More"
+    }
+}

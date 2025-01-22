@@ -6,7 +6,7 @@
     </listeners>
     <parameter name="platform" value="local"/>
     <parameter name="browser" value="Chrome"/>
-    <parameter name="env" value="QA"/>
+   <!-- <parameter name="env" value="STG"/>-->
     <!--   <parameter name ="testExecutionId" value="000000"/>-->
     <!--    <parameter name="updateJira" value="true"></parameter>-->
 
@@ -36,6 +36,26 @@
             <class name="tests.ui.WCMSContent.VerifyEnterpriseSolutions_StandardSolutionsInTheWCMSApplication_WCMSI_599"/>
             <class name="tests.ui.WCMSContent.VerifyLaboratoryServices_StandardSolutionsInTheWCMSApplication_WCMSI_590"/>
             <class name="tests.ui.WCMSContent.VerifySubscriptionPortal_StandardSolutionsInTheWCMSApplication_WCMSI_601"/>
+
+
+            <class name="tests.ui.WCMSContent.VerifyASTMSpecBuilder_StandardSolutionsInTheWCMSApplication_WCMSI_602"/>
+            <class name="tests.ui.WCMSContent.VerifyMultimediaServices_StandardSolutionsInTheWCMSApplication_WCMSI_603"/>
+            <class name="tests.ui.WCMSContent.VerifyNewsPageContentInWCMSApplication_WCMSI_1040"/>
+            <class name="tests.ui.WCMSContent.VerifyStandardizationNewsPageContentInWCMSApplication_WCMSI_1059"/>
+            <class name="tests.ui.WCMSContent.VerifyPressReleasesPageContentInWCMSApplication_WCMSI_1060"/>
+            <class name="tests.ui.WCMSContent.VerifyPodcastsPageContentInWCMSApplication_WCMSI_1061"/>
+            <class name="tests.ui.WCMSContent.VerifyEspanolPageContentInWCMSApplication_WCMSI_1062"/>
+            <class name="tests.ui.WCMSContent.VerifyMediaKitsPageContentInWCMSApplication_WCMSI_1063"/>
+            <class name="tests.ui.WCMSContent.VerifyQueryPageContentInWCMSApplication_WCMSI_1064"/>
+            <class name="tests.ui.WCMSContent.VerifyPostPageContentInWCMSApplication_WCMSI_1066"/>
+
+            <class name="tests.ui.WCMSContent.VerifyHomepagecontentinWCMSapplicationSet4_WCMSI_550"/>
+            <class name="tests.ui.WCMSContent.VerifyMarketInsightsInnovationPageContentWCMSApplication_WCMSI_587"/>
+            <class name="tests.ui.WCMSContent.VerifyStandardsPublicationsPageContentWCMSApplication_WCMSI_584"/>
+            <class name="tests.ui.WCMSContent.VerifyASTMCompassPageContentWCMSI_600"/>
+            <class name="tests.ui.WCMSContent.VerifyASTMIndustryTrainingSolutionsPageContentInWCMSApplication_WCMSI_604"/>
+
+
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

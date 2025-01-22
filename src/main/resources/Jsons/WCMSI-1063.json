@@ -1,0 +1,17 @@
+{
+  "WCMSI-1063": {
+    "Menu": "News",
+    "Submenu": "Editorial Calendar and Media Kit",
+    "AddURL": "news/editorial-calendar-and-media-kit"
+  },
+    "EditorialCalendaMediaKit": {
+      "Header": "Editorial Calendar and Media Kit",
+      "text1": "Standardization News magazine",
+      "Text1": "Standardization News magazine is the premier resource for the global standards community. Read by 30,000 members of ASTM International, it is used by professionals involved in laboratory testing, research, and standardization in many scientific disciplines and industries.",
+      "text2": "To view a media kit and editorial",
+      "Text2_1": "To view a media kit and editorial calendar",
+      "Text2_2": "which include rates and specs for advertising in the print magazine",
+
+      "Button": "Click Here"
+    }
+}

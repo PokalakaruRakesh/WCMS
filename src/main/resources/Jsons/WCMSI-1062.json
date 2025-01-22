@@ -1,0 +1,36 @@
+{
+  "WCMSI-1062": {
+    "Menu": "News",
+    "Submenu": "Español",
+    "AddURL": "news/espanol"
+  },
+    "News in Spanish": {
+      "Header": "Noticias en Espanol",
+      "text1": "The ASTM International Committee",
+      "Text1": "The ASTM International Committee on Concrete and Concrete Aggregates (C09) is developing a new standard for economical strength testing of concrete.",
+      "text2": "Corrosion protection",
+      "Text2": "Corrosion protection",
+      "LinkText": "Read More"
+    },
+  "Main Articles": {
+    "Header": "Main Articles",
+    "SubHeader1": "Standardization space",
+    "Button1": "Featured Articles",
+    "SubHeader2": "Commercial space flights",
+    "Button2": "Committees in action",
+    "SubHeader3": "Commercial space flight",
+    "Button3": "Editor",
+    "SubHeader4": "Types of space vehicles",
+    "Button4": "Committees in action"
+  },
+  "Recent Articles": {
+    "Header": "Recent Articles",
+    "SubHeader1": "Commercial space flight",
+    "SubHeader2": "Commercial space flights",
+    "SubHeader3": "Types of space vehicles",
+    "SubHeader4": "Standardization space",
+    "Button": "FURTHER"
+
+
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "WCMSI-584": {
+    "Menu": "Standards & Solutions",
+    "Submenu": "Standards & Solutions Overview",
+    "SubmenuList": "Standards & Publications"
+  },
+  "Standards & Publications": {
+    "Header": "Standards & Publications",
+    "text1": "Over 125 years of publishing excellence",
+    "Text1": "Over 125 years of publishing excellence",
+    "text2": "Welcome to your direct access",
+    "Text2": "Welcome to your direct access to one of most comprehensive online libraries of technical information in the world. Our extensive catalog is your source for standards from ASTM and other leading standards developers, plus thousands of journal articles, manuals, and technical papers dating back over 125 years.",
+    "Button1": "Browse by Category"
+  },
+  "ASTM Standards Tracker": {
+    "Header": "ASTM Standards Tracker",
+    "text1": "Get free email alerts for the new",
+    "Text1": "Get free email alerts for the new or revised standards in your industry. Track individual standards or by ASTM technical committee to ensure youre always up to date.",
+    "Button1": "Sign Up for Tracker"
+  },
+  "Standards Products": {
+    "Header": "Standards Products",
+    "Subheader1": "Book of ASTM Standards",
+    "text1": "80 volumes of 13,000 ASTM standards",
+    "Text1": "80 volumes of 13,000 ASTM standards, print or online with weekly updates and user tools",
+    "LinkText1": "Learn More",
+    "Subheader2": "ASTM Compass",
+    "text2": "Licensed digital access to ASTM",
+    "Text2": "Licensed digital access to ASTM and other standards, eBooks, papers, workflow tools",
+    "LinkText2": "Learn More",
+    "Subheader3": "ASTM Digital Library",
+    "text3": "Digital editions of every published ASTM",
+    "Text3": "Digital editions of every published ASTM technical book, paper, and journal article",
+    "LinkText3": "Learn More",
+    "Subheader4": "Standards Compilations",
+    "text4": "Online subscriptions to standards",
+    "Text4": "Online subscriptions to standards grouped by industry or build your own custom collections.",
+    "LinkText4": "Learn More"
+  },
+  "Adjuncts and Reference Radiographs": {
+    "Header": "Adjuncts and Reference Radiographs",
+    "text1": "Get important supplemental data",
+    "Text1": "Get important supplemental data and physical materials that help you to apply and use your ASTM standards. This content is available separately from your standards and can be downloaded or shipped to a secure location.",
+    "Button1": "Adjuncts & Reference Radiographs by Committee"
+  },
+  "Research Reports": {
+    "Header": "Research Reports",
+    "text1": "If an ASTM test method features",
+    "Text1": "If an ASTM test method features an interlaboratory study supporting the precision and bias statement, youll find it here in a Research Report. Use this valuable information to improve test performance and troubleshoot."
+  },
+  "ASTM Research Report": {
+    "Header": "What you’ll find in an ASTM Research Report",
+    "text1": "List of participating laboratories",
+    "Text1": "List of participating laboratories",
+    "text2": "Description of samples",
+    "Text2": "Description of samples",
+    "text3": "A copy of the laboratory instructions",
+    "Text3": "A copy of the laboratory instructions",
+    "text4": "Equipment/apparatus used",
+    "Text4": "Equipment/apparatus used",
+    "text5": "A statistical summary",
+    "Text5": "A statistical summary",
+    "text6": "Raw data",
+    "Text6": "Raw data",
+    "text7": "A copy of the precision and bias statement",
+    "Text7": "A copy of the precision and bias statement",
+    "Button1": "Research Reports by Committee"
+  },
+  "UOP Standards": {
+    "Header": "UOP Standards",
+    "Button1": "View UOP Standards"
+  },
+  "Publications": {
+    "Header": "Publications",
+    "text1": "The ASTM Digital Library",
+    "Text1": "The ASTM Digital Library comprising nearly 60,000 chapters and papers is available via the ASME Digital Collection, powered by the Silver chair platform.",
+    "Subheader1": "Reviewed Symposia Papers",
+    "text2": "First-hand accounts of user experiences",
+    "Text2": "First-hand accounts of user experiences and opinions on improvements and future needs in their industries",
+    "LinkText1": "Learn More",
+    "Subheader2": "Manuals, Monographs & Data Series",
+    "text3": "Practical, hands",
+    "Text3": "Practical, hands-on guidance on the proper application and interpretation of a standard",
+    "LinkText2": "Learn More",
+    "Subheader3": "Journals",
+    "text4": "The latest developments in testing",
+    "Text4": "The latest developments in testing and evaluation, materials performance, geotechnical and civil engineering",
+    "LinkText3": "Learn More",
+    "Subheader4": "Technical Reports",
+    "text5": "Critical insight on the need for a standard",
+    "Text5": "Critical insight on the need for a standard as well as the technology and research that led to its development",
+    "LinkText4": "Learn More"
+  },
+  "Standards Reading Room": {
+    "Header": "Standards Reading Room",
+    "text1": "View and read ASTM safety standards",
+    "Text1": "View and read ASTM safety standards incorporated in United States regulations.",
+    "Button1": "Open Reading Room"
+  },
+  "ASTM Standards & COVID-19": {
+    "Header": "ASTM Standards & COVID-19",
+    "text1": "In an effort to support manufacturers",
+    "Text1": "In an effort to support manufacturers, test labs, health care professionals as they respond to the global COVID-19 public health emergency, no-cost public access is provided in the Reading Room for ASTM standards used in the production and testing of personal protective equipment. This includes ASTM standards for face masks, medical gowns, gloves, and hand sanitizers.",
+    "Button1": "View COVID-19 Related Standards"
+  },
+  "Search": {
+    "Header": "Search",
+    "text1": "Search Standards and Publications",
+    "Text1": "Search Standards and Publications by keywords or designation."
+  },
+  "Need ordering assistance? Contact our Customer Support team.": {
+    "Header": "Need ordering assistance? Contact our Customer Support team.",
+    "Button1": "Contact Us"
+  }
+}
+
+

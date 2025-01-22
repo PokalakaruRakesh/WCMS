@@ -27,7 +27,7 @@ public class WCMSContentPage extends  BasePage {
     private String submenuList = "//nav[@data-testid='navbar']//a[contains(text(),'[TEXT]')]";
     private String mainHeader = "//h2[contains(text(),'[MAINHEADER]')]|//h2//strong[contains(text(),'[MAINHEADER]')]";
     private String header = "//h4[contains(text(),'[HEADER]')]|//h4/span[contains(text(),'[HEADER]')]|//h4//strong[contains(text(),'[HEADER]')]|//h5[contains(text(),'[HEADER]')]|//h5/span[contains(text(),'[HEADER]')]";
-    private String subheader = "//h6[contains(text(),'[SUBHEADER]')]|//h6/span[contains(text(),'[SUBHEADER]')]";
+    private String subheader = "//h6[contains(text(),'[SUBHEADER]')]|//h6/span[contains(text(),'[SUBHEADER]')]|//h5[contains(text(),'[SUBHEADER]')]";
     private String linkText = "//a[contains(text(),'[TEXT]')]";
     private String textUnderMainheader = "//h2[contains(text(),'[MAINHEADER]')]/..//p[contains(text(),'[TEXT]')]|//h2[contains(text(),'[MAINHEADER]')]/following::h5[contains(text(),'[TEXT]')]";
     private String textUnderMainheader1 = "//h2[contains(text(),'[MAINHEADER]')]/..//p[contains(text(),\"[TEXT]\")]";
@@ -42,8 +42,8 @@ public class WCMSContentPage extends  BasePage {
     private String buttonUnderHeader = header+"/..//a[contains(text(),'[TEXT]')]|"+header+"/../../following::div/a[contains(text(),'[TEXT]')]|"+header+"/..//a[contains(text(),'[TEXT]')]";
     private String dropdown = "//h4[contains(text(),'[HEADER]')]/..//button[contains(text(),'[TEXT]')]";
     private String buttonUnderMainheader = mainHeader+"/../../following-sibling::div/a[contains(text(),'[BUTTON]')]";
-    private String buttonUnderSubheader = "//h6[contains(text(),'[HEADER]')]/..//button[contains(text(),'[BUTTON]')]|//h6[contains(text(),'[HEADER]')]/../following-sibling::a[contains(text(),'[BUTTON]')]|//h6[contains(text(),'[HEADER]')]/following::div/a[contains(text(),'[BUTTON]')]|//h6/span[contains(text(),'[HEADER]')]/../following-sibling::div/a[contains(text(),'[BUTTON]')]";
-    private String buttonUnderSubheader1 = "//h6[contains(text(),'[HEADER]')]/../following-sibling::a[contains(text(),'[BUTTON]')]";
+    private String buttonUnderSubheader = "//h6[contains(text(),'[HEADER]')]/..//button[contains(text(),'[BUTTON]')]|//h6[contains(text(),'[HEADER]')]/../following-sibling::a[contains(text(),'[BUTTON]')]|//h6[contains(text(),'[HEADER]')]/following::div/a[contains(text(),'[BUTTON]')]|//h6/span[contains(text(),'[HEADER]')]/../following-sibling::div/a[contains(text(),'[BUTTON]')]|//h5[contains(text(),'[HEADER]')]/../following-sibling::a[contains(text(),'[BUTTON]')]";
+    private String buttonUnderSubheader1 = "//h6[contains(text(),'[HEADER]')]/../following-sibling::a[contains(text(),'[BUTTON]')]|//h6[contains(text(),'[HEADER]')]/../following::a[contains(text(),'[BUTTON]')]";
     private String linkUnderSubheader = "//h6[contains(text(),'[HEADER]')]/../../a[contains(text(),'[LINK]')]|//h5[contains(text(),'[HEADER]')]/../../a[contains(text(),'[LINK]')]";
     private String linkUnderSubheader1 = "//h6[contains(text(),'[HEADER]')]/../../following-sibling::div/a[contains(text(),'[LINK]')]";
     private String textUnderSubheader = "//h6[contains(text(),'[SUBHEADER]')]/../../div//*[contains(text(),'[TEXT]')]|//h5[contains(text(),'[SUBHEADER]')]/../../div//*[contains(text(),'[TEXT]')]";
@@ -52,6 +52,7 @@ public class WCMSContentPage extends  BasePage {
     private String text = "//*[contains(text(),'[TEXT]')]";
     private String textUnderdrp = "//button[contains(text(),'[TEXT]')]/../following-sibling::div/div";
     private String textByHeader = "//*[contains(text(),'[HEADER]')]/..//*[contains(text(),'[TEXT]')]";
+    private String button = "//button[contains(text(),'[BUTTON]')]";
     public By PCRLinks = By.xpath("//h6[text()='ASTM International has published the following PCR.']/ancestor::div//ul//a[contains(text(),'PCR')]");
     public By EPDLinks = By.xpath("//h2[text()='Published Environmental Product Declarations']/..//ul//a");
     public By ASTMHeadquarters = By.xpath("//h4[text()='ASTM Headquarters']/..");
@@ -59,6 +60,9 @@ public class WCMSContentPage extends  BasePage {
     public By frame = By.xpath("//iframe[@title='ASTM Podcast']");
     public By languageDrp = By.xpath("//button[@data-testid='selected-language']");
     public By englishlanguage = By.xpath("//button[@data-testid='language-change-button']//*[text()='English']");
+    private  By bannerText=By.xpath("//*[contains(@data-testid,'banner-text')]");
+    private  String buttonText="//a[text()='[TEXT]']";
+
 
     public By getMenu(String menuName) {
         return By.xpath(menu.replace("[MENU]", menuName));
@@ -137,19 +141,20 @@ public class WCMSContentPage extends  BasePage {
     public By getLinkUnderSubheader1(String header, String link) {
         return By.xpath(linkUnderSubheader1.replace("[HEADER]", header).replace("[LINK]", link));
     }
-
     public By getTextUnderSubheader(String subheader, String text) {
         return By.xpath(textUnderSubheader.replace("[SUBHEADER]", subheader).replace("[TEXT]", text));
     }
     public By getTextUnderSubheader1(String subheader, String text) {
         return By.xpath(textUnderSubheader1.replace("[SUBHEADER]", subheader).replace("[TEXT]", text));
     }
-
-    public By getImageTextUnderHeader(String text1, String text2) {
-        return By.xpath(imageTextUnderHeader.replace("[TEXT1]", text1).replace("[TEXT2]", text2));
+    public By getButton(String button1) {
+        return By.xpath(button.replace("[BUTTON]", button1));
     }
     public String getText1(String text1) {
         return getElement(By.xpath(text.replace("[TEXT]", text1))).getText();
+    }
+    public By getText2(String text1) {
+        return By.xpath(text.replace("[TEXT]", text1));
     }
     public WebElement getFrame() {
         return getElement(frame);
@@ -157,6 +162,14 @@ public class WCMSContentPage extends  BasePage {
     public By getSpotify(String text1) {
         return By.xpath(Spotify.replace("[TEXT]", text1));
     }
+    public By getImageTextUnderHeader(String text1, String text2) {
+        return By.xpath(imageTextUnderHeader.replace("[TEXT1]", text1).replace("[TEXT2]", text2));
+    }
+    public String getBannerText() {
+        return getElement(bannerText).getText();
+    }
+    public String getButtonText(String text) {
+        return getElement(By.xpath(buttonText.replace("[TEXT]", text))).getText();}
     public String getText(String text1) {
         By locator=By.xpath(text.replace("[TEXT]", text1));
         ReusableMethods.scrollToElement(driver,locator);
@@ -295,6 +308,29 @@ public class WCMSContentPage extends  BasePage {
             WaitStatementUtils.waitForElementToBeClickable(driver,getElement(englishlanguage));
             WCMSICommon.JSClick(getElement(englishlanguage),driver);
             ScreenshotUtil.takeScreenshotForAllure(driver);
+        } catch (Exception e) {
+            e.printStackTrace();
+            WCMSICommon.reportFailAssert("Failed to change Language", e);
+        }
+    }
+    @Step("Validate the URL redirection")
+    public void ValidateURLRedirection(String expectedUrl) {
+        try {
+            WebElement link = driver.findElement(By.id("newTabLink")); // Replace with actual locator
+            link.click();
+            // Switch to the new tab
+            String originalWindow = driver.getWindowHandle();
+            for (String windowHandle : driver.getWindowHandles()) {
+                if (!originalWindow.contentEquals(windowHandle)) {
+                    driver.switchTo().window(windowHandle);
+                    break;
+                }
+            }
+            String redirectedUrl = driver.getCurrentUrl();
+            Assert.assertEquals(redirectedUrl, expectedUrl, "Redirection validation failed redirected Url "+redirectedUrl+" and expected Url "+expectedUrl+" not matched");
+            // Close the new tab and switch back to the original tab
+            driver.close();
+            driver.switchTo().window(originalWindow);
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to change Language", e);

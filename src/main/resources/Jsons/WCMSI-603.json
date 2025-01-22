@@ -9,8 +9,8 @@
     "Button1": "Request an Appointment",
     "Button2": "Quick Guide"
   },
-  "Cost-Effective Media": {
-    "Header": "Cost-Effective Media Production Services to Elevate",
+  "CostEffective Media": {
+    "Header": "Media Production Services to Elevate",
     "text1": "Reimagine your technical",
     "Text1": "Reimagine your technical content with custom digital media that engages your stakeholders, improves your internal methods, and boosts your brand.",
     "text2": "Work directly with",
@@ -37,15 +37,48 @@
   },
   "Streamline Training": {
     "Header1": "Streamline Training and Improve Comprehension with Instructional Media",
-    "text1": "Give your staff, members",
+    "text1": "Give your staff",
     "Text1": "Give your staff, members, and customers the benefit of seeing your technical procedures and tests performed live. Get high-quality instructional videos that will enhance your written procedures.",
     "Header2": "Viewers retain",
-    "subHeader1": "Source – Forbes Magazine"
+    "subHeader1": "Forbes Magazine"
   },
   "Revolutionize": {
     "Header": "Revolutionize Your Content with CGI",
-    "text1": "Start collaborating",
-    "Text1": "Start collaborating with ASTM SpecBuilder today. Request a demo to see how SpecBuilder can help your team.",
-    "Button1": "Get Started"
+    "text1": "Modernize your existing",
+    "Text1": "Modernize your existing content with new custom 3D models and animations of your apparatuses, procedures, figures, and processes.",
+    "text2": "Create new CGI",
+    "Text2": "Create new CGI media that will seamlessly integrate with your current applications. Our team is adept at creating custom virtual training media for industrial procedures that can be challenging or hazardous to capture in a live environment.",
+    "text3": "Your users",
+    "Text3": "Your users will benefit from shareable, interactive content that works on all devices."
+  },
+  "Promote Your Brand": {
+    "Header": "Promote Your Brand, Expand Your Reach",
+    "text1": "Benefit from custom",
+    "Text1": "Benefit from custom, high-quality media content that aligns with your brand and mission with promotional videos.",
+    "text2": "closely with your staff ",
+    "Text2": "Well work closely with your staff to understand your most critical business needs and can help develop custom media content like:",
+    "text3": "Your users will benefit from",
+    "Text3": "Your users will benefit from shareable, interactive content that works on all devices.",
+    "text4": "unique instructional and technical procedural videos",
+    "Text4": "unique instructional and technical procedural videos",
+    "text5": "formal and informal interview segments",
+    "Text5": "formal and informal interview segments",
+    "text6": "product announcements",
+    "Text6": "product announcements",
+    "text7": "advertisements and special promotions",
+    "Text7": "advertisements and special promotions"
+  },
+  "Create Your Own": {
+    "Header": "Create Your Own Multimedia Productions with Media Consulting Services",
+    "text1": "3D models and animations of your apparatuses",
+    "Text1": "Modernize your existing content with new custom 3D models and animations of your apparatuses, procedures, figures, and procesStart creating your own digital media in-house, without relying on outside parties. Build your own in-house production team and develop a multimedia strategy that aligns with your organizations long-term goals.ses.",
+    "text2": "outline a strategic media plan",
+    "Text2": "Well help you outline a strategic media plan and provide all the background you need to get started. From budgeting and resources to advice on equipment and tips and tricks for content creation and editing, well advise you every step of the way."
+  },
+  "Contact": {
+    "Header": "Contact",
+    "subHeader": "meet with our team to develop your custom media service plan",
+    "Button": "Contact the Multimedia Team"
   }
+
 }

@@ -1,0 +1,137 @@
+{
+  "WCMSI-600": {
+    "Menu": "Standards & Solutions",
+    "Submenu": "Standards & Solutions Overview",
+    "SubmenuList": "ASTM Compass"
+  },
+  "ASTM Compass": {
+    "Mainheader": "ASTM Compass",
+    "Subheader": "One Platform. All of Your Content.",
+    "Button": "View Demo"
+  },
+  "Digital Access": {
+    "Header": "Digital Access to ASTM Content Plus Dynamic Workflow Tools",
+    "text1": "Providing you",
+    "Text1": "Providing you 24/7 online access to the content developed by ASTMs worldwide network of experts, ASTM Compass helps you ensure safety, improve quality, and gain a competitive advantage. Add your content, partner content, and more.",
+    "text2": "search and refine",
+    "Text2": "Youll search and refine searches using your native language and quickly find the standards you need to use in your industry. Instantly access any of ASTMs 12,000+ standards, as well as AASHTO,  AATCC,  AENOR,  API,  AWWA,  CGA,  IES, and UOP.",
+    "text3": "Combining these",
+    "Text3": "Combining these 12,000+ standards with 1,500+ books and 47,000+ articles and papers, Compass provides you one of the most comprehensive libraries of technical information available in the world. With tools to add notes, attachments, and even your own standards, youll be able to work smarter and faster.",
+    "Button1": "Learn More",
+    "Button2": "Compass eBook",
+    "Button3": "ASTM Compass Guide"
+  },
+  "Why ASTM Compass": {
+    "Header": "Why ASTM Compass",
+    "Subheader": "Get the Access You Need, When You Need It",
+    "text": "Build a customized ASTM",
+    "Text": "Build a customized ASTM Compass license to meet your teams needs and improve productivity with",
+    "text1": "Easy access to",
+    "Text1": "Easy access to the standards you choose",
+    "text2": "Tools for adding",
+    "Text2": "Tools for adding notes, images, and attachments",
+    "text3": "Sharing functions to",
+    "Text3": "Sharing functions to help pass on and preserve corporate knowledge",
+    "text4": "Color coded highlighting",
+    "Text4": "highlighting that identifies changes to standards",
+    "text5": "ASTM training modules",
+    "Text5": "ASTM training modules",
+    "text6": "Translated standards",
+    "Text6": "Translated standards  ",
+    "text7": "Access to the thousands",
+    "Text7": "Access to the thousands of papers and books in the ASTM Standards & Engineering Digital Library",
+    "text8": "Custom workflow tools",
+    "Text8": "Custom workflow tools to tag parts of standard, compare versions, and more"
+  },
+  "One Resource": {
+    "Header": "One Resource for All Your Content Needs",
+    "Subheader1": "Standards",
+    "text1": "12,000+ Standards",
+    "Text1": "12,000+ Standards",
+    "text2": "Collaboration Tools",
+    "Text2": "Collaboration Tools",
+    "text3": "Multiple Language",
+    "Text3": "Multiple LanguageTranslations",
+    "text4": "Third-Party Content",
+    "Text4": "Third-Party Content",
+    "Subheader2": "Digital Library ",
+    "text5": "1,500+ Books",
+    "Text5": "1,500+ Books",
+    "text6": "15,000+",
+    "Text6": "15,000+ JournalArticles",
+    "text7": "47,000+ Papers",
+    "Text7": "47,000+ Papers,Chapters, and Articles",
+    "Subheader3": "Training",
+    "text8": "Online and",
+    "Text8": "Online and On-Demand Courses",
+    "text9": "Demonstration Videos",
+    "Text9": "Demonstration Videos, Checklists, and Self-Testing",
+    "text10": "Learning Management  ",
+    "Text10": "Learning Management System",
+    "Subheader4": "ASTM SpecBuilder",
+    "text11": "Develop Your",
+    "Text11": "Develop Your Internal Specifications",
+    "text12": "Streamline Collaboration",
+    "Text12": "Streamline Collaboration and Communication",
+    "text13": "Reference and",
+    "Text13": "Reference and Hyperlink Other Standards"
+  },
+    "Custom Workflow": {
+      "Header": "Custom Workflow Tools for Standards Users",
+      "text1": "Revolutionize the way",
+      "Text1": "Revolutionize the way you use standards with tools to help you work more efficiently, reduce research time, and ensure compliance."
+    },
+
+    "Compass Points": {
+      "Header": "Compass Points ",
+      "Subheader": "Tag Parts of Standards: Collaborate, Propagate, Directing Your Teams to the Authoritative Source",
+      "text1": "Compass Points gives",
+      "Text1": "Compass Points gives smart users the ability to pinpoint important components in standards, building a breadcrumb trail to that source data for multiple purposesits an easy-to-adopt step towards smarter standards.",
+      "text2": "Data is growing",
+      "Text2": "Data is growing exponentially in industry. We designed Compass Points to help you keep order and assure data integrity.",
+      "Subheader1": "Manage your team standards data with change alerts",
+      "text3": "Reduce risk with alerts",
+      "Text3": "Reduce risk with alerts that will inform your team when a standard is updated. Each Compass Point includes the standard publisher, standard number and title, creators contact, date, time plus notes and overlays. Users can name the Point to associate with a project code, part number, or process ID for easy retrieval. A spreadsheet view by standard and by account makes it easy to sort your standards data.",
+      "Subheader2": "Preserve organizational knowledge",
+      "text4": "With a unique and permanent",
+      "Text4": "With a unique and permanent data ID, youll ensure information shared amongst colleagues is retained, protecting your organization against lost knowledge. Compass Points are kept in perpetuity for every version of standards from ASTM, ASME, API, AASHTO, ENs, and others.",
+      "Subheader3": "Features of Compass points",
+      "text5": "Every Compass Point",
+      "Text5": "Every Compass Point is programmatically enhanced with useful metadata",
+      "text6": "Easily add overlays",
+      "Text6": "Easily add overlays, diffs, departures, exceptions",
+      "text7": "Share your Compass",
+      "Text7": "Share your Compass Points with your colleagues to collaborate",
+      "text8": "Embed the links",
+      "Text8": "Embed the links in your internal systems: e.g., LIMS, PLM, requirements management, and ERP",
+      "text9": "Name your Compass Points",
+      "Text9": "Name your Compass Points semantically according to project code, part number or process ID for easy retrieval",
+      "text10": "Ease data hunting",
+      "Text10": "Ease data hunting during audits or look backs with a connection your saved Compass Points"
+    },
+      "Version Comparison": {
+        "Header": "Version Comparison",
+        "text1": "Save time",
+        "Text1": "Save time, money, and manpower with color-coded highlighting to help instantly identify changes to standards. With the version comparison tool, users can quickly see any changes to a standard since its last publication."
+      },
+
+      "Video Standards": {
+        "Header": "Video Standards",
+        "text1": "Get access to",
+        "Text1": "Get access to 300+ high-quality featured videos providing live demonstrations of your standards. Quickly onboard new staff to properly execute test methods. Retrain existing teams with changes to test procedures."
+      },
+
+      "Digital Access to International": {
+        "Header": "Digital Access to International Standards",
+        "text1": "from leading standards development",
+        "Text1": "Explore a broad array of standards from leading standards development organizations such as AASHTO, AATCC, UNE (AENOR), API, AWWA, CGA, IES, and UOP, without leaving the Compass platform."
+      },
+
+      "Discover ASTM Compass": {
+        "Header": "Discover ASTM Compass",
+        "Subheader": "Contact us to get started",
+        "Button": "Contact ASTM Sales"
+      }
+}
+
+
