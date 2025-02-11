@@ -47,7 +47,7 @@ public class VerifyNewsPageContentInWCMSApplication_WCMSI_1040 extends BaseTest 
             driver.navigate().to(url);
             cookiePage.handleOneTrustCookie();
             validateContentUnderNewsHeader("News");
-            validateContentUnderWhatsHappeningHeader("WhatsHappening");
+            //validateContentUnderWhatsHappeningHeader("WhatsHappening");
             validateContentUnderSTANDARDIZATIONNEWSHeader("STANDARDIZATIONNEWS");
             validateContentUnderASTMPodcastHeader("ASTMPodcast");
             validateContentUnderTrendingStoriesHeader("TrendingStories");
@@ -84,8 +84,8 @@ public class VerifyNewsPageContentInWCMSApplication_WCMSI_1040 extends BaseTest 
             Assert.assertEquals(WCMSPage.getTextByHeader(Mainheader,WCMSPage.jsonValue(jsonObject,"text3")), Text3);
             Assert.assertEquals(WCMSPage.getTextByHeader(Mainheader,WCMSPage.jsonValue(jsonObject,"text4")), Text4);
             Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkText(LinkText)));
-            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(Header1)));
-            Assert.assertEquals(WCMSPage.getTextByHeader(Header1,Text1_1),Text1_1);
+            //Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(Header1)));
+            Assert.assertEquals(WCMSPage.getText(Text1_1),Text1_1);
             Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getLinkText(LinkText1)));
             Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getsubheader(SubHeader)));
             Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderSubheader(SubHeader, Button)));

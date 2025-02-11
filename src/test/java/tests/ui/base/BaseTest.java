@@ -60,12 +60,14 @@ public class BaseTest {
 				ConfigReader.setValue("TestExecutionID", testExecutionId);
 			}
 			//Setting Base URL based on Environments
-			//ConfigReader.setValue("BASE_URL_MAE", ConfigReader.getValue(env+"MAE"));
+			ConfigReader.setValue("BASE_URL_MAE", ConfigReader.getValue(env+"MAE"));
 			
 			String value=ConfigReader.getValue(env);
 			if(env.equals("QA"))
 				ConfigReader.setValue("BASE_URL_WCMS_ASTM",value);
 			else if(env.equals("DEV"))
+				ConfigReader.setValue("BASE_URL_WCMS_ASTM",value);
+			else if(env.equals("STG"))
 				ConfigReader.setValue("BASE_URL_WCMS_ASTM",value);
 			EnvironmentFileUtil.setUp(browser, platform,env);
 			ScreenRecorderUtil.startRecord(className);

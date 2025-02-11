@@ -23,7 +23,9 @@ public class WCMSContentPage extends  BasePage {
     CookiePage cookiePage=getInstance(CookiePage.class);
 
     private String menu = "(//button[contains(text(),'[MENU]')])[2]|(//a[contains(@title,'[MENU]')])[2]";
-    private String submenu = "(//div[contains(@class,'submenuMain')]/following::a[contains(text(),'[SUBMENU]')])[2]";
+    private String submenu = "(//div[contains(@class,'submenuMain')]/following::a[contains(text(),'[SUBMENU]')])[2]|(//a[contains(@class,'header-navigation') and @title='[SUBMENU]'])[5]|(//a[@title='[SUBMENU]'])[4]";
+    private String submenu1 = "(//a[contains(@title,'[SUBMENU]') and contains(text(),'[SUBMENU]')])[5]";
+    private String submenu2 = "(//a[contains(@title,'[SUBMENU]') and contains(text(),'[SUBMENU]')])[4]";
     private String submenuList = "//nav[@data-testid='navbar']//a[contains(text(),'[TEXT]')]";
     private String mainHeader = "//h2[contains(text(),'[MAINHEADER]')]|//h2//strong[contains(text(),'[MAINHEADER]')]";
     private String header = "//h4[contains(text(),'[HEADER]')]|//h4/span[contains(text(),'[HEADER]')]|//h4//strong[contains(text(),'[HEADER]')]|//h5[contains(text(),'[HEADER]')]|//h5/span[contains(text(),'[HEADER]')]";
@@ -62,7 +64,7 @@ public class WCMSContentPage extends  BasePage {
     public By englishlanguage = By.xpath("//button[@data-testid='language-change-button']//*[text()='English']");
     private  By bannerText=By.xpath("//*[contains(@data-testid,'banner-text')]");
     private  String buttonText="//a[text()='[TEXT]']";
-
+    private  String footer="//div[contains(@class,'row footer-menu')]//a[contains(text(),'[TEXT]')]";
 
     public By getMenu(String menuName) {
         return By.xpath(menu.replace("[MENU]", menuName));
@@ -72,6 +74,12 @@ public class WCMSContentPage extends  BasePage {
     }
     public By getSubmenu(String submenuName) {
         return By.xpath(submenu.replace("[SUBMENU]", submenuName));
+    }
+    public By getSubmenu1(String submenuName) {
+        return By.xpath(submenu1.replace("[SUBMENU]", submenuName));
+    }
+    public By getSubmenu2(String submenuName) {
+        return By.xpath(submenu2.replace("[SUBMENU]", submenuName));
     }
     public By getMainHeader(String mainheader) {
         return By.xpath(mainHeader.replace("[MAINHEADER]", mainheader));
@@ -164,6 +172,9 @@ public class WCMSContentPage extends  BasePage {
     }
     public By getImageTextUnderHeader(String text1, String text2) {
         return By.xpath(imageTextUnderHeader.replace("[TEXT1]", text1).replace("[TEXT2]", text2));
+    }
+    public By getFooter(String text) {
+        return By.xpath(footer.replace("[TEXT]", text));
     }
     public String getBannerText() {
         return getElement(bannerText).getText();
