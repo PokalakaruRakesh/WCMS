@@ -8,10 +8,9 @@ import org.testng.annotations.Test;
 import pages.ui.ASTMDigital_LibraryWCMS;
 import pages.ui.CommonPage_WCMS;
 import pages.ui.CookiePage;
-import pages.ui.Tracker_ServicesWCMS;
 import tests.ui.base.BaseTest;
 @Epic("WCMSI-2: Design and Development of Pages")
-public class VerifyASTMDigitalLibraryWCMSI_607 extends BaseTest {
+public class VerifyASTMDigitalLibrary_WCMSI_607 extends BaseTest {
     static final String jiraTestID = "WCMSI-607";
     CookiePage cookiePage;
     CommonPage_WCMS commonPage;

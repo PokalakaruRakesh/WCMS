@@ -12,7 +12,7 @@ public class StandardAndPuplicationWCMS extends BasePage {
     public By BookAstmStandard=By.xpath("//h5[text()='Book of ASTM Standards']/ancestor::div/a[text()='Learn More']");
     public By ASTMCompass=By.xpath("//h5[contains(text(),'ASTM Compass')]/ancestor::div/a[text()='Learn More']");
     public By ASTMDigitalLibrary=By.xpath("//a[@href='/standards-and-solutions/digital-library'][normalize-space()='Learn More']");
-    public By Adjuncts=By.xpath("//a[@title='Adjuncts']");
+    public By Adjuncts=By.xpath("//a[contains(@title,'Adjuncts')]");
     public By ReferenceRadiographs = By.xpath("//a[@title='Reference Radiographs ']");
     public By ResearchReportsCommittee= By.xpath("//a[@title='Research Reports by Committee']");
     public By ViewUOPStandards= By.xpath("//a[@title='View UOP Standards']");

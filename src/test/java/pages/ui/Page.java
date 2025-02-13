@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class Page {
-    WebDriver driver;
+    static WebDriver driver;
     public WebDriverWait wait;
 
 

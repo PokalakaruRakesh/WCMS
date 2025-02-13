@@ -14,6 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 import java.util.List;
+import java.util.Set;
 
 public class CommonPage_WCMS extends BasePage {
 
@@ -27,6 +28,7 @@ public class CommonPage_WCMS extends BasePage {
     public WebElement getLearnMoreLinksUnderTiles(int index, String section) {
         return driver.findElement(By.xpath("(//h4[text()='" + section + "']/../div//a[text()='Learn More'])[" + index + "]"));
     }
+
     public By videoLink = By.xpath("(//iframe[@title='Video'])[1]");
 
     public WebElement getVideoLink() {
@@ -34,17 +36,29 @@ public class CommonPage_WCMS extends BasePage {
     }
 
     public WebElement getWistiaVideoLink(String heading) {
-        return driver.findElement(By.xpath("//h4[text()='"+heading+"']/following-sibling::iframe[@title='Wistia video player']"));
+        return driver.findElement(By.xpath("//h4[text()='" + heading + "']/following-sibling::iframe[@title='Wistia video player']"));
     }
 
     public By aboutNavigation = By.xpath("(//button[text()='About ASTM'])[last()]");
     public By aboutASTMOverview = By.xpath("(//a[@href='/about'][text()='About ASTM Overview'])[last()]");
-
     @Step("Click on 'About' Navigation Option")
     public void ClickOnAboutNavigationOption() {
         try {
             ReusableMethods.mouseHover(driver, getElement(aboutNavigation), "Click on About ASTM Option");
             getElement(aboutNavigation).click();
+        } catch (Exception e) {
+            e.getStackTrace();// TODO: handle exception
+        }
+    }
+
+    public By anniversaryCaseStudies = By.xpath("(//a[contains(@href, '125th-anniversary-case-studies')])[4]");
+
+    @Step("Click on '125th Anniversary Case Studies' Navigation Option")
+    public void clickOnAnniversaryCaseStudies() {
+        try {
+            ReusableMethods.mouseHover(driver, getElement(aboutNavigation), "Click on About ASTM Option");
+            getElement(anniversaryCaseStudies).click();
+            WCMSICommon.waitForSec(3);
         } catch (Exception e) {
             e.getStackTrace();// TODO: handle exception
         }
@@ -76,15 +90,115 @@ public class CommonPage_WCMS extends BasePage {
 
     public By standardSolutionNavigation = By.xpath("(//button[text()='Standards & Solutions'])[last()]");
 
-    @Step("Click on 'Standard_Solution_Overview' Option")
+    @Step("Click on 'Standard_Solution' Option")
     public void getstandardandSolution() {
         try {
-            WCMSICommon.waitForSec(3);
+            WCMSICommon.waitForSec(1);
             ReusableMethods.mouseHover(driver, getElement(standardSolutionNavigation), "Click on Standard & solution Option");
             WaitStatementUtils.waitForElementToBeClickable(driver, getElement(standardSolutionNavigation));
             getElement(standardSolutionNavigation).click();
         } catch (Exception e) {
             e.getStackTrace();// TODO: handle exception
+        }
+    }
+
+    public By standardSolutionOverview = By.xpath("(//a[text()='Standards & Solutions Overview'])[2]");
+
+    @Step("Click on 'Standard_Solution_Overview' Option")
+    public void clickStandardAndSolutionOverview() {
+        try {
+            WCMSICommon.waitForSec(2);
+            ReusableMethods.mouseHover(driver, getElement(standardSolutionOverview), "Click on Standard & solution Overview Option");
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(standardSolutionOverview));
+            getElement(standardSolutionOverview).click();
+            WCMSICommon.waitForSec(2);
+
+        } catch (Exception e) {
+            e.getStackTrace();// TODO: handle exception
+        }
+    }
+
+    public By membershipParticipationNavigation = By.xpath("(//button[text()='Membership & Participation'])[last()]");
+
+    @Step("Click on 'Membership And Participation' Option")
+    public void clickOnMembershipParticipation() {
+        try {
+            WCMSICommon.waitForSec(2);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(membershipParticipationNavigation));
+            getElement(membershipParticipationNavigation).click();
+            WCMSICommon.waitForSec(2);
+        } catch (Exception e) {
+            e.getStackTrace();
+        }
+    }
+
+    public By membershipParticipationOverview = By.xpath("(//a[contains(text(), 'Membership & Participation Overview')])[2]");
+
+    @Step("Click on 'Membership And Participation overview' Option")
+    public void clickOnMembershipAndParticipationOverviewNavigation() {
+        try {
+            WCMSICommon.waitForSec(2);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(membershipParticipationOverview));
+            getElement(membershipParticipationOverview).click();
+            WCMSICommon.waitForSec(2);
+        } catch (Exception e) {
+            e.getStackTrace();
+        }
+    }
+
+    public By emergingProfessionalsNavigation = By.xpath("(//a[@title='Emerging Professionals'])[5]");
+
+    @Step("Click on 'Emerging Professionals Navigation' Option")
+    public void clickOnEmergingProfessionals() {
+        try {
+            WCMSICommon.waitForSec(2);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(emergingProfessionalsNavigation));
+            getElement(emergingProfessionalsNavigation).click();
+            WCMSICommon.waitForSec(3);
+        } catch (Exception e) {
+            e.getStackTrace();
+        }
+    }
+
+    public By technicalCommitteesNavigation = By.xpath("(//a[@title='Technical Committees'])[5]");
+
+    @Step("Click on 'Technical Committees' Option")
+    public void clickOnTechnicalCommittees() {
+        try {
+            WCMSICommon.waitForSec(2);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(technicalCommitteesNavigation));
+            getElement(technicalCommitteesNavigation).click();
+            WCMSICommon.waitForSec(3);
+        } catch (Exception e) {
+            e.getStackTrace();
+        }
+    }
+
+    public By students = By.xpath("(//a[@title='Student Members'])[4]");
+
+    @Step("Click on 'Students' Option")
+    public void clickOnStudents() {
+        try {
+            WCMSICommon.waitForSec(2);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(students));
+            getElement(students).click();
+            WCMSICommon.waitForSec(2);
+        } catch (Exception e) {
+            e.getStackTrace();
+        }
+    }
+
+    public By membership = By.xpath("(//a[@title='Membership'])[5]");
+
+    @Step("Click on 'Membership' Option")
+    public void clickOnMembership() {
+        try {
+            WCMSICommon.waitForSec(2);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(membership));
+            getElement(membership).click();
+            WCMSICommon.waitForSec(3);
+        } catch (Exception e) {
+            e.getStackTrace();
         }
     }
 
@@ -199,7 +313,10 @@ public class CommonPage_WCMS extends BasePage {
             e.getStackTrace();
         }
     }
-    public By ASTMMultimediaSolution= By.xpath("(//a[@title='Multimedia Services'])[4]");
+
+    public By ASTMMultimediaSolution = By.xpath("(//a[@title='Multimedia Services'])[4]");
+
+    @Step("Click on 'ASTM Multimedia Solution' Option")
     public void clickonASTMMultimediaSolutions() {
         try {
             WCMSICommon.waitForSec(2);
@@ -213,6 +330,7 @@ public class CommonPage_WCMS extends BasePage {
 
     public By astmCompass = By.xpath("(//a[contains(@title, 'ASTM Compass')])[4]");
 
+    @Step("Click on 'ASTM Compass' Option")
     public void clickOnASTMCompass() {
         try {
             WCMSICommon.waitForSec(2);
@@ -224,15 +342,72 @@ public class CommonPage_WCMS extends BasePage {
         }
     }
 
+    public By specBuilder = By.xpath("(//a[contains(@title, 'ASTM SpecBuilder')])[4]");
+
+    @Step("Click on 'ASTM Specbuilder' Option")
+    public void clickOnASTMSpecbuilder() {
+        try {
+            WCMSICommon.waitForSec(2);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(specBuilder));
+            getElement(specBuilder).click();
+            WCMSICommon.waitForSec(2);
+        } catch (Exception e) {
+            e.getStackTrace();
+        }
+    }
+
+    public By regionalOffices = By.xpath("(//a[@title='Regional Offices and Support'])[5]");
+
+    @Step("Click on 'Regional Offices' Option")
+    public void clickOnRegionalOffices() {
+        try {
+            WCMSICommon.waitForSec(2);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(regionalOffices));
+            getElement(regionalOffices).click();
+            WCMSICommon.waitForSec(2);
+        } catch (Exception e) {
+            e.getStackTrace();
+        }
+    }
+
+    public By help = By.xpath("(//button[text()='Help'])[last()]");
+
+    @Step("Click on 'Help' Option")
+    public void getHelp() {
+        try {
+            WCMSICommon.waitForSec(1);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(help));
+            getElement(help).click();
+            WCMSICommon.waitForSec(2);
+        } catch (Exception e) {
+            e.getStackTrace();
+        }
+    }
+
+    public By helpoverview = By.xpath("(//a[text()='Help Overview'])[2]");
+
+    @Step("Click on 'Help' Option")
+    public void clickHelpOverview() {
+        try {
+            WCMSICommon.waitForSec(1);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(helpoverview));
+            getElement(helpoverview).click();
+            WCMSICommon.waitForSec(2);
+        } catch (Exception e) {
+            e.getStackTrace();
+        }
+    }
+
     @Step("Validate {message} redirects to the correct page")
     public Boolean ValidateLink(By locator, String link, String expectedTitle, String message) {
         try {
             ReusableMethods.scrollIntoView(getElement(locator), driver);
+            WaitStatementUtils.waitForElementStaleness(driver, getElement(locator),3);
             WaitStatementUtils.waitForElementToBeClickable(driver, getElement(locator));
             Assert.assertTrue(getElement(locator).getAttribute("href").contains(link));
             ScreenshotUtil.takeScreenshotForAllure(driver);
             Assert.assertTrue(Common.clickonWebElement(driver, locator));
-            WCMSICommon.waitForSec(3);
+            WCMSICommon.waitForSec(5);
             Assert.assertTrue(driver.getTitle().contains(expectedTitle));
             ScreenshotUtil.takeScreenshotForAllure(driver);
             driver.navigate().back();
@@ -243,17 +418,63 @@ public class CommonPage_WCMS extends BasePage {
         return false;
     }
 
+    @Step("Validate Play Pause button functionality on Postcast")
+    public Boolean validatePlayPauseButton(By buttonLocator, String playPath, String pausePath, String message) {
+        try {
+            // Scroll to the button and ensure it is clickable
+            ReusableMethods.scrollIntoView(getElement(buttonLocator), driver);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(buttonLocator));
+
+            // Locate the <path> element inside the Play/Pause button
+            WebElement pathElement = getElement(By.xpath(buttonLocator + "//path"));
+
+            // Capture the initial state of the button
+            String initialPathData = pathElement.getAttribute("d");
+            ScreenshotUtil.takeScreenshotForAllure(driver);
+
+            // Verify the initial state is Play
+            if (!initialPathData.contains(playPath) && !initialPathData.contains(pausePath)) {
+                throw new AssertionError("Button state is neither Play nor Pause.");
+            }
+            System.out.println("Initial button state: " + (initialPathData.contains(playPath) ? "Play" : "Pause"));
+
+            // Click the button to toggle state
+            Assert.assertTrue(Common.clickonWebElement(driver, buttonLocator));
+            WCMSICommon.waitForSec(2); // Allow time for the state change
+
+            // Capture the updated state of the button
+            String updatedPathData = pathElement.getAttribute("d");
+            ScreenshotUtil.takeScreenshotForAllure(driver);
+
+            // Validate that the state has toggled
+            if (initialPathData.contains(playPath)) {
+                Assert.assertTrue(updatedPathData.contains(pausePath), "Button did not toggle to Pause.");
+                System.out.println("Button toggled to Pause state.");
+            } else if (initialPathData.contains(pausePath)) {
+                Assert.assertTrue(updatedPathData.contains(playPath), "Button did not toggle to Play.");
+                System.out.println("Button toggled to Play state.");
+            }
+
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+
     @Step("Validate {message} redirects to the correct page")
     public Boolean ValidateLinkNewtab(By locator, String link, String expectedTitle, String message) {
         try {
             ReusableMethods.scrollIntoView(getElement(locator), driver);
+            WaitStatementUtils.waitForElementStaleness(driver, getElement(locator),3);
             WaitStatementUtils.waitForElementToBeClickable(driver, getElement(locator));
             // Validate that the href contains the correct link
             Assert.assertTrue(getElement(locator).getAttribute("href").contains(link));
             ScreenshotUtil.takeScreenshotForAllure(driver);
             // Click on the element
             Assert.assertTrue(Common.clickonWebElement(driver, locator));
-            WCMSICommon.waitForSec(3);
+            WCMSICommon.waitForSec(4);
             // Switch to the new tab
             String originalWindow = driver.getWindowHandle();
             for (String windowHandle : driver.getWindowHandles()) {
@@ -262,7 +483,6 @@ public class CommonPage_WCMS extends BasePage {
                     break;
                 }
             }
-            WCMSICommon.waitForSec(5);
             // Validate the title of the new tab
             Assert.assertTrue(driver.getTitle().contains(expectedTitle));
             ScreenshotUtil.takeScreenshotForAllure(driver);
@@ -302,5 +522,82 @@ public class CommonPage_WCMS extends BasePage {
         return false;
     }
 
+    public By News = By.xpath("(//button[text()='News'])[last()]");
 
+    public void getNews() {
+        try {
+            WCMSICommon.waitForSec(2);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(News));
+            getElement(News).click();
+            WCMSICommon.waitForSec(2);
+        } catch (Exception e) {
+            e.getStackTrace();
+        }
+    }
+
+    public By NewsOption = By.xpath("(//a[text()='News' and @href='/news'])[2]");
+
+    public void clickOnNews() {
+        try {
+            WCMSICommon.waitForSec(2);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(NewsOption));
+            getElement(NewsOption).click();
+            WCMSICommon.waitForSec(2);
+        } catch (Exception e) {
+            e.getStackTrace();
+        }
+    }
+
+    public By STANDARDIZATIONNewsOption = By.xpath("(//a[text()='Standardization News'])[5]");
+
+    public void clickOnSTANDARDIZATIONNews() {
+        try {
+            WCMSICommon.waitForSec(2);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(STANDARDIZATIONNewsOption));
+            getElement(STANDARDIZATIONNewsOption).click();
+            WCMSICommon.waitForSec(2);
+        } catch (Exception e) {
+            e.getStackTrace();
+        }
+    }
+    @Step("Validate {message} redirects to the correct page")
+    public Boolean ValidateLink(By locator, String link, String expectedTitle) {
+        try {
+            ReusableMethods.scrollIntoView(getElement(locator), driver);
+            WaitStatementUtils.waitForElementStaleness(driver, getElement(locator),2);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(locator));
+            Assert.assertTrue(getElement(locator).getAttribute("href").contains(link));
+            ScreenshotUtil.takeScreenshotForAllure(driver);
+            Assert.assertTrue(Common.clickonWebElement(driver, locator));
+            WCMSICommon.waitForSec(4);
+            String originalWindow = driver.getWindowHandle();
+            Set<String> windowHandles = driver.getWindowHandles();
+            if (windowHandles.size() == 2) {
+                for (String windowHandle : windowHandles) {
+                    if (!originalWindow.equals(windowHandle)) {
+                        driver.switchTo().window(windowHandle);
+                        break;
+                    }
+                }
+            }
+             if(driver.getTitle().contains("404 Not Found")){
+              Assert.fail("Page returned 404 Not Found instead of the expected title.");
+            }else if (driver.getCurrentUrl().contains(".pdf") && driver.getTitle().contains("")){
+                System.out.println("This is pdf file");
+            }else {
+                Assert.assertTrue(driver.getTitle().contains(expectedTitle));
+            }
+            ScreenshotUtil.takeScreenshotForAllure(driver);
+            if (windowHandles.size() == 2){
+                driver.close();
+                driver.switchTo().window(originalWindow);
+            }else {
+                driver.navigate().back();
+            }
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }

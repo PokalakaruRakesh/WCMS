@@ -46,28 +46,28 @@ public class VerifyHomePage_WCMSI_541 extends BaseTest {
     @Step("Validate links and buttons available on Home page")
     public void validateHomePageContent() {
         try {
-            Assert.assertTrue(commonPage.ValidateLink(homepage.learnMoreaboutAstm, "/about", "About ASTM", "Learn More About ASTM Button "));
-            Assert.assertTrue(commonPage.ValidateLink(homepage.standardizationNewsLearnMore, "https://sn.astm.org/?_gl=1*1hbvz04*_gcl_au*MTExNTYxNzQzNC4xNzI3MjY0NTUw", "Home | ASTM Standardization News", "Lean More about ASTM button clicked"));
+            Assert.assertTrue(commonPage.ValidateLink(homepage.learnMoreaboutAstm, "/about", "About ASTM Overview | ASTM", "Learn More About ASTM Button "));
+            Assert.assertTrue(commonPage.ValidateLink(homepage.standardizationNewsLearnMore, "/standardization-news", "STANDARDIZATION NEWS | ASTM", "Lean More button clicked"));
             Assert.assertTrue(commonPage.ValidateLink(homepage.standardImpactLearMore, "https://standards-impact.buzzsprout.com/", "Standards Impact", "Lean More Standard Impact button clicked"));
             Assert.assertTrue(commonPage.ValidateLink(homepage.labManagerAcademyLearnMore, "https://www.astm.org/astm-tpt-1008.html", "Lab Manager Academy | Lab Management Certificate", "Lean More Lab Manager Academy clicked"));
             Assert.assertTrue(commonPage.ValidateLink(homepage.icam2024LearMore, "https://amcoe.org/event/icam2024/", "International Conference on Advanced Manufacturing 2024 - AM CoE", "Learn More ICAM clicked"));
-            Assert.assertTrue(commonPage.ValidateLink(homepage.aboutAstmLearnMore, "/about", "About ASTM", "Learn More About ASTM Button"));
-            Assert.assertTrue(commonPage.ValidateLink(homepage.membershipAndPartnershipLearnMore, "/membership-participation", "Membership & Participation", "Learn More Membership & Participation Button"));
+            Assert.assertTrue(commonPage.ValidateLink(homepage.aboutAstmLearnMore, "/about", "About ASTM Overview | ASTM", "Learn More About ASTM Button"));
+            Assert.assertTrue(commonPage.ValidateLink(homepage.membershipAndPartnershipLearnMore, "/membership-participation", "Membership & Participation Overview | ASTM", "Learn More Membership & Participation Button"));
             //Standards & Solutions
             Assert.assertTrue(commonPage.ValidateLink(homepage.astmCompassLearnMore, "/standards-and-solutions/enterprise-solutions/astm-compass", "ASTM Compass", "Learn More About ASTM Compass clicked"));
-            Assert.assertTrue(commonPage.ValidateLink(homepage.annualBookLearnMore, "/standards-and-solutions/bos", "Annual Book of ASTM Standards", "Learn More Annual Book of ASTM Standards clicked"));
-            Assert.assertTrue(commonPage.ValidateLink(homepage.astmDigitalLearnMore, "/standards-and-solutions/digital-library/astm-digital-library-on-silverchair", "ASTM Digital Library on Silverchair", "Learn More ASTM Digital Library on Silver chair clicked"));
-            Assert.assertTrue(commonPage.ValidateLink(homepage.astmSpeacBuilderLearnMore, "/standards-and-solutions/enterprise-solutions", "Enterprise Solutions", "Learn More ASTM SpecBuilder clicked"));
+            Assert.assertTrue(commonPage.ValidateLink(homepage.annualBookLearnMore, "/standards-and-solutions/bos", "Annual Book of ASTM Standards | ASTM", "Learn More Annual Book of ASTM Standards clicked"));
+            Assert.assertTrue(commonPage.ValidateLinkNewtab(homepage.astmDigitalLearnMore, "https://asmedigitalcollection.asme.org/astm", "ASTM Content | ASME Digital Collection", "Learn More ASTM Digital Library on Silver chair clicked"));
+            Assert.assertTrue(commonPage.ValidateLink(homepage.astmSpeacBuilderLearnMore, "/standards-and-solutions/enterprise-solutions", "Enterprise Solutions | ASTM", "Learn More ASTM SpecBuilder clicked"));
             Assert.assertTrue(commonPage.ValidateLink(homepage.internationalStandardLearnMore, "/standards-and-solutions/enterprise-solutions/astm-compass", "ASTM Compass", "Learn More About International Standards clicked"));
-            // Market Insights & Innovation
+           // Market Insights & Innovation
             Assert.assertTrue(commonPage.ValidateLinkNewtab(homepage.astmXcellerateLearnMore, "https://astmxcellerate.com/", "ASTM Xcellerate", "Learn More ASTM Xcellerate clicked"));
-            Assert.assertTrue(commonPage.ValidateLink(homepage.centersofExcellenceLearnMore, "/standards-and-solutions/market-insights-and-innovation/innovation", "Market Innovation", "Learn More Centers of Excellence clicked"));
+            Assert.assertTrue(commonPage.ValidateLink(homepage.centersofExcellenceLearnMore, "/standards-and-solutions/market-insights-and-innovation/innovation", "Innovation | ASTM", "Learn More Centers of Excellence clicked"));
             Assert.assertTrue(commonPage.ValidateLinkNewtab(homepage.standardizationImpactReportLearnMore, "https://marketing.astm.org/acton/fs/blocks/showLandingPage/a/9652/p/p-0403/t/page/fm/0", "ASTM Standardization Impact Report 2024", "Learn More Standardization Impact Report clicked"));
             Assert.assertTrue(commonPage.ValidateLinkNewtab(homepage.marketIntelligenceLearnMore, "https://wohlersassociates.com/reports/", "State of the Industry Reports - Wohlers Associates", "Learn More Market Intelligence & Wholers Reports clicked"));
             // Laboratory Services
-            Assert.assertTrue(commonPage.ValidateLink(homepage.laboratoryServicesLearnMore, "/standards-and-solutions/laboratory-services", "ASTM International Laboratory Services", "laboratory-services clicked"));
-            Assert.assertTrue(commonPage.ValidateLink(homepage.trainingServicesLearnMore, "/standards-and-solutions/training-courses", "Training Courses", "Learn More Training and Certification clicked"));
-            Assert.assertTrue(commonPage.ValidateLink(homepage.globalCooperationLearnMore, "/about/global-cooperation", "Global Cooperation", "Learn More Global Cooperation clicked"));
+            Assert.assertTrue(commonPage.ValidateLink(homepage.laboratoryServicesLearnMore, "/standards-and-solutions/laboratory-services", "ASTM International Laboratory Services | ASTM", "laboratory-services clicked"));
+            Assert.assertTrue(commonPage.ValidateLink(homepage.trainingServicesLearnMore, "/standards-and-solutions/training-courses", "ASTM Industry Training Solutions | ASTM", "Learn More Training and Certification clicked"));
+            Assert.assertTrue(commonPage.ValidateLink(homepage.globalCooperationLearnMore, "/about/global-cooperation", "Global Cooperation | ASTM", "Learn More Global Cooperation clicked"));
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -78,12 +78,13 @@ public class VerifyHomePage_WCMSI_541 extends BaseTest {
     @Step("Validate navigation to Home page")
     public void NavigateToHomePage() {
         try {
-            Assert.assertEquals(driver.getTitle(), "Home");
+            Assert.assertEquals(driver.getTitle(), "Home | ASTM");
             ScreenshotUtil.takeScreenshotForAllure(driver);
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to Validate the navigation to ASTM Home page", e);
         }
     }
+
 }
 

@@ -26,6 +26,7 @@ public class WCMSContentPage extends  BasePage {
     private String submenu = "(//div[contains(@class,'submenuMain')]/following::a[contains(text(),'[SUBMENU]')])[2]|(//a[contains(@class,'header-navigation') and @title='[SUBMENU]'])[5]|(//a[@title='[SUBMENU]'])[4]";
     private String submenu1 = "(//a[contains(@title,'[SUBMENU]') and contains(text(),'[SUBMENU]')])[5]";
     private String submenu2 = "(//a[contains(@title,'[SUBMENU]') and contains(text(),'[SUBMENU]')])[4]";
+    private String selectSubmenu = "((//div[contains(@class,'mainGridContainer')])[3]//a[@title='[SUBMENU]'])[2]";
     private String submenuList = "//nav[@data-testid='navbar']//a[contains(text(),'[TEXT]')]";
     private String mainHeader = "//h2[contains(text(),'[MAINHEADER]')]|//h2//strong[contains(text(),'[MAINHEADER]')]";
     private String header = "//h4[contains(text(),'[HEADER]')]|//h4/span[contains(text(),'[HEADER]')]|//h4//strong[contains(text(),'[HEADER]')]|//h5[contains(text(),'[HEADER]')]|//h5/span[contains(text(),'[HEADER]')]";
@@ -80,6 +81,9 @@ public class WCMSContentPage extends  BasePage {
     }
     public By getSubmenu2(String submenuName) {
         return By.xpath(submenu2.replace("[SUBMENU]", submenuName));
+    }
+    public By getSelectSubmenu(String submenuName) {
+        return By.xpath(selectSubmenu.replace("[SUBMENU]", submenuName));
     }
     public By getMainHeader(String mainheader) {
         return By.xpath(mainHeader.replace("[MAINHEADER]", mainheader));
@@ -345,6 +349,23 @@ public class WCMSContentPage extends  BasePage {
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to change Language", e);
+        }
+    }
+    @Step("Navigate to page")
+    public void NavigateToPage(String menu,String submenu) {
+        try {
+            WaitStatementUtils.explicitWaitForVisibility(driver,getElement(getMenu(menu)),10);
+            getElement(getMenu(menu)).click();
+            ScreenshotUtil.takeScreenshotForAllure(driver);
+            WebElement element = getElement(getSelectSubmenu(submenu));
+            WaitStatementUtils.explicitWaitForVisibility(driver,element,10);
+            ReusableMethods.scrollToElement(driver,element);
+            WaitStatementUtils.waitForElementStaleness(driver,element,3);
+            element.click();
+            WCMSICommon.waitForSec(4);
+            ScreenshotUtil.takeScreenshotForAllure(driver);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

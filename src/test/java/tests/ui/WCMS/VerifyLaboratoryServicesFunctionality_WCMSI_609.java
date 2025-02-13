@@ -50,8 +50,8 @@ public class VerifyLaboratoryServicesFunctionality_WCMSI_609 extends BaseTest {
             Assert.assertTrue(commonPage.ValidateLinkNewtab(loborataryServicesPage.OnDemandWebinar, "https://event.on24.com/wcc/r/4113501/CFC9E7BF78EF39A8FC19AF64526377E4", "Improve Accuracy, Reduce Costs, and Work Smarter with ASTM Laboratory Services", "\'OnDemand Webinar\' Button"));
             Assert.assertTrue(commonPage.ValidateLinkNewtab(loborataryServicesPage.SubscribeNewsletter, "https://marketing.astm.org/acton/media/9652/astm-lab-services-newsletter-signup?_gl=1*1qnmnun*_gcl_au*ODA0MjMzMjE2LjE3MjE4NDUzNTI", "ASTM Lab Services Newsletter Signup", "\'Subscribe Newsletter\' Link"));
             Assert.assertTrue(commonPage.ValidateLinkNewtab(loborataryServicesPage.Contact, "https://marketing.astm.org/acton/fs/blocks/showLandingPage/a/9652/p/p-03de/t/page/fm/0?_gl=1*hdbd2e*_gcl_au*Mzg4ODIzMjQuMTcyNTg1Njk3Mg..", "", "\'Contact\' Link"));
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(loborataryServicesPage.ProficiencyTestingLearnMore, "https://www.astm.org/products-services/laboratory-services/proficiency-testing.html", "Proficiency Testing - Laboratory Services - Products & Services", "\'Proficiency Testing\'Learn more Link"));
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(loborataryServicesPage.ReferenceMaterialsLearnMore, "https://www.astm.org/products-services/laboratory-services/petroleum-reference-materials.html", "Reference Materials - Laboratory Services - Products & Services", "\'Reference Materials\' Learn More Link"));
+            Assert.assertTrue(commonPage.ValidateLinkNewtab(loborataryServicesPage.ProficiencyTestingLearnMore, "products-services/laboratory-services/proficiency-testing.html", "Proficiency Testing - Laboratory Services - Products & Services", "\'Proficiency Testing\'Learn more Link"));
+            Assert.assertTrue(commonPage.ValidateLink(loborataryServicesPage.ReferenceMaterialsLearnMore, "standards-and-solutions/laboratory-services/reference-materials", "Reference Materials | ASTM", "\'Reference Materials\' Learn More Link"));
             Assert.assertTrue(commonPage.ValidateLink(loborataryServicesPage.ContactUs, "/standards-and-solutions/enterprise-solutions/salesforce", "Contact Sales", "\'ContactUs\' Button"));
             Assert.assertTrue(commonPage.ValidateLink(loborataryServicesPage.ASTMInsightSQC, "/standards-and-solutions/laboratory-services/astm-insight-sqc", "ASTM Insight SQC", "\'ASTM Insight SQC\' Learn More Link"));
             Assert.assertTrue(commonPage.ValidateLink(loborataryServicesPage.StandardOperatingProcedures, "/standards-and-solutions/laboratory-services/standard-operating-procedures-sop", "Standard Operating Procedures (SOP)", "\'Standard Operating Procedures (SOP)\' Learn More Link"));
@@ -60,7 +60,7 @@ public class VerifyLaboratoryServicesFunctionality_WCMSI_609 extends BaseTest {
             Assert.assertTrue(commonPage.ValidateLink(loborataryServicesPage.DevelopInternalDocuments, "/standards-and-solutions/enterprise-solutions/specbuilder", "ASTM SpecBuilder", "\'Develop Internal Documents with ASTM SpecBuilder\' Learn More Link"));
             Assert.assertTrue(commonPage.ValidateLink(loborataryServicesPage.GetStandardsOnline, "/standards-and-solutions/enterprise-solutions/astm-compass", "ASTM Compass", "\'Get Standards Online with ASTM Compass® \'Learn More Link"));
             Assert.assertTrue(commonPage.ValidateLink(loborataryServicesPage.DevelopInternalDocuments, "/standards-and-solutions/enterprise-solutions/specbuilder", "ASTM SpecBuilder", "\'Develop Internal Documents with ASTM SpecBuilder\' Learn More Link"));
-            Assert.assertTrue(commonPage.ValidateLink(loborataryServicesPage.TrainWithExperts, "/standards-and-solutions/training-courses", "Training Courses", "\'Train with the Experts\' Learn More Link"));
+            Assert.assertTrue(commonPage.ValidateLink(loborataryServicesPage.TrainWithExperts, "/standards-and-solutions/training-courses", "ASTM Industry Training Solutions | ASTM", "\'Train with the Experts\' Learn More Link"));
         }catch (Exception e){
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to validate links and buttons available on Laboratory page",e);
@@ -72,7 +72,7 @@ public class VerifyLaboratoryServicesFunctionality_WCMSI_609 extends BaseTest {
             commonPage.getstandardandSolution();
             commonPage.clickOnLaboratoryServices();
             WCMSICommon.waitForSec(3);
-            Assert.assertEquals(driver.getTitle(),"ASTM International Laboratory Services");
+            Assert.assertEquals(driver.getTitle(),"ASTM International Laboratory Services | ASTM");
             ScreenshotUtil.takeScreenshotForAllure(driver);
         }catch (Exception e){
             e.printStackTrace();

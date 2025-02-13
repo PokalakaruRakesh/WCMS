@@ -11,19 +11,19 @@ public class HomePage_WCMS extends BasePage {
 
     public By learnMoreaboutAstm = By.xpath("//a[@title='Learn More About ASTM ']");
     // The Latest
-    public By standardizationNewsLearnMore = By.xpath("(//main[contains(@class, 'container-xl')]//a)[1]\n");
+    public By standardizationNewsLearnMore = By.xpath("//a[@href='/standardization-news' and text()='Learn More']");
     public By standardImpactLearMore = By.xpath("//a[@href='https://standards-impact.buzzsprout.com/']");
     public By labManagerAcademyLearnMore = By.xpath("//div[contains(@class, 'ImageCards_imageCardsContainer')]//div[3]//a[1]");
-    public By icam2024LearMore = By.xpath("//div[contains(@class,'ImageCards_imageCardsContainer')]//div[4]//a[1]\n");
+    public By icam2024LearMore = By.xpath("//div[contains(@class,'ImageCards_imageCardsContainer')]//div[4]//a[1]");
     public By aboutAstmLearnMore = By.xpath("//a[@class='d-block mt-auto'][normalize-space()='Learn More About ASTM']");
     public By membershipAndPartnershipLearnMore = By.xpath("//a[normalize-space()='Learn More About Membership & Participation']");
     //Standards & Solutions
     public By astmCompassLearnMore = By.xpath("//a[contains(@title,'Learn More About ASTM Compass')]");
-    public By annualBookLearnMore = By.xpath("//a[contains(@href,'/standards-and-solutions/bos')]");
-    public By astmDigitalLearnMore = By.xpath("//a[contains(@href,'/standards-and-solutions/digital-library/astm-digital-library-on-silverchair')]");
-    public By astmSpeacBuilderLearnMore = By.xpath("//a[@href='/standards-and-solutions/enterprise-solutions'][normalize-space()='Learn More']");
+    public By annualBookLearnMore = By.xpath("//h6[text()='Annual Book of ASTM Standards']/../../a[@title='Learn More']");
+    public By astmDigitalLearnMore = By.xpath("//h6[text()='ASTM Digital Library on Silver chair']/../../a[@title='Learn More']");
+    public By astmSpeacBuilderLearnMore = By.xpath("//h6[text()='ASTM SpecBuilder']/../../a[@title='Learn More']");
     // Working
-    public By internationalStandardLearnMore = By.xpath("//a[@href='/standards-and-solutions/enterprise-solutions/astm-compass'][normalize-space()='Learn More']");
+    public By internationalStandardLearnMore = By.xpath("//h6[text()='International Standards']/../../a[@title='Learn More']");
     // Market Insights & Innovation
     public By astmXcellerateLearnMore = By.xpath("//a[@href='https://astmxcellerate.com/']");
     public By centersofExcellenceLearnMore = By.xpath("//a[contains(@href,'/standards-and-solutions/market-insights-and-innovation/innovation')]");

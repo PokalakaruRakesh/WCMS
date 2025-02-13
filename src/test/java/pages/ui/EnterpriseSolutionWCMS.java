@@ -14,6 +14,6 @@ public class EnterpriseSolutionWCMS extends BasePage{
     public By ASTMSpecBuilder=By.xpath("//h6[contains(text(),'ASTM SpecBuilder')]/ancestor::div/a[text()='Learn More']");
     public By MultimediaServices=By.xpath("//h6[contains(text(),'Multimedia Services')]/ancestor::div/a[text()='Learn More']");
     public By TrainStandardsExperts=By.xpath("//a[@title='Learn More' and contains(@href, '/standards-and-solutions/training-courses')]");
-    public By ImproveLaboratoryEfficiency=By.xpath("//a[@title='Learn More' and contains(@href, '/standards-and-solutions/enterprise-solutions/astm-compass')]");
+    public By ImproveLaboratoryEfficiency=By.xpath("//a[@title='Learn More' and contains(@href, 'standards-and-solutions/laboratory-services')]");
     public By ASTMDigitalLibrary=By.xpath("//a[@title='Learn More' and contains(@href, '/standards-and-solutions/digital-library')]");
 }

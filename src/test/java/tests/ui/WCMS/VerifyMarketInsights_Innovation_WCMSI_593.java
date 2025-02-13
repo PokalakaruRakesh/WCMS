@@ -12,7 +12,7 @@ import pages.ui.CookiePage;
 import pages.ui.MarketInsightsInnovation_WCMS;
 import tests.ui.base.BaseTest;
 @Epic("WCMSI-2: Design and Development of Pages")
-public class VerifyMarketInsights_InnovationWCMSI_593 extends BaseTest {
+public class VerifyMarketInsights_Innovation_WCMSI_593 extends BaseTest {
     static final String jiraTestID = "WCMSI-593";
     CookiePage cookiePage;
     MarketInsightsInnovation_WCMS marketInsiteInnovation;

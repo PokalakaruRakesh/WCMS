@@ -16,4 +16,7 @@ public class ASTMDigital_LibraryWCMS extends BasePage {
     public By ManualsMonographsLearnMore = By.xpath("//h6[text()='Manuals, Monographs, & Data Series']/ancestor::div/a[text()='Learn More']");
     public By JournalsLearnMore = By.xpath("//h6[text()='Journals']/ancestor::div/a[text()='Learn More']");
     public By TechnicalReportsLearnMore = By.xpath("//h6[contains(text(),'Technical Reports')]/ancestor::div/a[text()='Learn More']");
+    //a[@href='/membership-participation/technical-committees/interlaboratory-studies-program']
+    public By InterlaboratoryStudyProgram = By.xpath("//h6[contains(text(),'Technical Reports')]/ancestor::div/a[text()='Learn More']");
+
 }
