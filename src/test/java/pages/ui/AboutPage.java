@@ -16,7 +16,7 @@ public class AboutPage extends BasePage {
     public By viewOpenOpportunitiesLink = By.xpath("//a[@title='VIEW OPEN OPPORTUNITIES']");
     public By CultureCareersLearnMoreLink = By.xpath("//*[text()='Culture and Careers']/../../following::a[text()='Learn More']");
     public By interactiveTimelineLink = By.xpath("//a[@href='/about/history']");
-    public By viewBtnUnderHistory = By.xpath("//a[@title='View History']");
+    public By viewBtnUnderHistory = By.xpath("//h4[text()='History']/..//a[contains(@title,'View')]");
     public By learnMoreBtnUnderGlobalCooperation = By.xpath("//h4[text()='Global Cooperation']/../a[text()='Learn More']");
 
     public By viewBtnUnderGovernance= By.xpath("//h4[text()='Governance']/..//a[@title='View']");

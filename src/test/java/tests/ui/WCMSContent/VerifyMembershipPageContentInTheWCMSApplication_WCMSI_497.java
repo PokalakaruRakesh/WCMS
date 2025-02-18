@@ -188,36 +188,28 @@ public class VerifyMembershipPageContentInTheWCMSApplication_WCMSI_497 extends B
             JsonObject jsonObject=WCMSPage.jsonData(jiraTestID,jsonElement);
 
             Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getHeader(WCMSPage.jsonValue(jsonObject,"Header"))));
-            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(WCMSPage.jsonValue(jsonObject,"Header"),
-                    WCMSPage.jsonValue(jsonObject,"Subheader1"))));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getsubheader(WCMSPage.jsonValue(jsonObject,"Subheader1"))));
             Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader1"),
                     WCMSPage.jsonValue(jsonObject,"LinkText"))));
-            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(WCMSPage.jsonValue(jsonObject,"Header"),
-                    WCMSPage.jsonValue(jsonObject,"Subheader2"))));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getsubheader(WCMSPage.jsonValue(jsonObject,"Subheader2"))));
             Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader2"),
                     WCMSPage.jsonValue(jsonObject,"LinkText"))));
-            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(WCMSPage.jsonValue(jsonObject,"Header"),
-                    WCMSPage.jsonValue(jsonObject,"Subheader3"))));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getsubheader(WCMSPage.jsonValue(jsonObject,"Subheader3"))));
             Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader3"),
                     WCMSPage.jsonValue(jsonObject,"LinkText"))));
-            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(WCMSPage.jsonValue(jsonObject,"Header"),
-                    WCMSPage.jsonValue(jsonObject,"Subheader4"))));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getsubheader(WCMSPage.jsonValue(jsonObject,"Subheader4"))));
             Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader4"),
                     WCMSPage.jsonValue(jsonObject,"LinkText"))));
-            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(WCMSPage.jsonValue(jsonObject,"Header"),
-                    WCMSPage.jsonValue(jsonObject,"Subheader5"))));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getsubheader(WCMSPage.jsonValue(jsonObject,"Subheader5"))));
             Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader5"),
                     WCMSPage.jsonValue(jsonObject,"LinkText"))));
-            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(WCMSPage.jsonValue(jsonObject,"Header"),
-                    WCMSPage.jsonValue(jsonObject,"Subheader6"))));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getsubheader(WCMSPage.jsonValue(jsonObject,"Subheader6"))));
             Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader6"),
                     WCMSPage.jsonValue(jsonObject,"LinkText"))));
-            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(WCMSPage.jsonValue(jsonObject,"Header"),
-                    WCMSPage.jsonValue(jsonObject,"Subheader7"))));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getsubheader(WCMSPage.jsonValue(jsonObject,"Subheader7"))));
             Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader7"),
                     WCMSPage.jsonValue(jsonObject,"LinkText"))));
-            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getSubheaderUnderHeader(WCMSPage.jsonValue(jsonObject,"Header"),
-                    WCMSPage.jsonValue(jsonObject,"Subheader8"))));
+            Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getsubheader(WCMSPage.jsonValue(jsonObject,"Subheader8"))));
             Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getButtonUnderSubheader(WCMSPage.jsonValue(jsonObject,"Subheader8"),
                     WCMSPage.jsonValue(jsonObject,"LinkText"))));
 

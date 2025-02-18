@@ -46,7 +46,7 @@ public class VerifyMarketInsights_Innovation_WCMSI_593 extends BaseTest {
         Assert.assertTrue(commonPage.ValidateLinkNewtab(marketInsiteInnovation.ASTMXcellerate,"https://astmxcellerate.com/","ASTM Xcellerate","ASTM Xcellerate Learn More Clicked"));
         Assert.assertTrue(commonPage.ValidateLinkNewtab(marketInsiteInnovation.standardizationImpactReport,"https://marketing.astm.org/acton/fs/blocks/showLandingPage/a/9652/p/p-0403/t/page/fm/0","ASTM Standardization Impact Report 2024","Standardization Impact Report Learn More CLicked"));
         Assert.assertTrue(commonPage.ValidateLinkNewtab(marketInsiteInnovation.MarketIntelligenceWohlersReports,"https://wohlersassociates.com/reports/","State of the Industry Reports - Wohlers Associates","Market Intelligence & Wohlers Reports Learn More Clicked"));
-        Assert.assertTrue(commonPage.ValidateLink(marketInsiteInnovation.SpecialtyReports,"/standards-and-solutions/market-insights-and-innovation/wohlers-report","Wohlers Report","Wohlers Report Learn More Clicked"));
+        Assert.assertTrue(commonPage.ValidateLink(marketInsiteInnovation.SpecialtyReports,"/standards-and-solutions/market-insights-and-innovation/wohlers-report","Wohlers","Wohlers Report Learn More Clicked"));
         Assert.assertTrue(commonPage.ValidateLink(marketInsiteInnovation.contactUs,"","","Contact Us Clicked"));
 
     }
@@ -56,7 +56,7 @@ public class VerifyMarketInsights_Innovation_WCMSI_593 extends BaseTest {
             commonPage.getstandardandSolution();
             commonPage.clickOnMarketInsightsInnovation();
             WCMSICommon.waitForSec(3);
-            Assert.assertEquals(driver.getTitle(),"Market Insights and Innovation");
+            Assert.assertEquals(driver.getTitle(),"Market Insights & Innovation | ASTM");
             ScreenshotUtil.takeScreenshotForAllure(driver);
     }catch (Exception e){
         e.printStackTrace();

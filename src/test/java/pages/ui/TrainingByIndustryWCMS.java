@@ -34,6 +34,7 @@ public class TrainingByIndustryWCMS extends BasePage{
     public By ViewTrainingCatalog= By.xpath("//a[contains(@title, 'View Training Catalog')]");
     public By BecomeSponsor= By.xpath("//a[@title='Become a sponsor']");
     public By Accreditations= By.xpath("//h6[contains(text(),'Accreditations')]/ancestor::div/a[text()='Learn More']");
+    public By accreditationsContactUs= By.xpath("//h4[text()='ASTM Training and eLearning Accreditations']/..//a[text()='Contact Us']");
     public By DigitalBadging= By.xpath("//h6[contains(text(),'Digital Badging for eLearning')]/ancestor::div/a[text()='Learn More']");
     public By ContinuingEducation= By.xpath("//h6[contains(text(),'Continuing Education – Professional Engineers')]/ancestor::div/a[text()='Learn More']");
     public By Credentialing= By.xpath("//h6[contains(text(),'Credentialing Program Registry')]/ancestor::div/a[text()='Learn More']");

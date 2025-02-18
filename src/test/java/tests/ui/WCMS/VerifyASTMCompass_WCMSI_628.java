@@ -49,7 +49,7 @@ public class VerifyASTMCompass_WCMSI_628 extends BaseTest {
         Assert.assertTrue(commonPage.ValidateLinkNewtab(ASTMCompass.viewDemo, "https://marketing.astm.org/acton/fs/blocks/showLandingPage/a/9652/p/p-011c/t/page/fm/0?_gl=1*v8vczm*_gcl_au*MTkzODUxMjcwLjE3MjQyNzc3NjU", "", "\'View Demo\' Button"));
         Assert.assertTrue(commonPage.ValidateLinkNewtab(ASTMCompass.learnMore, "https://marketing.astm.org/acton/fs/blocks/showLandingPage/a/9652/p/p-011c/t/page/fm/0?_gl=1*1dyjo1g*_gcl_au*NjI5MDIwNjEuMTcyNDM0MjUzOQ", "", "\'Learn More\' Button"));
         Assert.assertTrue(commonPage.ValidateLinkNewtab(ASTMCompass.compassEbook, "https://marketing.astm.org/acton/fs/blocks/showLandingPage/a/9652/p/p-00c9/t/page/fm/1?_gl=1*1hi94k0*_gcl_au*ODI3MjkyOTY0LjE3MjQzMzA4NDE", "", "\'Compass EBook\' Link"));
-        Assert.assertTrue(commonPage.ValidateLinkNewtab(ASTMCompass.astmCompassGuid, "https://assets.contentstack.io/v3/assets/blt5eb0a2cb04534832/blt132540dd633cb889/67406f06bda2a67f4ad9a785/CompassBeYourGuide_FINAL.pdf?branch=stage", "", "\'Digital Access to International Standards\' Link"));
+        Assert.assertTrue(commonPage.ValidateLinkNewtab(ASTMCompass.astmCompassGuid, "CompassBeYourGuide_FINAL.pdf", "", "\'Digital Access to International Standards\' Link"));
     }
 
     @Step("Validate navigation to ASTM Compass page")

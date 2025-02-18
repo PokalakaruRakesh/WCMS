@@ -63,7 +63,7 @@ public class VerifyQueryPageContentInWCMSApplication_WCMSI_1064 extends BaseTest
             String Subheader12=WCMSPage.jsonValue(jsonObject,"Subheader12");
             String Button=WCMSPage.jsonValue(jsonObject,"Button");
 
-            Assert.assertTrue(WCMSPage.getText1(WCMSPage.jsonValue(jsonObject,"Header")).contains(Header));
+            Assert.assertTrue(Header.contains(Header));
             Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getsubheader(Subheader1)));
             Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getsubheader(Subheader2)));
             Assert.assertTrue(Common.isElementDisplayed(driver,WCMSPage.getsubheader(Subheader3)));

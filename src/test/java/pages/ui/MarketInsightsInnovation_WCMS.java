@@ -19,8 +19,13 @@ public class MarketInsightsInnovation_WCMS extends BasePage{
     public By AMCOE= By.xpath("//a[@class='d-block mt-auto' and @href='https://amcoe.org/']");
     public By ETCOE= By.xpath("//a[@class='d-block mt-auto'][normalize-space()='Learn More']");
     public By MarketInsight = By.xpath("//a[@href='/standards-and-solutions/market-insights-and-innovation/market-insights'][normalize-space()='Learn More']");
-    public By MarketInnovations = By.xpath("//a[@href='/standards-and-solutions/market-insights-and-innovation/innovation']");
+    public By MarketInnovations = By.xpath("//h5[text()='Market Innovations']");
     public By Standards1= By.xpath("//a[contains(text(),'Browse the latest ASTM standards by')]");
     public By Membership= By.xpath("//a[normalize-space()='Join Us']");
+    public By MarketInnovationsLearnMore = By.xpath("//h5[text()='Market Innovations']/../../a[text()='Learn More']");
+    public By LearnMoreAMCoE= By.xpath("//h5[text()='Centers of Excellence']/../../div//a[text()='Learn More AM CoE']");
+    public By LearnMoreETCoE= By.xpath("//h5[text()='Centers of Excellence']/../../div//a[text()='Learn More ET CoE']");
+    public By TechnicalExpertsLearnMore= By.xpath("//h5[text()='Technical Experts']/../../div//a[text()='Learn More']");
+    public By ASTMExoGamesLearnMore= By.xpath("//h5[text()='ASTM Exo Games']/../../div//a[text()='Learn More']");
 
 }
