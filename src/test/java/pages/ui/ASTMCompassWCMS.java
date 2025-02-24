@@ -13,4 +13,7 @@ public class ASTMCompassWCMS extends BasePage {
     public By astmCompassGuid = By.xpath("//a[contains(@title,'ASTM Compass Guide')]");
     public By compassEbook = By.xpath("//a[contains(@title,'Compass eBook')]");
     public By contactAstmSales = By.xpath("//a[text()='Contact ASTM Sales']");
+    public By Exploreabroad = By.xpath("//a[contains(text(), 'Explore a broad array of standards')]");
+
 }
+

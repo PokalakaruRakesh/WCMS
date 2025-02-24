@@ -21,5 +21,10 @@ public class TechnicalCommitteesWCMS extends BasePage {
     public By LabServices = By.xpath("//a[@href='/standards-and-solutions/laboratory-services'][normalize-space()='Learn More']");
     public By SustainabilityReferenceDatabase = By.xpath("//a[@href='/membership-participation/technical-committees/sustainability-reference']");
     public By PoliciesProcedures = By.xpath("//a[contains(text(),'Policies & Procedures')]");
+    public By StaffEmail = By.xpath("//a[@href='mailto:mzamorski@astm.org']");
+    public By SocietyAwards = By.xpath("//a[text()='Learn more about Society Awards.']");
+    public By SocietyRecognized = By.xpath("//a[text()='Learn more about Society Recognized Committee Awards.']");
+    public By TechnicalCommitteeAwards = By.xpath("//a[text()='Learn more about Technical Committee Awards.']");
+    public By DownloadListPreviousRecipients = By.xpath("//a[@title='Download List of Previous Recipients By Award Name']");
 
 }

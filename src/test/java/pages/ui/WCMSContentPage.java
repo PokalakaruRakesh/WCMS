@@ -26,7 +26,7 @@ public class WCMSContentPage extends  BasePage {
     private String submenu = "(//div[contains(@class,'submenuMain')]/following::a[contains(text(),'[SUBMENU]')])[2]|(//a[contains(@class,'header-navigation') and @title='[SUBMENU]'])[5]|(//a[@title='[SUBMENU]'])[4]";
     private String submenu1 = "(//a[contains(@title,'[SUBMENU]') and contains(text(),'[SUBMENU]')])[5]";
     private String submenu2 = "(//a[contains(@title,'[SUBMENU]') and contains(text(),'[SUBMENU]')])[4]";
-    private String selectSubmenu = "((//div[contains(@class,'mainGridContainer')])[3]//a[@title='[SUBMENU]'])[2]";
+    private String selectSubmenu = "((//div[contains(@class,'mainGridContainer')])[3]//a[contains(@title,'[SUBMENU]')])[2]";
     private String submenuList = "//nav[@data-testid='navbar']//a[contains(text(),'[TEXT]')]";
     private String mainHeader = "//h2[contains(text(),'[MAINHEADER]')]|//h2//strong[contains(text(),'[MAINHEADER]')]";
     private String header = "//h4[contains(text(),'[HEADER]')]|//h4/span[contains(text(),'[HEADER]')]|//h4//strong[contains(text(),'[HEADER]')]|//h5[contains(text(),'[HEADER]')]|//h5/span[contains(text(),'[HEADER]')]";

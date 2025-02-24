@@ -13,7 +13,7 @@ import tests.ui.base.BaseTest;
 
 @Epic("WCMSI-2: Design and Development of Pages")
 public class VerifySocietyAwardsPage_WCMSI_980 extends BaseTest {
-    static final String jiraTestID = "WCMSI-982";
+    static final String jiraTestID = "WCMSI-980";
     CookiePage cookiePage;
     SocietyAwardsPage societyAwardsPage;
     CommonPage_WCMS commonPage;
