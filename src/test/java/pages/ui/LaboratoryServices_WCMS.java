@@ -27,8 +27,12 @@ public class LaboratoryServices_WCMS extends BasePage {
     public By GetStandardsOnline= By.xpath("(//a[@title='Learn More'])[8]");
     public By TrainWithExperts= By.xpath("(//a[@title='Learn More'])[9]");
     public By videoLink1 = By.xpath("(//img[contains(@alt,'Video')])[2]");
+    public By SOPsLearnMoreLink = By.xpath("//h6[contains(text(),'Standard Operating Procedures')]/../../a[text()='Learn More']");
     public By ViewReferenceMaterials = By.xpath("//a[text()='View Reference Materials']");
     public By ReferenceMaterialsCatalog = By.xpath("//a[text()='Reference Materials Catalog (PDF)']");
+    public By ContactSales = By.xpath("(//a[text()='Contact Sales'])[1]");
+    public By LaboratoryServicesOverviewPDF = By.xpath("//a[text()='Laboratory Services Overview (PDF)']");
+    public By AccessNewASTMStandardContactSalesLink = By.xpath("//h2[contains(text(),'Access new ASTM Standard')]/../..//a[text()='Contact Sales']");
 
     public WebElement getVideoLink1() {
         return driver.findElement(videoLink1);

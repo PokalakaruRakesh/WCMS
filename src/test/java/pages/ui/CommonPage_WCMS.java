@@ -1,6 +1,7 @@
 
 package pages.ui;
 
+import base.utils.ConfigReader;
 import base.utils.ReusableMethods;
 import base.utils.ScreenshotUtil;
 import base.utils.WaitStatementUtils;
@@ -10,10 +11,15 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
+import java.io.File;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class CommonPage_WCMS extends BasePage {
@@ -580,11 +586,13 @@ public class CommonPage_WCMS extends BasePage {
                     }
                 }
             }
+            WCMSICommon.waitForSec(3);
              if(driver.getTitle().contains("404 Not Found")){
               Assert.fail("Page returned 404 Not Found instead of the expected title.");
             }else if (driver.getCurrentUrl().contains(".pdf") && driver.getTitle().contains("")){
                 System.out.println("This is pdf file");
             }else {
+                 String title=driver.getTitle();
                 Assert.assertTrue(driver.getTitle().contains(expectedTitle));
             }
             ScreenshotUtil.takeScreenshotForAllure(driver);
@@ -600,4 +608,47 @@ public class CommonPage_WCMS extends BasePage {
         }
         return false;
     }
+    @Step("Validate {message}  download the file")
+    public Boolean ValidateDownloadedFile(By locator,String fileName) {
+        try {
+            String downloadFolder=System.getProperty("user.dir")+"\\"+ ConfigReader.getValue("DownloadPath")+"\\downloads";
+            ReusableMethods.scrollIntoView(getElement(locator), driver);
+            WaitStatementUtils.waitForElementStaleness(driver, getElement(locator),2);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(locator));
+            ScreenshotUtil.takeScreenshotForAllure(driver);
+            Assert.assertTrue(Common.clickonWebElement(driver, locator));
+            WCMSICommon.waitForSec(4);
+            Assert.assertTrue(ReusableMethods.checkIfFileExists(downloadFolder,fileName));
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+    @Step("Validate {message} redirects to the correct page")
+    public void downloadFileSetup(String url) {
+        try {
+            driver.close();
+            String path=System.getProperty("user.dir")+"\\"+ ConfigReader.getValue("DownloadPath")+"\\downloads";
+            ReusableMethods.deleteFilesInsideFolder(path);
+            File folder = new File(path);
+            if (!folder.exists()) {
+                folder.mkdir();
+            }
+            Map<String, Object> prefs = new HashMap<>();
+            prefs.put("profile.default_content_settings.popups", 0);
+            prefs.put("download.default_directory", path);
+            prefs.put("plugins.always_open_pdf_externally", true);
+            ChromeOptions options = new ChromeOptions();
+            options.setExperimentalOption("prefs", prefs);
+            WebDriver driver = new ChromeDriver(options);
+            Page page=new BasePage(driver);
+            BasePage basePage=new BasePage(driver);
+            driver.manage().window().maximize();
+            driver.get(url);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }

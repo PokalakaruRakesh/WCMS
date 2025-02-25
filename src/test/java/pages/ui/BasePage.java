@@ -94,12 +94,13 @@ public class BasePage extends Page {
         return driver.findElement(locater);
     }
 
-    public void clickOnMethod(By locater) {
+    public void clickOnMethod(By locator) {
         try {
-            ReusableMethods.scrollIntoView(getElement(locater), driver);
+            ReusableMethods.scrollIntoView(getElement(locator), driver);
             ScreenshotUtil.takeScreenshotForAllure(driver);
-            WCMSICommon.clickonWebElement(driver, getElement(locater));
-
+            WaitStatementUtils.waitForElementStaleness(driver, getElement(locator),2);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(locator));
+            getElement(locator).click();
         } catch (Exception e) {
             e.printStackTrace();
             log.info(e.toString());

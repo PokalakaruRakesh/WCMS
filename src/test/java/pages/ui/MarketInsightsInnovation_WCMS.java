@@ -28,4 +28,16 @@ public class MarketInsightsInnovation_WCMS extends BasePage{
     public By TechnicalExpertsLearnMore= By.xpath("//h5[text()='Technical Experts']/../../div//a[text()='Learn More']");
     public By ASTMExoGamesLearnMore= By.xpath("//h5[text()='ASTM Exo Games']/../../div//a[text()='Learn More']");
 
+
+    public By AdvisoryServicesContactUs= By.xpath("//h5[text()='Advisory Services']/../..//a[text()='Contact us today to get started']");
+    public By WohlersSpecialtyReportsLearnMore= By.xpath("//h5[text()=' Wohlers and Specialty Reports']/../..//a[text()='Learn More']");
+    public By StandardizationImpactLearnMore= By.xpath("//h5[text()='Standardization Impact Report']/../..//a[text()='Learn More']");
+    public By TechnicalReportsLearnMore= By.xpath("//h5[text()='Technical Reports']/../..//a[text()='Learn More']");
+    public By WhitePapersLearnMore= By.xpath("//h5[text()='White Papers']/../..//a[text()='Learn More']");
+    public By StandardizationNewsLearnMore= By.xpath("//h5[text()='Standardization News']/../..//a[text()='Learn More']");
+    public By GetInvolvedContactUs= By.xpath("//h4[contains(text(),'get involved')]/..//a[text()='Contact Us']");
+
+
+
+
 }

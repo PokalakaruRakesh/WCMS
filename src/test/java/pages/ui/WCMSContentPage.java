@@ -360,6 +360,7 @@ public class WCMSContentPage extends  BasePage {
             WebElement element = getElement(getSelectSubmenu(submenu));
             WaitStatementUtils.explicitWaitForVisibility(driver,element,10);
             ReusableMethods.scrollToElement(driver,element);
+            WaitStatementUtils.waitForElementToBeClickable(driver,element,2);
             WaitStatementUtils.waitForElementStaleness(driver,element,3);
             element.click();
             WCMSICommon.waitForSec(4);

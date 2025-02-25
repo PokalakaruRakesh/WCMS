@@ -1,5 +1,8 @@
 package base.utils;
 
+import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -235,5 +238,86 @@ static Object[][] obj;
 			e.printStackTrace();
 			return false;
 		}
+	}
+	public static void deleteFolder(String filePath){
+		File folder = new File(filePath);
+		if (folder.exists()) {
+			File[] files = folder.listFiles();
+			if (files != null) {
+				for (File file : files) {
+					if (file.isDirectory()) {
+						deleteFolder(filePath);
+					} else {
+						file.delete();
+					}
+				}
+			}
+			folder.delete();
+		}
+	}
+	public static void deleteFilesInsideFolder(String filePath) {
+		File folder = new File(filePath);
+		if (folder.exists() && folder.isDirectory()) {
+			File[] files = folder.listFiles();
+			if (files != null) {
+				for (File file : files) {
+					if (file.isDirectory()) {
+						deleteFilesInsideFolder(file.getAbsolutePath());
+					} else {
+						file.delete();
+					}
+				}
+			}
+		}
+	}
+	public static String pickLatestFileFromDownloads(String downloadFolder) {
+		//String currentUsersHomeDir = System.getProperty("user.home");
+		//String downloadFolder = currentUsersHomeDir + File.separator + "Downloads" + File.separator;
+		File dir = new File(downloadFolder);
+		File[] files = dir.listFiles();
+		if (files == null || files.length == 0) {
+			System.out.println("There is no file in the folder");
+		}
+		File lastModifiedFile = files[0];
+		for (int i = 1; i < files.length; i++) {
+			if (lastModifiedFile.lastModified() < files[i].lastModified()) {
+				lastModifiedFile = files[i];
+			}
+		}
+		String k = lastModifiedFile.toString();
+		System.out.println(lastModifiedFile);
+		Path p = Paths.get(k);
+		String file = p.getFileName().toString();
+		return file;
+	}
+	public static List<File> getAllFilesFromDownloads(String downloadFolder) {
+		File dir = new File(downloadFolder);
+		File[] files = dir.listFiles();
+		List<File> fileList = new ArrayList<>();
+
+		if (files == null || files.length == 0) {
+			System.out.println("There are no files in the folder");
+		} else {
+			for (File file : files) {
+				if (file.isFile()) {
+					fileList.add(file);
+				}
+			}
+		}
+
+		return fileList;
+	}
+	public static boolean checkIfFileExists(String downloadFolder, String fileName) {
+		File dir = new File(downloadFolder);
+		File[] files = dir.listFiles();
+
+		if (files != null) {
+			for (File file : files) {
+				if (file.isFile() && file.getName().equals(fileName)) {
+					return true; // File exists
+				}
+			}
+		}
+		return false; // File doesn't exist
 	}
 }

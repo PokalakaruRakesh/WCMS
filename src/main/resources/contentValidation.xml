@@ -6,7 +6,7 @@
     </listeners>
     <parameter name="platform" value="local"/>
     <parameter name="browser" value="Chrome"/>
-   <!-- <parameter name="env" value="STG"/>-->
+    <parameter name="env" value="QA"/>
     <!--   <parameter name ="testExecutionId" value="000000"/>-->
     <!--    <parameter name="updateJira" value="true"></parameter>-->
 
@@ -54,6 +54,7 @@
             <class name="tests.ui.WCMSContent.VerifyStandardsPublicationsPageContentWCMSApplication_WCMSI_584"/>
             <class name="tests.ui.WCMSContent.VerifyASTMCompassPageContentWCMSI_600"/>
             <class name="tests.ui.WCMSContent.VerifyASTMIndustryTrainingSolutionsPageContentInWCMSApplication_WCMSI_604"/>
+            <class name="tests.ui.WCMSContent.VerifyHeaderAndFooterPageContentInWCMSApplication_WCMSI_1176"/>
 
 
         </classes>

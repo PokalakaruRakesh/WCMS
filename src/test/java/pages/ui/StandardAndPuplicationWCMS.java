@@ -25,4 +25,9 @@ public class StandardAndPuplicationWCMS extends BasePage {
     public By ViewCOVIDRelated= By.xpath("//a[@title='View COVID-19 Related Standards']");
     public By ShopRequestStandard= By.xpath("//a[contains(text(),'subscribe to an online volume via ASTM Compass')]");
     public By ContactUs= By.xpath("//a[@title='Contact Us']");
+
+    public By BOSCatalogViewOnline= By.xpath("//h4[text()='ASTM 2024 BOS Catalog']/../..//a[text()='View Online']");
+    public By ASTMAdvantageViewOnline= By.xpath("//p[contains(text(),'The ASTM Advantage')]/../../a[text()='View Online ']");
+    public By ReferenceMaterialsViewOnline= By.xpath("//p[contains(text(),'Reference Materials')]/../../a[text()='View Online']");
+    public By eLearningBrochureViewOnline= By.xpath("//p[contains(text(),'eLearning Brochure')]/../../a[text()='View Online']");
 }
