@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ASTM WCMSI Automation Suite">
+    <listeners>
+        <listener class-name="TestListeners.TestListener"/>
+    </listeners>
+    <parameter name="platform" value="local"/>
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="env" value="STG"/>
+    <!--   <parameter name ="testExecutionId" value="000000"/>-->
+    <!--    <parameter name="updateJira" value="true"></parameter>-->
+
+    <test name="Test">
+        <classes>
+
+            <class name="tests.ui.WCMS.VerifyAboutPageNavigationFromHomePage_WCMSI_561"/>
+            <class name="tests.ui.WCMS.VerifyAccreditationsPage_WCMSI_978"/>
+            <class name="tests.ui.WCMS.VerifyAnniversaryCaseStudies_WCMSI_530"/>
+            <class name="tests.ui.WCMS.VerifyASTMCompass_WCMSI_628"/>
+            <class name="tests.ui.WCMS.VerifyASTMDigitalLibrary_WCMSI_607"/>
+            <class name="tests.ui.WCMS.VerifyASTMLabAndFieldFundamentalsPage_WCMSI_923"/>
+            <class name="tests.ui.WCMS.VerifyASTMSpecBuilder_WCMSI_630"/>
+            <class name="tests.ui.WCMS.VerifyBookOfStandardPageFunctionality_WCMSI_596"/>
+            <class name="tests.ui.WCMS.VerifyCatalogsPage_WCMSI_937"/>
+            <class name="tests.ui.WCMS.VerifyCorporateCitizenship_WCMSI_941"/>
+            <class name="tests.ui.WCMS.VerifyCorporateCitizenshipPage_WCMSI_938"/>
+            <class name="tests.ui.WCMS.VerifyDigitalAccessToInternationalStandardsOnASTMCompassPage_WCMSI_961"/>
+            <class name="tests.ui.WCMS.VerifyDigitalAccessToInternationalStandardsPage_WCMSI_980"/>
+            <class name="tests.ui.WCMS.VerifyEmailSubscriptionSettingsPage_WCMSI_981"/>
+            <class name="tests.ui.WCMS.VerifyEmergingProfessionalsProgram_WCMSI_523"/>
+            <class name="tests.ui.WCMS.VerifyEnterpriseSolutions_WCMSI_625"/>
+            <class name="tests.ui.WCMS.VerifyFAQPageFunctionality_WCMSI_514"/>
+            <class name="tests.ui.WCMS.VerifyHelpOverview_WCMSI_511"/>
+            <class name="tests.ui.WCMS.VerifyHomePage_WCMSI_541"/>
+            <class name="tests.ui.WCMS.VerifyHonorsAndAwardsTheUIResponsivenessContentLinksOfThePage_WCMSI_960"/>
+            <class name="tests.ui.WCMS.VerifyInResidenceTrainingProgramsPage_WCMSI_864"/>
+            <class name="tests.ui.WCMS.VerifyInternationalPartnersPage_WCMSI_862"/>
+            <class name="tests.ui.WCMS.VerifyLaboratoryServicesFunctionality_WCMSI_609"/>
+            <class name="tests.ui.WCMS.VerifyMarketInnovationPage_WCMSI_982"/>
+            <class name="tests.ui.WCMS.VerifyMarketInsights_Innovation_WCMSI_593"/>
+            <class name="tests.ui.WCMS.VerifyMarketInsightsPage_WCMSI_925"/>
+            <class name="tests.ui.WCMS.VerifyMembership_WCMSI_519"/>
+            <class name="tests.ui.WCMS.VerifyMembershipAndParticipationOverview_WCMSI_496"/>
+            <class name="tests.ui.WCMS.VerifyMultimediaSolutionsFunctionality_WCMSI_634"/>
+            <class name="tests.ui.WCMS.VerifyNew_WCMSI_1039"/>
+            <class name="tests.ui.WCMS.VerifyReferenceMaterialsPage_WCMSI_987"/>
+            <class name="tests.ui.WCMS.VerifyRegionalOffices_WCMSI_529"/>
+            <class name="tests.ui.WCMS.VerifySCCPublicReviewPage_WCMSI_921"/>
+            <class name="tests.ui.WCMS.VerifySocietyAwardsPage_WCMSI_980"/>
+            <class name="tests.ui.WCMS.VerifySocietyReviewPage_WCMSI_919"/>
+            <class name="tests.ui.WCMS.VerifyStandardAndPublication_WCMSI_581"/>
+            <class name="tests.ui.WCMS.VerifyStandardandSolutionOverview_WCMSI_505"/>
+            <class name="tests.ui.WCMS.VerifyStandardizationNews_WCMSI_1043"/>
+            <class name="tests.ui.WCMS.VerifyStandardOperatingProceduresPage_WCMSI_959"/>
+            <class name="tests.ui.WCMS.VerifyStudents_WCMSI_522"/>
+            <class name="tests.ui.WCMS.VerifyTechnicalCommittees_WCMSI_526"/>
+            <class name="tests.ui.WCMS.VerifyTracker_Services_WCMSI_614"/>
+            <class name="tests.ui.WCMS.VerifyTrainingByIndustryPageFunctionality_WCMSI_636"/>
+            <class name="tests.ui.WCMS.VerifyWohlersAndSpecialtyReportPage_WCMSI_945"/>
+
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

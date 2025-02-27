@@ -59,6 +59,27 @@ task tempContent(type: Test) {
         suites 'src/main/resources/tempContent.xml'
     }
 }
+task regressionWCMS(type: Test) {
+    retry {
+        maxRetries =  System.getProperty('retryCount','0').toInteger()
+        maxFailures = 0
+        failOnPassedAfterRetry = true
+    }
+    ignoreFailures = true
+    systemProperty 'browser', System.getProperty('browser', 'chrome')
+    systemProperty 'platform', System.getProperty('platform', 'local')
+    systemProperty 'env', System.getProperty('env', 'QA')
+    systemProperty 'updateJira', System.getProperty('updateJira', 'false')
+    systemProperty 'testExecutionId', System.getProperty('testExecutionId', '0000')
+    useTestNG() { //This is for Gradle to use TestNG
+        //No need to add Custome Listener
+        // It will be provided by the TESTNG.XML
+        //listeners.add('TestListeners.TestListener')
+        useDefaultListeners = true
+        outputDirectory = file("$projectDir/testngOutput")
+        suites 'src/main/resources/WCMSRegression.xml'
+    }
+}
 task content(type: Test) {
     retry {
         maxRetries =  System.getProperty('retryCount','0').toInteger()

@@ -12,8 +12,8 @@ public class TechnicalCommitteesWCMS extends BasePage {
     public By joinNow = By.xpath("//a[contains(text(),'Join Now')]");
     public By TechnicalCommitteeeFullList = By.xpath("//a[contains(text(),'Technical Committeee Full List')]");
     public By workItemfullListView = By.xpath("//a[@href='/membership-participation/technical-committees/work-items-full-list' and @title='View']");
-    public By InitiateNewStandardsActivity = By.xpath("//a[@href='/membership-participation/technical-committees/new-standards-development' and @title='View']");
-    public By SocietyReview = By.xpath("//a[@href='/society-review' and @title='View']");
+    public By InitiateNewStandardsActivity = By.xpath("//a[contains(@href,'/new-standards-development') and @title='View']");
+    public By SocietyReview = By.xpath("//a[contains(@href,'/society-review') and @title='View']");
     public By ANSIPublicReview = By.xpath("//a[@href='/membership-participation/technical-committees/ansi-review' and @title='View']");
     public By SCCPublicReview = By.xpath("//a[contains(@href,'/scc-public-review') and @title='View']");
     public By InterlaboratoryStudyProgram = By.xpath("//a[@href='/membership-participation/technical-committees/interlaboratory-studies-program']");
@@ -32,4 +32,10 @@ public class TechnicalCommitteesWCMS extends BasePage {
     public By DownloadWorkProgram = By.xpath("//a[text()='Download Work Program']");
     public By PublicReviewMail = By.xpath("//a[contains(text(),'accreditation@astm.org')]");
 
+    public By DownloadBallotActions = By.xpath("//a[text()='Download Ballot Actions']");
+    public By SocietyReviewMail = By.xpath("//a[text()='socrev@astm.org']");
+
+    public By TestMethodsSpecificationsLink = By.xpath("//a[contains(text(),'Test methods, specifications')]");
+    public By PetroleumSteelLink = By.xpath("//a[contains(text(),'petroleum, steel')]");
+    public By LightSportAircraftLink = By.xpath("//a[contains(text(),'Light Sport Aircraft & FAA')]");
 }

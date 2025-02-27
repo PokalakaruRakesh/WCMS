@@ -47,6 +47,10 @@ public class CommonPage_WCMS extends BasePage {
 
     public By aboutNavigation = By.xpath("(//button[text()='About ASTM'])[last()]");
     public By aboutASTMOverview = By.xpath("(//a[@href='/about'][text()='About ASTM Overview'])[last()]");
+
+    public By dropDown(String buttonText) {
+        return By.xpath(String.format("//button[contains(text(),'%s')]", buttonText));
+    }
     @Step("Click on 'About' Navigation Option")
     public void ClickOnAboutNavigationOption() {
         try {
@@ -578,11 +582,22 @@ public class CommonPage_WCMS extends BasePage {
             WCMSICommon.waitForSec(4);
             String originalWindow = driver.getWindowHandle();
             Set<String> windowHandles = driver.getWindowHandles();
+            if (windowHandles.size() == 3) {
+                for (String windowHandle : windowHandles) {
+                    if (!windowHandle.equals(originalWindow)) {
+                        driver.switchTo().window(windowHandle);
+                        String currentUrl = driver.getCurrentUrl();
+                        if (!currentUrl.contains("chrome-extension://")) {
+                            break;
+                        }
+                    }
+                }
+            }
             if (windowHandles.size() == 2) {
                 for (String windowHandle : windowHandles) {
-                    if (!originalWindow.equals(windowHandle)) {
+                    if (!windowHandle.equals(originalWindow)) {
                         driver.switchTo().window(windowHandle);
-                        break;
+                            break;
                     }
                 }
             }
@@ -596,7 +611,7 @@ public class CommonPage_WCMS extends BasePage {
                 Assert.assertTrue(driver.getTitle().contains(expectedTitle));
             }
             ScreenshotUtil.takeScreenshotForAllure(driver);
-            if (windowHandles.size() == 2){
+            if (windowHandles.size() == 3 || windowHandles.size() == 2){
                 driver.close();
                 driver.switchTo().window(originalWindow);
             }else {
