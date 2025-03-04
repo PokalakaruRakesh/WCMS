@@ -38,9 +38,8 @@ public class VerifyDigitalAccessToInternationalStandardsPage_WCMSI_980 extends B
             digitalLibrary = page.getInstance(ASTMDigital_LibraryWCMS.class);
             basePage = page.getInstance(BasePage.class);
 
-            commonPage.downloadFileSetup(ConfigReader.getValue("BASE_URL_WCMS_ASTM"));
+            commonPage.downloadFileSetup(ConfigReader.getValue("BASE_URL_WCMS_ASTM")+"membership-participation/technical-committees/interlaboratory-studies-program");
             cookiePage.handleOneTrustCookie();
-            WCMSPage.NavigateToPage("Membership & Participation","Technical Committees");
             ValidateDigitalAccessToInternationalStandardsPage();
             ReusableMethods.deleteFilesInsideFolder(System.getProperty("user.dir")+"\\"+ ConfigReader.getValue("DownloadPath")+"\\downloads");
         } catch (Exception e) {
@@ -66,7 +65,7 @@ public class VerifyDigitalAccessToInternationalStandardsPage_WCMSI_980 extends B
             Assert.assertTrue(page.getElement(digitalLibrary.Contactus).getAttribute("href").contains("mailto:researchreports@astm.org"));
             Assert.assertTrue(commonPage.ValidateDownloadedFile(digitalLibrary.DownloadResearchReportTemplate,"ASTM_Research_Report_Template_2024.doc"));
             Assert.assertTrue(page.getElement(digitalLibrary.submitToOurILSTeam).getAttribute("href").contains("mailto:researchreports@astm.org"));
-            Assert.assertTrue(commonPage.ValidateLink(digitalLibrary.ContactASTM,"/contact", "Contact Us"));
+            Assert.assertTrue(commonPage.ValidateLink(digitalLibrary.ContactASTM,"/contact", "Contact"));
             Assert.assertTrue(commonPage.ValidateDownloadedFile(digitalLibrary.InterlaboratoryStudiesProgram,"May_Jun_SN_Infograhpic_We_Can_Help_Print_v3.pdf"));
         } catch (Exception e) {
             e.printStackTrace();

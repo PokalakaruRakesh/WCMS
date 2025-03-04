@@ -38,4 +38,16 @@ public class TechnicalCommitteesWCMS extends BasePage {
     public By TestMethodsSpecificationsLink = By.xpath("//a[contains(text(),'Test methods, specifications')]");
     public By PetroleumSteelLink = By.xpath("//a[contains(text(),'petroleum, steel')]");
     public By LightSportAircraftLink = By.xpath("//a[contains(text(),'Light Sport Aircraft & FAA')]");
+
+    public By FormAndStyleLink = By.xpath("//a[contains(text(),'Form and Style Manual')]");
+    public By RegulationsGoverningLink = By.xpath("//a[contains(text(),'Regulations Governing')]");
+    public By DraftStandardTemplatesLink = By.xpath("//a[contains(text(),'Draft Standard Templates')]");
+    public By RedBookLink = By.xpath("//a[contains(text(),'Red Book')]");
+    public By StrategicPlanningLink = By.xpath("//a[contains(text(),'Strategic Planning Manual')]");
+    public By ProxyFormLink = By.xpath("//a[contains(text(),'Proxy Form')]");
+    public By CertificateAttendanceLink = By.xpath("//a[contains(text(),'Certificate of Attendance')]");
+    public By SymposiumProposalLink = By.xpath("//a[contains(text(),'Symposium Proposal Form')]");
+    public By DirectionsPreparingLink = By.xpath("//a[contains(text(),'Directions for Preparing')]");
+
+
 }

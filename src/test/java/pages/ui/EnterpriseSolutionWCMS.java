@@ -10,7 +10,7 @@ public class EnterpriseSolutionWCMS extends BasePage{
     public By WhyASTM=By.xpath("//a[@title='Why ASTM?']");
     public By ASTMAdvantage=By.xpath("//a[@title='The ASTM Advantage']");
     public By ASTMCompass=By.xpath("//h6[contains(text(),'ASTM Compass')]/ancestor::div/a[text()='Learn More']");
-    public By SubscriptionPortals=By.xpath("//h6[contains(text(),'Subscription Portals')]/ancestor::div/a[text()='Learn More']");
+    public By YourContentASTMCompass=By.xpath("//h6[contains(text(),'Your Content on ASTM Compass')]/ancestor::div/a[text()='Learn More']");
     public By ASTMSpecBuilder=By.xpath("//h6[contains(text(),'ASTM SpecBuilder')]/ancestor::div/a[text()='Learn More']");
     public By MultimediaServices=By.xpath("//h6[contains(text(),'Multimedia Services')]/ancestor::div/a[text()='Learn More']");
     public By TrainStandardsExperts=By.xpath("//a[@title='Learn More' and contains(@href, '/standards-and-solutions/training-courses')]");
@@ -18,10 +18,16 @@ public class EnterpriseSolutionWCMS extends BasePage{
     public By ASTMDigitalLibrary=By.xpath("//a[@title='Learn More' and contains(@href, '/standards-and-solutions/digital-library')]");
     public By AASHTO=By.xpath("//a[contains(text(), 'Learn more about accessing AASHTO')]");
     public By AATCC=By.xpath("//a[contains(text(), 'Learn more about accessing AATCC')]");
-    public By Aenor=By.xpath("//a[contains(text(), 'Learn more about accessing Aenor')]");
+    public By Aenor=By.xpath("//a[contains(text(), 'Learn more about accessing AENOR')]");
     public By API=By.xpath("//a[contains(text(), 'Learn more about accessing API')]");
     public By AWWA=By.xpath("//a[contains(text(), 'Learn more about accessing AWWA')]");
     public By CGA=By.xpath("//a[contains(text(), 'Learn more about accessing CGA')]");
     public By IES=By.xpath("//a[contains(text(), 'Learn more about accessing IES')]");
     public By UOP=By.xpath("//a[contains(text(), 'Learn more about accessing UOP')]");
+
+    public By BenefitsDigitalVideo=By.xpath("//h4[contains(text(),'Benefits of Digital')]/..//*[@title='Video']");
+    public By BenefitsDigitalRequestDemo=By.xpath("//h4[contains(text(),'Benefits of Digital')]/..//a[text()='Request Demo']");
+    public By DownloadCompassEBook=By.xpath("//h4[contains(text(),'Benefits of Digital')]/..//a[text()='Download Compass EBook']");
+    public By AdvancingYourProjectsRequestDemo=By.xpath("//h4[contains(text(),'Advancing Your Projects')]/..//a[text()='Request Demo']");
+
 }

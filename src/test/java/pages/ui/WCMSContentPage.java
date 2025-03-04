@@ -355,13 +355,14 @@ public class WCMSContentPage extends  BasePage {
     public void NavigateToPage(String menu,String submenu) {
         try {
             WaitStatementUtils.explicitWaitForVisibility(driver,getElement(getMenu(menu)),10);
+            WaitStatementUtils.waitForElementStaleness(driver,getElement(getMenu(menu)),5);
             getElement(getMenu(menu)).click();
             ScreenshotUtil.takeScreenshotForAllure(driver);
+            WCMSICommon.waitForSec(3);
             WebElement element = getElement(getSelectSubmenu(submenu));
-            WaitStatementUtils.explicitWaitForVisibility(driver,element,10);
             ReusableMethods.scrollToElement(driver,element);
-            WaitStatementUtils.waitForElementToBeClickable(driver,element,2);
-            WaitStatementUtils.waitForElementStaleness(driver,element,3);
+            WaitStatementUtils.waitForElementStaleness(driver,element,10);
+            WaitStatementUtils.waitForElementToBeClickable(driver,element,5);
             element.click();
             WCMSICommon.waitForSec(4);
             ScreenshotUtil.takeScreenshotForAllure(driver);

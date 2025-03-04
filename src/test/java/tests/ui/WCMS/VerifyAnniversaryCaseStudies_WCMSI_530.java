@@ -41,14 +41,14 @@ public class VerifyAnniversaryCaseStudies_WCMSI_530 extends BaseTest {
     @Step("Validate links and buttons available on 125th Anniversary Case Studies page")
     public void validaAnniversaryCaseStudiesLinks() {
         try {
-            Assert.assertTrue(commonPage.ValidateLink(anniversaryCaseStudies.AircraftBrakingMeasurements, "news/case-study-on-standards-aircraft-braking-measurements", "Case Study on Standards: Aircraft Braking Measurements | ASTM Standardization News", "\'Aircraft Braking Measurements\' link"));
-            Assert.assertTrue(commonPage.ValidateLink(anniversaryCaseStudies.AmusementRides, "case-study-on-standards-amusement-rides", "Case Study on Standards: Amusement Rides | ASTM Standardization News", "\'Amusement Rides\' Link"));
-            Assert.assertTrue(commonPage.ValidateLink(anniversaryCaseStudies.BabyCribs, "case-study-on-standards-baby-cribs", "Case Study on Standards: Baby Cribs | ASTM Standardization News", "\'Baby Cribs\' Link"));
-            Assert.assertTrue(commonPage.ValidateLink(anniversaryCaseStudies.BarrierFaceCoverings, "case-study-on-standards-barrier-face-coverings", "Case Study on Standards: Barrier Face Coverings | ASTM Standardization News", "\'Barrier Face Coverings\' Link"));
-            Assert.assertTrue(commonPage.ValidateLink(anniversaryCaseStudies.BiodegradablePlastic, "case-study-on-standards-biodegradable-plastic", "Case Study on Standards: Biodegradable Plastic | ASTM Standardization News", "\'Biodegradable Plastic\' Link"));
-            Assert.assertTrue(commonPage.ValidateLink(anniversaryCaseStudies.BiodieselFuelBlend, "case-study-on-standards-biodiesel-fuel-blend", "Case Study on Standards: Biodiesel Fuel Blend | ASTM Standardization News", "\'Biodiesel Fuel Blend\' Link"));
-            Assert.assertTrue(commonPage.ValidateLink(anniversaryCaseStudies.Disinfection, "case-study-on-standards-disinfection", "Case Study on Standards: Disinfection | ASTM Standardization News", "\'Disinfection\' Link"));
-            Assert.assertTrue(commonPage.ValidateLink(anniversaryCaseStudies.Infrastructure, "case-study-on-standards-infrastructure", "Case Study on Standards: Infrastructure | ASTM Standardization News", "\'Infrastructure\' Link"));
+            Assert.assertTrue(commonPage.ValidateLink(anniversaryCaseStudies.AircraftBrakingMeasurements, "aircraft-braking", "Aircraft Braking Measurements"));
+            Assert.assertTrue(commonPage.ValidateLink(anniversaryCaseStudies.AmusementRides, "amusement-rides", "Amusement Rides"));
+            Assert.assertTrue(commonPage.ValidateLink(anniversaryCaseStudies.BabyCribs, "standards-baby-cribs", "Baby Cribs"));
+            Assert.assertTrue(commonPage.ValidateLink(anniversaryCaseStudies.BarrierFaceCoverings, "standards-barrier-face-coverings", "Barrier Face Coverings"));
+            Assert.assertTrue(commonPage.ValidateLink(anniversaryCaseStudies.BiodegradablePlastic, "standards-biodegradable-plastic", "Biodegradable Plastic"));
+            Assert.assertTrue(commonPage.ValidateLink(anniversaryCaseStudies.BiodieselFuelBlend, "standards-biodiesel-fuel-blend", "Biodiesel Fuel Blend"));
+            Assert.assertTrue(commonPage.ValidateLink(anniversaryCaseStudies.Disinfection, "standards-disinfection", "Disinfection"));
+            Assert.assertTrue(commonPage.ValidateLink(anniversaryCaseStudies.Infrastructure, "standards-infrastructure", "Infrastructure"));
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to Validate the Link and button available on 125th Anniversary Case Studies", e);

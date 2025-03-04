@@ -421,6 +421,7 @@ public class CommonPage_WCMS extends BasePage {
             Assert.assertTrue(driver.getTitle().contains(expectedTitle));
             ScreenshotUtil.takeScreenshotForAllure(driver);
             driver.navigate().back();
+            WCMSICommon.waitForSec(3);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -574,7 +575,7 @@ public class CommonPage_WCMS extends BasePage {
     public Boolean ValidateLink(By locator, String link, String expectedTitle) {
         try {
             ReusableMethods.scrollIntoView(getElement(locator), driver);
-            WaitStatementUtils.waitForElementStaleness(driver, getElement(locator),2);
+            WaitStatementUtils.waitForElementStaleness(driver, getElement(locator),5);
             WaitStatementUtils.waitForElementToBeClickable(driver, getElement(locator));
             Assert.assertTrue(getElement(locator).getAttribute("href").contains(link));
             ScreenshotUtil.takeScreenshotForAllure(driver);
@@ -582,23 +583,13 @@ public class CommonPage_WCMS extends BasePage {
             WCMSICommon.waitForSec(4);
             String originalWindow = driver.getWindowHandle();
             Set<String> windowHandles = driver.getWindowHandles();
-            if (windowHandles.size() == 3) {
-                for (String windowHandle : windowHandles) {
-                    if (!windowHandle.equals(originalWindow)) {
-                        driver.switchTo().window(windowHandle);
-                        String currentUrl = driver.getCurrentUrl();
-                        if (!currentUrl.contains("chrome-extension://")) {
-                            break;
-                        }
+            for (String windowHandle : windowHandles) {
+                if (!windowHandle.equals(originalWindow)) {
+                    driver.switchTo().window(windowHandle);
+                    if (windowHandles.size() == 3 && driver.getCurrentUrl().contains("chrome-extension://")) {
+                        continue;
                     }
-                }
-            }
-            if (windowHandles.size() == 2) {
-                for (String windowHandle : windowHandles) {
-                    if (!windowHandle.equals(originalWindow)) {
-                        driver.switchTo().window(windowHandle);
-                            break;
-                    }
+                    break;
                 }
             }
             WCMSICommon.waitForSec(3);

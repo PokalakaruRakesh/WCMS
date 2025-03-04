@@ -51,6 +51,7 @@ public class VerifyAccreditationsPage_WCMSI_978 extends BaseTest {
     public void ValidateAccreditationsPage() {
         try {
             basePage.clickOnMethod(TrainingIndustry.Accreditations);
+            WCMSICommon.waitForSec(4);
             Assert.assertTrue(commonPage.ValidateLink(TrainingIndustry.accreditationsContactUs,"/standards-and-solutions/enterprise-solutions/salesforce", "Contact Sales | ASTM"));
         } catch (Exception e) {
             e.printStackTrace();

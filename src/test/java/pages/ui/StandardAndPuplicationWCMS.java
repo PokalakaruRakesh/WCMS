@@ -7,9 +7,9 @@ public class StandardAndPuplicationWCMS extends BasePage {
     public StandardAndPuplicationWCMS(WebDriver driver) {
         super(driver);
     }
-    public By BrowseByCategory=By.xpath("//a[@title='Browse by Category']");
-    public By SignUpTracker=By.xpath("//a[normalize-space()='Sign Up for Tracker']");
-    public By BookAstmStandard=By.xpath("//h5[text()='Book of ASTM Standards']/ancestor::div/a[text()='Learn More']");
+    public By BrowseByCategory=By.xpath("//a[@title='Browse Standards by Category']");
+    public By StandardsTracker=By.xpath("//a[contains(@href,'astm-standards-tracker')][normalize-space()='Learn More']");
+    public By BookAstmStandard=By.xpath("//h5[text()='Annual Book of ASTM Standards']/ancestor::div/a[text()='Learn More']");
     public By ASTMCompass=By.xpath("//h5[contains(text(),'ASTM Compass')]/ancestor::div/a[text()='Learn More']");
     public By ASTMDigitalLibrary=By.xpath("//a[@href='/standards-and-solutions/digital-library'][normalize-space()='Learn More']");
     public By Adjuncts=By.xpath("//a[contains(@title,'Adjuncts')]");

@@ -57,8 +57,8 @@ public class VerifyHomePage_WCMSI_541 extends BaseTest {
             }else{
                 Assert.assertTrue(commonPage.ValidateLink(homepage.standardizationNewsGetDigitalEdition, "SN-January-February-2025", ""));
                 Assert.assertTrue(commonPage.ValidateLink(homepage.standardImpactListen, "standards-impact-drones", "Taking to the Skies: Drone Standards"));
-                Assert.assertTrue(commonPage.ValidateLink(homepage.labManagerAcademyLearnMore, "https://www.astm.org/astm-tpt-1008.html", "Lab Manager Academy | Lab Management Certificate", "Lean More Lab Manager Academy clicked"));
-                Assert.assertTrue(commonPage.ValidateLink(homepage.standardizationImpactReportLearnMore1, "showLandingPage", "ASTM Standardization Impact Report 2024", "Learn More ICAM clicked"));
+                Assert.assertTrue(commonPage.ValidateLinkNewtab(homepage.labManagerAcademyLearnMore, "https://www.astm.org/astm-tpt-1008.html", "Lab Manager Academy | Lab Management Certificate", "Lean More Lab Manager Academy clicked"));
+                Assert.assertTrue(commonPage.ValidateLinkNewtab(homepage.standardizationImpactReportLearnMore1, "showLandingPage", "ASTM Standardization Impact Report", "Learn More ICAM clicked"));
 
             }
             //Standards & Solutions

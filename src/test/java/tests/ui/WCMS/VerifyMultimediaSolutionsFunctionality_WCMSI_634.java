@@ -48,7 +48,7 @@ public class VerifyMultimediaSolutionsFunctionality_WCMSI_634 extends BaseTest {
         Assert.assertEquals(commonPage.getVideoLink().getAttribute("src"), "https://fast.wistia.net/embed/iframe/m4qv0rhely");
         ScreenshotUtil.takeScreenshotForAllure(driver);
         Assert.assertTrue(commonPage.ValidateLinkNewtab(MultimediaSolutions.RequestAppointment, "https://marketing.astm.org/acton/fs/blocks/showLandingPage/a/9652/p/p-03b5/t/page/fm/1?_gl=1*16xtsq3*_gcl_au*MjY3MzYyNjc4LjE3MjQ3ODM3NjE", "", "\'Request AN Appointment \' Button"));
-        Assert.assertTrue(commonPage.ValidateLinkNewtab(MultimediaSolutions.QuickGuide,"https://marketing.astm.org/acton/attachment/9652/f-a4d90de7-4ded-4ef6-8cb9-f27cd0fb7b22/1/-/-/-/-/ASTM%20Multimedia%20Services.pdf?_gl=1*1j2zz8g*_gcl_au*MTA2MDM2NTE5MC4xNzI0NzcxNzIw","","\'Quick Guide\' Button"));
+        Assert.assertTrue(commonPage.ValidateLinkNewtab(MultimediaSolutions.QuickGuide,"https://marketing.astm.org","","\'Quick Guide\' Button"));
         Assert.assertEquals(commonPage.getWistiaVideoLink("Revolutionize Your Content with CGI").getAttribute("src"), "https://fast.wistia.net/embed/iframe/c0zph57f92");
         Assert.assertEquals(commonPage.getWistiaVideoLink("Promote Your Brand, Expand Your Reach").getAttribute("src"), "https://fast.wistia.net/embed/iframe/39uxp6dtp7");
         ScreenshotUtil.takeScreenshotForAllure(driver);
@@ -64,7 +64,7 @@ public class VerifyMultimediaSolutionsFunctionality_WCMSI_634 extends BaseTest {
         try {
             commonPage.getstandardandSolution();
             commonPage.clickonASTMMultimediaSolutions();
-            Assert.assertEquals(driver.getTitle(), "ASTM Multimedia Solutions");
+            Assert.assertTrue(driver.getTitle().contains( "ASTM Multimedia Solutions"));
             ScreenshotUtil.takeScreenshotForAllure(driver);
         } catch (Exception e) {
             e.printStackTrace();

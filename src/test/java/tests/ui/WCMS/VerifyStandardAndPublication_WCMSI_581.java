@@ -46,24 +46,24 @@ public class VerifyStandardAndPublication_WCMSI_581 extends BaseTest {
     @Step("Validate links and buttons available on page")
     private void validateStandardAndPublicationPage() {
         try {
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(StandardAndPublication.BrowseByCategory, "products-services/standards-and-publications/standards/standards-category-list.html", "Standards By Category - Standards Products - Standards & Publications - Products & Services", "\'Browse by Category\' Button"));
-            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.SignUpTracker, "standards-and-solutions/standards-and-publications/astm-standards-tracker", "ASTM Standards Tracker", "\'Sign Up for Tracker\' Button"));
-            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.BookAstmStandard, "/standards-and-solutions/bos", "Annual Book of ASTM Standards", "\'Book of ASTM Standards\'Learn More Link"));
-            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.ASTMCompass, "/standards-and-solutions/enterprise-solutions/astm-compass", "ASTM Compass", "\'ASTM Compass\'Learn More Link"));
-            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.ASTMDigitalLibrary, "/standards-and-solutions/digital-library", "ASTM Digital Library", "\'ASTM Digital Library\'Learn More Link"));
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(StandardAndPublication.Adjuncts, "products-services/standards-and-publications/adjuncts-and-reference-radiographs.html", "Adjuncts and Reference Radiographs - Standards & Publications - Products & Services", "\'Adjuncts\' Button"));
+            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.BrowseByCategory, "products-services/standards-and-publications/standards/standards-category-list.html", "Standards By Category - Standards Products"));
+            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.StandardsTracker, "/astm-standards-tracker", "ASTM Standards Tracker"));
+            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.BookAstmStandard, "/standards-and-solutions/bos", "Annual Book of ASTM Standards"));
+            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.ASTMCompass, "/standards-and-solutions/enterprise-solutions/astm-compass", "ASTM Compass"));
+            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.ASTMDigitalLibrary, "/standards-and-solutions/digital-library", "ASTM Digital Library"));
+            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.Adjuncts, "adjuncts-and-reference-radiographs","Adjuncts and Reference Radiographs"));
             //Assert.assertTrue(commonPage.ValidateLinkNewtab(StandardAndPublication.ReferenceRadiographs, "products-services/standards-and-publications/adjuncts-and-reference-radiographs.html", "Adjuncts and Reference Radiographs - Standards & Publications - Products & Services", "\' Adjuncts\' Button"));
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(StandardAndPublication.ResearchReportsCommittee, "products-services/standards-and-publications/research-reports.html", "Research Reports - Standards & Publications - Products & Services", "\'Research Reports by Committee\' Button"));
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(StandardAndPublication.ViewUOPStandards, "products-services/standards-and-publications/standards/uop-standards.html", "UOP Standards - Standards Products - Standards & Publications - Products & Services", "\'View UOP Standards\' Button"));
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(StandardAndPublication.ASMEDigitalCollection, "asmedigitalcollection.asme.org/astm", "ASTM Content | ASME Digital Collection", "\'View UOP Standards\' Button"));
-            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.PeerReviewedSymposiaPapersSTPs, "/standards-and-solutions/standards-and-publications/symposia-papers", "Symposia Papers & STPs", "\'Peer-Reviewed Symposia Papers & STPs\' Learn More Link"));
-            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.ManualsMonographsDataSeries, "/standards-and-solutions/standards-and-publications/mnl", "Manuals, Monographs, & Data Series", "\'Manuals, Monographs & Data Series\' Learn More Link"));
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(StandardAndPublication.Journals, "products-services/standards-and-publications/journals.html", "Journals - Standards & Publications - Products & Services", "\'Journals\' Learn More Link"));
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(StandardAndPublication.TechnicalReports, "products-services/standards-and-publications/technical-reports.html", "Technical Reports - Standards & Publications - Products & Services", "\'Technical Reports\' Learn More Link"));
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(StandardAndPublication.OpenReadingRoom, "products-services/reading-room.html", "Reading Room", "\'Reading Room\' Button"));
-            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.ViewCOVIDRelated, "standards-and-solutions/standards-publications/covid-19", "ASTM Standards & COVID-19", "\'View COVID-19 Related Standards\' Button"));
+            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.ResearchReportsCommittee, "products-services/standards-and-publications/research-reports.html", "Research Reports - Standards & Publications - Products & Services"));
+            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.ViewUOPStandards, "products-services/standards-and-publications/standards/uop-standards.html", "UOP Standards - Standards Products - Standards & Publications - Products & Services"));
+            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.ASMEDigitalCollection, "asmedigitalcollection.asme.org/astm", "ASTM Content | ASME Digital Collection"));
+            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.PeerReviewedSymposiaPapersSTPs, "/standards-and-solutions/standards-and-publications/symposia-papers", "Symposia Papers & STPs"));
+            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.ManualsMonographsDataSeries, "/standards-and-solutions/standards-and-publications/mnl", "Manuals, Monographs, & Data Series"));
+            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.Journals, "products-services/standards-and-publications/journals.html", "Journals - Standards & Publications - Products & Services"));
+            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.TechnicalReports, "products-services/standards-and-publications/technical-reports.html", "Technical Reports - Standards & Publications - Products & Services"));
+            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.OpenReadingRoom, "products-services/reading-room.html", "Reading Room"));
+            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.ViewCOVIDRelated, "standards-and-solutions/standards-publications/covid-19", "ASTM Standards & COVID-19"));
             //Assert.assertTrue(commonPage.ValidateLinkNewtab(StandardAndPublication.ShopRequestStandard, "/standards-and-solutions/enterprise-solutions/astm-compass", "ASTM Compass", "\'subscribe to an online volume via ASTM Compass\' Link"));
-            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.ContactUs, "standards-and-solutions/enterprise-solutions/salesforce", "Contact Sales", "\'Contact US\' Button"));
+            Assert.assertTrue(commonPage.ValidateLink(StandardAndPublication.ContactUs, "standards-and-solutions/enterprise-solutions/salesforce", "Contact Sales"));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

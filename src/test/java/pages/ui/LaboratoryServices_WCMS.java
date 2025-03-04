@@ -16,8 +16,8 @@ public class LaboratoryServices_WCMS extends BasePage {
     public By OnDemandWebinar= By.xpath("//a[@title='OnDemand Webinar']");
     public By SubscribeNewsletter= By.xpath("//a[@title='Subscribe to Newsletter']");
     public By Contact= By.xpath("//a[@title='Contact']");
-    public By ProficiencyTestingLearnMore= By.xpath("//h6[text()='Proficiency Testing']/../..//a[text()='Learn More']");
-    public By ReferenceMaterialsLearnMore= By.xpath("//h6[text()='Reference Materials']/../..//a[text()='Learn More']");
+    public By ProficiencyTestingLearnMore= By.xpath("//h3[text()='Proficiency Testing Program']/../..//a[text()='Learn More']");
+    public By ReferenceMaterialsLearnMore= By.xpath("//h2[text()='Reference Materials']/../..//a[text()='Learn More']");
     public By ContactUs= By.xpath("(//a[text()='Contact Us'])");
     public By ASTMInsightSQC= By.xpath("(//a[@title='Learn More' and @href='/standards-and-solutions/laboratory-services/astm-insight-sqc'])");
     public By StandardOperatingProcedures= By.xpath("//a[@title='Learn More' and @href='/standards-and-solutions/laboratory-services/standard-operating-procedures-sop']");

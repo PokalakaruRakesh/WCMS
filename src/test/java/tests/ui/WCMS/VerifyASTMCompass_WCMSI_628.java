@@ -45,11 +45,11 @@ public class VerifyASTMCompass_WCMSI_628 extends BaseTest {
 
     @Step("Validate links and buttons available on page")
     private void validateASTMCompassPage() {
-        Assert.assertTrue(commonPage.ValidateLink(ASTMCompass.contactAstmSales, "/standards-and-solutions/enterprise-solutions/salesforce", "Contact Sales", "\'Contact Sales\' Button"));
-        Assert.assertTrue(commonPage.ValidateLinkNewtab(ASTMCompass.viewDemo, "https://marketing.astm.org/acton/fs/blocks/showLandingPage/a/9652/p/p-011c/t/page/fm/0?_gl=1*v8vczm*_gcl_au*MTkzODUxMjcwLjE3MjQyNzc3NjU", "", "\'View Demo\' Button"));
-        Assert.assertTrue(commonPage.ValidateLinkNewtab(ASTMCompass.learnMore, "https://marketing.astm.org/acton/fs/blocks/showLandingPage/a/9652/p/p-011c/t/page/fm/0?_gl=1*1dyjo1g*_gcl_au*NjI5MDIwNjEuMTcyNDM0MjUzOQ", "", "\'Learn More\' Button"));
-        Assert.assertTrue(commonPage.ValidateLinkNewtab(ASTMCompass.compassEbook, "https://marketing.astm.org/acton/fs/blocks/showLandingPage/a/9652/p/p-00c9/t/page/fm/1?_gl=1*1hi94k0*_gcl_au*ODI3MjkyOTY0LjE3MjQzMzA4NDE", "", "\'Compass EBook\' Link"));
-        Assert.assertTrue(commonPage.ValidateLinkNewtab(ASTMCompass.astmCompassGuid, "CompassBeYourGuide_FINAL.pdf", "", "\'Digital Access to International Standards\' Link"));
+        Assert.assertTrue(commonPage.ValidateLink(ASTMCompass.contactAstmSales, "/standards-and-solutions/enterprise-solutions/salesforce", "Contact Sales"));
+        Assert.assertTrue(commonPage.ValidateLink(ASTMCompass.viewDemo, "https://marketing.astm.org/acton/fs/blocks/showLandingPage/a/9652/p/p-011c/t/page/fm/0?_gl=1*v8vczm*_gcl_au*MTkzODUxMjcwLjE3MjQyNzc3NjU", ""));
+        Assert.assertTrue(commonPage.ValidateLink(ASTMCompass.learnMore, "https://marketing.astm.org/acton/fs/blocks/showLandingPage/a/9652/p/p-011c/t/page/fm/0?_gl=1*1dyjo1g*_gcl_au*NjI5MDIwNjEuMTcyNDM0MjUzOQ", ""));
+        Assert.assertTrue(commonPage.ValidateLink(ASTMCompass.compassEbook, "https://marketing.astm.org/acton/fs/blocks/showLandingPage/a/9652/p/p-00c9/t/page/fm/1?_gl=1*1hi94k0*_gcl_au*ODI3MjkyOTY0LjE3MjQzMzA4NDE", ""));
+        Assert.assertTrue(commonPage.ValidateLink(ASTMCompass.astmCompassGuid, "CompassBeYourGuide_FINAL.pdf", "", "\'Digital Access to International Standards\' Link"));
     }
 
     @Step("Validate navigation to ASTM Compass page")

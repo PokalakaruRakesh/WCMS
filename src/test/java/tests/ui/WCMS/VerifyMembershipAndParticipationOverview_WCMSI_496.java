@@ -42,22 +42,22 @@ public class VerifyMembershipAndParticipationOverview_WCMSI_496 extends BaseTest
     @Step("Validate links and buttons available on Membership And Participation Overview page")
     public void validaMembershipAndParticipationLinks() {
         try {
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(MembershipAndParticipationOverview.ParticipatingMembership, "participating", "ASTM International - Membership", "\'Participating Membership\' Learn More link"));
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(MembershipAndParticipationOverview.OrganizationalMembership, "organizational", "ASTM International - Membership", "\'Organizational Membership\' Learn More link"));
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(MembershipAndParticipationOverview.InformationalMembership, "memindividual24", "2024 Individual Membership", "\'Informational Membership\' Learn More link"));
-            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.StudentMembership, "student-members", "Student Members", "\'Student Members\' Learn More link"));
-            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.DirectCommitteeParticipation, "/membership-participation/memberships", "ASTM Membership", "\'Direct Committee Participation\' Learn More link"));
-            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.PublicationDiscounts, "/standards-and-solutions/digital-library", "ASTM Digital Library", "\'Publication Discounts\' Learn More link"));
-            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.StandardizationNews, "/standardization-news", "STANDARDIZATION NEWS", "\'Standardization News\' Learn More link"));
-            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.ExploreBenefitsJoin, "/membership-participation/memberships", "ASTM Membership", "\'Explore Benefits - Join\' Button"));
-            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.MyCommittees, "https://secure.astm.org/?redirectUrl=aHR0cHM6Ly93d3cuYXN0bS5vcmcvc3NvL2xvZ2luL2F1dG8%3D&newApproach=true", "ASTM Login", "\'My Committees\' Learn More Link"));
-            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.ASTMCompass, "/standards-and-solutions/enterprise-solutions/astm-compass", "ASTM Compass", "\'ASTM Compass\' Learn More Link"));
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(MembershipAndParticipationOverview.GetPublished, "Publish-With-ASTM_1.pdf", "", "\'Sustainability Reference DatabaseGet Published\' Learn More Button"));
-            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.TechnicalCommitteesLearnMore, "/membership-participation/technical-committees", "Technical Committees", "\'Technical Committees\' Learn More Button"));
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(MembershipAndParticipationOverview.MeetingsSymposiaWorkshopsLearMore, "https://member.astm.org/meeting/", "ASTM International", "\'Meetings, Symposia & Workshops\' Learn More Button"));
-            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.MemberOfficerTrainingLearnMore, "/standards-and-solutions/training-courses/member-training", "Classroom for Members", "\'Member & Officer Training\' Learn More Button"));
-            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.ConsumerParticipationLearnMore, "/membership-participation/consumer-participation", "Consumers and ASTM International", "\'Consumer Participation\' Learn More Button"));
-            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.StudentsLearnMore, "/membership-participation/student-members", "Students", "\'Student Members\' Learn More Button"));
+            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.ParticipatingMembership, "participating", "ASTM International - Membership"));
+            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.OrganizationalMembership, "organizational", "ASTM International - Membership"));
+            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.InformationalMembership, "memindividual24", "2024 Individual Membership"));
+            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.StudentMembership, "student-members", "Student Members"));
+            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.DirectCommitteeParticipation, "/membership-participation/memberships", "ASTM Membership"));
+            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.PublicationDiscounts, "/standards-and-solutions/digital-library", "ASTM Digital Library"));
+            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.StandardizationNews, "/standardization-news", "STANDARDIZATION NEWS"));
+            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.ExploreBenefitsJoin, "/membership-participation/memberships", "ASTM Membership"));
+            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.MyCommittees, "https://secure.astm.org/?redirectUrl=aHR0cHM6Ly93d3cuYXN0bS5vcmcvc3NvL2xvZ2luL2F1dG8%3D&newApproach=true", "ASTM Login"));
+            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.ASTMCompass, "/standards-and-solutions/enterprise-solutions/astm-compass", "ASTM Compass"));
+            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.GetPublished, "Publish-With-ASTM_1.pdf", ""));
+            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.TechnicalCommitteesLearnMore, "/membership-participation/technical-committees", "Technical Committees"));
+            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.MeetingsSymposiaWorkshopsLearMore, "https://member.astm.org/meeting/", "ASTM International"));
+            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.MemberOfficerTrainingLearnMore, "/standards-and-solutions/training-courses/member-training", "Classroom for Members"));
+            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.ConsumerParticipationLearnMore, "/membership-participation/consumer-participation", "Consumers and ASTM International"));
+            Assert.assertTrue(commonPage.ValidateLink(MembershipAndParticipationOverview.StudentsLearnMore, "/membership-participation/student-members", "Students"));
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to Validate the Link and button available on Membership And Participation overview page", e);

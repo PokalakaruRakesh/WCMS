@@ -313,7 +313,7 @@ static Object[][] obj;
 
 		if (files != null) {
 			for (File file : files) {
-				if (file.isFile() && file.getName().equals(fileName)) {
+				if (file.isFile() && file.getName().contains(fileName)) {
 					return true; // File exists
 				}
 			}

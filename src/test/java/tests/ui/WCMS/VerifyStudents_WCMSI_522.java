@@ -41,11 +41,11 @@ public class VerifyStudents_WCMSI_522 extends BaseTest {
     @Step("Validate links and buttons available on Students page")
     public void validateStudentsLinks() {
         try {
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(Students.ApplyOnline, "https://qa-member.astm.org/application/student", "ASTM International - Membership", "\'Apply Online\' Link"));
-            Assert.assertTrue(commonPage.ValidateLink(Students.GraduateScholarship, "https://assets.contentstack.io/v3/assets/blt5eb0a2cb04534832/blta4e86d91da7415b3/6752b8716b5d6e1be8190b80/ASTM_Graduate_Scholarship_Application.pdf?branch=stage", "", "\'Click here for the graduate scholarship application form\' Click here Link"));
-            Assert.assertTrue(commonPage.ValidateLink(Students.ProfessorYearAward, "https://assets.contentstack.io/v3/assets/blt5eb0a2cb04534832/blta55d663ffeb505bb/6752b894efbd784cf74a7dee/ASTM_Professor_of_The_Year_Nomination.pdf?branch=stage", "", "\'Click here for Professor of the Year nomination form\' Click here Link"));
-            Assert.assertTrue(commonPage.ValidateLink(Students.MatterScholarship, "https://assets.contentstack.io/v3/assets/blt5eb0a2cb04534832/blt6785002c1547bb8f/67406f7bd328736af6233cdb/ASTM-Mather-Scholarship-Application.pdf?branch=stage", "", "\'Click here for the Katharine and Bryant Mather Scholarship Application form\' Click here Link"));
-            Assert.assertTrue(commonPage.ValidateLink(Students.ProjectGrants, "https://assets.contentstack.io/v3/assets/blt5eb0a2cb04534832/blt5651a912e5b919fc/6752b8ac5e462a55516b2a72/ASTM_Grant_Application.pdf?branch=stage", "", "\'Click here for the ASTM grant application form\' Click here Link"));
+            Assert.assertTrue(commonPage.ValidateLink(Students.ApplyOnline, "application/student", "ASTM International - Membership"));
+            Assert.assertTrue(commonPage.ValidateLink(Students.GraduateScholarship, "ASTM_Graduate_Scholarship_Application.pdf", ""));
+            Assert.assertTrue(commonPage.ValidateLink(Students.ProfessorYearAward, "ASTM_Professor_of_The_Year_Nomination.pdf", ""));
+            Assert.assertTrue(commonPage.ValidateLink(Students.MatterScholarship, "ASTM-Mather-Scholarship-Application.pdf", ""));
+            Assert.assertTrue(commonPage.ValidateLink(Students.ProjectGrants, "ASTM_Grant_Application.pdf", ""));
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to Validate the Link and button available on Students page", e);

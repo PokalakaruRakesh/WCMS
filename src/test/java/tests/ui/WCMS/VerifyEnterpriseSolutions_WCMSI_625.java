@@ -42,15 +42,15 @@ public class VerifyEnterpriseSolutions_WCMSI_625 extends BaseTest {
     }
     @Step("Validate links and buttons available on page")
     private void validateEnterpriseSolutionsPage() {
-        Assert.assertTrue(commonPage.ValidateLinkNewtab(enterpriseSolution.WhyASTM, "/ASTM-Advantage_Infographic_2023.pdf", "", "\'Why ASTM?\' Button"));
-        Assert.assertTrue(commonPage.ValidateLinkNewtab(enterpriseSolution.ASTMAdvantage, "https://marketing.astm.org/acton", "", "\'The ASTM Advantage\' Link"));
-        Assert.assertTrue(commonPage.ValidateLink(enterpriseSolution.ASTMCompass, "/standards-and-solutions/enterprise-solutions/astm-compass", "ASTM Compass", "\'ASTM Compass\' Learn More Link"));
-        Assert.assertTrue(commonPage.ValidateLink(enterpriseSolution.SubscriptionPortals, "standards-and-solutions/enterprise-solutions/subscription-portals", "Subscription Portals", "\'Subscription Portals\' Learn More Link"));
-        Assert.assertTrue(commonPage.ValidateLink(enterpriseSolution.ASTMSpecBuilder, "/standards-and-solutions/enterprise-solutions/specbuilder", "ASTM SpecBuilder", "\'ASTM SpecBuilder\' Learn More Link"));
-        Assert.assertTrue(commonPage.ValidateLink(enterpriseSolution.MultimediaServices, "/standards-and-solutions/enterprise-solutions/multimedia-services", "ASTM Multimedia Solutions", "\'Multimedia Services\' Learn More Link"));
-        Assert.assertTrue(commonPage.ValidateLink(enterpriseSolution.ImproveLaboratoryEfficiency, "/standards-and-solutions/laboratory-services", "ASTM International Laboratory Services", "\'Improve Your Laboratory’s Efficiency\' Learn More Link"));
-        Assert.assertTrue(commonPage.ValidateLink(enterpriseSolution.TrainStandardsExperts, "/standards-and-solutions/training-courses", "ASTM Industry Training Solutions", "\'Train with Standards Experts\' Learn More Link"));
-        Assert.assertTrue(commonPage.ValidateLink(enterpriseSolution.ASTMDigitalLibrary, "/standards-and-solutions/digital-library", "ASTM Digital Library", "\'ASTM Digital Library\' Learn More Link"));
+        Assert.assertTrue(commonPage.ValidateLink(enterpriseSolution.WhyASTM, "/ASTM-Advantage_Infographic_2023.pdf", ""));
+        Assert.assertTrue(commonPage.ValidateLink(enterpriseSolution.ASTMAdvantage, "https://marketing.astm.org/acton", ""));
+        Assert.assertTrue(commonPage.ValidateLink(enterpriseSolution.ASTMCompass, "/standards-and-solutions/enterprise-solutions/astm-compass", "ASTM Compass"));
+        Assert.assertTrue(commonPage.ValidateLink(enterpriseSolution.YourContentASTMCompass, "/subscription-portals", "Your Content on Compass"));
+        Assert.assertTrue(commonPage.ValidateLink(enterpriseSolution.ASTMSpecBuilder, "/standards-and-solutions/enterprise-solutions/specbuilder", "ASTM SpecBuilder"));
+        Assert.assertTrue(commonPage.ValidateLink(enterpriseSolution.MultimediaServices, "/standards-and-solutions/enterprise-solutions/multimedia-services", "ASTM Multimedia Solutions"));
+        Assert.assertTrue(commonPage.ValidateLink(enterpriseSolution.ImproveLaboratoryEfficiency, "/standards-and-solutions/laboratory-services", "ASTM International Laboratory Services"));
+        Assert.assertTrue(commonPage.ValidateLink(enterpriseSolution.TrainStandardsExperts, "/standards-and-solutions/training-courses", "ASTM Industry Training Solutions"));
+        Assert.assertTrue(commonPage.ValidateLink(enterpriseSolution.ASTMDigitalLibrary, "/standards-and-solutions/digital-library", "ASTM Digital Library"));
     }
 
     @Step("Validate navigation to Enterprise Solutions page")
