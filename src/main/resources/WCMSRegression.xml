@@ -29,7 +29,6 @@
             <class name="tests.ui.WCMS.VerifyEmailSubscriptionSettingsPage_WCMSI_981"/>
             <class name="tests.ui.WCMS.VerifyEmergingProfessionalsProgram_WCMSI_523"/>
             <class name="tests.ui.WCMS.VerifyEnterpriseSolutions_WCMSI_625"/>
-            <class name="tests.ui.WCMS.VerifyFAQPageFunctionality_WCMSI_514"/>
             <class name="tests.ui.WCMS.VerifyHelpOverview_WCMSI_511"/>
             <class name="tests.ui.WCMS.VerifyHomePage_WCMSI_541"/>
             <class name="tests.ui.WCMS.VerifyHonorsAndAwardsTheUIResponsivenessContentLinksOfThePage_WCMSI_960"/>
