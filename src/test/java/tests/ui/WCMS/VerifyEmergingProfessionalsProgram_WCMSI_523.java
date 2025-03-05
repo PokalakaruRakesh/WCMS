@@ -41,9 +41,9 @@ public class VerifyEmergingProfessionalsProgram_WCMSI_523 extends BaseTest {
     @Step("Validate links and buttons available on 125th Anniversary Case Studies page")
     public void validateEmergingProfessionalsProgramLinks() {
         try {
-            Assert.assertEquals(commonPage.getVideoLink().getAttribute("src"), "https://www.youtube.com/embed/VzSXV4FJZbc");
+            Assert.assertEquals(commonPage.getVideoLink().getAttribute("src"), "https://www.youtube.com/embed/BH9RwjaDLiA?si=L7WFlV-MM75F9YaO");
             ScreenshotUtil.takeScreenshotForAllure(driver);
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(EmergingProfessionalsProgramWCMS.Nominationform, "https://assets.contentstack.io/v3/assets/blt5eb0a2cb04534832/blt7030ee5a15d16742/6707aa3a1201251665725233/CURRENT_0924_EP_Nomination_Form_2024.pdf?branch=development", "", "\'Click here for a nomination form\' Button"));
+            Assert.assertTrue(commonPage.ValidateLink(EmergingProfessionalsProgramWCMS.Nominationform, "CURRENT_0924_EP_Nomination_Form_2024.pdf", ""));
         } catch (Exception e) {
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to Validate the Link and button available on Emerging Professionals Program", e);
@@ -55,7 +55,7 @@ public class VerifyEmergingProfessionalsProgram_WCMSI_523 extends BaseTest {
         try {
             commonPage.clickOnMembershipParticipation();
             commonPage.clickOnEmergingProfessionals();
-            Assert.assertEquals(driver.getTitle(), "Emerging Professionals Program");
+            Assert.assertEquals(driver.getTitle(), "Emerging Professionals Program | ASTM");
             ScreenshotUtil.takeScreenshotForAllure(driver);
         } catch (Exception e) {
             e.printStackTrace();

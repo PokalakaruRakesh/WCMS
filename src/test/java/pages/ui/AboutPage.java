@@ -50,6 +50,36 @@ public class AboutPage extends BasePage {
     public By UnitedNationsUN = By.xpath("//a[text()='United Nations (UN)']");
     public By PPECollaboration = By.xpath("//a[contains(text(),'PPE Collaboration')]");
 
+    public By BoardOfDirectors = By.xpath("//a[contains(@href, '21188-2024-Board-Book-Web.pdf') and text()='Download']");
+    public By SeniorStaff = By.xpath("//a[contains(@href, 'Senior-Staff-2024.pdf') and text()='Download']");
+    public By AnnualReport = By.xpath("//a[contains(@href, '2023-ASTM-Annual-Report.pdf') and text()='Download']");
+    public By AnnualBusinessMeeting = By.xpath("//a[contains(@href, '2024-Annual-Business-Meeting.pdf') and text()='Download']");
+    public By ASTMByLaws = By.xpath("//a[contains(@href, 'Bylaws102019E.pdf') and text()='Download the ASTM Bylaws PDF']");
+    public By ASTMCharter = By.xpath("//a[contains(@href, 'CHARTER.pdf') and contains(text(), 'Download')]");
+    public By ASTMBoardBookPDF = By.xpath("//a[contains(@href, '21188-2024-Board-Book-Web.pdf') and contains(text(), 'Download')]");
+
+
+    public By CultureCareers = By.xpath("//a[contains(@href, '/about/careers') and contains(@data-testid, 'navLink-Culture')]");
+    public By ViewOpenOpportunities = By.xpath("//a[contains(text(), 'View Open Opportunities')]");
+    public By AccessibilityHrEmail = By.xpath(" //h4[text()='Accessibility']/following::a[contains(@href, 'mailto:hr@astm.org')][1]");
+    public By LearnAboutDiversity = By.xpath("//a[contains(text(),'Learn more about Diversity, Equity')]");
+    public By DiversityHrEmail = By.xpath("//h4[text()='Diversity, Equity, Inclusion, and Belonging']/following::a[contains(@href, 'mailto:hr@astm.org')][1]");
+    public By DiversityHrEmail2 = By.xpath("//h4[text()='Diversity, Equity, Inclusion, and Belonging']/following::a[contains(@href, 'mailto:hr@astm.org')][2]");
+    public By EVerifyEnglish = By.xpath("//a[@href[contains(.,'EverifyPosterEnglish.pdf')]]");
+    public By EVerifySpanish = By.xpath("//a[contains(@href, 'EverifyPosterSpanish.pdf')]");
+    public By WorkPlaceDiscrimination  = By.xpath("//a[contains(@href, 'EEOC_KnowYourRights_2022.pdf')]");
+    public By RTW = By.xpath("//a[contains(@href, 'RTW_Poster_English_Version.pdf')]");
+    public By RTWS = By.xpath("//a[contains(@href, 'RTW_Poster_Spanish_Version.pdf')]");
+    public By ReviewEEOS = By.xpath("//a[contains(@href, '/policies/equal-opportunity-policy') and @target='_self']");
+    public By ReviewVeteran = By.xpath("//a[contains(@href, '/policies/veteran-and-disabilities-policy') and @target='_self']");
+
+
+
+
+
+
+
+
 
 
 

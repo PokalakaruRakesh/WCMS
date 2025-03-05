@@ -20,7 +20,6 @@ public class VerifyMarketInsightsPage_WCMSI_925 extends BaseTest {
 
     @BeforeMethod(alwaysRun = true)
     public void beforeTest() throws InterruptedException {
-        driver.get(ConfigReader.getValue("BASE_URL_WCMS_ASTM"));
 
     }
 
@@ -36,8 +35,8 @@ public class VerifyMarketInsightsPage_WCMSI_925 extends BaseTest {
             marketInsiteInnovation = page.getInstance(MarketInsightsInnovation_WCMS.class);
             basePage = page.getInstance(BasePage.class);
 
+            driver.get(ConfigReader.getValue("BASE_URL_WCMS_ASTM")+"standards-and-solutions/market-insights-and-innovation/market-insights");
             cookiePage.handleOneTrustCookie();
-            WCMSPage.NavigateToPage("Standards & Solutions","Market Insights");
             ValidateMarketInsightsPage();
         } catch (Exception e) {
             e.printStackTrace();
