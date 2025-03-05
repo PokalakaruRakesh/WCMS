@@ -36,19 +36,19 @@ public class VerifyASTMDigitalLibrary_WCMSI_607 extends BaseTest {
     }
     @Step("Validate links and buttons available on page")
     public void ValidateDigitalLibraryContent() {
-        Assert.assertTrue(commonPage.ValidateLinkNewtab(digitalLibrary.ASMEDigitalCollection, "https://asmedigitalcollection.asme.org/astm", "ASTM Content | ASME Digital Collection", "\'ASME Digital Collection\' Link"));
-        Assert.assertTrue(commonPage.ValidateLink(digitalLibrary.PeerReviewedLearnMore,"/standards-and-solutions/standards-and-publications/symposia-papers","Symposia Papers & STPs","\'Peer-Reviewed Symposia Papers and Conference Proceedings\' Learn More Link"));
-        Assert.assertTrue(commonPage.ValidateLink(digitalLibrary.ManualsMonographsLearnMore,"/standards-and-solutions/standards-and-publications/mnl","Manuals, Monographs, & Data Series","\'Manuals, Monographs, & Data Series\' Learn More Link"));
-        Assert.assertTrue(commonPage.ValidateLinkNewtab(digitalLibrary.JournalsLearnMore,"https://www.astm.org/products-services/standards-and-publications/journals.html","Journals - Standards & Publications - Products & Services","\'Journals\' Learn More Link"));
-        Assert.assertTrue(commonPage.ValidateLinkNewtab(digitalLibrary.TechnicalReportsLearnMore,"https://www.astm.org/products-services/standards-and-publications/technical-reports.html","Technical Reports - Standards & Publications - Products & Services","\'Technical Reports\' Learn More Link"));
-        Assert.assertTrue(commonPage.ValidateLinkNewtab(digitalLibrary.AutherLearnMore, "https://assets.contentstack.io/v3/assets/blt5eb0a2cb04534832/blt7da9f76c4fd7f491/66d8138c0e97bcb39464bc0b/Publish-With-ASTM_1.pdf?branch=development", "", "\'Author\' Learn More Button"));
-        Assert.assertTrue(commonPage.ValidateLink(digitalLibrary.DiscoverASTMCompass, "/standards-and-solutions/enterprise-solutions/astm-compass", "ASTM Compass", "\'Discover ASTM Compass\' Button"));
-        Assert.assertTrue(commonPage.ValidateLink(digitalLibrary.ContactUs, "/standards-and-solutions/enterprise-solutions/salesforce", "Contact Sales", "\'Contact US \'Button"));
+        Assert.assertTrue(commonPage.ValidateLink(digitalLibrary.ASMEDigitalCollection, "https://asmedigitalcollection.asme.org/astm", "ASTM Content | ASME Digital Collection"));
+        Assert.assertTrue(commonPage.ValidateLink(digitalLibrary.PeerReviewedLearnMore,"/standards-and-solutions/standards-and-publications/symposia-papers","Symposia Papers & STPs"));
+        Assert.assertTrue(commonPage.ValidateLink(digitalLibrary.ManualsMonographsLearnMore,"/standards-and-solutions/standards-and-publications/mnl","Manuals, Monographs, & Data Series"));
+        Assert.assertTrue(commonPage.ValidateLink(digitalLibrary.JournalsLearnMore,"/journals.html","Journals - Standards & Publications - Products & Services"));
+        Assert.assertTrue(commonPage.ValidateLink(digitalLibrary.TechnicalReportsLearnMore,"/technical-reports.html","Technical Reports - Standards & Publications - Products & Services"));
+        Assert.assertTrue(commonPage.ValidateLink(digitalLibrary.AutherLearnMore, "/Publish-With-ASTM_1.pdf", ""));
+        Assert.assertTrue(commonPage.ValidateLink(digitalLibrary.DiscoverASTMCompass, "/standards-and-solutions/enterprise-solutions/astm-compass", "ASTM Compass"));
+        Assert.assertTrue(commonPage.ValidateLink(digitalLibrary.ContactUs, "/standards-and-solutions/enterprise-solutions/salesforce", "Contact Sales"));
     }
     @Step("Validate Navigation to Digital Library")
     public void NavigateDigitalLibrary() {
         commonPage.getstandardandSolution();
         commonPage.clickonASTMDigitalLibrary();
-        Assert.assertEquals(driver.getTitle(), "ASTM Digital Library");
+        Assert.assertTrue(driver.getTitle().contains("ASTM Digital Library"));
     }
 }

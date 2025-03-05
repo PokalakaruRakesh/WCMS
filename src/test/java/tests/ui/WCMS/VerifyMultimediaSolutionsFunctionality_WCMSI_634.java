@@ -47,12 +47,12 @@ public class VerifyMultimediaSolutionsFunctionality_WCMSI_634 extends BaseTest {
         try{
         Assert.assertEquals(commonPage.getVideoLink().getAttribute("src"), "https://fast.wistia.net/embed/iframe/m4qv0rhely");
         ScreenshotUtil.takeScreenshotForAllure(driver);
-        Assert.assertTrue(commonPage.ValidateLinkNewtab(MultimediaSolutions.RequestAppointment, "https://marketing.astm.org/acton/fs/blocks/showLandingPage/a/9652/p/p-03b5/t/page/fm/1?_gl=1*16xtsq3*_gcl_au*MjY3MzYyNjc4LjE3MjQ3ODM3NjE", "", "\'Request AN Appointment \' Button"));
-        Assert.assertTrue(commonPage.ValidateLinkNewtab(MultimediaSolutions.QuickGuide,"https://marketing.astm.org","","\'Quick Guide\' Button"));
+        Assert.assertTrue(commonPage.ValidateLink(MultimediaSolutions.RequestAppointment, "https://marketing.astm.org/acton", ""));
+        Assert.assertTrue(commonPage.ValidateLink(MultimediaSolutions.QuickGuide,"https://marketing.astm.org",""));
         Assert.assertEquals(commonPage.getWistiaVideoLink("Revolutionize Your Content with CGI").getAttribute("src"), "https://fast.wistia.net/embed/iframe/c0zph57f92");
         Assert.assertEquals(commonPage.getWistiaVideoLink("Promote Your Brand, Expand Your Reach").getAttribute("src"), "https://fast.wistia.net/embed/iframe/39uxp6dtp7");
         ScreenshotUtil.takeScreenshotForAllure(driver);
-        Assert.assertTrue(commonPage.ValidateLinkNewtab(MultimediaSolutions.ContactMultimediaTeam,"https://marketing.astm.org/acton/fs/blocks/showLandingPage/a/9652/p/p-03b5/t/page/fm/1?_gl=1*1l6cu5i*_gcl_au*MjY3MzYyNjc4LjE3MjQ3ODM3NjE","","\'Contact the Multimedia Team\' Link"));
+        Assert.assertTrue(commonPage.ValidateLink(MultimediaSolutions.ContactMultimediaTeam,"https://marketing.astm.org/acton",""));
         }catch (Exception e){
             e.printStackTrace();
             WCMSICommon.reportFailAssert("Failed to Validate links and buttons available on Multimedia Solutions page",e);

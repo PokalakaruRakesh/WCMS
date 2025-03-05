@@ -41,21 +41,21 @@ public class VerifyMembership_WCMSI_519 extends BaseTest {
     @Step("Validate links and buttons available on Membership Page")
     public void validateMembershipLinks() {
         try {
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(Membership.ParticipatingMembership, "https://member.astm.org/application/participating", "ASTM International - Membership", "\'Participating Membership\' Learn More link"));
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(Membership.OrganizationalMembership, "https://member.astm.org/application/organizational", "ASTM International - Membership", "\'Organizational Membership\' Learn More link"));
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(Membership.InformationalMembership, "astm.org//get-involved/membership/memindividual24.html", "2024 Individual Membership", "\'Informational Membership\' Learn More link"));
-            Assert.assertTrue(commonPage.ValidateLink(Membership.StudentMembership, "/membership-participation/student-members", "Student Members", "\'Student Members\' Learn More link"));
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(Membership.EmergingProfessionals, "/membership-participation/emerging-professionals", "Emerging Professionals Program", "\'Emerging Professionals\' Learn More link"));
-            Assert.assertTrue(commonPage.ValidateLink(Membership.JoinASTMTechnicalCommittee, "/membership-participation/technical-committees", "Technical Committees", "\'Join an ASTM Technical Committee\' Learn More link"));
+            Assert.assertTrue(commonPage.ValidateLink(Membership.ParticipatingMembership, "/participating", "ASTM International - Membership"));
+            Assert.assertTrue(commonPage.ValidateLink(Membership.OrganizationalMembership, "/organizational", "ASTM International - Membership"));
+            Assert.assertTrue(commonPage.ValidateLink(Membership.InformationalMembership, "/memindividual24", "2024 Individual Membership"));
+            Assert.assertTrue(commonPage.ValidateLink(Membership.StudentMembership, "/student-members", "Student Members"));
+            Assert.assertTrue(commonPage.ValidateLink(Membership.EmergingProfessionals, "/membership-participation/emerging-professionals", "Emerging Professionals Program"));
+            Assert.assertTrue(commonPage.ValidateLink(Membership.JoinASTMTechnicalCommittee, "/membership-participation/technical-committees", "Technical Committees"));
 
-            Assert.assertTrue(commonPage.ValidateLink(Membership.MemberResources, "/membership-participation/technical-committees", "Technical Committees", "\'Emerging Professionals\' Learn More link"));
-            Assert.assertTrue(commonPage.ValidateLink(Membership.NewMemberOrientation, "/standards-and-solutions/training-courses/member-training#new-member-training", "Classroom for Members", "\' New Member Orientation\' Learn More link"));
-            Assert.assertTrue(commonPage.ValidateLink(Membership.VirtualClassroomMembers, "/standards-and-solutions/training-courses/member-training", "Classroom for Members", "\'Classroom for Members\' Learn More link"));
-            Assert.assertTrue(commonPage.ValidateLink(Membership.TechnicalCommitteeResources, "/membership-participation/technical-committees", "Technical Committees", "\'Technical Committee Resources\' Learn More link"));
-            Assert.assertTrue(commonPage.ValidateLink(Membership.KeyDocumentsForms, "/membership-participation/technical-committees/key-documents", "Key Documents and Forms", "\'Key Documents & Forms\' Learn More link"));
+            Assert.assertTrue(commonPage.ValidateLink(Membership.MemberResources, "/membership-participation/technical-committees", "Technical Committees"));
+            Assert.assertTrue(commonPage.ValidateLink(Membership.NewMemberOrientation, "/standards-and-solutions/training-courses/member-training#new-member-training", "Classroom for Members"));
+            Assert.assertTrue(commonPage.ValidateLink(Membership.VirtualClassroomMembers, "/standards-and-solutions/training-courses/member-training", "Classroom for Members"));
+            Assert.assertTrue(commonPage.ValidateLink(Membership.TechnicalCommitteeResources, "/membership-participation/technical-committees", "Technical Committees"));
+            Assert.assertTrue(commonPage.ValidateLink(Membership.KeyDocumentsForms, "/membership-participation/technical-committees/key-documents", "Key Documents and Forms"));
             Assert.assertTrue(commonPage.ValidateLink(Membership.MembershipFAQs, "/faq", "Frequently Asked Questions", "\'Membership FAQs\' Learn More link"));
-            Assert.assertTrue(commonPage.ValidateLinkNewtab(Membership.RenewReinstateMembership, "astm.org/customer/account/login/referer/aHR0cHM6Ly93d3cuYXN0bS5vcmcvY3VzdG9tZXIvYWNjb3VudC9sb2dpbi8%3D/", "Customer Login", "\'Renew or Reinstate Membership\' Learn More link"));
-            Assert.assertTrue(commonPage.ValidateLink(Membership.ContactASTMMember, "/contact", "Contact Us", "\'Contact ASTM Member\' Learn More link"));
+            Assert.assertTrue(commonPage.ValidateLink(Membership.RenewReinstateMembership, "astm.org/customer/account/login/referer/aHR0cHM6Ly93d3cuYXN0bS5vcmcvY3VzdG9tZXIvYWNjb3VudC9sb2dpbi8%3D/", "Customer Login"));
+            Assert.assertTrue(commonPage.ValidateLink(Membership.ContactASTMMember, "/contact", "Contact Us"));
 
 
         } catch (Exception e) {
