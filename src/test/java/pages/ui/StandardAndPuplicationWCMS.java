@@ -26,8 +26,16 @@ public class StandardAndPuplicationWCMS extends BasePage {
     public By ShopRequestStandard= By.xpath("//a[contains(text(),'subscribe to an online volume via ASTM Compass')]");
     public By ContactUs= By.xpath("//a[@title='Contact Us']");
 
+    public By CovidStandards= By.xpath("//a[@href='/standards-and-solutions/standards-publications/covid-19' and contains(text(), 'View COVID-19 Related Standards')]");
     public By BOSCatalogViewOnline= By.xpath("//h4[text()='ASTM 2024 BOS Catalog']/../..//a[text()='View Online']");
     public By ASTMAdvantageViewOnline= By.xpath("//p[contains(text(),'The ASTM Advantage')]/../../a[text()='View Online ']");
     public By ReferenceMaterialsViewOnline= By.xpath("//p[contains(text(),'Reference Materials')]/../../a[text()='View Online']");
     public By eLearningBrochureViewOnline= By.xpath("//p[contains(text(),'eLearning Brochure')]/../../a[text()='View Online']");
+
+    public By AccessStandards= By.xpath("//a[@href='https://qa.astm.org/products-services/reading-room.html' and contains(text(), 'Access Standards')]");
+
+
+
+
+
 }

@@ -36,6 +36,22 @@ public class HomePage_WCMS extends BasePage {
     public By trainingServicesLearnMore = By.xpath("//a[contains(@title,'Learn More About Training and Certification')]");
     public By globalCooperationLearnMore = By.xpath("//a[contains(@title,'Learn More About Global Cooperation')]");
     public By astmSubscription = By.xpath("//a[contains(@href,'astm-subscription')]");
+
+
+    public By IPPolicy = By.xpath("//a[text()='IP Policy (PDF)']");
+    public By AIPolicy = By.xpath("//a[text()='AI Policy']");
+    public By UseOfAIQuestions = By.xpath("//a[text()='Submit a Use of AI Question']");
+    public By LogoPolicy = By.xpath("//a[text()='Logo Policy']");
+    public By LinkingPolicy = By.xpath("//a[text()='Linking Policy (PDF)']");
+    public By PoliciesPrivacyPolicy = By.xpath("//h2[text()='Policies']/..//a[text()='Privacy Policy']");
+    public By ReturnPolicy = By.xpath("//h2[text()='Policies']/..//a[text()='Return Policy']");
+    public By VeteranPolicy = By.xpath("//a[@href='/policies/veteran-and-disabilities-policy' and @target='_self']");
+    public By EqualEmploymentPolicy = By.xpath("//a[@href='/policies/equal-opportunity-policy' and @target='_self']");
+    public By EmploymentLawPolicy = By.xpath("//a[text()='Equal Employment Opportunity is the Law']");
+    public By PayTransparency = By.xpath("//a[text()='Pay Transparency - Nondiscrimination Provision']");
+    public By EEOLaw = By.xpath("//a[contains(@href, 'OFCCP_EEO_Supplement_Final_JRF_QA_508c.pdf') and text()[contains(., 'EEO is the Law')]]");
+    public By PolicyFAQ = By.xpath("//a[@href='/policies/tpt-faq' and @target='_self']");
+    public By InstructorInterests = By.xpath("//a[@href='/policies/instructor-proprietary-interests' and @target='_self']");
 }
 
 

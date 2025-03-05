@@ -21,4 +21,22 @@ public class Standard_SolutionOverviewWCMS extends BasePage {
     public By TrainingLearnMore= By.xpath("//a[@href='/standards-and-solutions/training-courses' and text()='Learn More']");
     public By CertificationLearnMore = By.xpath("//a[@href='/standards-and-solutions/certification' and text()='Learn More']");
     public By CementConcreteReferenceLaboratoryLearnMore = By.xpath("//a[@href='http://www.ccrl.us/' and @title='Learn More']");
+
+    public By ContactSales1 = By.xpath("(//h2[contains(text(),'Test Method Assessment')]/..//a[text()='Contact Sales'])[1]");
+    public By LaboratoryServicesOverview = By.xpath("//a[@title='Laboratory Services Overview (PDF)' and contains(@href, 'Lab-Services_Infographic_Oct_2022.pdf')]");
+    public By AccessASTMContactSales = By.xpath("//h4[contains(text(),'Access ASTM Test Methods')]/../following::div/a[text()='Contact Sales']");
+
+    public By InsightSQCDemo = By.xpath("(//a[contains(text(), 'Request a Demo')])[1]");
+    public By RequestSamplesDemo = By.xpath("(//a[contains(text(), 'Request a Demo')])[2]");
+
+
+
+
+
+
+
+
+
+
+
 }
