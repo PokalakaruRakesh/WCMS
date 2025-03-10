@@ -18,22 +18,30 @@
             <class name="tests.ui.WCMS.VerifyAnniversaryCaseStudies_WCMSI_530"/>
             <class name="tests.ui.WCMS.VerifyASTMCompass_WCMSI_628"/>
             <class name="tests.ui.WCMS.VerifyASTMDigitalLibrary_WCMSI_607"/>
+            <class name="tests.ui.WCMS.VerifyASTMInsightSQCPage_WCMSI_855"/>
             <class name="tests.ui.WCMS.VerifyASTMLabAndFieldFundamentalsPage_WCMSI_923"/>
             <class name="tests.ui.WCMS.VerifyASTMSpecBuilder_WCMSI_630"/>
+            <class name="tests.ui.WCMS.VerifyASTMTrainingAndELearningPoliciesAndFAQsPage_WCMSI_907"/>
             <class name="tests.ui.WCMS.VerifyBookOfStandardPageFunctionality_WCMSI_596"/>
+            <class name="tests.ui.WCMS.VerifyCareersPage_WCMSI_857"/>
             <class name="tests.ui.WCMS.VerifyCatalogsPage_WCMSI_937"/>
+            <class name="tests.ui.WCMS.VerifyCopyrightAndPermissionsPage_WCMSI_911"/>
             <class name="tests.ui.WCMS.VerifyCorporateCitizenship_WCMSI_941"/>
             <class name="tests.ui.WCMS.VerifyCorporateCitizenshipPage_WCMSI_938"/>
+            <class name="tests.ui.WCMS.VerifyCovidPage_WCMSI_853"/>
             <class name="tests.ui.WCMS.VerifyDigitalAccessToInternationalStandardsOnASTMCompassPage_WCMSI_961"/>
             <class name="tests.ui.WCMS.VerifyDigitalAccessToInternationalStandardsPage_WCMSI_980"/>
             <class name="tests.ui.WCMS.VerifyEmailSubscriptionSettingsPage_WCMSI_981"/>
             <class name="tests.ui.WCMS.VerifyEmergingProfessionalsProgram_WCMSI_523"/>
             <class name="tests.ui.WCMS.VerifyEnterpriseSolutions_WCMSI_625"/>
+            <class name="tests.ui.WCMS.VerifyEnvironmentalProductDeclarationsPage_WCMSI_917"/>
+            <class name="tests.ui.WCMS.VerifyGovernancePage_WCMSI_851"/>
             <class name="tests.ui.WCMS.VerifyHelpOverview_WCMSI_511"/>
             <class name="tests.ui.WCMS.VerifyHomePage_WCMSI_541"/>
             <class name="tests.ui.WCMS.VerifyHonorsAndAwardsTheUIResponsivenessContentLinksOfThePage_WCMSI_960"/>
             <class name="tests.ui.WCMS.VerifyInResidenceTrainingProgramsPage_WCMSI_864"/>
             <class name="tests.ui.WCMS.VerifyInternationalPartnersPage_WCMSI_862"/>
+            <class name="tests.ui.WCMS.VerifyKeyDocumentsAndFormsPage_WCMSI_913"/>
             <class name="tests.ui.WCMS.VerifyLaboratoryServicesFunctionality_WCMSI_609"/>
             <class name="tests.ui.WCMS.VerifyMarketInnovationPage_WCMSI_982"/>
             <class name="tests.ui.WCMS.VerifyMarketInsights_Innovation_WCMSI_593"/>
@@ -42,8 +50,11 @@
             <class name="tests.ui.WCMS.VerifyMembershipAndParticipationOverview_WCMSI_496"/>
             <class name="tests.ui.WCMS.VerifyMultimediaSolutionsFunctionality_WCMSI_634"/>
             <class name="tests.ui.WCMS.VerifyNew_WCMSI_1039"/>
+            <class name="tests.ui.WCMS.VerifyNewStandardsDevelopmentPage_WCMSI_915"/>
+            <class name="tests.ui.WCMS.VerifyPolicyPage_WCMSI_873"/>
             <class name="tests.ui.WCMS.VerifyReferenceMaterialsPage_WCMSI_987"/>
             <class name="tests.ui.WCMS.VerifyRegionalOffices_WCMSI_529"/>
+            <class name="tests.ui.WCMS.VerifyReturnPolicyPage_WCMSI_909"/>
             <class name="tests.ui.WCMS.VerifySCCPublicReviewPage_WCMSI_921"/>
             <class name="tests.ui.WCMS.VerifySocietyAwardsPage_WCMSI_980"/>
             <class name="tests.ui.WCMS.VerifySocietyReviewPage_WCMSI_919"/>
@@ -53,9 +64,11 @@
             <class name="tests.ui.WCMS.VerifyStandardOperatingProceduresPage_WCMSI_959"/>
             <class name="tests.ui.WCMS.VerifyStudents_WCMSI_522"/>
             <class name="tests.ui.WCMS.VerifyTechnicalCommittees_WCMSI_526"/>
+            <class name="tests.ui.WCMS.VerifyTestMethodAssessmentPage_WCMSI_858"/>
             <class name="tests.ui.WCMS.VerifyTracker_Services_WCMSI_614"/>
             <class name="tests.ui.WCMS.VerifyTrainingByIndustryPageFunctionality_WCMSI_636"/>
             <class name="tests.ui.WCMS.VerifyWohlersAndSpecialtyReportPage_WCMSI_945"/>
+
 
         </classes>
     </test> <!-- Test -->
