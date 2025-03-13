@@ -104,4 +104,6 @@ public class TrainingByIndustryWCMS extends BasePage{
     public By Precisionbias = By.xpath("(//a[contains(text(), 'Precision and Bias')])[1]");
     public By StatisticsContactUs2 = By.xpath("(//a[@title='Contact Us'])[2]");
 
+    public By PerformanceGrading= By.xpath("//h4[contains(text(),'Live Courses')]/..//a[contains(text(),'ASTM/ACES Performance Grading')]");
+
 }

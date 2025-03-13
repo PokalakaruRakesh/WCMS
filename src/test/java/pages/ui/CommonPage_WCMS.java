@@ -51,6 +51,9 @@ public class CommonPage_WCMS extends BasePage {
     public By dropDown(String buttonText) {
         return By.xpath(String.format("//button[contains(text(),'%s')]", buttonText));
     }
+    public By getElement(String text) {
+        return By.xpath("//a[contains(text(),'"+text+"')]");
+    }
     @Step("Click on 'About' Navigation Option")
     public void ClickOnAboutNavigationOption() {
         try {

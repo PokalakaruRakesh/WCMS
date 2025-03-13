@@ -49,5 +49,16 @@ public class TechnicalCommitteesWCMS extends BasePage {
     public By SymposiumProposalLink = By.xpath("//a[contains(text(),'Symposium Proposal Form')]");
     public By DirectionsPreparingLink = By.xpath("//a[contains(text(),'Directions for Preparing')]");
 
+    //Draft Standard Templates
+    public By TestMethods = By.xpath("//a[text()='Test Methods']");
+    public By Specifications = By.xpath("//a[text()='Specifications']");
+    public By GuidesPractices = By.xpath("//a[text()='Guides/Practices']");
+    public By Classification = By.xpath("//a[text()='Classification']");
+    public By Terminology = By.xpath("//a[text()='Terminology']");
+    public By ResearchReport = By.xpath("//a[text()='Research Report']");
+    public By TemplateFeatures = By.xpath("//a[text()='Template Features']");
+    public By TheFormStyle = By.xpath("//a[contains(text(),'The Form and Style')]");
+    public By TechnicalSupport = By.xpath("//a[contains(text(),'Technical Support')]");
+    public By TemplateQuestions = By.xpath("//a[contains(text(),'Template Questions')]");
 
 }

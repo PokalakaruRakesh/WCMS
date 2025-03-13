@@ -89,10 +89,16 @@ public class AboutPage extends BasePage {
 
 
 
+    public By LearnMoreAboutASTMMembership = By.xpath("//a[contains(text(),'Learn more about ASTM membership')]");
+    public By BoardOfDirectorsLink = By.xpath("//a[contains(text(),'Board of Directors')]");
+    public By EmploymentOpportunityLink = By.xpath("//a[contains(text(),'Employment Opportunity')]");
 
 
-
-
+    //White Papers page
+    public By RolesAndResponsibilitiesLink = By.xpath("//a[contains(text(),'Roles and Responsibilities')]");
+    public By GlobalCollaborationLink = By.xpath("//a[contains(text(),'Global Collaboration')]");
+    public By StandardsDevelopmentLink = By.xpath("//a[contains(text(),'Standards Development')]");
+    public By StrengtheningTransatlanticLink = By.xpath("//a[contains(text(),'Strengthening Transatlantic')]");
 
 
 
