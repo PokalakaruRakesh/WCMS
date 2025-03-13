@@ -29,6 +29,8 @@ public class Standard_SolutionOverviewWCMS extends BasePage {
     public By InsightSQCDemo = By.xpath("(//a[contains(text(), 'Request a Demo')])[1]");
     public By RequestSamplesDemo = By.xpath("(//a[contains(text(), 'Request a Demo')])[2]");
 
+    public By ITContactSales = By.xpath("//a[contains(text(), 'contact sales') and @href='/standards-and-solutions/enterprise-solutions/salesforce']");
+    public By MariaIsabelBarrios = By.xpath("//a[contains(@href, 'mailto:mibarrios@enginzone.org')]");
 
 
 

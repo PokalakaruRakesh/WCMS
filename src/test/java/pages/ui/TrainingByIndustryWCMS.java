@@ -60,6 +60,48 @@ public class TrainingByIndustryWCMS extends BasePage{
     public By LabManagement= By.xpath("//a[contains(text(),'How to Improve Lab Management')]");
     public By TrainYourWholeTeam= By.xpath("//h4[contains(text(),'Train Your')]/..//a[text()='Contact Us']");
 
+    public By RubberContactUs = By.xpath("(//a[@title='Contact Us'])[1]");
+    public By RubberTraining = By.xpath("//a[text()='Live Training']");
+    public By RubberContactUs2 = By.xpath("(//a[@title='Contact Us'])[2]");
 
+    public By CoalContactUs = By.xpath("(//a[@title='Contact Us'])[1]");
+    public By CoalTraining = By.xpath("//a[text()='Coal Chemistry Technician Training']");
+    public By CoalContactUs2 = By.xpath("(//a[@title='Contact Us'])[2]");
+
+    public By AirCraftContactUs = By.xpath("(//a[@title='Contact Us'])[1]");
+    public By AirCraftTraining = By.xpath("");
+    public By AirCraftContactUs2 = By.xpath("(//a[@title='Contact Us'])[2]");
+
+    public By TextilesContactUs = By.xpath("(//a[text()='Contact Us'])[1]");
+    public By TextileStandards = By.xpath("//a[contains(text(), 'ASTM Textile Standards for Yarns and Sewing Threads')]");
+    public By ChildrenSleepwear = By.xpath("(//a[contains(text(), \"Flammability of Children's Sleepwear\")])[1]");
+    public By UpholsteredFurniture = By.xpath("//a[contains(text(), \"Flammability of Upholstered Furniture\")]");
+    public By WearingApparel = By.xpath("//a[contains(text(),'Flammability of Wearing Apparel')]");
+    public By QualityPerformanceStandards = By.xpath("//a[contains(text(),'Textiles: Quality and Performance Standards')]");
+    public By TextilesContactUs2 = By.xpath("(//a[text()='Contact Us'])[2]");
+
+    public By PlasticsContactUs = By.xpath("(//a[@title='Contact Us'])[1]");
+    public By SustainableMaterials = By.xpath("//a[contains(text(),'Sustainable Materials') and contains(text(),'Biodegradability')]");
+    public By MajorTestingTechniques = By.xpath("//a[contains(text(),'Major Testing Techniques for Plastics')]");
+    public By TestingPlasticsBasics = By.xpath("//a[contains(text(),'The Basics of Testing Plastics')]");
+    public By PlasticsContactUs2 = By.xpath("(//a[@title='Contact Us'])[2]");
+
+    public By OxygenContactUs = By.xpath("(//a[@title='Contact Us'])[1]");
+    public By FireHazardslive = By.xpath("(//h4[text()='Training available Live or OnDemand:']/following::a[text()='Live Training'])[1]");
+    public By FireHazardsELearning = By.xpath("(//a[text()='eLearning'])[1]");
+    public By OxygenSystemLive = By.xpath("(//h4[text()='Training available Live or OnDemand:']/following::a[text()='Live Training'])[2]");
+    public By OxygenSystemELearning = By.xpath("(//a[text()='eLearning'])[2]");
+    public By OxygenContactUs2 = By.xpath("(//a[@title='Contact Us'])[2]");
+
+
+    public By StatisticsContactUs = By.xpath("(//a[@title='Contact Us'])[1]");
+    public By CoursesLivetraining = By.xpath("(//h4[text()='Courses available Live or OnDemand:']/following::a[text()='Live Training'])[1]");
+    public By CoursesElearning = By.xpath("(//h4[text()='Courses available Live or OnDemand:']/following::a[text()='eLearning'])[1]");
+    public By UnderstandLiveTraining = By.xpath("(//h4[text()='Courses available Live or OnDemand:']/following::a[text()='Live Training'])[2]");
+    public By UnderstandElearning = By.xpath("(//h4[text()='Courses available Live or OnDemand:']/following::a[text()='eLearning'])[2]");
+    public By Webinar = By.xpath("(//a[contains(text(), 'Ordinary Linear Regression')])");
+    public By ArtOfPerfectAnalysis = By.xpath("(//a[contains(text(), 'The Art of Perfect Analysis')])[1]");
+    public By Precisionbias = By.xpath("(//a[contains(text(), 'Precision and Bias')])[1]");
+    public By StatisticsContactUs2 = By.xpath("(//a[@title='Contact Us'])[2]");
 
 }

@@ -30,4 +30,10 @@ public class EnterpriseSolutionWCMS extends BasePage{
     public By DownloadCompassEBook=By.xpath("//h4[contains(text(),'Benefits of Digital')]/..//a[text()='Download Compass EBook']");
     public By AdvancingYourProjectsRequestDemo=By.xpath("//h4[contains(text(),'Advancing Your Projects')]/..//a[text()='Request Demo']");
 
+    public By CompassPointsYouTube = By.xpath("//img[@class='w-css-reset' and contains(@src, '055778db08213dbbd2efda027223fce2')]");
+    public By ContactSalesPoints = By.xpath("//a[@title='Contact Sales']");
+
+
+
+
 }

@@ -10,7 +10,7 @@ import pages.ui.*;
 import tests.ui.base.BaseTest;
 
 public class VerifyInternationalPartnersPage_WCMSI_862 extends BaseTest {
-    static final String jiraTestID = "WCMSI-864";
+    static final String jiraTestID = "WCMSI-862";
     CookiePage cookiePage;
     CommonPage_WCMS commonPage;
     WCMSContentPage WCMSPage;

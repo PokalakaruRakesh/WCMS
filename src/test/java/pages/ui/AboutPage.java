@@ -73,6 +73,21 @@ public class AboutPage extends BasePage {
     public By ReviewEEOS = By.xpath("//a[contains(@href, '/policies/equal-opportunity-policy') and @target='_self']");
     public By ReviewVeteran = By.xpath("//a[contains(@href, '/policies/veteran-and-disabilities-policy') and @target='_self']");
 
+    public By GlobalVideoLink = By.xpath("//div[@class='ytp-cued-thumbnail-overlay-image' and contains(@style, 'Ikt-aYVdDR8')]\n");
+    public WebElement VideoLink(){
+        return  driver.findElement(videoLink);
+    }
+
+    public By SupportingGlobal = By.xpath("//a[contains(@title, 'Download Supporting Global Growth')]");
+    public By MOUMemberList = By.xpath("//a[contains(@title, 'Download MoU Members List')]");
+    public By InResidenceTrainingPrograms = By.xpath("//a[contains(@title, 'Download MoU Members List')]");
+    public By OnineTrainingLearnMore = By.xpath("//a[@href='/about/global-cooperation/online-training' and contains(text(), 'Learn More')]");
+    public By InternationalPartners = By.xpath("//a[@href='/about/global-cooperation/international-partners' and contains(@class, 'mt-auto')]");
+    public By UAEChapterLearn = By.xpath("//a[@href='https://astmuae.org/' and contains(text(), 'Learn More')]");
+
+
+
+
 
 
 
