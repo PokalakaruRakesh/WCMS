@@ -13,24 +13,39 @@
     <test name="Test">
         <classes>
 
+            <class name="tests.ui.WCMS.ASTMIndustryTrainingSolutionsPage_WCMSI_743"/>
+            <class name="tests.ui.WCMS.ASTMLightSportAircraftTrainingPage_WCMSI_745"/>
+            <class name="tests.ui.WCMS.ASTMOxygenTrainingPage_WCMSI_739"/>
+            <class name="tests.ui.WCMS.ASTMPlasticsTrainingPage_WCMSI_737"/>
+            <class name="tests.ui.WCMS.ASTMStatisticsAndQualityTrainingPage_WCMSI_729"/>
+            <class name="tests.ui.WCMS.GlobalCooperationPage_WCMSI_848"/>
+            <class name="tests.ui.WCMS.InternationalTrainingPage_WCMSI_844"/>
             <class name="tests.ui.WCMS.VerifyAboutPageNavigationFromHomePage_WCMSI_561"/>
             <class name="tests.ui.WCMS.VerifyAccreditationsPage_WCMSI_978"/>
+            <class name="tests.ui.WCMS.VerifyAENORStandardsOnASTMCompassPage_WCMSI_767"/>
             <class name="tests.ui.WCMS.VerifyAnniversaryCaseStudies_WCMSI_530"/>
+            <class name="tests.ui.WCMS.VerifyASTMBuildingAndConstructionTrainingPage_WCMSI_788"/>
+            <class name="tests.ui.WCMS.VerifyASTMCannabisTrainingPage_WCMSI_747"/>
+            <class name="tests.ui.WCMS.VerifyASTMCoalChemistryTrainingPage_WCMSI_757"/>
             <class name="tests.ui.WCMS.VerifyASTMCompass_WCMSI_628"/>
             <class name="tests.ui.WCMS.VerifyASTMDigitalLibrary_WCMSI_607"/>
             <class name="tests.ui.WCMS.VerifyASTMInsightSQCPage_WCMSI_855"/>
             <class name="tests.ui.WCMS.VerifyASTMLabAndFieldFundamentalsPage_WCMSI_923"/>
+            <class name="tests.ui.WCMS.VerifyASTMRubberTrainingPage_WCMSI_761"/>
             <class name="tests.ui.WCMS.VerifyASTMSpecBuilder_WCMSI_630"/>
             <class name="tests.ui.WCMS.VerifyASTMTrainingAndELearningPoliciesAndFAQsPage_WCMSI_907"/>
             <class name="tests.ui.WCMS.VerifyBookOfStandardPageFunctionality_WCMSI_596"/>
             <class name="tests.ui.WCMS.VerifyCareersPage_WCMSI_857"/>
             <class name="tests.ui.WCMS.VerifyCatalogsPage_WCMSI_937"/>
+            <class name="tests.ui.WCMS.VerifyCertificationPage_WCMSI_708"/>
             <class name="tests.ui.WCMS.VerifyCopyrightAndPermissionsPage_WCMSI_911"/>
             <class name="tests.ui.WCMS.VerifyCorporateCitizenship_WCMSI_941"/>
             <class name="tests.ui.WCMS.VerifyCorporateCitizenshipPage_WCMSI_938"/>
             <class name="tests.ui.WCMS.VerifyCovidPage_WCMSI_853"/>
             <class name="tests.ui.WCMS.VerifyDigitalAccessToInternationalStandardsOnASTMCompassPage_WCMSI_961"/>
             <class name="tests.ui.WCMS.VerifyDigitalAccessToInternationalStandardsPage_WCMSI_980"/>
+            <class name="tests.ui.WCMS.VerifyDiversityEquityInclusionPage_WCMSI_834"/>
+            <class name="tests.ui.WCMS.VerifyDraftStandardTemplatesPage_WCMSI_967"/>
             <class name="tests.ui.WCMS.VerifyEmailSubscriptionSettingsPage_WCMSI_981"/>
             <class name="tests.ui.WCMS.VerifyEmergingProfessionalsProgram_WCMSI_523"/>
             <class name="tests.ui.WCMS.VerifyEnterpriseSolutions_WCMSI_625"/>
@@ -39,6 +54,8 @@
             <class name="tests.ui.WCMS.VerifyHelpOverview_WCMSI_511"/>
             <class name="tests.ui.WCMS.VerifyHomePage_WCMSI_541"/>
             <class name="tests.ui.WCMS.VerifyHonorsAndAwardsTheUIResponsivenessContentLinksOfThePage_WCMSI_960"/>
+            <class name="tests.ui.WCMS.VerifyHowToGetInvolvedPage_WCMSI_528"/>
+            <class name="tests.ui.WCMS.VerifyIESStandardsOnASTMCompassPage_WCMSI_772"/>
             <class name="tests.ui.WCMS.VerifyInResidenceTrainingProgramsPage_WCMSI_864"/>
             <class name="tests.ui.WCMS.VerifyInternationalPartnersPage_WCMSI_862"/>
             <class name="tests.ui.WCMS.VerifyKeyDocumentsAndFormsPage_WCMSI_913"/>
@@ -52,6 +69,7 @@
             <class name="tests.ui.WCMS.VerifyNew_WCMSI_1039"/>
             <class name="tests.ui.WCMS.VerifyNewStandardsDevelopmentPage_WCMSI_915"/>
             <class name="tests.ui.WCMS.VerifyPolicyPage_WCMSI_873"/>
+            <class name="tests.ui.WCMS.VerifyPublishBooksAndJournalsPage_WCMSI_710"/>
             <class name="tests.ui.WCMS.VerifyReferenceMaterialsPage_WCMSI_987"/>
             <class name="tests.ui.WCMS.VerifyRegionalOffices_WCMSI_529"/>
             <class name="tests.ui.WCMS.VerifyReturnPolicyPage_WCMSI_909"/>
@@ -67,7 +85,9 @@
             <class name="tests.ui.WCMS.VerifyTestMethodAssessmentPage_WCMSI_858"/>
             <class name="tests.ui.WCMS.VerifyTracker_Services_WCMSI_614"/>
             <class name="tests.ui.WCMS.VerifyTrainingByIndustryPageFunctionality_WCMSI_636"/>
+            <class name="tests.ui.WCMS.VerifyWhitePapersPage_WCMSI_706"/>
             <class name="tests.ui.WCMS.VerifyWohlersAndSpecialtyReportPage_WCMSI_945"/>
+
 
 
         </classes>

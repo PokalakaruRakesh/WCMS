@@ -626,7 +626,7 @@ public class CommonPage_WCMS extends BasePage {
             WaitStatementUtils.waitForElementToBeClickable(driver, getElement(locator));
             ScreenshotUtil.takeScreenshotForAllure(driver);
             Assert.assertTrue(Common.clickonWebElement(driver, locator));
-            WCMSICommon.waitForSec(4);
+            WCMSICommon.waitForSec(5);
             Assert.assertTrue(ReusableMethods.checkIfFileExists(downloadFolder,fileName));
             return true;
         } catch (Exception e) {

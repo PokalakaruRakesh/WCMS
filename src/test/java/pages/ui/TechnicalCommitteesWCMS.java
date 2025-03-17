@@ -60,5 +60,4 @@ public class TechnicalCommitteesWCMS extends BasePage {
     public By TheFormStyle = By.xpath("//a[contains(text(),'The Form and Style')]");
     public By TechnicalSupport = By.xpath("//a[contains(text(),'Technical Support')]");
     public By TemplateQuestions = By.xpath("//a[contains(text(),'Template Questions')]");
-
 }
