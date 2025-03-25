@@ -33,6 +33,15 @@ public class EnterpriseSolutionWCMS extends BasePage{
     public By CompassPointsYouTube = By.xpath("//img[@class='w-css-reset' and contains(@src, '055778db08213dbbd2efda027223fce2')]");
     public By ContactSalesPoints = By.xpath("//a[@title='Contact Sales']");
 
+    public By ContactUsEnterprise = By.xpath("//a[text()='Contact Us']");
+    public By SubmitButton = By.xpath("//p[text()='Submit Message']");
+    public By PrivacyPolicy = By.xpath("//a[text()='privacy policy']");
+
+    public By APIRequestDemo = By.xpath("(//a[contains(text(), 'Request Demo')])[1]");
+    public By CompassEBook = By.xpath("//a[contains(text(), 'Download Compass EBook')]");
+    public By APIRequestDemo2 = By.xpath("(//a[contains(text(), 'Request Demo')])[2]");
+
+
 
 
 

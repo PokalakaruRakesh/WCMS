@@ -73,19 +73,61 @@ public class AboutPage extends BasePage {
     public By ReviewEEOS = By.xpath("//a[contains(@href, '/policies/equal-opportunity-policy') and @target='_self']");
     public By ReviewVeteran = By.xpath("//a[contains(@href, '/policies/veteran-and-disabilities-policy') and @target='_self']");
 
-    public By GlobalVideoLink = By.xpath("//div[@class='ytp-cued-thumbnail-overlay-image' and contains(@style, 'Ikt-aYVdDR8')]\n");
+    public By GlobalVideoLink = By.xpath("//div[@class='ytp-cued-thumbnail-overlay-image' and contains(@style, 'Ikt-aYVdDR8')]");
     public WebElement VideoLink(){
         return  driver.findElement(videoLink);
     }
 
     public By SupportingGlobal = By.xpath("//a[contains(@title, 'Download Supporting Global Growth')]");
     public By MOUMemberList = By.xpath("//a[contains(@title, 'Download MoU Members List')]");
-    public By InResidenceTrainingPrograms = By.xpath("//a[contains(@title, 'Download MoU Members List')]");
+    public By InResidenceTrainingPrograms = By.xpath("//a[@href='/about/global-cooperation/in-residence-training-programs' and contains(text(), 'Learn More')]");
     public By OnineTrainingLearnMore = By.xpath("//a[@href='/about/global-cooperation/online-training' and contains(text(), 'Learn More')]");
     public By InternationalPartners = By.xpath("//a[@href='/about/global-cooperation/international-partners' and contains(@class, 'mt-auto')]");
     public By UAEChapterLearn = By.xpath("//a[@href='https://astmuae.org/' and contains(text(), 'Learn More')]");
 
+    public By ASTMMembership = By.xpath("//a[contains(text(),'Learn more about ASTM membership')]");
+    public By ASTMBoardOfDirectors = By.xpath("//a[contains(text(), 'Board of Directors')]");
+    public By EqualOpportunity = By.xpath("//a[contains(text(), 'Equal Employment Opportunity')]");
 
+    public By ContactMariaJiverage = By.xpath("//a[contains(text(), 'Contact Maria Jiverage')]");
+    public By ActivatingASTMMoU = By.xpath("//a[contains(text(), 'Activating the ASTM MoU')]");
+    public By TheStandardsSystems = By.xpath("//a[contains(text(), 'The U.S. Standards Systems and International Standards for Trade')]");
+    public By MarketingPromotion = By.xpath("//a[contains(text(), 'Marketing and Promotion of Standards')]");
+    public By MembershipStakeholder = By.xpath("//a[contains(text(), 'Membership and Stakeholder Engagement')]");
+    public By OverviewASTM = By.xpath("//a[contains(text(),'Overview of ASTM Compass')]");
+    public By SocialMedia = By.xpath("//a[contains(text(),'Social Media')]");
+    public By SimpleWaysAdopt = By.xpath("//a[contains(text(), 'Simple Ways to Adopt and Reference ASTM Standards')]");
+    public By ASTMStandardizationProcess = By.xpath("//a[contains(text(),'ASTM Standardization Process')]");
+    public By IntroductionStandardsWriting = By.xpath("//a[contains(text(),'An Introduction to ASTM Standards Writing')]");
+    public By PublicMediaRelations = By.xpath("//a[contains(text(), 'Public/Media Relations and Branding')]");
+    public By PrecisionBias = By.xpath("//a[contains(text(),'Introduction to Precision and Bias')]");
+    public By AnnualReportTraining = By.xpath("//a[contains(text(),'Online MoU Annual Report Training')]");
+    public By OutreachProgram = By.xpath("//a[contains(text(),'ASTM Academic Outreach Program')]");
+    public By MemberOnboardingEngagement = By.xpath("//a[contains(text(),'MoU Member Onboarding and Engagement')]");
+    public By LabServicesProgram = By.xpath("//a[contains(text(),'ASTM Lab Services Program: ASTM Insight SQC Software')]");
+    public By WebExMeetingManager = By.xpath("//a[contains(text(),'Webex-Meetings-Join-a-Test-Meeting')]");
+    public By RunningWebEx = By.xpath("//a[contains(@href, 'webex.com/test-meeting.html')]");
+
+
+
+
+
+
+
+
+
+
+
+    /*public By ASTMStandardizationProcess = By.xpath("//a[@href='#standardization_process']");
+    public By IntroductionStandardsWriting = By.xpath("//a[@href='#standards_writing']");
+    public By PublicMediaRelations = By.xpath("//a[@href='#relations_and_branding']");
+    public By PrecisionBias = By.xpath("//a[@href='#precision_and_bias']");
+    public By AnnualReportTraining = By.xpath("//a[@href='#annual_report_training']");
+    public By OutreachProgram = By.xpath("//a[@href='#outreach_program']");
+    public By MemberOnboardingEngagement = By.xpath("//a[@href='#member_onboarding']");
+    public By LabServicesProgram = By.xpath("//a[contains(text(), 'ASTM Lab Services Program')]");
+    public By WebExMeetingManager = By.xpath("//a[contains(@href, 'webex.com') and contains(text(), 'Webex-Meetings-Join-a-Test-Meeting')]");
+    public By RunningWebEx = By.xpath("//a[contains(@href, 'webex.com/test-meeting.html')]");*/
 
 
 

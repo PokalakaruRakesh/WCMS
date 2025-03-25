@@ -31,4 +31,9 @@ public class MembershipWCMS extends BasePage {
     public By RenewReinstateMembership = By.xpath("//h6[contains(text(),'Renew or Reinstate Membership')]/ancestor::div/a[text()='Learn More']");
     public By ContactASTMMember = By.xpath("//h6[contains(text(),'Contact ASTM Member')]/ancestor::div/a[text()='Learn More']");
 
+    public By PhiladelphiaInternational = By.xpath("//button[text()='From Philadelphia International Airport']");
+    public By AceLimousine = By.xpath("//a[@href='https://www.acelimosvce.com/']");
+
+
+
 }

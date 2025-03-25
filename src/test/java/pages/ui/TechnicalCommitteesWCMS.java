@@ -49,6 +49,17 @@ public class TechnicalCommitteesWCMS extends BasePage {
     public By SymposiumProposalLink = By.xpath("//a[contains(text(),'Symposium Proposal Form')]");
     public By DirectionsPreparingLink = By.xpath("//a[contains(text(),'Directions for Preparing')]");
 
+    public By SustainabilityReference = By.xpath("//a[contains(@href, 'sustainability-reference') and contains(text(), 'Learn More')]");
+    public By SustainabilityStandardsListing = By.xpath("//a[contains(text(), 'ASTM Sustainability Standards Listing')]");
+    public By InclusionSustainabilityDatabase = By.xpath("//a[contains(text(), 'Suggest Standards for Inclusion')]");
+    public By SustainabilityOverview = By.xpath("//h4[contains(text(), 'ASTM Sustainability Standards')]/following::a[contains(@href, 'E60_2024_PPT.pptx')]");
+    public By SustainabilityChinese = By.xpath("//a[contains(text(), 'Sustainability Overview in Chinese')]");
+    public By EPASustainability = By.xpath("//a[contains(text(), 'EPA Sustainability Web Page')]");
+
+
+
+
+
     //Draft Standard Templates
     public By TestMethods = By.xpath("//a[text()='Test Methods']");
     public By Specifications = By.xpath("//a[text()='Specifications']");

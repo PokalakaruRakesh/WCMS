@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import pages.ui.*;
 import tests.ui.base.BaseTest;
 
-public class VerifyCorporateCitizenshipPage_WCMSI_938 extends BaseTest {
+public class VerifyCitizenshipPage_WCMSI_938 extends BaseTest {
     static final String jiraTestID = "WCMSI-938";
     CookiePage cookiePage;
     CommonPage_WCMS commonPage;

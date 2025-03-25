@@ -104,6 +104,44 @@ public class TrainingByIndustryWCMS extends BasePage{
     public By Precisionbias = By.xpath("(//a[contains(text(), 'Precision and Bias')])[1]");
     public By StatisticsContactUs2 = By.xpath("(//a[@title='Contact Us'])[2]");
 
+    public By ProfessionalEngineer = By.xpath("//a[@title='Learn More' and contains(@href, '/training-courses/pe-continuing-education')]");
+    public By ContactUsProfessionalEng = By.xpath("//a[contains(text(), 'Contact us')]");
+    public By Certificate = By.xpath("//a[contains(text(), 'Click here for the ASTM Certificate of Attendance')]");
+    public By SubscriptionHere = By.xpath("//a[text()='here']");
+
+    public By CorrosionContactUs = By.xpath("(//a[@title='Contact Us'])[1]");
+    public By ApplicationASTMB117 = By.xpath("//a[contains(text(),'Understanding and Application of ASTM B117')]");
+    public By ElectrochemicalTechniques = By.xpath("//a[contains(text(),'Corrosion Testing, Measurement, and Monitoring')]");
+    public By CorrosionInhibitors = By.xpath("//a[contains(text(),'Corrosion Inhibitors for Oil and Gas Industry')]");
+    public By B117StandardPractice = By.xpath("//a[contains(text(),'ASTM B117 Standard Practice')]");
+    public By G85StandardPractice = By.xpath("//a[contains(text(),'ASTM G85 Standard Practice')]");
+    public By ModuloLearningPara = By.xpath("//a[contains(text(),'Modulo eLearning para ASTM B117')]");
+    public By CorrosionContactUs2 = By.xpath("(//a[@title='Contact Us'])[2]");
+
+    public By EmergingContactUs = By.xpath("(//a[@title='Contact Us'])[1]");
+    public By WebinarOnDemand = By.xpath("//a[contains(text(),'Applications for Exoskeletons Webinar')]");
+    public By ExoskeletonPPEInterface = By.xpath("//a[contains(text(),'Exoskeleton and PPE Interface Challenges')]");
+    public By DataManagementProgram = By.xpath("//a[contains(text(),'Additive Manufacturing Data Management')]");
+    public By DesignProgram = By.xpath("//a[contains(text(),'Additive Manufacturing Design Program')]");
+    public By ProcessesProgram = By.xpath("//a[contains(text(),'Additive Manufacturing Processes Program')]");
+    public By MetalsProgram = By.xpath("//a[contains(text(),'Additive Manufacturing with Metals Program')]");
+    public By BedFusionProgram = By.xpath("//a[contains(text(),'Additive Manufacturing Laser Powder Bed Fusion Program')]");
+    public By SafetyCertificate = By.xpath("//a[contains(text(),'Additive Manufacturing Safety Certificate Course')]");
+    public By TestingProgram = By.xpath("//a[contains(text(),'Additive Manufacturing Testing Program')]");
+    public By AdditiveCertification = By.xpath("//a[contains(text(),'Additive Manufacturing Qualification')]");
+    public By ManufacturingELearning = By.xpath("//a[contains(text(),'Principles of Additive Manufacturing')]");
+    public By WordWebinarOnDemand = By.xpath("//a[contains(@href, 'astm-tpt-817')]");
+    public By AutonomyDesign = By.xpath("//a[contains(text(),'Autonomy Design and Operations in Aviation')]");
+    public By DevelopmentalPillars = By.xpath("//a[contains(text(),'Developmental Pillars of Increased Autonomy')]");
+    public By F3586Remote = By.xpath("//a[contains(text(),'How to Use ASTM F3586 Remote ID Means of Compliance')]");
+    public By EmergingContactUs2 = By.xpath("(//a[@title='Contact Us'])[2]");
+
+
+
+
+
+
+
     public By PerformanceGrading= By.xpath("//h4[contains(text(),'Live Courses')]/..//a[contains(text(),'ASTM/ACES Performance Grading')]");
     public By BrownfieldsRedevelopment= By.xpath("//a[contains(text(),'Brownfields Redevelopment')]");
 }

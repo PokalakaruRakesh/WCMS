@@ -46,10 +46,10 @@ public class GlobalCooperationPage_WCMSI_848 extends BaseTest {
     @Step("Validate Global Cooperation Training Page")
     public void ValidateGlobalCooperationPage() {
         try {
-//            Assert.assertEquals(aboutPage.VideoLink().getAttribute("src"), "blob:https://www.youtube.com/81341ec6-5716-4bf1-bbca-b14ebe00accc");
+            Assert.assertEquals(aboutPage.VideoLink().getAttribute("src"), "https://www.youtube.com/embed/Ikt-aYVdDR8");
             Assert.assertTrue(commonPage.ValidateLink(aboutPage.SupportingGlobal, "https://qa-www.astm.org", "ASTM_Supporting-Global-Growth_September2020.pdf"));
             Assert.assertTrue(commonPage.ValidateLink(aboutPage.MOUMemberList, "https://go.astm.org/mou-program-members", "ASTM INTERNATIONAL" + "Memorandum of Understanding (MoU) Program Members"));
-            Assert.assertTrue(commonPage.ValidateLink(aboutPage.InResidenceTrainingPrograms, "/about/global-cooperation/in-residence-training-programs", "In-Residence Training Programs | ASTM"));
+            Assert.assertTrue(commonPage.ValidateLink(aboutPage.InResidenceTrainingPrograms, "/in-residence-training-programs", "Residence Training Programs | ASTM"));
             Assert.assertTrue(commonPage.ValidateLink(aboutPage.OnineTrainingLearnMore, "/about/global-cooperation/online-training", "Online Training | ASTM"));
             Assert.assertTrue(commonPage.ValidateLink(aboutPage.InternationalPartners, "/about/global-cooperation/international-partners", "International Partners | ASTM"));
             Assert.assertTrue(commonPage.ValidateLink(aboutPage.UAEChapterLearn, "https://astmuae.org/", "ASTM International - United Arab Emirates Chapter"));

@@ -54,7 +54,7 @@ public class InternationalTrainingPage_WCMSI_844 extends BaseTest {
 
         } catch (Exception e) {
             e.printStackTrace();
-            WCMSICommon.reportFailAssert("Failed to Validate the Training Page", e);
+            WCMSICommon.reportFailAssert("Failed to Validate the International Training Page", e);
         }
     }
 
