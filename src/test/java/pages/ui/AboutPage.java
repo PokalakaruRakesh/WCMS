@@ -100,7 +100,9 @@ public class AboutPage extends BasePage {
     public By StandardsDevelopmentLink = By.xpath("//a[contains(text(),'Standards Development')]");
     public By StrengtheningTransatlanticLink = By.xpath("//a[contains(text(),'Strengthening Transatlantic')]");
 
-
+    //ASTM President
+    public By ClickHereLink = By.xpath("//a[text()='Click here for a high-res pic of Andy Kireta.']");
+    public By FollowAndyOnXLink = By.xpath("//a[contains(text(),'Follow Andy on X')]");
 
 
 

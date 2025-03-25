@@ -66,6 +66,5 @@ class ASTMIndustryTrainingSolutionsPage_WCMSI_743 extends BaseTest {
             WCMSICommon.reportFailAssert("Failed to Validate the Link and button available on ASTM Industry Solutions Training Page", e);
         }
     }
-
 }
 

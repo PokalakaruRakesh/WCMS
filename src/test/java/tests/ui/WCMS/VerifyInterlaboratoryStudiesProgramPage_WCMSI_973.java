@@ -1,22 +1,19 @@
 package tests.ui.WCMS;
 
 import base.utils.ConfigReader;
-import base.utils.ReusableMethods;
-import base.utils.WaitStatementUtils;
 import com.astm.commonFunctions.WCMSICommon;
 import io.qameta.allure.*;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.ui.*;
 import tests.ui.base.BaseTest;
 
-public class VerifyDigitalAccessToInternationalStandardsPage_WCMSI_980 extends BaseTest {
-    static final String jiraTestID = "WCMSI-980";
+public class VerifyInterlaboratoryStudiesProgramPage_WCMSI_973 extends BaseTest {
+    static final String jiraTestID = "WCMSI-973";
     CookiePage cookiePage;
-    TechnicalCommitteesWCMS technicalCommittees;
     ASTMDigital_LibraryWCMS digitalLibrary;
+    TechnicalCommitteesWCMS technicalCommittees;
     CommonPage_WCMS commonPage;
     WCMSContentPage WCMSPage;
     BasePage basePage;
@@ -27,31 +24,32 @@ public class VerifyDigitalAccessToInternationalStandardsPage_WCMSI_980 extends B
 
     @Severity(SeverityLevel.NORMAL)
     @TmsLink(jiraTestID)
-    @Description("Digital Access to International Standards on ASTM Compass: Verify the UI, Responsiveness, content and Links of the page")
-    @Test(description = jiraTestID + ": Digital Access to International Standards on ASTM Compass: Verify the UI, Responsiveness, content and Links of the page")
-    public void VerifyDigitalAccessToInternationalStandardsPage() {
+    @Description("Interlaboratory Studies Program: Navigation Verification for All Buttons and Links")
+    @Test(description = jiraTestID + ": Interlaboratory Studies Program: Navigation Verification for All Buttons and Links")
+    public void VerifyInterlaboratoryStudiesPage() {
         try {
             WCMSPage = page.getInstance(WCMSContentPage.class);
-            technicalCommittees = page.getInstance(TechnicalCommitteesWCMS.class);
             commonPage = page.getInstance(CommonPage_WCMS.class);
             cookiePage = page.getInstance(CookiePage.class);
             digitalLibrary = page.getInstance(ASTMDigital_LibraryWCMS.class);
+            technicalCommittees = page.getInstance(TechnicalCommitteesWCMS.class);
             basePage = page.getInstance(BasePage.class);
 
-            commonPage.downloadFileSetup(ConfigReader.getValue("BASE_URL_WCMS_ASTM")+"membership-participation/technical-committees/interlaboratory-studies-program");
+            commonPage.downloadFileSetup(ConfigReader.getValue("BASE_URL_WCMS_ASTM"));
             cookiePage.handleOneTrustCookie();
-            ValidateDigitalAccessToInternationalStandardsPage();
-            ReusableMethods.deleteFilesInsideFolder(System.getProperty("user.dir")+"\\"+ ConfigReader.getValue("DownloadPath")+"\\downloads");
+            WCMSPage.NavigateToPage("Membership & Participation","Technical Committees");
+            ValidateInterlaboratoryStudiesProgramPage();
         } catch (Exception e) {
             e.printStackTrace();
-            WCMSICommon.reportFailAssert("Failed to Validate the Digital Access to International Standards on ASTM Compass page", e);
+            WCMSICommon.reportFailAssert("Failed to Interlaboratory Studies Program: Navigation Verification for All Buttons and Links", e);
         }
     }
-    @Step("Validate Digital Access To International Standards Page")
-    public void ValidateDigitalAccessToInternationalStandardsPage() {
+    @Step("Validate Interlaboratory Studies Program Page")
+    public void ValidateInterlaboratoryStudiesProgramPage() {
         try {
             WCMSICommon.waitForSec(5);
             basePage.clickOnMethod(technicalCommittees.InterlaboratoryStudyProgramLink);
+            WCMSICommon.waitForSec(4);
             Assert.assertTrue(commonPage.ValidateLink(digitalLibrary.RegisterForNewILSProgram,"redirectToILS", "ASTM Login"));
             Assert.assertTrue(commonPage.ValidateDownloadedFile(digitalLibrary.ActiveILSProgramList,"Active-Report.xlsx"));
             Assert.assertTrue(commonPage.ValidateDownloadedFile(digitalLibrary.FAQs,"ASTM_ILS_FAQ-Revised11.24.2021.pdf"));
@@ -67,9 +65,10 @@ public class VerifyDigitalAccessToInternationalStandardsPage_WCMSI_980 extends B
             Assert.assertTrue(page.getElement(digitalLibrary.submitToOurILSTeam).getAttribute("href").contains("mailto:researchreports@astm.org"));
             Assert.assertTrue(commonPage.ValidateLink(digitalLibrary.ContactASTM,"/contact", "Contact"));
             Assert.assertTrue(commonPage.ValidateDownloadedFile(digitalLibrary.InterlaboratoryStudiesProgram,"May_Jun_SN_Infograhpic_We_Can_Help_Print_v3.pdf"));
+
         } catch (Exception e) {
             e.printStackTrace();
-            WCMSICommon.reportFailAssert("Failed to Validate the Link and button available on Digital Access To International Standards", e);
+            WCMSICommon.reportFailAssert("Failed to Validate the Link and button available on Interlaboratory Studies Program page", e);
         }
     }
 

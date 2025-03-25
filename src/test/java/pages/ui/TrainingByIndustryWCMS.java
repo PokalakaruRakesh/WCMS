@@ -105,5 +105,5 @@ public class TrainingByIndustryWCMS extends BasePage{
     public By StatisticsContactUs2 = By.xpath("(//a[@title='Contact Us'])[2]");
 
     public By PerformanceGrading= By.xpath("//h4[contains(text(),'Live Courses')]/..//a[contains(text(),'ASTM/ACES Performance Grading')]");
-
+    public By BrownfieldsRedevelopment= By.xpath("//a[contains(text(),'Brownfields Redevelopment')]");
 }

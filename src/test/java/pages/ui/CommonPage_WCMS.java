@@ -47,12 +47,41 @@ public class CommonPage_WCMS extends BasePage {
 
     public By aboutNavigation = By.xpath("(//button[text()='About ASTM'])[last()]");
     public By aboutASTMOverview = By.xpath("(//a[@href='/about'][text()='About ASTM Overview'])[last()]");
+    public By Search = By.xpath("(//input[@aria-label='Search'])[2]");
+    public By SearchIcon = By.xpath("(//button[@type='submit'])[2]");
+    public By SearchResult = By.xpath("//h2[text()='Search Result']");
+    public By show = By.xpath("(//select[@id='limitSelect'])[2]");
+    public By SortBy = By.xpath("(//select[@name='Sort by'])[2]");
+    public By ArrowIcon = By.xpath("(//*[@data-role='direction-switcher'])[2]");
+    public By PreviousButton = By.xpath("//button[@aria-label='Previous']");
+    public By Nextbutton = By.xpath("//button[@aria-label='Next']");
+    public By ActivePage = By.xpath("//li[contains(@class,'searchComponent_active')]");
+    public By SearchResults = By.xpath("//h4[contains(@class,'searchComponent_title')]");
+    public By  DidNotProduceAnyResults = By.xpath(" //*[text()=' did not produce any results']");
+    public By  SubmitMessageBtn = By.xpath("//p[text()='Submit Message' or text()='Submit']");
 
     public By dropDown(String buttonText) {
         return By.xpath(String.format("//button[contains(text(),'%s')]", buttonText));
     }
     public By getElement(String text) {
         return By.xpath("//a[contains(text(),'"+text+"')]");
+    }
+    public By clickOnDropDown(String text) {
+        return By.xpath("//button[contains(text(),'"+text+"')]");
+    }
+    public By selectFileByName(String fileName) {
+        return By.xpath("//a[contains(text(),'"+fileName+"')]");
+    }
+    public By verifyEmailByCommitteeName(String committe,String mail) {
+        return By.xpath("//p[contains(text(),'"+committe+"')]/a[text()='"+mail+"']");
+    }
+    public String getFieldMessage(String name) {
+        By locator=By.xpath("//p[contains(text(),'"+name+"')]/../../span[@class='invalid-feedback']");
+        ReusableMethods.scrollToElement(driver,locator);
+        return getElement(locator).getText();
+    }
+    public By enterFormField(String filedName) {
+        return By.xpath("//*[contains(@title,'"+filedName+"') or @id='"+filedName+"']");
     }
     @Step("Click on 'About' Navigation Option")
     public void ClickOnAboutNavigationOption() {
@@ -659,5 +688,16 @@ public class CommonPage_WCMS extends BasePage {
             e.printStackTrace();
         }
     }
-
+    @Step("scroll To Element And Fill Field")
+    public static void scrollToElementAndFillField(WebDriver driver, By locator, String value) {
+        try {
+            ReusableMethods.scrollToElement(driver,locator);
+            WebElement element = driver.findElement(locator);
+            element.clear();
+            element.sendKeys(value);
+            ScreenshotUtil.takeScreenshotForAllure(driver);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
