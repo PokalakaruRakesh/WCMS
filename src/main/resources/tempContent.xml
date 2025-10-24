@@ -7,13 +7,14 @@
     <parameter name="platform" value="local"/>
     <parameter name="browser" value="Chrome"/>
     <parameter name="env" value="QA"/>
+    <parameter name="viewMode" value="mobile"/>
     <!--   <parameter name ="testExecutionId" value="000000"/>-->
     <!--    <parameter name="updateJira" value="true"></parameter>-->
 
     <test name="Test">
         <classes>
 
-            <class name="tests.ui.WCMSContent.VerifyAboutASTMPageContentInTheWCMSApplication_WCMSI_465"/>
+            <class name="tests.ui.WCMSContent.Verify125thAnniversaryCaseStudiesPageContentInTheWCMSApplication_WCMSI_493"/>
 
         </classes>
     </test> <!-- Test -->

@@ -50,6 +50,7 @@ task tempContent(type: Test) {
     systemProperty 'env', System.getProperty('env', 'QA')
     systemProperty 'updateJira', System.getProperty('updateJira', 'false')
     systemProperty 'testExecutionId', System.getProperty('testExecutionId', '0000')
+    systemProperty 'viewMode', System.getProperty('viewMode', 'mobile')
     useTestNG() { //This is for Gradle to use TestNG
         //No need to add Custome Listener
         // It will be provided by the TESTNG.XML
