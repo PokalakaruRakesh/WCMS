@@ -1,0 +1,62 @@
+// Test Data for INT-111: validate footer components
+{
+  "INT-111": {
+    "TestCaseID": "INT-111",
+    "TestCaseName": "validate footer components",
+    "Description": "User should be able to see the footer components successfully",
+    "Priority": "Medium",
+    "Locators": [
+      {
+        "name": "FooterSection",
+        "type": "xpath",
+        "value": "//footer"
+      },
+      {
+        "name": "FooterLink1",
+        "type": "xpath",
+        "value": "//footer//a[1]"
+      },
+      {
+        "name": "FooterLink2",
+        "type": "xpath",
+        "value": "//footer//a[2]"
+      },
+      {
+        "name": "FooterText",
+        "type": "xpath",
+        "value": "//footer//p"
+      },
+      {
+        "name": "FooterLogo",
+        "type": "xpath",
+        "value": "//footer//img[contains(@alt, 'logo')]"
+      }
+    ],
+    "FooterComponents": [
+      {
+        "component": "Links",
+        "expectedCount": 2,
+        "edgeCases": [
+          { "description": "No links present", "expected": false },
+          { "description": "Maximum links (boundary)", "expected": true, "count": 10 }
+        ]
+      },
+      {
+        "component": "Text",
+        "expected": "© ASTM International. All Rights Reserved.",
+        "edgeCases": [
+          { "description": "Text missing", "expected": false },
+          { "description": "Text partially present", "expected": false }
+        ]
+      },
+      {
+        "component": "Logo",
+        "expectedAltText": "ASTM logo",
+        "edgeCases": [
+          { "description": "Logo missing", "expected": false },
+          { "description": "Logo alt text incorrect", "expected": false }
+        ]
+      }
+    ]
+  }
+}
