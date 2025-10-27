@@ -1,0 +1,99 @@
+{
+  "INT-111": {
+    "TestCaseID": "INT-111",
+    "TestCaseName": "valiadate footer components",
+    "Priority": "Medium",
+    "Objective": "User should be able to see the footer components successfully",
+    "Locators": [
+      {
+        "name": "FooterSection",
+        "description": "Main footer section container",
+        "locatorType": "xpath",
+        "locatorValue": "//footer"
+      },
+      {
+        "name": "FooterLink1",
+        "description": "First footer link (e.g. About Us)",
+        "locatorType": "xpath",
+        "locatorValue": "//footer//a[1]"
+      },
+      {
+        "name": "FooterLink2",
+        "description": "Second footer link (e.g. Contact)",
+        "locatorType": "xpath",
+        "locatorValue": "//footer//a[2]"
+      },
+      {
+        "name": "FooterSocialIcons",
+        "description": "Footer social media icons container",
+        "locatorType": "xpath",
+        "locatorValue": "//footer//div[contains(@class, 'social-icons')]"
+      },
+      {
+        "name": "FooterCopyright",
+        "description": "Footer copyright text",
+        "locatorType": "xpath",
+        "locatorValue": "//footer//*[contains(text(), '©')]"
+      }
+    ],
+    "FooterComponents": {
+      "FooterLinks": [
+        {
+          "label": "About Us",
+          "expectedUrl": "/about-us",
+          "isVisible": true
+        },
+        {
+          "label": "Contact",
+          "expectedUrl": "/contact",
+          "isVisible": true
+        },
+        {
+          "label": "Privacy Policy",
+          "expectedUrl": "/privacy-policy",
+          "isVisible": true
+        },
+        {
+          "label": "Terms of Use",
+          "expectedUrl": "/terms-of-use",
+          "isVisible": true
+        }
+      ],
+      "SocialIcons": [
+        {
+          "platform": "Facebook",
+          "expectedUrl": "https://facebook.com/astm",
+          "isVisible": true
+        },
+        {
+          "platform": "Twitter",
+          "expectedUrl": "https://twitter.com/astm",
+          "isVisible": true
+        },
+        {
+          "platform": "LinkedIn",
+          "expectedUrl": "https://linkedin.com/company/astm-international",
+          "isVisible": true
+        }
+      ],
+      "Copyright": {
+        "expectedTextPattern": "© [0-9]{4} ASTM International. All rights reserved.",
+        "isVisible": true
+      }
+    },
+    "EdgeCases": {
+      "NoFooter": {
+        "description": "Footer section is missing from the DOM",
+        "expectedBehavior": "Test should fail with appropriate message"
+      },
+      "PartialFooter": {
+        "description": "Some footer links or icons are missing",
+        "expectedBehavior": "Test should fail and report missing components"
+      },
+      "BrokenLinks": {
+        "description": "Footer links lead to 404 or incorrect pages",
+        "expectedBehavior": "Test should validate link navigation and fail if incorrect"
+      }
+    }
+  }
+}
