@@ -1,0 +1,80 @@
+// Test data for: TC-N001 - Title not provided
+// Purpose: Data for login test case with 0 data items, 5 locators, and expected result of successful login
+{
+  "TC-N001": {
+    "TestCaseID": "TC-N001",
+    "Name": "Title not provided",
+    "Module": null,
+    "Submodule": null,
+    "Objective": null,
+    "Preconditions": null,
+    "TestStepsCount": 229,
+    "ExpectedResultsCount": 0,
+    "ExpectedResult": "User should be able to log in successfully.",
+    "PostConditions": null,
+    "Priority": "Medium",
+    "Type": null
+  },
+  "Locators": [
+    {
+      "name": "usernameField",
+      "description": "Username input field",
+      "locator": "//input[@id='username']"
+    },
+    {
+      "name": "passwordField",
+      "description": "Password input field",
+      "locator": "//input[@id='password']"
+    },
+    {
+      "name": "loginButton",
+      "description": "Login button",
+      "locator": "//button[@id='login']"
+    },
+    {
+      "name": "errorMessage",
+      "description": "Error message for invalid login",
+      "locator": "//div[@class='error-message']"
+    },
+    {
+      "name": "dashboardHeader",
+      "description": "Header on dashboard after successful login",
+      "locator": "//h1[contains(text(),'Dashboard')]"
+    }
+  ],
+  "TestData": [
+    // No user data provided in test case; placeholder for future expansion
+  ],
+  "EdgeCases": [
+    {
+      "scenario": "Empty username and password",
+      "username": "",
+      "password": "",
+      "expectedResult": "Error message displayed"
+    },
+    {
+      "scenario": "Valid username, empty password",
+      "username": "validUser",
+      "password": "",
+      "expectedResult": "Error message displayed"
+    },
+    {
+      "scenario": "Empty username, valid password",
+      "username": "",
+      "password": "validPass123",
+      "expectedResult": "Error message displayed"
+    },
+    {
+      "scenario": "Invalid username and password",
+      "username": "invalidUser",
+      "password": "invalidPass",
+      "expectedResult": "Error message displayed"
+    },
+    {
+      "scenario": "Valid username and password",
+      "username": "validUser",
+      "password": "validPass123",
+      "expectedResult": "User should be able to log in successfully."
+    }
+  ]
+}
