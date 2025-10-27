@@ -1,0 +1,105 @@
+// Test Data for: Login to Public Application (TC-N001)
+// Objective: To verify that a user can successfully log into the public application.
+{
+  "TC-N001": {
+    "TestCaseID": "TC-N001",
+    "TestCaseName": "Login to Public Application",
+    "Objective": "To verify that a user can successfully log into the public application.",
+    "Priority": "Medium",
+    "Type": "Functional",
+    "Locators": [
+      {
+        "name": "usernameField",
+        "description": "Input field for username",
+        "locatorType": "id",
+        "locatorValue": "username"
+      },
+      {
+        "name": "passwordField",
+        "description": "Input field for password",
+        "locatorType": "id",
+        "locatorValue": "password"
+      },
+      {
+        "name": "loginButton",
+        "description": "Button to submit login form",
+        "locatorType": "id",
+        "locatorValue": "loginBtn"
+      },
+      {
+        "name": "loginErrorMessage",
+        "description": "Error message displayed on failed login",
+        "locatorType": "css",
+        "locatorValue": ".login-error-message"
+      },
+      {
+        "name": "dashboardHeader",
+        "description": "Header element visible after successful login",
+        "locatorType": "css",
+        "locatorValue": "h1.dashboard-title"
+      }
+    ],
+    "TestData": [
+      {
+        "scenario": "Valid Login",
+        "username": "validUser",
+        "password": "ValidPass123",
+        "expectedResult": "Login successful, dashboard visible"
+      },
+      {
+        "scenario": "Invalid Password",
+        "username": "validUser",
+        "password": "WrongPass",
+        "expectedResult": "Error message displayed: Invalid credentials"
+      },
+      {
+        "scenario": "Invalid Username",
+        "username": "invalidUser",
+        "password": "ValidPass123",
+        "expectedResult": "Error message displayed: Invalid credentials"
+      },
+      {
+        "scenario": "Empty Username",
+        "username": "",
+        "password": "ValidPass123",
+        "expectedResult": "Error message displayed: Username required"
+      },
+      {
+        "scenario": "Empty Password",
+        "username": "validUser",
+        "password": "",
+        "expectedResult": "Error message displayed: Password required"
+      },
+      {
+        "scenario": "Empty Username and Password",
+        "username": "",
+        "password": "",
+        "expectedResult": "Error message displayed: Username and Password required"
+      },
+      {
+        "scenario": "Boundary Username Length",
+        "username": "u",
+        "password": "ValidPass123",
+        "expectedResult": "Error message displayed: Username too short"
+      },
+      {
+        "scenario": "Boundary Password Length",
+        "username": "validUser",
+        "password": "p",
+        "expectedResult": "Error message displayed: Password too short"
+      },
+      {
+        "scenario": "Special Characters in Username",
+        "username": "user!@#",
+        "password": "ValidPass123",
+        "expectedResult": "Error message displayed: Invalid characters in username"
+      },
+      {
+        "scenario": "Special Characters in Password",
+        "username": "validUser",
+        "password": "P@ssw0rd!",
+        "expectedResult": "Login successful, dashboard visible"
+      }
+    ]
+  }
+}
