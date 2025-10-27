@@ -1,0 +1,71 @@
+{
+  "INT-123": {
+    "TestCaseID": "INT-123",
+    "TestCaseName": "valiadate header components",
+    "Priority": "Medium",
+    "Type": "UI",
+    "Objective": "User should be able to see the header components successfully",
+    "Locators": [
+      {
+        "name": "headerLogo",
+        "description": "Main site logo in header",
+        "locatorType": "xpath",
+        "locatorValue": "//header//img[@alt='Site Logo']"
+      },
+      {
+        "name": "mainMenu",
+        "description": "Main navigation menu",
+        "locatorType": "css",
+        "locatorValue": "header nav.main-menu"
+      },
+      {
+        "name": "searchIcon",
+        "description": "Search icon in header",
+        "locatorType": "xpath",
+        "locatorValue": "//header//button[contains(@class,'search')]"
+      },
+      {
+        "name": "loginButton",
+        "description": "Login button in header",
+        "locatorType": "css",
+        "locatorValue": "header .login-btn"
+      },
+      {
+        "name": "languageSelector",
+        "description": "Language selector dropdown in header",
+        "locatorType": "xpath",
+        "locatorValue": "//header//select[@name='language']"
+      }
+    ],
+    "EdgeCases": [
+      {
+        "scenario": "Header components on mobile viewport",
+        "viewport": "375x667",
+        "expected": "All header components are visible or accessible via hamburger menu"
+      },
+      {
+        "scenario": "Header components on maximum desktop viewport",
+        "viewport": "1920x1080",
+        "expected": "All header components are visible and not overlapping"
+      },
+      {
+        "scenario": "Header components when user is logged in",
+        "expected": "Login button replaced by user profile icon"
+      },
+      {
+        "scenario": "Header components when language selector is changed",
+        "expected": "Header text updates to selected language"
+      }
+    ],
+    "BoundaryValues": [
+      {
+        "scenario": "Header with minimum menu items",
+        "menuItems": 1
+      },
+      {
+        "scenario": "Header with maximum menu items",
+        "menuItems": 10
+      }
+    ]
+  }
+}
