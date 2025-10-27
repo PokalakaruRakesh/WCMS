@@ -1,0 +1,105 @@
+// Test data for: Title not provided (TC-N001)
+// Purpose: Data for login test with edge cases and boundary values
+{
+  "TC-N001": {
+    "description": "User should be able to log in successfully.",
+    "priority": "Medium",
+    "type": "Functional",
+    "locators": [
+      {
+        "name": "usernameField",
+        "type": "id",
+        "value": "username"
+      },
+      {
+        "name": "passwordField",
+        "type": "id",
+        "value": "password"
+      },
+      {
+        "name": "loginButton",
+        "type": "id",
+        "value": "loginBtn"
+      },
+      {
+        "name": "errorMessage",
+        "type": "css",
+        "value": ".error-msg"
+      },
+      {
+        "name": "dashboardHeader",
+        "type": "xpath",
+        "value": "//h1[text()='Dashboard']"
+      }
+    ],
+    "testData": [
+      {
+        "scenario": "Valid login",
+        "username": "validUser",
+        "password": "ValidPass123!",
+        "expectedResult": "success"
+      },
+      {
+        "scenario": "Invalid password",
+        "username": "validUser",
+        "password": "WrongPass",
+        "expectedResult": "error",
+        "errorMessage": "Invalid username or password."
+      },
+      {
+        "scenario": "Invalid username",
+        "username": "invalidUser",
+        "password": "ValidPass123!",
+        "expectedResult": "error",
+        "errorMessage": "Invalid username or password."
+      },
+      {
+        "scenario": "Empty username",
+        "username": "",
+        "password": "ValidPass123!",
+        "expectedResult": "error",
+        "errorMessage": "Username is required."
+      },
+      {
+        "scenario": "Empty password",
+        "username": "validUser",
+        "password": "",
+        "expectedResult": "error",
+        "errorMessage": "Password is required."
+      },
+      {
+        "scenario": "Username boundary min length",
+        "username": "a",
+        "password": "ValidPass123!",
+        "expectedResult": "error",
+        "errorMessage": "Username must be at least 3 characters."
+      },
+      {
+        "scenario": "Username boundary max length",
+        "username": "abcdefghijklmnopqrstuvwxyz012345",
+        "password": "ValidPass123!",
+        "expectedResult": "success"
+      },
+      {
+        "scenario": "Password boundary min length",
+        "username": "validUser",
+        "password": "aB1$",
+        "expectedResult": "error",
+        "errorMessage": "Password must be at least 8 characters."
+      },
+      {
+        "scenario": "Password boundary max length",
+        "username": "validUser",
+        "password": "A1b2C3d4E5f6G7h8I9j0K1l2M3n4O5p6Q7r8S9t0U1v2W3x4Y5z6!@#",
+        "expectedResult": "success"
+      },
+      {
+        "scenario": "SQL Injection attempt",
+        "username": "' OR '1'='1",
+        "password": "' OR '1'='1",
+        "expectedResult": "error",
+        "errorMessage": "Invalid username or password."
+      }
+    ]
+  }
+}
