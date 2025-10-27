@@ -1,0 +1,36 @@
+// Test data for INT-111: validate footer components
+// This file is structured following the existing JSON test data patterns (see WCMSI-1176.json)
+{
+  "INT-111": {
+    "TestCaseID": "INT-111",
+    "TestCaseName": "validate footer components",
+    "Priority": "Medium",
+    "ExpectedResult": "User should be able to see the footer components successfully",
+    "Locators": [
+      // Replace with actual locator values if available
+      { "name": "footerMain", "type": "css", "value": "footer.main-footer" },
+      { "name": "footerLink1", "type": "xpath", "value": "//footer//a[1]" },
+      { "name": "footerLink2", "type": "xpath", "value": "//footer//a[2]" },
+      { "name": "footerLogo", "type": "css", "value": "footer .footer-logo" },
+      { "name": "footerCopyright", "type": "css", "value": "footer .copyright" }
+    ]
+  },
+  "FooterComponents": {
+    "Footer1": "About ASTM International",
+    "Footer2": "Contact Us",
+    "Footer3": "Privacy Policy",
+    "Footer4": "Terms of Use",
+    "Footer5": "Sitemap",
+    "Footer6": "SocialLinks",
+    "Footer7": "ASTM Logo",
+    "Footer8": "Copyright Notice",
+    "Footer9": "Accessibility Statement",
+    "Footer10": "Careers",
+    // Add edge cases for footer links
+    "FooterEdgeCase1": "Empty Link Text",
+    "FooterEdgeCase2": "Broken Link (404)",
+    "FooterEdgeCase3": "External Link",
+    "FooterEdgeCase4": "Link with Special Characters: © ™ ®",
+    "FooterEdgeCase5": "Very Long Link Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  }
+}
