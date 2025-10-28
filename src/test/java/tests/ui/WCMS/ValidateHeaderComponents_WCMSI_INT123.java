@@ -7,90 +7,92 @@ import io.qameta.allure.Step;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.ui.HomePage_WCMS;
-import pages.ui.CommonPage_WCMS;
-import base.utils.PublicCommon;
+import pages.ui.HeaderComponentPage;
 import tests.ui.base.BaseTest;
+import com.astm.commonFunctions.Common;
+import com.astm.commonFunctions.WCMSICommon;
 
 public class ValidateHeaderComponents_WCMSI_INT123 extends BaseTest {
-    private HomePage_WCMS homePageWCMS;
-    private CommonPage_WCMS commonPageWCMS;
+    private HeaderComponentPage headerComponentPage;
+    private Common common;
+    private WCMSICommon wcmsiCommon;
 
-    @BeforeMethod(alwaysRun = true)
-    public void setUpPages() {
-        homePageWCMS = page.getInstance(HomePage_WCMS.class);
-        commonPageWCMS = page.getInstance(CommonPage_WCMS.class);
+    @BeforeMethod
+    public void setUp() {
+        headerComponentPage = page.getInstance(HeaderComponentPage.class);
+        common = page.getInstance(Common.class);
+        wcmsiCommon = page.getInstance(WCMSICommon.class);
     }
 
-    @Test(description = "INT-123: Validate header components are visible and functional on the home page.")
-    @Description("INT-123: User should be able to see the header components successfully.")
+    @Test(description = "INT-123: Validate header components are visible and correct")
+    @Description("INT-123: User should be able to see the header components successfully")
     @Severity(SeverityLevel.NORMAL)
-    public void validateHeaderComponents_INT123() {
+    public void testValidateHeaderComponents_INT123() {
         stepNavigateToHomePage();
         stepValidateHeaderLogo();
-        stepValidateHeaderNavigationMenu();
+        stepValidateHeaderNavigationLinks();
         stepValidateHeaderSearchIcon();
-        stepValidateHeaderAccountIcon();
-        stepValidateHeaderLanguageSelector();
+        stepValidateHeaderUserProfileIcon();
+        stepValidateHeaderNotificationsIcon();
     }
 
     @Step("Navigate to Home Page")
     public void stepNavigateToHomePage() {
         try {
-            homePageWCMS.navigateToHomePage();
-            PublicCommon.reportPass("Navigated to Home Page successfully");
+            common.navigateToHomePage();
+            com.astm.commonFunctions.PublicCommon.reportPass("Navigated to Home Page successfully");
         } catch (Exception e) {
-            PublicCommon.reportFailAssert("Failed to navigate to Home Page: " + e.getMessage());
+            com.astm.commonFunctions.PublicCommon.reportFailAssert("Failed to navigate to Home Page: " + e.getMessage());
         }
     }
 
     @Step("Validate Header Logo is displayed")
     public void stepValidateHeaderLogo() {
         try {
-            Assert.assertTrue(homePageWCMS.isHeaderLogoDisplayed(), "Header logo should be visible");
-            PublicCommon.reportPass("Header logo is displayed successfully");
+            Assert.assertTrue(headerComponentPage.isHeaderLogoDisplayed(), "Header logo should be visible");
+            com.astm.commonFunctions.PublicCommon.reportPass("Header logo is displayed successfully");
         } catch (AssertionError | Exception e) {
-            PublicCommon.reportFailAssert("Header logo validation failed: " + e.getMessage());
+            com.astm.commonFunctions.PublicCommon.reportFailAssert("Header logo validation failed: " + e.getMessage());
         }
     }
 
-    @Step("Validate Header Navigation Menu is displayed")
-    public void stepValidateHeaderNavigationMenu() {
+    @Step("Validate Header Navigation Links are displayed")
+    public void stepValidateHeaderNavigationLinks() {
         try {
-            Assert.assertTrue(homePageWCMS.isHeaderNavigationMenuDisplayed(), "Header navigation menu should be visible");
-            PublicCommon.reportPass("Header navigation menu is displayed successfully");
+            Assert.assertTrue(headerComponentPage.areHeaderNavigationLinksDisplayed(), "Header navigation links should be visible");
+            com.astm.commonFunctions.PublicCommon.reportPass("Header navigation links are displayed successfully");
         } catch (AssertionError | Exception e) {
-            PublicCommon.reportFailAssert("Header navigation menu validation failed: " + e.getMessage());
+            com.astm.commonFunctions.PublicCommon.reportFailAssert("Header navigation links validation failed: " + e.getMessage());
         }
     }
 
     @Step("Validate Header Search Icon is displayed")
     public void stepValidateHeaderSearchIcon() {
         try {
-            Assert.assertTrue(homePageWCMS.isHeaderSearchIconDisplayed(), "Header search icon should be visible");
-            PublicCommon.reportPass("Header search icon is displayed successfully");
+            Assert.assertTrue(headerComponentPage.isHeaderSearchIconDisplayed(), "Header search icon should be visible");
+            com.astm.commonFunctions.PublicCommon.reportPass("Header search icon is displayed successfully");
         } catch (AssertionError | Exception e) {
-            PublicCommon.reportFailAssert("Header search icon validation failed: " + e.getMessage());
+            com.astm.commonFunctions.PublicCommon.reportFailAssert("Header search icon validation failed: " + e.getMessage());
         }
     }
 
-    @Step("Validate Header Account Icon is displayed")
-    public void stepValidateHeaderAccountIcon() {
+    @Step("Validate Header User Profile Icon is displayed")
+    public void stepValidateHeaderUserProfileIcon() {
         try {
-            Assert.assertTrue(homePageWCMS.isHeaderAccountIconDisplayed(), "Header account icon should be visible");
-            PublicCommon.reportPass("Header account icon is displayed successfully");
+            Assert.assertTrue(headerComponentPage.isHeaderUserProfileIconDisplayed(), "Header user profile icon should be visible");
+            com.astm.commonFunctions.PublicCommon.reportPass("Header user profile icon is displayed successfully");
         } catch (AssertionError | Exception e) {
-            PublicCommon.reportFailAssert("Header account icon validation failed: " + e.getMessage());
+            com.astm.commonFunctions.PublicCommon.reportFailAssert("Header user profile icon validation failed: " + e.getMessage());
         }
     }
 
-    @Step("Validate Header Language Selector is displayed")
-    public void stepValidateHeaderLanguageSelector() {
+    @Step("Validate Header Notifications Icon is displayed")
+    public void stepValidateHeaderNotificationsIcon() {
         try {
-            Assert.assertTrue(homePageWCMS.isHeaderLanguageSelectorDisplayed(), "Header language selector should be visible");
-            PublicCommon.reportPass("Header language selector is displayed successfully");
+            Assert.assertTrue(headerComponentPage.isHeaderNotificationsIconDisplayed(), "Header notifications icon should be visible");
+            com.astm.commonFunctions.PublicCommon.reportPass("Header notifications icon is displayed successfully");
         } catch (AssertionError | Exception e) {
-            PublicCommon.reportFailAssert("Header language selector validation failed: " + e.getMessage());
+            com.astm.commonFunctions.PublicCommon.reportFailAssert("Header notifications icon validation failed: " + e.getMessage());
         }
     }
 }

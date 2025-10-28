@@ -3,68 +3,75 @@
     "TestCaseID": "INT-123",
     "TestCaseName": "valiadate header components",
     "Priority": "Medium",
-    "Type": "UI",
-    "Objective": "User should be able to see the header components successfully",
+    "Type": "N/A",
+    "Objective": "No Objective specified",
     "Locators": [
       {
-        "name": "headerLogo",
-        "description": "Main site logo in header",
+        "name": "HeaderLogo",
+        "description": "ASTM logo in the header",
         "locatorType": "xpath",
-        "locatorValue": "//header//img[@alt='Site Logo']"
+        "locatorValue": "//header//img[@alt='ASTM Logo']"
       },
       {
-        "name": "mainMenu",
-        "description": "Main navigation menu",
+        "name": "MainNavigationMenu",
+        "description": "Main navigation menu in the header",
         "locatorType": "css",
-        "locatorValue": "header nav.main-menu"
+        "locatorValue": "nav.main-nav"
       },
       {
-        "name": "searchIcon",
-        "description": "Search icon in header",
+        "name": "SearchIcon",
+        "description": "Search icon in the header",
         "locatorType": "xpath",
         "locatorValue": "//header//button[contains(@class,'search')]"
       },
       {
-        "name": "loginButton",
-        "description": "Login button in header",
+        "name": "LoginButton",
+        "description": "Login button in the header",
         "locatorType": "css",
         "locatorValue": "header .login-btn"
       },
       {
-        "name": "languageSelector",
-        "description": "Language selector dropdown in header",
-        "locatorType": "xpath",
-        "locatorValue": "//header//select[@name='language']"
+        "name": "LanguageSelector",
+        "description": "Language selector dropdown in the header",
+        "locatorType": "css",
+        "locatorValue": "header .language-selector"
       }
     ],
     "EdgeCases": [
       {
-        "scenario": "Header components on mobile viewport",
+        "scenario": "Header on mobile viewport",
         "viewport": "375x667",
-        "expected": "All header components are visible or accessible via hamburger menu"
+        "expected": "Header components should collapse into a hamburger menu; logo remains visible."
       },
       {
-        "scenario": "Header components on maximum desktop viewport",
+        "scenario": "Header on minimum supported width",
+        "viewport": "320x480",
+        "expected": "Header components should be accessible via overflow/hamburger menu."
+      },
+      {
+        "scenario": "Header on maximum supported width",
+        "viewport": "2560x1440",
+        "expected": "Header components should stretch and remain aligned."
+      },
+      {
+        "scenario": "Header with user logged in",
         "viewport": "1920x1080",
-        "expected": "All header components are visible and not overlapping"
+        "expected": "Login button replaced by user profile icon."
       },
       {
-        "scenario": "Header components when user is logged in",
-        "expected": "Login button replaced by user profile icon"
-      },
-      {
-        "scenario": "Header components when language selector is changed",
-        "expected": "Header text updates to selected language"
+        "scenario": "Header with JavaScript disabled",
+        "viewport": "1920x1080",
+        "expected": "Header components should be visible but interactive elements may be disabled."
       }
     ],
     "BoundaryValues": [
       {
-        "scenario": "Header with minimum menu items",
-        "menuItems": 1
+        "scenario": "Header with maximum number of menu items",
+        "menuItems": 10
       },
       {
-        "scenario": "Header with maximum menu items",
-        "menuItems": 10
+        "scenario": "Header with minimum number of menu items",
+        "menuItems": 1
       }
     ]
   }
