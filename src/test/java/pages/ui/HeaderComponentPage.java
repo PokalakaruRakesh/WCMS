@@ -88,4 +88,48 @@ public class HeaderComponentPage extends BasePage {
     }
 
     // Additional placeholder methods for header interactions can be added here as needed
+
+    // Header logo locator and validation
+    private By headerLogo = By.id("PLACEHOLDER_header_logo"); // TODO: Replace with actual locator
+    public boolean isHeaderLogoDisplayed() {
+        waitForElementPresent(headerLogo);
+        return getElement(headerLogo).isDisplayed();
+    }
+
+    // Navigation menu locator and validation
+    private By navigationMenuHeader = By.id("PLACEHOLDER_navigation_menu"); // TODO: Replace with actual locator
+    public boolean isNavigationMenuHeaderDisplayed() {
+        waitForElementPresent(navigationMenuHeader);
+        return getElement(navigationMenuHeader).isDisplayed();
+    }
+
+    // Search bar locator and validation
+    private By searchBar = By.id("PLACEHOLDER_search_bar"); // TODO: Replace with actual locator
+    public boolean isSearchBarDisplayed() {
+        waitForElementPresent(searchBar);
+        return getElement(searchBar).isDisplayed();
+    }
+
+    // User profile icon locator and validation
+    private By userProfileIconHeader = By.id("PLACEHOLDER_user_profile_icon"); // TODO: Replace with actual locator
+    public boolean isUserProfileIconHeaderDisplayed() {
+        waitForElementPresent(userProfileIconHeader);
+        return getElement(userProfileIconHeader).isDisplayed();
+    }
+
+    // Notification bell locator and validation
+    private By notificationBell = By.id("PLACEHOLDER_notification_bell"); // TODO: Replace with actual locator
+    public boolean isNotificationBellDisplayed() {
+        waitForElementPresent(notificationBell);
+        return getElement(notificationBell).isDisplayed();
+    }
+
+    // Generic method to validate all header components are displayed
+    public boolean areAllHeaderComponentsDisplayed() {
+        return isHeaderLogoDisplayed() &&
+               isNavigationMenuHeaderDisplayed() &&
+               isSearchBarDisplayed() &&
+               isUserProfileIconHeaderDisplayed() &&
+               isNotificationBellDisplayed();
+    }
 }
