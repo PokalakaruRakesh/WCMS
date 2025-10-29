@@ -3,100 +3,113 @@ package pages.ui;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import java.util.List;
+import base.utils.ReusableMethods;
+import base.utils.WaitStatementUtils;
+import com.astm.commonFunctions.WCMSICommon;
+import org.testng.Assert;
 
 public class FooterPage_WCMS extends BasePage {
-
-    // Example locators for footer components
-    // TODO: Replace with actual locators
-    private By footerContainer = By.xpath("//footer"); // TODO: Replace with actual locator
-    private By footerLinks = By.xpath("//footer//a"); // TODO: Replace with actual locator
-    private By footerLogo = By.xpath("//footer//img[contains(@class, 'footer-logo')]"); // TODO: Replace with actual locator
-    private By footerSocialIcons = By.xpath("//footer//a[contains(@class, 'social-icon')]"); // TODO: Replace with actual locator
-    private By footerCopyright = By.xpath("//footer//*[contains(text(),'Copyright')]"); // TODO: Replace with actual locator
 
     public FooterPage_WCMS(WebDriver driver) {
         super(driver);
     }
 
-    /**
-     * Checks if the footer container is displayed
-     */
+    // Placeholder locators for footer components (replace with actual locators)
+    private By footerSection = By.xpath("//footer"); // TODO: Replace with actual locator if more specific
+    private By footerCopyright = By.xpath("//footer//*[contains(text(),'Copyright')]"); // TODO: Replace with actual locator
+    private By footerPrivacyPolicyLink = By.xpath("//footer//a[contains(text(),'Privacy Policy')]"); // TODO: Replace with actual locator
+    private By footerTermsOfUseLink = By.xpath("//footer//a[contains(text(),'Terms of Use')]"); // TODO: Replace with actual locator
+    private By footerContactUsLink = By.xpath("//footer//a[contains(text(),'Contact Us')]"); // TODO: Replace with actual locator
+    
+    // Example: Validate footer section is displayed
     public boolean isFooterDisplayed() {
-        waitForElementPresent(footerContainer);
-        return getElement(footerContainer).isDisplayed();
-    }
-
-    /**
-     * Returns the list of footer links
-     */
-    public List<WebElement> getFooterLinks() {
-        waitForElementPresent(footerContainer);
-        return getElements(footerLinks);
-    }
-
-    /**
-     * Checks if the footer logo is displayed
-     */
-    public boolean isFooterLogoDisplayed() {
-        waitForElementPresent(footerLogo);
-        return getElement(footerLogo).isDisplayed();
-    }
-
-    /**
-     * Returns the list of social media icons in the footer
-     */
-    public List<WebElement> getFooterSocialIcons() {
-        waitForElementPresent(footerSocialIcons);
-        return getElements(footerSocialIcons);
-    }
-
-    /**
-     * Gets the copyright text from the footer
-     */
-    public String getFooterCopyrightText() {
-        waitForElementPresent(footerCopyright);
-        return getElement(footerCopyright).getText();
-    }
-
-    /**
-     * Clicks a footer link by its visible text
-     * @param linkText the visible text of the link
-     */
-    public void clickFooterLinkByText(String linkText) {
-        By linkLocator = By.xpath("//footer//a[normalize-space(text())='" + linkText + "']");
-        waitForElementPresent(linkLocator);
-        clickOnMethod(linkLocator);
-    }
-
-    /**
-     * Checks if a specific footer link is present
-     * @param linkText the visible text of the link
-     * @return true if present, false otherwise
-     */
-    public boolean isFooterLinkPresent(String linkText) {
-        By linkLocator = By.xpath("//footer//a[normalize-space(text())='" + linkText + "']");
         try {
-            waitForElementPresent(linkLocator);
-            return getElement(linkLocator).isDisplayed();
+            waitForElementPresent(footerSection);
+            return getElement(footerSection).isDisplayed();
         } catch (Exception e) {
             return false;
         }
     }
 
-    /**
-     * Checks if a specific social icon is present by aria-label or title
-     * @param socialName the aria-label or title of the social icon (e.g., 'Twitter', 'LinkedIn')
-     * @return true if present, false otherwise
-     */
-    public boolean isFooterSocialIconPresent(String socialName) {
-        By iconLocator = By.xpath("//footer//a[contains(@aria-label, '" + socialName + "') or contains(@title, '" + socialName + "')]");
+    // Example: Validate copyright text is present
+    public boolean isCopyrightDisplayed() {
         try {
-            waitForElementPresent(iconLocator);
-            return getElement(iconLocator).isDisplayed();
+            waitForElementPresent(footerCopyright);
+            return getElement(footerCopyright).isDisplayed();
         } catch (Exception e) {
             return false;
         }
+    }
+
+    // Example: Validate Privacy Policy link is present and clickable
+    public boolean isPrivacyPolicyLinkDisplayed() {
+        try {
+            waitForElementPresent(footerPrivacyPolicyLink);
+            return getElement(footerPrivacyPolicyLink).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void clickPrivacyPolicyLink() {
+        try {
+            ReusableMethods.scrollIntoView(getElement(footerPrivacyPolicyLink), driver);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(footerPrivacyPolicyLink));
+            getElement(footerPrivacyPolicyLink).click();
+            WCMSICommon.waitForSec(2);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Example: Validate Terms of Use link is present and clickable
+    public boolean isTermsOfUseLinkDisplayed() {
+        try {
+            waitForElementPresent(footerTermsOfUseLink);
+            return getElement(footerTermsOfUseLink).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void clickTermsOfUseLink() {
+        try {
+            ReusableMethods.scrollIntoView(getElement(footerTermsOfUseLink), driver);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(footerTermsOfUseLink));
+            getElement(footerTermsOfUseLink).click();
+            WCMSICommon.waitForSec(2);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Example: Validate Contact Us link is present and clickable
+    public boolean isContactUsLinkDisplayed() {
+        try {
+            waitForElementPresent(footerContactUsLink);
+            return getElement(footerContactUsLink).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void clickContactUsLink() {
+        try {
+            ReusableMethods.scrollIntoView(getElement(footerContactUsLink), driver);
+            WaitStatementUtils.waitForElementToBeClickable(driver, getElement(footerContactUsLink));
+            getElement(footerContactUsLink).click();
+            WCMSICommon.waitForSec(2);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Example: Validate all footer components are visible
+    public void validateAllFooterComponentsVisible() {
+        Assert.assertTrue(isFooterDisplayed(), "Footer section is not displayed");
+        Assert.assertTrue(isCopyrightDisplayed(), "Copyright is not displayed in footer");
+        Assert.assertTrue(isPrivacyPolicyLinkDisplayed(), "Privacy Policy link is not displayed in footer");
+        Assert.assertTrue(isTermsOfUseLinkDisplayed(), "Terms of Use link is not displayed in footer");
+        Assert.assertTrue(isContactUsLinkDisplayed(), "Contact Us link is not displayed in footer");
     }
 }

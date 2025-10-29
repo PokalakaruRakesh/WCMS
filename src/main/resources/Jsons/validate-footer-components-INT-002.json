@@ -1,0 +1,73 @@
+// Test Data for INT-002: valiadate Footer components
+// This file contains test data for validating the presence and content of footer components on the WCMS application.
+{
+  "INT-002": {
+    "TestCaseID": "INT-002",
+    "TestCaseName": "valiadate Footer components",
+    "Priority": "Medium",
+    "ExpectedResult": "User should be able to see the footer components successfully",
+    "Locators": [
+      {
+        "name": "FooterContainer",
+        "type": "xpath",
+        "value": "//footer"
+      },
+      {
+        "name": "FooterLink1",
+        "type": "xpath",
+        "value": "//footer//a[1]"
+      },
+      {
+        "name": "FooterLink2",
+        "type": "xpath",
+        "value": "//footer//a[2]"
+      },
+      {
+        "name": "FooterText1",
+        "type": "xpath",
+        "value": "//footer//*[contains(text(),'©')]"
+      },
+      {
+        "name": "FooterSocialIcons",
+        "type": "xpath",
+        "value": "//footer//ul[contains(@class,'social-icons')]"
+      }
+    ],
+    "FooterComponents": [
+      {
+        "component": "Copyright",
+        "expectedText": "© ASTM International"
+      },
+      {
+        "component": "PrivacyPolicyLink",
+        "expectedText": "Privacy Policy"
+      },
+      {
+        "component": "TermsOfUseLink",
+        "expectedText": "Terms of Use"
+      },
+      {
+        "component": "ContactUsLink",
+        "expectedText": "Contact Us"
+      },
+      {
+        "component": "SocialIcons",
+        "expectedIcons": ["facebook", "twitter", "linkedin", "youtube"]
+      }
+    ],
+    "EdgeCases": [
+      {
+        "description": "Footer is not visible on mobile viewport",
+        "viewport": "375x667"
+      },
+      {
+        "description": "Footer links open in new tab",
+        "check": "target=_blank"
+      },
+      {
+        "description": "All footer links are accessible (tab order)",
+        "check": "tabindex"
+      }
+    ]
+  }
+}
