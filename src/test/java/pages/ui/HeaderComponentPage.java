@@ -4,88 +4,87 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import base.utils.WaitStatementUtils;
-import base.utils.ReusableMethods;
-import java.time.Duration;
+import java.util.List;
 
-/**
- * Page Object for validating header components as per INT-123.
- * Follows existing repository patterns (see HomePage_WCMS, BasePage).
- */
 public class HeaderComponentPage extends BasePage {
 
-    // Example header locators (replace with actual locators as needed)
-    private By logo = By.xpath("//header//img[contains(@alt, 'Logo')]"); // TODO: Replace with actual locator
-    private By navigationMenu = By.xpath("//header//nav"); // TODO: Replace with actual locator
-    private By searchIcon = By.xpath("//header//*[contains(@class, 'search-icon')]"); // TODO: Replace with actual locator
-    private By userProfileIcon = By.xpath("//header//*[contains(@class, 'user-profile')]"); // TODO: Replace with actual locator
-    private By notificationsIcon = By.xpath("//header//*[contains(@class, 'notifications')]"); // TODO: Replace with actual locator
+    // Placeholder locators for header components
+    private By logo = By.id("PLACEHOLDER_header_logo"); // TODO: Replace with actual locator
+    private By navigationMenu = By.id("PLACEHOLDER_header_navigation_menu"); // TODO: Replace with actual locator
+    private By searchIcon = By.id("PLACEHOLDER_header_search_icon"); // TODO: Replace with actual locator
+    private By loginButton = By.id("PLACEHOLDER_header_login_button"); // TODO: Replace with actual locator
+    private By languageSelector = By.id("PLACEHOLDER_header_language_selector"); // TODO: Replace with actual locator
 
     public HeaderComponentPage(WebDriver driver) {
         super(driver);
     }
 
-    /**
-     * Checks if the logo is displayed in the header.
-     */
     public boolean isLogoDisplayed() {
         waitForElementPresent(logo);
         return getElement(logo).isDisplayed();
     }
 
-    /**
-     * Checks if the navigation menu is displayed in the header.
-     */
     public boolean isNavigationMenuDisplayed() {
         waitForElementPresent(navigationMenu);
         return getElement(navigationMenu).isDisplayed();
     }
 
-    /**
-     * Checks if the search icon is displayed in the header.
-     */
     public boolean isSearchIconDisplayed() {
         waitForElementPresent(searchIcon);
         return getElement(searchIcon).isDisplayed();
     }
 
-    /**
-     * Checks if the user profile icon is displayed in the header.
-     */
-    public boolean isUserProfileIconDisplayed() {
-        waitForElementPresent(userProfileIcon);
-        return getElement(userProfileIcon).isDisplayed();
+    public boolean isLoginButtonDisplayed() {
+        waitForElementPresent(loginButton);
+        return getElement(loginButton).isDisplayed();
     }
 
-    /**
-     * Checks if the notifications icon is displayed in the header.
-     */
-    public boolean isNotificationsIconDisplayed() {
-        waitForElementPresent(notificationsIcon);
-        return getElement(notificationsIcon).isDisplayed();
+    public boolean isLanguageSelectorDisplayed() {
+        waitForElementPresent(languageSelector);
+        return getElement(languageSelector).isDisplayed();
     }
 
-    /**
-     * Clicks on the search icon in the header.
-     */
+    public void clickLogo() {
+        clickOnMethod(logo);
+    }
+
+    public void clickNavigationMenu() {
+        clickOnMethod(navigationMenu);
+    }
+
     public void clickSearchIcon() {
         clickOnMethod(searchIcon);
     }
 
-    /**
-     * Clicks on the user profile icon in the header.
-     */
-    public void clickUserProfileIcon() {
-        clickOnMethod(userProfileIcon);
+    public void clickLoginButton() {
+        clickOnMethod(loginButton);
     }
 
-    /**
-     * Clicks on the notifications icon in the header.
-     */
-    public void clickNotificationsIcon() {
-        clickOnMethod(notificationsIcon);
+    public void selectLanguage(String language) {
+        clickOnMethod(languageSelector);
+        // TODO: Implement language selection dropdown logic
+        // Example placeholder:
+        By languageOption = By.xpath("//li[contains(text(),'" + language + "')]"); // TODO: Replace with actual locator
+        waitForElementPresent(languageOption);
+        clickOnMethod(languageOption);
     }
 
-    // Additional placeholder methods for header interactions can be added here as needed
+    public List<WebElement> getAllHeaderLinks() {
+        By headerLinks = By.cssSelector("PLACEHOLDER_header_links"); // TODO: Replace with actual locator
+        waitForElementPresent(headerLinks);
+        return getElements(headerLinks);
+    }
+
+    public String getHeaderLinkText(int index) {
+        List<WebElement> links = getAllHeaderLinks();
+        if (links != null && links.size() > index) {
+            return links.get(index).getText();
+        }
+        return null;
+    }
+
+    public boolean isHeaderComponentDisplayed(By componentLocator) {
+        waitForElementPresent(componentLocator);
+        return getElement(componentLocator).isDisplayed();
+    }
 }
