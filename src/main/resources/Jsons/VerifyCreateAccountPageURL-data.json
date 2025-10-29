@@ -1,0 +1,53 @@
+{
+  "VerifyCreateAccountPageURL": {
+    "TestCaseID": "INT-003",
+    "TestCaseName": "Verify Create Account Page URL",
+    "Priority": "Medium",
+    "ExpectedURL": "https://store.astm.org/customer/account/create/?acc_class=b2c&acc_type=b2c",
+    "EdgeCases": [
+      {
+        "description": "Trailing slash omitted",
+        "url": "https://store.astm.org/customer/account/create?acc_class=b2c&acc_type=b2c"
+      },
+      {
+        "description": "Query parameters in different order",
+        "url": "https://store.astm.org/customer/account/create/?acc_type=b2c&acc_class=b2c"
+      },
+      {
+        "description": "Extra query parameter",
+        "url": "https://store.astm.org/customer/account/create/?acc_class=b2c&acc_type=b2c&extra=1"
+      },
+      {
+        "description": "HTTP instead of HTTPS",
+        "url": "http://store.astm.org/customer/account/create/?acc_class=b2c&acc_type=b2c"
+      }
+    ],
+    "Locators": [
+      {
+        "name": "CreateAccountButton",
+        "type": "xpath",
+        "value": "//a[contains(@href, '/customer/account/create')]"
+      },
+      {
+        "name": "AccountMenu",
+        "type": "css",
+        "value": ".account-menu"
+      },
+      {
+        "name": "HeaderTitle",
+        "type": "xpath",
+        "value": "//h1[contains(text(), 'Create Account')]"
+      },
+      {
+        "name": "Form",
+        "type": "css",
+        "value": "form#create-account-form"
+      },
+      {
+        "name": "SubmitButton",
+        "type": "css",
+        "value": "button[type='submit']"
+      }
+    ]
+  }
+}
