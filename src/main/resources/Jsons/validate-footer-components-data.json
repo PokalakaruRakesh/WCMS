@@ -1,0 +1,64 @@
+// Test data for INT-001: valiadate Footer components
+// This file provides footer component metadata and locator test data for UI validation.
+{
+  "INT-001": {
+    "TestCaseID": "INT-001",
+    "TestCaseName": "valiadate Footer components",
+    "Priority": "Medium",
+    "ExpectedResult": "User should be able to see the footer components successfully"
+  },
+  "FooterComponents": [
+    {
+      "componentName": "Footer1",
+      "locator": "//footer//div[@class='footer-section'][1]",
+      "description": "First footer section - typically contains company info or logo.",
+      "edgeCases": [
+        "Footer1 missing",
+        "Footer1 not visible",
+        "Footer1 text truncated"
+      ]
+    },
+    {
+      "componentName": "Footer2",
+      "locator": "//footer//div[@class='footer-section'][2]",
+      "description": "Second footer section - may contain navigation links.",
+      "edgeCases": [
+        "Footer2 links broken",
+        "Footer2 not rendered on mobile view"
+      ]
+    },
+    {
+      "componentName": "Footer3",
+      "locator": "//footer//div[@class='footer-section'][3]",
+      "description": "Third footer section - may have social icons or newsletter.",
+      "edgeCases": [
+        "Footer3 icons missing",
+        "Footer3 overlaps with other content"
+      ]
+    },
+    {
+      "componentName": "Footer4",
+      "locator": "//footer//div[@class='footer-section'][4]",
+      "description": "Fourth footer section - legal or copyright info.",
+      "edgeCases": [
+        "Footer4 year not current",
+        "Footer4 not visible on small screens"
+      ]
+    },
+    {
+      "componentName": "Footer5",
+      "locator": "//footer//div[@class='footer-section'][5]",
+      "description": "Fifth footer section - extra links or disclaimers.",
+      "edgeCases": [
+        "Footer5 missing",
+        "Footer5 contains incorrect links"
+      ]
+    }
+  ],
+  "BoundaryValues": {
+    "minFooterSections": 1,
+    "maxFooterSections": 5,
+    "expectedFooterSections": 5
+  },
+  "Notes": "This test data file is designed to support validation of all visible footer components as per INT-001. Locators are examples and should be updated to match the actual application DOM structure. Edge cases included for negative and boundary testing."
+}
