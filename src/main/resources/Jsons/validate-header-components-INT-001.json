@@ -1,0 +1,53 @@
+{
+  "INT-001": {
+    "TestCaseID": "INT-001",
+    "TestCaseName": "valiadate header components",
+    "Priority": "Medium",
+    "ExpectedResult": "User should be able to see the header components successfully",
+    "Locators": [
+      {
+        "name": "HeaderLogo",
+        "type": "xpath",
+        "value": "//header//img[@alt='Logo']"
+      },
+      {
+        "name": "MainMenu",
+        "type": "css",
+        "value": "nav.main-menu"
+      },
+      {
+        "name": "SearchBar",
+        "type": "id",
+        "value": "search-header-input"
+      },
+      {
+        "name": "LoginButton",
+        "type": "css",
+        "value": ".header-login-btn"
+      },
+      {
+        "name": "LanguageSelector",
+        "type": "xpath",
+        "value": "//header//select[@name='language']"
+      }
+    ],
+    "EdgeCases": [
+      {
+        "description": "Header components not visible for unauthenticated user",
+        "expected": "All header components should be visible regardless of authentication state"
+      },
+      {
+        "description": "Header components on mobile viewport",
+        "expected": "Header components should be visible and responsive on mobile devices"
+      },
+      {
+        "description": "Header components after page refresh",
+        "expected": "Header components should persist and remain visible after refresh"
+      },
+      {
+        "description": "Header components with slow network",
+        "expected": "Header components should load and display correctly even under slow network conditions"
+      }
+    ]
+  }
+}
