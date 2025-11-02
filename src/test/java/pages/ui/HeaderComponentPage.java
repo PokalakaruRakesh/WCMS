@@ -87,4 +87,128 @@ public class HeaderComponentPage extends BasePage {
         waitForElementPresent(componentLocator);
         return getElement(componentLocator).isDisplayed();
     }
+
+    // Locators for header components based on provided locators and actual page structure
+    private By astmLogo = By.className("astm-logo");
+    private By navigationMenuNew = By.xpath("<PLACEHOLDER>"); // TODO: Replace with actual locator for navigation menu
+    private By searchIconNew = By.xpath("<PLACEHOLDER>"); // TODO: Replace with actual locator for search icon
+    private By userProfileIcon = By.xpath("<PLACEHOLDER>"); // TODO: Replace with actual locator for user profile icon
+    private By notificationsIcon = By.xpath("<PLACEHOLDER>"); // TODO: Replace with actual locator for notifications icon
+
+    /**
+     * Validates that all main header components are displayed after login.
+     * This includes ASTM logo, navigation menu, search icon, user profile icon, and notifications icon.
+     *
+     * Usage: Call after successful login to verify header is rendered.
+     */
+    public boolean areHeaderComponentsDisplayed() {
+        try {
+            waitForElementPresent(astmLogo);
+            boolean logoDisplayed = getElement(astmLogo).isDisplayed();
+
+            // Navigation menu placeholder
+            boolean navigationMenuDisplayed = true;
+            try {
+                waitForElementPresent(navigationMenuNew);
+                navigationMenuDisplayed = getElement(navigationMenuNew).isDisplayed();
+            } catch (Exception e) {
+                navigationMenuDisplayed = false; // If not found, mark as not displayed
+            }
+
+            // Search icon placeholder
+            boolean searchIconDisplayed = true;
+            try {
+                waitForElementPresent(searchIconNew);
+                searchIconDisplayed = getElement(searchIconNew).isDisplayed();
+            } catch (Exception e) {
+                searchIconDisplayed = false;
+            }
+
+            // User profile icon placeholder
+            boolean userProfileDisplayed = true;
+            try {
+                waitForElementPresent(userProfileIcon);
+                userProfileDisplayed = getElement(userProfileIcon).isDisplayed();
+            } catch (Exception e) {
+                userProfileDisplayed = false;
+            }
+
+            // Notifications icon placeholder
+            boolean notificationsDisplayed = true;
+            try {
+                waitForElementPresent(notificationsIcon);
+                notificationsDisplayed = getElement(notificationsIcon).isDisplayed();
+            } catch (Exception e) {
+                notificationsDisplayed = false;
+            }
+
+            return logoDisplayed && navigationMenuDisplayed && searchIconDisplayed && userProfileDisplayed && notificationsDisplayed;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    /**
+     * Returns true if the ASTM logo is displayed in the header.
+     */
+    public boolean isAstmLogoDisplayed() {
+        try {
+            waitForElementPresent(astmLogo);
+            return getElement(astmLogo).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    /**
+     * Returns true if the navigation menu is displayed in the header.
+     * Placeholder: Update locator when actual navigation menu locator is known.
+     */
+    public boolean isNavigationMenuNewDisplayed() {
+        try {
+            waitForElementPresent(navigationMenuNew);
+            return getElement(navigationMenuNew).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    /**
+     * Returns true if the search icon is displayed in the header.
+     * Placeholder: Update locator when actual search icon locator is known.
+     */
+    public boolean isSearchIconNewDisplayed() {
+        try {
+            waitForElementPresent(searchIconNew);
+            return getElement(searchIconNew).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    /**
+     * Returns true if the user profile icon is displayed in the header.
+     * Placeholder: Update locator when actual user profile icon locator is known.
+     */
+    public boolean isUserProfileIconDisplayed() {
+        try {
+            waitForElementPresent(userProfileIcon);
+            return getElement(userProfileIcon).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    /**
+     * Returns true if the notifications icon is displayed in the header.
+     * Placeholder: Update locator when actual notifications icon locator is known.
+     */
+    public boolean isNotificationsIconDisplayed() {
+        try {
+            waitForElementPresent(notificationsIcon);
+            return getElement(notificationsIcon).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }

@@ -3,68 +3,71 @@
     "TestCaseID": "INT-123",
     "TestCaseName": "valiadate header components",
     "Priority": "Medium",
-    "Type": "UI",
-    "Objective": "User should be able to see the header components successfully",
+    "Type": "No Type specified",
+    "Objective": "No Objective specified",
+    "ExpectedResult": "User should be able to see the header components successfully",
     "Locators": [
       {
-        "name": "headerLogo",
-        "description": "Main site logo in header",
+        "name": "Logo",
+        "description": "ASTM logo in the header, links to home page",
         "locatorType": "xpath",
-        "locatorValue": "//header//img[@alt='Site Logo']"
+        "locatorValue": "//header//img[@alt='ASTM Logo']"
       },
       {
-        "name": "mainMenu",
-        "description": "Main navigation menu",
+        "name": "Main Navigation",
+        "description": "Main navigation menu in the header",
         "locatorType": "css",
-        "locatorValue": "header nav.main-menu"
+        "locatorValue": "header nav.main-navigation"
       },
       {
-        "name": "searchIcon",
-        "description": "Search icon in header",
-        "locatorType": "xpath",
-        "locatorValue": "//header//button[contains(@class,'search')]"
-      },
-      {
-        "name": "loginButton",
-        "description": "Login button in header",
+        "name": "Search Icon",
+        "description": "Search icon/button in the header",
         "locatorType": "css",
-        "locatorValue": "header .login-btn"
+        "locatorValue": "header .header-search-icon"
       },
       {
-        "name": "languageSelector",
-        "description": "Language selector dropdown in header",
+        "name": "Login Button",
+        "description": "Login button in the header",
         "locatorType": "xpath",
-        "locatorValue": "//header//select[@name='language']"
+        "locatorValue": "//header//a[contains(@href, 'login')]"
+      },
+      {
+        "name": "Language Selector",
+        "description": "Language selector dropdown in the header",
+        "locatorType": "css",
+        "locatorValue": "header .language-selector"
       }
     ],
     "EdgeCases": [
       {
-        "scenario": "Header components on mobile viewport",
+        "scenario": "Header on mobile viewport",
         "viewport": "375x667",
-        "expected": "All header components are visible or accessible via hamburger menu"
+        "expected": "Header collapses into hamburger menu, all components accessible via menu"
       },
       {
-        "scenario": "Header components on maximum desktop viewport",
+        "scenario": "Header on large desktop viewport",
         "viewport": "1920x1080",
-        "expected": "All header components are visible and not overlapping"
+        "expected": "Header displays all components inline, no overflow"
       },
       {
-        "scenario": "Header components when user is logged in",
-        "expected": "Login button replaced by user profile icon"
+        "scenario": "Header with user logged in",
+        "viewport": "default",
+        "expected": "Login button replaced with user avatar or profile link"
       },
       {
-        "scenario": "Header components when language selector is changed",
-        "expected": "Header text updates to selected language"
+        "scenario": "Header with missing logo image",
+        "viewport": "default",
+        "expected": "Logo alt text is displayed, layout is not broken"
       }
     ],
     "BoundaryValues": [
       {
-        "scenario": "Header with minimum menu items",
-        "menuItems": 1
+        "scenario": "Header with maximum allowed menu items",
+        "menuItems": 10
       },
       {
-        "scenario": "Header with maximum menu items",
-        "menuItems": 10
+        "scenario": "Header with minimum allowed menu items",
+        "menuItems": 1
       }
     ]
   }
