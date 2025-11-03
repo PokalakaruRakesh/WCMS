@@ -1,0 +1,153 @@
+{
+  "INT-999": {
+    "TestCaseID": "INT-999",
+    "TestCaseName": "Create account",
+    "Priority": "Medium",
+    "Objective": "No Objective specified",
+    "ExpectedResult": "Account should be created successfully and confirmation message displayed",
+    "Locators": [
+      {
+        "name": "First Name Field",
+        "description": "Input field for user's first name",
+        "locatorType": "id",
+        "locatorValue": "firstName"
+      },
+      {
+        "name": "Last Name Field",
+        "description": "Input field for user's last name",
+        "locatorType": "id",
+        "locatorValue": "lastName"
+      },
+      {
+        "name": "Email Field",
+        "description": "Input field for user's email address",
+        "locatorType": "id",
+        "locatorValue": "email"
+      },
+      {
+        "name": "Password Field",
+        "description": "Input field for user's password",
+        "locatorType": "id",
+        "locatorValue": "password"
+      },
+      {
+        "name": "Create Account Button",
+        "description": "Button to submit the create account form",
+        "locatorType": "id",
+        "locatorValue": "createAccountBtn"
+      }
+    ],
+    "TestData": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "password": "Password123!",
+        "description": "Valid data - standard account creation"
+      },
+      {
+        "firstName": "",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "password": "Password123!",
+        "description": "Edge case - missing first name"
+      },
+      {
+        "firstName": "John",
+        "lastName": "",
+        "email": "john.doe@example.com",
+        "password": "Password123!",
+        "description": "Edge case - missing last name"
+      },
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "",
+        "password": "Password123!",
+        "description": "Edge case - missing email"
+      },
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "invalid-email",
+        "password": "Password123!",
+        "description": "Edge case - invalid email format"
+      },
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "password": "",
+        "description": "Edge case - missing password"
+      },
+      {
+        "firstName": "J",
+        "lastName": "D",
+        "email": "j.d@example.com",
+        "password": "P1!",
+        "description": "Boundary values - minimum length for all fields"
+      },
+      {
+        "firstName": "JohnJohnJohnJohnJohnJohnJohnJohnJohnJohn",
+        "lastName": "DoeDoeDoeDoeDoeDoeDoeDoeDoeDoe",
+        "email": "john.doe.longemailaddress@example.com",
+        "password": "VeryLongPassword1234567890!",
+        "description": "Boundary values - maximum length for all fields"
+      },
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "password": "password",
+        "description": "Edge case - password missing uppercase, digit, and special character"
+      },
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "password": "PASSWORD123!",
+        "description": "Edge case - password missing lowercase"
+      }
+    ],
+    "EdgeCases": [
+      {
+        "description": "Attempt to create account with already registered email",
+        "expected": "Error message displayed: 'Email already exists'"
+      },
+      {
+        "description": "Attempt to create account with invalid password (too short)",
+        "expected": "Error message displayed: 'Password must be at least 8 characters'"
+      },
+      {
+        "description": "Attempt to create account with all fields empty",
+        "expected": "Error messages displayed for all required fields"
+      },
+      {
+        "description": "Attempt to create account with XSS payload in first name",
+        "expected": "Input is sanitized, no script execution, error or warning displayed"
+      }
+    ],
+    "BoundaryValues": [
+      {
+        "field": "firstName",
+        "minLength": 1,
+        "maxLength": 50
+      },
+      {
+        "field": "lastName",
+        "minLength": 1,
+        "maxLength": 50
+      },
+      {
+        "field": "email",
+        "minLength": 5,
+        "maxLength": 100
+      },
+      {
+        "field": "password",
+        "minLength": 8,
+        "maxLength": 30
+      }
+    ]
+  }
+}
