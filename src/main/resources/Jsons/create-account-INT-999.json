@@ -1,0 +1,121 @@
+{
+  "INT-999": {
+    "TestCaseID": "INT-999",
+    "TestCaseName": "Create account",
+    "Priority": "Medium",
+    "Objective": "No Objective specified",
+    "ExpectedResult": "Account should be created successfully and confirmation message displayed",
+    "Locators": [
+      {
+        "name": "firstNameField",
+        "description": "Input field for user's first name",
+        "locatorType": "id",
+        "locatorValue": "firstName"
+      },
+      {
+        "name": "lastNameField",
+        "description": "Input field for user's last name",
+        "locatorType": "id",
+        "locatorValue": "lastName"
+      },
+      {
+        "name": "emailField",
+        "description": "Input field for user's email address",
+        "locatorType": "id",
+        "locatorValue": "email"
+      },
+      {
+        "name": "passwordField",
+        "description": "Input field for user's password",
+        "locatorType": "id",
+        "locatorValue": "password"
+      },
+      {
+        "name": "submitButton",
+        "description": "Button to submit the create account form",
+        "locatorType": "id",
+        "locatorValue": "createAccountBtn"
+      }
+    ],
+    "TestData": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "password": "Password123!",
+        "description": "Valid data - standard account creation"
+      },
+      {
+        "firstName": "A",
+        "lastName": "B",
+        "email": "a.b@example.com",
+        "password": "A1!a1!a1!",
+        "description": "Boundary value - minimum allowed length for names"
+      },
+      {
+        "firstName": "VeryLongFirstNameVeryLongFirstNameVeryLongFirstName",
+        "lastName": "VeryLongLastNameVeryLongLastNameVeryLongLastName",
+        "email": "long.name@example.com",
+        "password": "LongPassword123!",
+        "description": "Boundary value - maximum allowed length for names"
+      },
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "invalid-email",
+        "password": "Password123!",
+        "description": "Edge case - invalid email format"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "email": "jane.smith@example.com",
+        "password": "short",
+        "description": "Edge case - password too short"
+      },
+      {
+        "firstName": "",
+        "lastName": "Doe",
+        "email": "john.doe2@example.com",
+        "password": "Password123!",
+        "description": "Edge case - missing first name"
+      },
+      {
+        "firstName": "John",
+        "lastName": "",
+        "email": "john.doe3@example.com",
+        "password": "Password123!",
+        "description": "Edge case - missing last name"
+      },
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "password": "Password123!",
+        "description": "Edge case - duplicate email (already registered)"
+      }
+    ],
+    "EdgeCases": [
+      {
+        "description": "Attempt to create account with existing email",
+        "expected": "Error message indicating email already exists"
+      },
+      {
+        "description": "Attempt to create account with invalid email format",
+        "expected": "Validation error for email format"
+      },
+      {
+        "description": "Attempt to create account with missing required fields",
+        "expected": "Validation error for required fields"
+      },
+      {
+        "description": "Attempt to create account with password not meeting complexity requirements",
+        "expected": "Validation error for password complexity"
+      },
+      {
+        "description": "Boundary value - minimum and maximum allowed field lengths",
+        "expected": "Account creation should succeed if within limits, fail otherwise"
+      }
+    ]
+  }
+}
