@@ -1,0 +1,132 @@
+{
+  "INT-999": {
+    "TestCaseID": "INT-999",
+    "TestCaseName": "Create account",
+    "Priority": "Medium",
+    "Objective": "No Objective specified",
+    "ExpectedResult": "Account should be created successfully and confirmation message displayed",
+    "Locators": [
+      {
+        "name": "firstNameField",
+        "description": "Input field for user's first name",
+        "locatorType": "id",
+        "locatorValue": "firstName"
+      },
+      {
+        "name": "lastNameField",
+        "description": "Input field for user's last name",
+        "locatorType": "id",
+        "locatorValue": "lastName"
+      },
+      {
+        "name": "emailField",
+        "description": "Input field for user's email address",
+        "locatorType": "id",
+        "locatorValue": "email"
+      },
+      {
+        "name": "passwordField",
+        "description": "Input field for user's password",
+        "locatorType": "id",
+        "locatorValue": "password"
+      },
+      {
+        "name": "createAccountButton",
+        "description": "Button to submit account creation form",
+        "locatorType": "id",
+        "locatorValue": "createAccountBtn"
+      }
+    ],
+    "TestData": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe+normal@example.com",
+        "password": "Password123!",
+        "description": "Valid account creation data"
+      },
+      {
+        "firstName": "A",
+        "lastName": "B",
+        "email": "a.b@example.com",
+        "password": "P@1",
+        "description": "Minimum boundary values for fields"
+      },
+      {
+        "firstName": "",
+        "lastName": "Smith",
+        "email": "smith@example.com",
+        "password": "Password123!",
+        "description": "Missing first name (edge case)"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "",
+        "email": "jane@example.com",
+        "password": "Password123!",
+        "description": "Missing last name (edge case)"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "invalid-email",
+        "password": "Password123!",
+        "description": "Invalid email format (edge case)"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane.doe@example.com",
+        "password": "short",
+        "description": "Password too short (boundary value)"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane.doe@example.com",
+        "password": "averyveryveryveryveryveryveryveryveryveryveryveryveryveryveryverylongpassword123!",
+        "description": "Password maximum length (boundary value)"
+      },
+      {
+        "firstName": "!@#$%^&*()_+|~",
+        "lastName": "<script>alert(1)</script>",
+        "email": "special.chars@example.com",
+        "password": "Password123!",
+        "description": "Special characters in name fields (edge case)"
+      },
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe+duplicate@example.com",
+        "password": "Password123!",
+        "description": "Duplicate email (edge case)"
+      }
+    ],
+    "EdgeCases": [
+      {
+        "description": "Attempt to create account with already registered email",
+        "expected": "Error message indicating duplicate account or email already in use"
+      },
+      {
+        "description": "Attempt to create account with invalid email format",
+        "expected": "Error message indicating invalid email"
+      },
+      {
+        "description": "Attempt to create account with missing required fields",
+        "expected": "Error message indicating required fields must be filled"
+      },
+      {
+        "description": "Attempt to create account with password below minimum length",
+        "expected": "Error message indicating password requirements"
+      },
+      {
+        "description": "Attempt to create account with maximum allowed field lengths",
+        "expected": "Account created or error if limit exceeded"
+      },
+      {
+        "description": "Attempt to create account with special characters in name fields",
+        "expected": "Account created or error if not allowed"
+      }
+    ]
+  }
+}
