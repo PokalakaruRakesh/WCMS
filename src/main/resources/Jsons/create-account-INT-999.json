@@ -1,0 +1,148 @@
+{
+  "INT-999": {
+    "TestCaseID": "INT-999",
+    "TestCaseName": "Create account",
+    "Priority": "Medium",
+    "Objective": "No Objective specified",
+    "ExpectedResult": "Account should be created successfully and confirmation message displayed",
+    "Locators": [
+      {
+        "name": "First Name Field",
+        "description": "Input field for user's first name",
+        "locatorType": "id",
+        "locatorValue": "firstName"
+      },
+      {
+        "name": "Last Name Field",
+        "description": "Input field for user's last name",
+        "locatorType": "id",
+        "locatorValue": "lastName"
+      },
+      {
+        "name": "Email Field",
+        "description": "Input field for user's email address",
+        "locatorType": "id",
+        "locatorValue": "email"
+      },
+      {
+        "name": "Password Field",
+        "description": "Input field for user's password",
+        "locatorType": "id",
+        "locatorValue": "password"
+      },
+      {
+        "name": "Create Account Button",
+        "description": "Button to submit account creation form",
+        "locatorType": "id",
+        "locatorValue": "createAccountBtn"
+      }
+    ],
+    "TestData": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe+test@example.com",
+        "password": "Password123!",
+        "expectedConfirmation": "Your account has been created successfully."
+      },
+      {
+        "firstName": "A",
+        "lastName": "B",
+        "email": "a.b@example.com",
+        "password": "A1!",
+        "expectedConfirmation": "Your account has been created successfully."
+      },
+      {
+        "firstName": "VeryLongFirstNameThatExceedsNormalLengthForTestingBoundaryCases",
+        "lastName": "VeryLongLastNameThatExceedsNormalLengthForTestingBoundaryCases",
+        "email": "long.name+boundary@example.com",
+        "password": "VeryLongPassword1234567890!@#",
+        "expectedConfirmation": "Your account has been created successfully."
+      },
+      {
+        "firstName": "",
+        "lastName": "Doe",
+        "email": "missing.firstname@example.com",
+        "password": "Password123!",
+        "expectedConfirmation": "First name is required."
+      },
+      {
+        "firstName": "John",
+        "lastName": "",
+        "email": "missing.lastname@example.com",
+        "password": "Password123!",
+        "expectedConfirmation": "Last name is required."
+      },
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "",
+        "password": "Password123!",
+        "expectedConfirmation": "Email is required."
+      },
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "invalid-email-format",
+        "password": "Password123!",
+        "expectedConfirmation": "Please enter a valid email address."
+      },
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe+test@example.com",
+        "password": "",
+        "expectedConfirmation": "Password is required."
+      },
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe+test@example.com",
+        "password": "short",
+        "expectedConfirmation": "Password must be at least 8 characters."
+      }
+    ],
+    "EdgeCases": [
+      {
+        "description": "Attempt to create account with existing email",
+        "testData": {
+          "firstName": "Jane",
+          "lastName": "Smith",
+          "email": "john.doe+test@example.com",
+          "password": "Password123!"
+        },
+        "expected": "An account with this email already exists."
+      },
+      {
+        "description": "Attempt to create account with all fields empty",
+        "testData": {
+          "firstName": "",
+          "lastName": "",
+          "email": "",
+          "password": ""
+        },
+        "expected": "First name is required. Last name is required. Email is required. Password is required."
+      },
+      {
+        "description": "Attempt to create account with special characters in name fields",
+        "testData": {
+          "firstName": "J@hn$",
+          "lastName": "D#e%",
+          "email": "special.char@example.com",
+          "password": "Password123!"
+        },
+        "expected": "Names cannot contain special characters."
+      },
+      {
+        "description": "Attempt to create account with maximum allowed field lengths",
+        "testData": {
+          "firstName": "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ",
+          "lastName": "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ",
+          "email": "max.length.email+test@example.com",
+          "password": "MaxLengthPassword1234567890!@#"
+        },
+        "expected": "Your account has been created successfully."
+      }
+    ]
+  }
+}
