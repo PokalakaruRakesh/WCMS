@@ -1,0 +1,135 @@
+{
+  "INT-999": {
+    "TestCaseID": "INT-999",
+    "TestCaseName": "Create account",
+    "Priority": "Medium",
+    "Objective": "No Objective specified",
+    "ExpectedResult": "Account should be created successfully and confirmation message displayed",
+    "Locators": [
+      {
+        "name": "FirstNameInput",
+        "description": "Input field for first name",
+        "locatorType": "id",
+        "locatorValue": "firstName"
+      },
+      {
+        "name": "LastNameInput",
+        "description": "Input field for last name",
+        "locatorType": "id",
+        "locatorValue": "lastName"
+      },
+      {
+        "name": "EmailInput",
+        "description": "Input field for email address",
+        "locatorType": "id",
+        "locatorValue": "email"
+      },
+      {
+        "name": "PasswordInput",
+        "description": "Input field for password",
+        "locatorType": "id",
+        "locatorValue": "password"
+      },
+      {
+        "name": "CreateAccountButton",
+        "description": "Button to submit account creation",
+        "locatorType": "id",
+        "locatorValue": "createAccountBtn"
+      }
+    ],
+    "TestData": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe+valid@example.com",
+        "password": "Password123!",
+        "description": "Valid data - normal case"
+      },
+      {
+        "firstName": "A",
+        "lastName": "B",
+        "email": "a.b@example.com",
+        "password": "Abcdef1!",
+        "description": "Boundary - minimum length names"
+      },
+      {
+        "firstName": "VeryLongFirstNameVeryLongFirstNameVeryLongFirstNameVeryLongFirstNameVeryLongFirstName",
+        "lastName": "VeryLongLastNameVeryLongLastNameVeryLongLastNameVeryLongLastNameVeryLongLastName",
+        "email": "long.name@example.com",
+        "password": "LongPassword123!",
+        "description": "Boundary - maximum length names"
+      },
+      {
+        "firstName": "",
+        "lastName": "Doe",
+        "email": "missing.firstname@example.com",
+        "password": "Password123!",
+        "description": "Edge - missing first name"
+      },
+      {
+        "firstName": "John",
+        "lastName": "",
+        "email": "missing.lastname@example.com",
+        "password": "Password123!",
+        "description": "Edge - missing last name"
+      },
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "invalid-email",
+        "password": "Password123!",
+        "description": "Edge - invalid email format"
+      },
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe+duplicate@example.com",
+        "password": "Password123!",
+        "description": "Edge - duplicate email (already registered)"
+      },
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe+weakpass@example.com",
+        "password": "123",
+        "description": "Edge - weak password"
+      },
+      {
+        "firstName": "<script>",
+        "lastName": "Doe",
+        "email": "john.doe+xss@example.com",
+        "password": "Password123!",
+        "description": "Edge - XSS in first name"
+      },
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe+specialchars@example.com",
+        "password": "P@$$w0rd!#%&*()",
+        "description": "Edge - password with special characters"
+      }
+    ],
+    "EdgeCases": [
+      {
+        "scenario": "All fields empty",
+        "expected": "Error messages for all required fields"
+      },
+      {
+        "scenario": "Email already exists",
+        "expected": "Display duplicate email error message"
+      },
+      {
+        "scenario": "Password does not meet complexity requirements",
+        "expected": "Display password strength error"
+      },
+      {
+        "scenario": "First name/Last name contains script tags",
+        "expected": "Input is sanitized and error shown or input rejected"
+      },
+      {
+        "scenario": "Rapid multiple submissions",
+        "expected": "Only one account created, others blocked"
+      }
+    ]
+  }
+}
