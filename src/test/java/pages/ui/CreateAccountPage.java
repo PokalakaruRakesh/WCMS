@@ -23,6 +23,19 @@ public class CreateAccountPage extends BasePage {
     private By cancelLink = By.linkText("Cancel");
     private By confirmationMessage = By.xpath("//div[contains(@class,'message-success') or contains(@class,'messages')]"); // TODO: Replace with actual locator if needed
 
+    // --- Additional locators from new requirements (placeholders) ---
+    private By firstNameInputPlaceholder = By.xpath("<PLACEHOLDER_first_name_input>"); // TODO: Replace with actual locator
+    private By middleNameInputPlaceholder = By.xpath("<PLACEHOLDER_middle_name_input>"); // TODO: Replace with actual locator
+    private By lastNameInputPlaceholder = By.xpath("<PLACEHOLDER_last_name_input>"); // TODO: Replace with actual locator
+    private By companyNameInputPlaceholder = By.xpath("<PLACEHOLDER_company_name_input>"); // TODO: Replace with actual locator
+    private By emailInputPlaceholder = By.xpath("<PLACEHOLDER_email_input>"); // TODO: Replace with actual locator
+    private By passwordInputPlaceholder = By.xpath("<PLACEHOLDER_password_input>"); // TODO: Replace with actual locator
+    private By confirmPasswordInputPlaceholder = By.xpath("<PLACEHOLDER_confirm_password_input>"); // TODO: Replace with actual locator
+    private By submitButtonPlaceholder = By.xpath("<PLACEHOLDER_submit_button>"); // TODO: Replace with actual locator
+    private By cancelButtonPlaceholder = By.xpath("<PLACEHOLDER_cancel_button>"); // TODO: Replace with actual locator
+    private By confirmationMessagePlaceholder = By.xpath("<PLACEHOLDER_confirmation_message>"); // TODO: Replace with actual locator
+    // ---------------------------------------------------------------
+
     public CreateAccountPage(WebDriver driver) {
         super(driver);
         this.driver = driver;
@@ -107,5 +120,88 @@ public class CreateAccountPage extends BasePage {
         } catch (Exception e) {
             return false;
         }
+    }
+
+    // ------------------- New Functionality from New Requirements -------------------
+
+    /**
+     * Complete the Create Account flow with provided details using placeholder locators.
+     * This method uses the new locator placeholders and does not overlap with the existing method.
+     *
+     * @param firstName      First Name value
+     * @param middleName     Middle Name value
+     * @param lastName       Last Name value
+     * @param companyName    Company Name value
+     * @param email          Email value
+     * @param password       Password value
+     * @param confirmPassword Confirm Password value
+     */
+    @Step("Complete the Create Account flow with provided details")
+    public void completeCreateAccountFlowWithPlaceholders(String firstName, String middleName, String lastName, String companyName, String email, String password, String confirmPassword) {
+        waitForElementPresent(firstNameInputPlaceholder);
+        driver.findElement(firstNameInputPlaceholder).clear();
+        driver.findElement(firstNameInputPlaceholder).sendKeys(firstName);
+
+        waitForElementPresent(middleNameInputPlaceholder);
+        driver.findElement(middleNameInputPlaceholder).clear();
+        driver.findElement(middleNameInputPlaceholder).sendKeys(middleName);
+
+        waitForElementPresent(lastNameInputPlaceholder);
+        driver.findElement(lastNameInputPlaceholder).clear();
+        driver.findElement(lastNameInputPlaceholder).sendKeys(lastName);
+
+        waitForElementPresent(companyNameInputPlaceholder);
+        driver.findElement(companyNameInputPlaceholder).clear();
+        driver.findElement(companyNameInputPlaceholder).sendKeys(companyName);
+
+        waitForElementPresent(emailInputPlaceholder);
+        driver.findElement(emailInputPlaceholder).clear();
+        driver.findElement(emailInputPlaceholder).sendKeys(email);
+
+        waitForElementPresent(passwordInputPlaceholder);
+        driver.findElement(passwordInputPlaceholder).clear();
+        driver.findElement(passwordInputPlaceholder).sendKeys(password);
+
+        waitForElementPresent(confirmPasswordInputPlaceholder);
+        driver.findElement(confirmPasswordInputPlaceholder).clear();
+        driver.findElement(confirmPasswordInputPlaceholder).sendKeys(confirmPassword);
+
+        waitForElementPresent(submitButtonPlaceholder);
+        driver.findElement(submitButtonPlaceholder).click();
+    }
+
+    /**
+     * Click Cancel on Create Account page using placeholder locator.
+     */
+    @Step("Click Cancel on Create Account page")
+    public void clickCancelWithPlaceholder() {
+        waitForElementPresent(cancelButtonPlaceholder);
+        driver.findElement(cancelButtonPlaceholder).click();
+    }
+
+    /**
+     * Check if confirmation message is displayed after account creation using placeholder locator.
+     * @return true if confirmation message is displayed, false otherwise
+     */
+    @Step("Check if confirmation message is displayed after account creation")
+    public boolean isConfirmationMessageDisplayedWithPlaceholder() {
+        try {
+            waitForElementPresent(confirmationMessagePlaceholder);
+            WebElement message = driver.findElement(confirmationMessagePlaceholder);
+            return message.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    // ------------------- End of New Functionality -------------------
+
+    /**
+     * Wait for element to be present in DOM and visible.
+     * Utility method for placeholder-based methods.
+     * @param locator By locator
+     */
+    private void waitForElementPresent(By locator) {
+        WaitStatementUtils.explicitWaitForVisibility(driver, driver.findElement(locator), 10);
     }
 }
