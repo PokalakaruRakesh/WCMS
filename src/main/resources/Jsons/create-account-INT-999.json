@@ -1,0 +1,137 @@
+{
+  "INT-999": {
+    "TestCaseID": "INT-999",
+    "TestCaseName": "Create account",
+    "Priority": "Medium",
+    "Objective": "",
+    "ExpectedResult": "Account should be created successfully and confirmation message displayed",
+    "Locators": [
+      {
+        "name": "Username Field",
+        "description": "Input field for entering the username",
+        "locatorType": "id",
+        "locatorValue": "username"
+      },
+      {
+        "name": "Email Field",
+        "description": "Input field for entering the email address",
+        "locatorType": "id",
+        "locatorValue": "email"
+      },
+      {
+        "name": "Password Field",
+        "description": "Input field for entering the password",
+        "locatorType": "id",
+        "locatorValue": "password"
+      },
+      {
+        "name": "Confirm Password Field",
+        "description": "Input field for confirming the password",
+        "locatorType": "id",
+        "locatorValue": "confirmPassword"
+      },
+      {
+        "name": "Create Account Button",
+        "description": "Button to submit the account creation form",
+        "locatorType": "id",
+        "locatorValue": "createAccountBtn"
+      }
+    ],
+    "TestData": [
+      {
+        "scenario": "Valid Data",
+        "username": "testuser123",
+        "email": "testuser123@example.com",
+        "password": "Test@1234",
+        "confirmPassword": "Test@1234",
+        "expectedConfirmation": "Your account has been created successfully."
+      },
+      {
+        "scenario": "Edge Case - Minimum Username Length",
+        "username": "tu",
+        "email": "minuser@example.com",
+        "password": "Test@1234",
+        "confirmPassword": "Test@1234",
+        "expectedConfirmation": "Your account has been created successfully."
+      },
+      {
+        "scenario": "Edge Case - Maximum Username Length",
+        "username": "usernamemaxlengthallowedbyforminput",
+        "email": "maxuser@example.com",
+        "password": "Test@1234",
+        "confirmPassword": "Test@1234",
+        "expectedConfirmation": "Your account has been created successfully."
+      },
+      {
+        "scenario": "Edge Case - Invalid Email Format",
+        "username": "invalidemailuser",
+        "email": "invalidemail.com",
+        "password": "Test@1234",
+        "confirmPassword": "Test@1234",
+        "expectedError": "Please enter a valid email address."
+      },
+      {
+        "scenario": "Edge Case - Passwords Do Not Match",
+        "username": "mismatchuser",
+        "email": "mismatch@example.com",
+        "password": "Test@1234",
+        "confirmPassword": "Test@5678",
+        "expectedError": "Passwords do not match."
+      },
+      {
+        "scenario": "Edge Case - Weak Password",
+        "username": "weakpassuser",
+        "email": "weakpass@example.com",
+        "password": "123",
+        "confirmPassword": "123",
+        "expectedError": "Password does not meet complexity requirements."
+      },
+      {
+        "scenario": "Edge Case - Existing Username",
+        "username": "existinguser",
+        "email": "existinguser@example.com",
+        "password": "Test@1234",
+        "confirmPassword": "Test@1234",
+        "expectedError": "Username already exists."
+      },
+      {
+        "scenario": "Edge Case - Existing Email",
+        "username": "newuser",
+        "email": "existingemail@example.com",
+        "password": "Test@1234",
+        "confirmPassword": "Test@1234",
+        "expectedError": "Email already registered."
+      },
+      {
+        "scenario": "Boundary Value - Max Email Length",
+        "username": "maxemaillengthuser",
+        "email": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com",
+        "password": "Test@1234",
+        "confirmPassword": "Test@1234",
+        "expectedConfirmation": "Your account has been created successfully."
+      },
+      {
+        "scenario": "Boundary Value - Min Password Length",
+        "username": "minpassuser",
+        "email": "minpassuser@example.com",
+        "password": "T@1a",
+        "confirmPassword": "T@1a",
+        "expectedConfirmation": "Your account has been created successfully."
+      }
+    ],
+    "EdgeCases": [
+      {
+        "description": "Attempt to create account with empty fields",
+        "expected": "All required field validation errors are displayed."
+      },
+      {
+        "description": "Rapid multiple submissions of the create account button",
+        "expected": "Account is created only once, duplicate submissions are prevented."
+      },
+      {
+        "description": "Special characters in username",
+        "expected": "Username accepts only allowed characters and displays error otherwise."
+      }
+    ]
+  }
+}
