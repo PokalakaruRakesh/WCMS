@@ -108,4 +108,69 @@ public class CreateAccountPage extends BasePage {
             return false;
         }
     }
+
+    // ====================== NEW METHODS ADDED BELOW (per requirements) ======================
+
+    /**
+     * Complete the Create Account flow with all required details and submit the form.
+     * This method performs the entire account creation process as per the test case INT-999.
+     */
+    @Step("Create a new account with provided details and submit the form")
+    public void createAccount(String firstName, String middleName, String lastName, String organization, String email, String password, String confirmPassword) {
+        waitForElementPresent(firstNameInput);
+        driver.findElement(firstNameInput).clear();
+        driver.findElement(firstNameInput).sendKeys(firstName);
+
+        waitForElementPresent(middleNameInput);
+        driver.findElement(middleNameInput).clear();
+        driver.findElement(middleNameInput).sendKeys(middleName);
+
+        waitForElementPresent(lastNameInput);
+        driver.findElement(lastNameInput).clear();
+        driver.findElement(lastNameInput).sendKeys(lastName);
+
+        waitForElementPresent(organizationInput);
+        driver.findElement(organizationInput).clear();
+        driver.findElement(organizationInput).sendKeys(organization);
+
+        waitForElementPresent(emailInput);
+        driver.findElement(emailInput).clear();
+        driver.findElement(emailInput).sendKeys(email);
+
+        waitForElementPresent(passwordInput);
+        driver.findElement(passwordInput).clear();
+        driver.findElement(passwordInput).sendKeys(password);
+
+        waitForElementPresent(confirmPasswordInput);
+        driver.findElement(confirmPasswordInput).clear();
+        driver.findElement(confirmPasswordInput).sendKeys(confirmPassword);
+
+        waitForElementPresent(createAccountButton);
+        driver.findElement(createAccountButton).click();
+    }
+
+    /**
+     * Clicks the Cancel link on the Create Account form.
+     */
+    public void clickCancel() {
+        waitForElementPresent(cancelLink);
+        driver.findElement(cancelLink).click();
+    }
+
+    /**
+     * Gets the confirmation message displayed after successful account creation.
+     * @return Confirmation message text
+     */
+    public String getConfirmationMessage() {
+        waitForElementPresent(confirmationMessage);
+        return driver.findElement(confirmationMessage).getText();
+    }
+
+    /**
+     * Waits for the specified element to be present and visible on the page.
+     * @param locator The By locator of the element to wait for
+     */
+    private void waitForElementPresent(By locator) {
+        WaitStatementUtils.explicitWaitForVisibility(driver, driver.findElement(locator), 10);
+    }
 }
