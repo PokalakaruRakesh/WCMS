@@ -3,134 +3,163 @@
     "TestCaseID": "INT-999",
     "TestCaseName": "Create account",
     "Priority": "Medium",
-    "Objective": "",
+    "Type": "Functional",
+    "Objective": "To verify the functionality of the Create Account page",
     "ExpectedResult": "Account should be created successfully and confirmation message displayed",
     "Locators": [
       {
-        "name": "Username Field",
-        "description": "Input field for entering the username",
+        "name": "usernameField",
+        "description": "Input field for username",
         "locatorType": "id",
-        "locatorValue": "username"
+        "locatorValue": "create-account-username"
       },
       {
-        "name": "Email Field",
-        "description": "Input field for entering the email address",
+        "name": "emailField",
+        "description": "Input field for email address",
         "locatorType": "id",
-        "locatorValue": "email"
+        "locatorValue": "create-account-email"
       },
       {
-        "name": "Password Field",
-        "description": "Input field for entering the password",
+        "name": "passwordField",
+        "description": "Input field for password",
         "locatorType": "id",
-        "locatorValue": "password"
+        "locatorValue": "create-account-password"
       },
       {
-        "name": "Confirm Password Field",
-        "description": "Input field for confirming the password",
+        "name": "confirmPasswordField",
+        "description": "Input field for confirming password",
         "locatorType": "id",
-        "locatorValue": "confirmPassword"
+        "locatorValue": "create-account-confirm-password"
       },
       {
-        "name": "Create Account Button",
-        "description": "Button to submit the account creation form",
-        "locatorType": "id",
-        "locatorValue": "createAccountBtn"
+        "name": "submitButton",
+        "description": "Button to submit the create account form",
+        "locatorType": "css",
+        "locatorValue": "button#create-account-submit"
       }
     ],
     "TestData": [
       {
-        "scenario": "Valid Data",
-        "username": "testuser123",
-        "email": "testuser123@example.com",
-        "password": "Test@1234",
-        "confirmPassword": "Test@1234",
+        "scenario": "Valid account creation",
+        "username": "testuser001",
+        "email": "testuser001@example.com",
+        "password": "ValidPass123!",
+        "confirmPassword": "ValidPass123!",
         "expectedConfirmation": "Your account has been created successfully."
       },
       {
-        "scenario": "Edge Case - Minimum Username Length",
-        "username": "tu",
-        "email": "minuser@example.com",
-        "password": "Test@1234",
-        "confirmPassword": "Test@1234",
-        "expectedConfirmation": "Your account has been created successfully."
-      },
-      {
-        "scenario": "Edge Case - Maximum Username Length",
-        "username": "usernamemaxlengthallowedbyforminput",
-        "email": "maxuser@example.com",
-        "password": "Test@1234",
-        "confirmPassword": "Test@1234",
-        "expectedConfirmation": "Your account has been created successfully."
-      },
-      {
-        "scenario": "Edge Case - Invalid Email Format",
-        "username": "invalidemailuser",
-        "email": "invalidemail.com",
-        "password": "Test@1234",
-        "confirmPassword": "Test@1234",
-        "expectedError": "Please enter a valid email address."
-      },
-      {
-        "scenario": "Edge Case - Passwords Do Not Match",
-        "username": "mismatchuser",
-        "email": "mismatch@example.com",
-        "password": "Test@1234",
-        "confirmPassword": "Test@5678",
+        "scenario": "Password mismatch",
+        "username": "testuser002",
+        "email": "testuser002@example.com",
+        "password": "Password1!",
+        "confirmPassword": "Password2!",
         "expectedError": "Passwords do not match."
       },
       {
-        "scenario": "Edge Case - Weak Password",
-        "username": "weakpassuser",
-        "email": "weakpass@example.com",
-        "password": "123",
-        "confirmPassword": "123",
-        "expectedError": "Password does not meet complexity requirements."
+        "scenario": "Invalid email format",
+        "username": "testuser003",
+        "email": "invalid-email-format",
+        "password": "ValidPass123!",
+        "confirmPassword": "ValidPass123!",
+        "expectedError": "Please enter a valid email address."
       },
       {
-        "scenario": "Edge Case - Existing Username",
+        "scenario": "Username already exists",
         "username": "existinguser",
         "email": "existinguser@example.com",
-        "password": "Test@1234",
-        "confirmPassword": "Test@1234",
+        "password": "ValidPass123!",
+        "confirmPassword": "ValidPass123!",
         "expectedError": "Username already exists."
       },
       {
-        "scenario": "Edge Case - Existing Email",
-        "username": "newuser",
-        "email": "existingemail@example.com",
-        "password": "Test@1234",
-        "confirmPassword": "Test@1234",
-        "expectedError": "Email already registered."
+        "scenario": "Password too short (boundary)",
+        "username": "testuser004",
+        "email": "testuser004@example.com",
+        "password": "Ab1!",
+        "confirmPassword": "Ab1!",
+        "expectedError": "Password must be at least 8 characters."
       },
       {
-        "scenario": "Boundary Value - Max Email Length",
-        "username": "maxemaillengthuser",
-        "email": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com",
-        "password": "Test@1234",
-        "confirmPassword": "Test@1234",
+        "scenario": "Password at minimum length (boundary)",
+        "username": "testuser005",
+        "email": "testuser005@example.com",
+        "password": "Abcdef1!",
+        "confirmPassword": "Abcdef1!",
         "expectedConfirmation": "Your account has been created successfully."
       },
       {
-        "scenario": "Boundary Value - Min Password Length",
-        "username": "minpassuser",
-        "email": "minpassuser@example.com",
-        "password": "T@1a",
-        "confirmPassword": "T@1a",
+        "scenario": "Password at maximum length (boundary)",
+        "username": "testuser006",
+        "email": "testuser006@example.com",
+        "password": "A1!" + "a".repeat(57),
+        "confirmPassword": "A1!" + "a".repeat(57),
         "expectedConfirmation": "Your account has been created successfully."
+      },
+      {
+        "scenario": "Empty required fields",
+        "username": "",
+        "email": "",
+        "password": "",
+        "confirmPassword": "",
+        "expectedError": "All fields are required."
       }
     ],
     "EdgeCases": [
       {
-        "description": "Attempt to create account with empty fields",
-        "expected": "All required field validation errors are displayed."
+        "description": "Username with special characters",
+        "username": "user!@#",
+        "email": "user_special@example.com",
+        "password": "ValidPass123!",
+        "confirmPassword": "ValidPass123!",
+        "expected": "Username cannot contain special characters."
       },
       {
-        "description": "Rapid multiple submissions of the create account button",
-        "expected": "Account is created only once, duplicate submissions are prevented."
+        "description": "Email already registered",
+        "username": "uniqueuser",
+        "email": "existinguser@example.com",
+        "password": "ValidPass123!",
+        "confirmPassword": "ValidPass123!",
+        "expected": "Email already registered."
       },
       {
-        "description": "Special characters in username",
-        "expected": "Username accepts only allowed characters and displays error otherwise."
+        "description": "Password missing uppercase letter",
+        "username": "testuser007",
+        "email": "testuser007@example.com",
+        "password": "lowercase123!",
+        "confirmPassword": "lowercase123!",
+        "expected": "Password must contain at least one uppercase letter."
+      },
+      {
+        "description": "Password missing number",
+        "username": "testuser008",
+        "email": "testuser008@example.com",
+        "password": "NoNumbers!",
+        "confirmPassword": "NoNumbers!",
+        "expected": "Password must contain at least one number."
+      },
+      {
+        "description": "Password missing special character",
+        "username": "testuser009",
+        "email": "testuser009@example.com",
+        "password": "NoSpecial123",
+        "confirmPassword": "NoSpecial123",
+        "expected": "Password must contain at least one special character."
+      },
+      {
+        "description": "Whitespace in username",
+        "username": "user name",
+        "email": "whitespace@example.com",
+        "password": "ValidPass123!",
+        "confirmPassword": "ValidPass123!",
+        "expected": "Username cannot contain spaces."
+      },
+      {
+        "description": "SQL injection attempt in username",
+        "username": "testuser'; DROP TABLE users;--",
+        "email": "sqlinject@example.com",
+        "password": "ValidPass123!",
+        "confirmPassword": "ValidPass123!",
+        "expected": "Invalid username."
       }
     ]
   }
