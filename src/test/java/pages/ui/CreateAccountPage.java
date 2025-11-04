@@ -108,4 +108,69 @@ public class CreateAccountPage extends BasePage {
             return false;
         }
     }
+
+    // ================== ADDED METHODS BELOW (per new requirements) ==================
+
+    // Locators for Create Account form (overrides for new methods only)
+    private By createAccountButtonNew = By.xpath("//button[@id='send2' and @title='Create Account']");
+    private By confirmationMessageNew = By.xpath("//div[contains(@class,'message-success') or contains(@class,'success')]"); // TODO: Replace with actual locator if needed
+
+    /**
+     * Complete the Create Account flow with all required and optional fields.
+     * This method covers the comprehensive flow for the INT-999 test case.
+     *
+     * @param firstName        First Name
+     * @param middleName       Middle Name (optional)
+     * @param lastName         Last Name
+     * @param organization     Organization/Company (optional)
+     * @param email            Email Address
+     * @param password         Password
+     * @param confirmPassword  Confirm Password
+     */
+    @Step("Create a new account with all details and submit the form")
+    public void createAccount(String firstName, String middleName, String lastName, String organization, String email, String password, String confirmPassword) {
+        WaitStatementUtils.explicitWaitForVisibility(driver, driver.findElement(firstNameInput), 15);
+        driver.findElement(firstNameInput).clear();
+        driver.findElement(firstNameInput).sendKeys(firstName);
+
+        if (middleName != null && !middleName.isEmpty()) {
+            driver.findElement(middleNameInput).clear();
+            driver.findElement(middleNameInput).sendKeys(middleName);
+        }
+
+        driver.findElement(lastNameInput).clear();
+        driver.findElement(lastNameInput).sendKeys(lastName);
+
+        if (organization != null && !organization.isEmpty()) {
+            driver.findElement(organizationInput).clear();
+            driver.findElement(organizationInput).sendKeys(organization);
+        }
+
+        driver.findElement(emailInput).clear();
+        driver.findElement(emailInput).sendKeys(email);
+
+        driver.findElement(passwordInput).clear();
+        driver.findElement(passwordInput).sendKeys(password);
+
+        driver.findElement(confirmPasswordInput).clear();
+        driver.findElement(confirmPasswordInput).sendKeys(confirmPassword);
+
+        ReusableMethods.scrollIntoView(driver.findElement(createAccountButtonNew), driver);
+        WaitStatementUtils.waitForElementToBeClickable(driver, driver.findElement(createAccountButtonNew));
+        driver.findElement(createAccountButtonNew).click();
+    }
+
+    /**
+     * Verifies if the account creation confirmation message is displayed.
+     *
+     * @return true if confirmation message is displayed, false otherwise
+     */
+    public boolean isAccountCreationConfirmationDisplayed() {
+        try {
+            WaitStatementUtils.explicitWaitForVisibility(driver, driver.findElement(confirmationMessageNew), 15);
+            return driver.findElement(confirmationMessageNew).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }
