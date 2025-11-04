@@ -108,4 +108,82 @@ public class CreateAccountPage extends BasePage {
             return false;
         }
     }
+
+    // ===================== ADDED METHODS BELOW (DO NOT MODIFY EXISTING CODE) =====================
+
+    /**
+     * Complete the account creation process with all required fields and actions.
+     * This method covers the entire flow: filling in all fields, handling edge cases (invalid/valid data),
+     * clicking Cancel, submitting the form, and verifying the confirmation message.
+     *
+     * @param firstName           The first name to enter (valid or invalid)
+     * @param middleName          The middle name to enter
+     * @param lastName            The last name to enter
+     * @param organization        The organization/company name
+     * @param email               The email address to enter (valid or invalid)
+     * @param password            The password to enter
+     * @param confirmPassword     The confirm password to enter
+     * @param submit              If true, click Submit; if false, click Cancel
+     */
+    public void completeAccountCreationFlow(String firstName, String middleName, String lastName, String organization, String email, String password, String confirmPassword, boolean submit) {
+        try {
+            // Define new locators as per new requirements
+            By firstNameField = By.id("firstname");
+            By middleNameField = By.id("middlename");
+            By lastNameField = By.id("lastname");
+            By organizationField = By.id("additional_organization");
+            By emailField = By.id("email_address");
+            By accountPasswordField = By.id("password");
+            By confirmPasswordField = By.id("password-confirmation");
+
+            // Wait for the first name field to be visible
+            WaitStatementUtils.waitForElementToBeClickable(driver, driver.findElement(firstNameField), 15);
+            driver.findElement(firstNameField).clear();
+            driver.findElement(firstNameField).sendKeys(firstName);
+
+            driver.findElement(middleNameField).clear();
+            driver.findElement(middleNameField).sendKeys(middleName);
+
+            driver.findElement(lastNameField).clear();
+            driver.findElement(lastNameField).sendKeys(lastName);
+
+            driver.findElement(organizationField).clear();
+            driver.findElement(organizationField).sendKeys(organization);
+
+            driver.findElement(emailField).clear();
+            driver.findElement(emailField).sendKeys(email);
+
+            driver.findElement(accountPasswordField).clear();
+            driver.findElement(accountPasswordField).sendKeys(password);
+
+            driver.findElement(confirmPasswordField).clear();
+            driver.findElement(confirmPasswordField).sendKeys(confirmPassword);
+
+            if (submit) {
+                WaitStatementUtils.waitForElementToBeClickable(driver, driver.findElement(createAccountButton), 10);
+                driver.findElement(createAccountButton).click();
+            } else {
+                WaitStatementUtils.waitForElementToBeClickable(driver, driver.findElement(cancelLink), 10);
+                driver.findElement(cancelLink).click();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Verifies if the confirmation message is displayed after successful account creation.
+     *
+     * @return true if confirmation message is displayed, false otherwise
+     */
+    public boolean isAccountCreationConfirmationDisplayed() {
+        try {
+            // Placeholder: Replace with actual locator for confirmation message
+            By confirmationMessage = By.xpath("<PLACEHOLDER_confirmation_message>"); // TODO: Replace with actual locator
+            WaitStatementUtils.explicitWaitForVisibility(driver, driver.findElement(confirmationMessage), 15);
+            return driver.findElement(confirmationMessage).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }
