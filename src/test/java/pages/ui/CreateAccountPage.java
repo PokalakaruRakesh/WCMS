@@ -108,4 +108,79 @@ public class CreateAccountPage extends BasePage {
             return false;
         }
     }
+
+    /**
+     * Complete the Create Account flow for INT-999: handles all valid/invalid field entries and submission.
+     * This method covers the following scenarios:
+     * - Entering valid/invalid first/middle/last names
+     * - Entering valid/invalid email
+     * - Entering weak/strong passwords
+     * - Entering matching/mismatching passwords
+     * - Submitting with required fields blank
+     * - Clicking Cancel
+     * - Submitting with all valid details
+     *
+     * @param firstName         First Name (valid or invalid)
+     * @param middleName        Middle Name (valid or invalid)
+     * @param lastName          Last Name (valid or invalid)
+     * @param organization      Organization/Company (optional)
+     * @param email             Email (valid or invalid)
+     * @param password          Password (weak or strong)
+     * @param confirmPassword   Confirm Password (matching or not)
+     * @param clickCancel       If true, clicks Cancel instead of Submit
+     * @param submit            If true, clicks Submit (Create Account) button
+     */
+    public void completeCreateAccountFlow_INT_999(String firstName, String middleName, String lastName, String organization, String email, String password, String confirmPassword, boolean clickCancel, boolean submit) {
+        // Wait for First Name field
+        waitForElementPresent(By.id("firstname"));
+        driver.findElement(By.id("firstname")).clear();
+        driver.findElement(By.id("firstname")).sendKeys(firstName);
+
+        // Middle Name (optional)
+        if (middleName != null) {
+            waitForElementPresent(By.id("middlename"));
+            driver.findElement(By.id("middlename")).clear();
+            driver.findElement(By.id("middlename")).sendKeys(middleName);
+        }
+
+        // Last Name
+        waitForElementPresent(By.id("lastname"));
+        driver.findElement(By.id("lastname")).clear();
+        driver.findElement(By.id("lastname")).sendKeys(lastName);
+
+        // Organization (optional)
+        if (organization != null) {
+            waitForElementPresent(By.id("additional_organization"));
+            driver.findElement(By.id("additional_organization")).clear();
+            driver.findElement(By.id("additional_organization")).sendKeys(organization);
+        }
+
+        // Email
+        waitForElementPresent(By.id("email_address"));
+        driver.findElement(By.id("email_address")).clear();
+        driver.findElement(By.id("email_address")).sendKeys(email);
+
+        // Password
+        waitForElementPresent(By.id("password"));
+        driver.findElement(By.id("password")).clear();
+        driver.findElement(By.id("password")).sendKeys(password);
+
+        // Confirm Password
+        waitForElementPresent(By.id("password-confirmation"));
+        driver.findElement(By.id("password-confirmation")).clear();
+        driver.findElement(By.id("password-confirmation")).sendKeys(confirmPassword);
+
+        if (clickCancel) {
+            // Click Cancel link
+            waitForElementPresent(By.linkText("Cancel"));
+            driver.findElement(By.linkText("Cancel")).click();
+            return;
+        }
+
+        if (submit) {
+            // Click Create Account button
+            waitForElementPresent(By.id("send2"));
+            driver.findElement(By.id("send2")).click();
+        }
+    }
 }
