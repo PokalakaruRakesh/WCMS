@@ -14,7 +14,7 @@
     <test name="Test">
         <classes>
 
-            <class name="tests.ui.WCMSContent.Verify125thAnniversaryCaseStudiesPageContentInTheWCMSApplication_WCMSI_493"/>
+            <class name="tests.ui.CreateAccount_INT_999"/>
 
         </classes>
     </test> <!-- Test -->

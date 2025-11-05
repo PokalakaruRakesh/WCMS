@@ -31,7 +31,7 @@ public class BaseTest {
 	
 	@BeforeClass(alwaysRun=true)
 	@Parameters({"browser", "platform","env","updateJira","testExecutionId","sprintID"})
-	/*public void setUpTest(String browser,  @Optional("local") String platform, @Optional("QA") String env,@Optional("false") boolean updateJira,@Optional("0000") String testExecutionId,@Optional("sprintID") String sprintID)
+	public void setUpTest(String browser,  @Optional("local") String platform, @Optional("QA") String env,@Optional("false") boolean updateJira,@Optional("0000") String testExecutionId,@Optional("sprintID") String sprintID)
 	{
 
 		//Fetching Class name for Passing it to BrowserStack Execution.
@@ -81,8 +81,8 @@ public class BaseTest {
 		catch (Exception e) {
 			// TODO: handle exception
 		}
-	}*/
-	public void setUpTest(
+	}
+	/*public void setUpTest(
 			String browser,
 			@Optional("local") String platform,
 			@Optional("QA") String env,
@@ -159,7 +159,7 @@ public class BaseTest {
 			log.error("Error in setUpTest: " + e.getMessage(), e);
 			throw new RuntimeException("Failed to initialize test setup.", e);
 		}
-	}
+	}*/
 
 	@AfterMethod(alwaysRun=true)
 	public void Screenshot()

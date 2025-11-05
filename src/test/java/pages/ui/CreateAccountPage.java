@@ -51,9 +51,9 @@ public class CreateAccountPage extends BasePage {
             firstNameElem.sendKeys(firstName);
 
             // Fill Middle Name
-            WebElement middleNameElem = driver.findElement(middleNameInput);
+            /*WebElement middleNameElem = driver.findElement(middleNameInput);
             middleNameElem.clear();
-            middleNameElem.sendKeys(middleName);
+            middleNameElem.sendKeys(middleName);*/
 
             // Fill Last Name
             WebElement lastNameElem = driver.findElement(lastNameInput);
