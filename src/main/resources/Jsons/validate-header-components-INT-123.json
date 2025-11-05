@@ -3,67 +3,75 @@
     "TestCaseID": "INT-123",
     "TestCaseName": "valiadate header components",
     "Priority": "Medium",
-    "Type": "UI",
-    "Objective": "User should be able to see the header components successfully",
+    "Type": "N/A",
+    "Objective": "No Objective specified",
+    "ExpectedResult": "User should be able to see the header components successfully",
     "Locators": [
       {
-        "name": "headerLogo",
-        "description": "Main site logo in header",
+        "name": "HeaderLogo",
+        "description": "ASTM logo in the header",
         "locatorType": "xpath",
-        "locatorValue": "//header//img[@alt='Site Logo']"
+        "locatorValue": "//header//img[@alt='ASTM Logo']"
       },
       {
-        "name": "mainMenu",
-        "description": "Main navigation menu",
-        "locatorType": "css",
+        "name": "MainNavigationMenu",
+        "description": "Main navigation menu bar",
+        "locatorType": "cssSelector",
         "locatorValue": "header nav.main-menu"
       },
       {
-        "name": "searchIcon",
-        "description": "Search icon in header",
+        "name": "SearchIcon",
+        "description": "Search icon/button in the header",
         "locatorType": "xpath",
         "locatorValue": "//header//button[contains(@class,'search')]"
       },
       {
-        "name": "loginButton",
-        "description": "Login button in header",
-        "locatorType": "css",
+        "name": "LoginButton",
+        "description": "Login button in the header",
+        "locatorType": "cssSelector",
         "locatorValue": "header .login-btn"
       },
       {
-        "name": "languageSelector",
-        "description": "Language selector dropdown in header",
+        "name": "LanguageSelector",
+        "description": "Language selector dropdown",
         "locatorType": "xpath",
         "locatorValue": "//header//select[@name='language']"
       }
     ],
     "EdgeCases": [
       {
-        "scenario": "Header components on mobile viewport",
-        "viewport": "375x667",
-        "expected": "All header components are visible or accessible via hamburger menu"
+        "scenario": "Viewport width at minimum supported (mobile)",
+        "viewport": "320x568",
+        "expected": "Header components are visible and accessible in mobile layout. Navigation menu collapses to hamburger."
       },
       {
-        "scenario": "Header components on maximum desktop viewport",
+        "scenario": "Viewport width at maximum supported (desktop)",
         "viewport": "1920x1080",
-        "expected": "All header components are visible and not overlapping"
+        "expected": "Header components are visible and spread across the header as per desktop layout."
       },
       {
-        "scenario": "Header components when user is logged in",
-        "expected": "Login button replaced by user profile icon"
+        "scenario": "User not logged in",
+        "viewport": "default",
+        "expected": "Login button is visible. User-specific menu is not displayed."
       },
       {
-        "scenario": "Header components when language selector is changed",
-        "expected": "Header text updates to selected language"
+        "scenario": "User logged in",
+        "viewport": "default",
+        "expected": "Login button is replaced by user profile/menu."
+      },
+      {
+        "scenario": "Header fails to load",
+        "viewport": "default",
+        "expected": "Test should fail and log missing header components."
       }
     ],
     "BoundaryValues": [
       {
-        "scenario": "Header with minimum menu items",
+        "scenario": "Navigation menu with minimum items",
         "menuItems": 1
       },
       {
-        "scenario": "Header with maximum menu items",
+        "scenario": "Navigation menu with maximum items",
         "menuItems": 10
       }
     ]
