@@ -1,0 +1,74 @@
+{
+  "INT-444": {
+    "TestCaseID": "INT-444",
+    "TestCaseName": "Learn More About ASTM",
+    "Priority": "Medium",
+    "Objective": "",
+    "ExpectedResult": "The user should be able to see Global ASTM Standards listed under the About ASTM Overview header.",
+    "Locators": [
+      {
+        "name": "aboutASTMOverviewHeader",
+        "description": "Header for About ASTM Overview section",
+        "locatorType": "xpath",
+        "locatorValue": "//h2[contains(text(),'About ASTM Overview')]"
+      },
+      {
+        "name": "globalASTMStandardsList",
+        "description": "List of Global ASTM Standards under About ASTM Overview",
+        "locatorType": "xpath",
+        "locatorValue": "//h2[contains(text(),'About ASTM Overview')]/following-sibling::ul[@class='global-astm-standards']"
+      },
+      {
+        "name": "learnMoreButton",
+        "description": "Learn More button in About ASTM section",
+        "locatorType": "css",
+        "locatorValue": "button.learn-more"
+      },
+      {
+        "name": "aboutASTMMenu",
+        "description": "About ASTM menu item in header",
+        "locatorType": "xpath",
+        "locatorValue": "//nav//a[contains(text(),'About ASTM')]"
+      },
+      {
+        "name": "aboutASTMPageContainer",
+        "description": "Container for About ASTM page content",
+        "locatorType": "css",
+        "locatorValue": "div.about-astm-container"
+      }
+    ],
+    "TestData": [],
+    "EdgeCases": [
+      {
+        "description": "About ASTM Overview header is missing",
+        "expected": "Test should fail with a clear error that the header is not present."
+      },
+      {
+        "description": "Global ASTM Standards list is empty",
+        "expected": "Test should fail and log that standards are not listed."
+      },
+      {
+        "description": "Learn More button is not clickable",
+        "expected": "Test should fail and report button is disabled or not interactable."
+      },
+      {
+        "description": "User is not logged in (if authentication is required)",
+        "expected": "Test should verify if the standards are visible to unauthenticated users or fail gracefully."
+      },
+      {
+        "description": "Page loads slowly or times out",
+        "expected": "Test should handle timeout and report as a failure with appropriate message."
+      }
+    ],
+    "BoundaryValues": [
+      {
+        "scenario": "Maximum number of standards listed (e.g., 100 items)",
+        "expected": "All standards should be visible and the UI should not break or overflow."
+      },
+      {
+        "scenario": "Minimum number of standards listed (e.g., 1 item)",
+        "expected": "The single standard should be visible under the header."
+      }
+    ]
+  }
+}
