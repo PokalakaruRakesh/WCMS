@@ -1,0 +1,100 @@
+{
+  "INT-666": {
+    "TestCaseID": "INT-666",
+    "TestCaseName": "Verify Search functionality",
+    "Priority": "Medium",
+    "Objective": "",
+    "ExpectedResult": "Search results related to \"Standards\" should be displayed.",
+    "Locators": [
+      {
+        "name": "searchInput",
+        "description": "Input field for entering search queries",
+        "locatorType": "id",
+        "locatorValue": "search-input"
+      },
+      {
+        "name": "searchButton",
+        "description": "Button to trigger the search",
+        "locatorType": "css",
+        "locatorValue": ".search-btn"
+      },
+      {
+        "name": "searchResultsContainer",
+        "description": "Container displaying search results",
+        "locatorType": "css",
+        "locatorValue": ".search-results"
+      },
+      {
+        "name": "searchResultItem",
+        "description": "Individual search result item",
+        "locatorType": "css",
+        "locatorValue": ".search-result-item"
+      },
+      {
+        "name": "noResultsMessage",
+        "description": "Message displayed when no results are found",
+        "locatorType": "css",
+        "locatorValue": ".no-results-msg"
+      }
+    ],
+    "TestData": [
+      {
+        "scenario": "Valid search term",
+        "searchQuery": "Standards",
+        "expectedResults": ">0",
+        "expectedResultText": "Search results related to 'Standards' should be displayed."
+      },
+      {
+        "scenario": "Empty search term",
+        "searchQuery": "",
+        "expectedResults": "0",
+        "expectedResultText": "No results should be displayed or prompt for input."
+      },
+      {
+        "scenario": "Non-existent term",
+        "searchQuery": "asdkfjhasdf",
+        "expectedResults": "0",
+        "expectedResultText": "No results should be displayed and a 'no results' message should appear."
+      },
+      {
+        "scenario": "Special characters",
+        "searchQuery": "!@#$%^&*()",
+        "expectedResults": "0",
+        "expectedResultText": "No results should be displayed and a 'no results' message should appear."
+      },
+      {
+        "scenario": "Long string",
+        "searchQuery": "S".repeat(256),
+        "expectedResults": "0",
+        "expectedResultText": "No results should be displayed and a 'no results' message should appear."
+      }
+    ],
+    "EdgeCases": [
+      {
+        "description": "Search with leading/trailing spaces",
+        "searchQuery": "  Standards  ",
+        "expected": "Should trim spaces and return results as for 'Standards'"
+      },
+      {
+        "description": "Case insensitivity",
+        "searchQuery": "standards",
+        "expected": "Should return same results as 'Standards'"
+      },
+      {
+        "description": "Rapid consecutive searches",
+        "searchQuery": ["Standards", "asdkfjhasdf", "Standards"],
+        "expected": "Should update results accordingly without error or stale data"
+      },
+      {
+        "description": "SQL injection attempt",
+        "searchQuery": "Standards'; DROP TABLE users;--",
+        "expected": "Should not break functionality or return error; no results expected"
+      },
+      {
+        "description": "XSS attempt",
+        "searchQuery": "<script>alert('xss')</script>",
+        "expected": "Should not execute script; no results expected and input sanitized"
+      }
+    ]
+  }
+}
