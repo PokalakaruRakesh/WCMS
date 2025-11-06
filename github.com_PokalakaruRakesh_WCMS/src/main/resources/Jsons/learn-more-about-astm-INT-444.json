@@ -1,0 +1,88 @@
+{
+  "INT-444": {
+    "TestCaseID": "INT-444",
+    "TestCaseName": "Learn More About ASTM",
+    "Priority": "Medium",
+    "Type": "N/A",
+    "Objective": "No Objective specified",
+    "ExpectedResult": "The user should be able to see Global ASTM Standards listed under the About ASTM Overview header.",
+    "Locators": [
+      {
+        "name": "aboutASTMOverviewHeader",
+        "description": "Header for About ASTM Overview section",
+        "locatorType": "xpath",
+        "locatorValue": "//h2[contains(text(),'About ASTM Overview')]"
+      },
+      {
+        "name": "globalASTMStandardsList",
+        "description": "List of Global ASTM Standards under About ASTM Overview",
+        "locatorType": "xpath",
+        "locatorValue": "//h2[contains(text(),'About ASTM Overview')]/following-sibling::ul[1]"
+      },
+      {
+        "name": "globalASTMStandardsItem",
+        "description": "Each item in Global ASTM Standards list",
+        "locatorType": "xpath",
+        "locatorValue": "//h2[contains(text(),'About ASTM Overview')]/following-sibling::ul[1]/li"
+      },
+      {
+        "name": "learnMoreAboutASTMButton",
+        "description": "Button or link to Learn More About ASTM",
+        "locatorType": "xpath",
+        "locatorValue": "//a[contains(text(),'Learn More About ASTM') or contains(@href, 'about-astm')]"
+      },
+      {
+        "name": "aboutASTMSection",
+        "description": "Main section containing About ASTM content",
+        "locatorType": "xpath",
+        "locatorValue": "//section[contains(@class, 'about-astm')]"
+      }
+    ],
+    "TestData": [
+      {
+        "scenario": "Verify Global ASTM Standards are listed under About ASTM Overview header",
+        "expectedListHeader": "Global ASTM Standards",
+        "expectedListItems": [
+          "Standard A",
+          "Standard B",
+          "Standard C"
+        ]
+      }
+    ],
+    "EdgeCases": [
+      {
+        "description": "About ASTM Overview header is missing",
+        "expected": "Test should fail and log that the header is not present."
+      },
+      {
+        "description": "Global ASTM Standards list is empty",
+        "expected": "Test should fail and log that no standards are listed."
+      },
+      {
+        "description": "Global ASTM Standards list contains unexpected items",
+        "expected": "Test should fail and log the unexpected list items."
+      },
+      {
+        "description": "Learn More About ASTM button/link is not present",
+        "expected": "Test should fail and log that the navigation element is missing."
+      }
+    ],
+    "BoundaryValues": [
+      {
+        "scenario": "Minimum one standard listed",
+        "expectedListItems": [
+          "Standard A"
+        ]
+      },
+      {
+        "scenario": "Maximum number of standards supported by UI (e.g., 100 standards)",
+        "expectedListItems": [
+          "Standard 1",
+          "Standard 2",
+          "...",
+          "Standard 100"
+        ]
+      }
+    ]
+  }
+}
