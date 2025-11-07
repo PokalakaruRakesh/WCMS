@@ -49,3 +49,45 @@
             throw new AssertionError("FAQ link is not displayed in header");
         }
     }
+
+    // Locators for header components based on provided locators and HTML
+    private By aboutASTMButton = By.xpath("//button[text()='About ASTM']");
+    private By submenuCloseButton = By.xpath("//button[@data-testid='collapse-submenu-button']");
+
+    /**
+     * Comprehensive method to validate all main header components are displayed
+     * as per INT-555: User should be able to see the header components successfully
+     */
+    public boolean validateAllHeaderComponentsDisplayed() {
+        boolean allDisplayed = true;
+        waitForElementPresent(homeLink);
+        allDisplayed &= getElement(homeLink).isDisplayed();
+
+        waitForElementPresent(aboutASTMButton);
+        allDisplayed &= getElement(aboutASTMButton).isDisplayed();
+
+        waitForElementPresent(membershipParticipationButton);
+        allDisplayed &= getElement(membershipParticipationButton).isDisplayed();
+
+        waitForElementPresent(standardsSolutionsButton);
+        allDisplayed &= getElement(standardsSolutionsButton).isDisplayed();
+
+        waitForElementPresent(newsButton);
+        allDisplayed &= getElement(newsButton).isDisplayed();
+
+        waitForElementPresent(helpButton);
+        allDisplayed &= getElement(helpButton).isDisplayed();
+
+        waitForElementPresent(faqLink);
+        allDisplayed &= getElement(faqLink).isDisplayed();
+
+        return allDisplayed;
+    }
+
+    /**
+     * Clicks the submenu close button in the header (if visible)
+     */
+    public void clickSubmenuCloseButton() {
+        waitForElementPresent(submenuCloseButton);
+        clickOnMethod(submenuCloseButton);
+    }

@@ -1,0 +1,101 @@
+{
+  "INT-555": {
+    "TestCaseID": "INT-555",
+    "TestCaseName": "valiadate header components",
+    "Priority": "Medium",
+    "Type": "No Type specified",
+    "Objective": "No Objective specified",
+    "ExpectedResult": "User should be able to see the header components successfully",
+    "Locators": [
+      {
+        "name": "HeaderLogo",
+        "description": "The main logo in the header",
+        "locatorType": "xpath",
+        "locatorValue": "//header//img[@alt='Site Logo']"
+      },
+      {
+        "name": "NavigationMenu",
+        "description": "Primary navigation menu",
+        "locatorType": "cssSelector",
+        "locatorValue": "header nav.primary-menu"
+      },
+      {
+        "name": "SearchIcon",
+        "description": "Search icon/button in the header",
+        "locatorType": "xpath",
+        "locatorValue": "//header//button[contains(@class,'search-icon')]"
+      },
+      {
+        "name": "UserProfileDropdown",
+        "description": "User profile dropdown or login link",
+        "locatorType": "cssSelector",
+        "locatorValue": "header .user-profile"
+      },
+      {
+        "name": "NotificationsBell",
+        "description": "Notifications bell icon in the header",
+        "locatorType": "xpath",
+        "locatorValue": "//header//span[contains(@class,'notifications-bell')]"
+      }
+    ],
+    "HeaderComponents": {
+      "Logo": {
+        "isVisible": true,
+        "expectedAltText": "Site Logo"
+      },
+      "Menu": {
+        "isVisible": true,
+        "expectedMenuItems": [
+          "Home",
+          "About",
+          "Membership",
+          "Standards",
+          "News",
+          "Help"
+        ]
+      },
+      "Search": {
+        "isVisible": true
+      },
+      "UserProfile": {
+        "isVisible": true,
+        "expectedStates": ["logged-in", "logged-out"]
+      },
+      "Notifications": {
+        "isVisible": true
+      }
+    },
+    "EdgeCases": [
+      {
+        "scenario": "Header not rendered",
+        "expected": "Test should fail and log missing header components."
+      },
+      {
+        "scenario": "Menu items missing",
+        "expected": "Test should fail and report which menu items are missing."
+      },
+      {
+        "scenario": "Responsive layout (mobile viewport)",
+        "expected": "Header components should be visible or accessible via hamburger menu."
+      },
+      {
+        "scenario": "User not logged in",
+        "expected": "UserProfile should show login/register link."
+      },
+      {
+        "scenario": "User logged in",
+        "expected": "UserProfile should show user dropdown and notifications bell."
+      }
+    ],
+    "BoundaryValues": [
+      {
+        "scenario": "Minimum menu items",
+        "menuItems": ["Home"]
+      },
+      {
+        "scenario": "Maximum menu items",
+        "menuItems": ["Home", "About", "Membership", "Standards", "News", "Help", "Contact", "Events", "Resources", "Blog"]
+      }
+    ]
+  }
+}
