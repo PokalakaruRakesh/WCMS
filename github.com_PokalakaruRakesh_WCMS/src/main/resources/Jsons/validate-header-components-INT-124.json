@@ -1,0 +1,98 @@
+{
+  "INT-124": {
+    "TestCaseID": "INT-124",
+    "TestCaseName": "valiadate header components",
+    "Priority": "Medium",
+    "Type": "N/A",
+    "Objective": "No Objective specified",
+    "ExpectedResult": "User should be able to see the header components successfully",
+    "Locators": [
+      {
+        "name": "HeaderLogo",
+        "description": "ASTM logo in the header",
+        "locatorType": "xpath",
+        "locatorValue": "//header//img[@alt='ASTM Logo']"
+      },
+      {
+        "name": "MainMenu",
+        "description": "Main navigation menu",
+        "locatorType": "css",
+        "locatorValue": "nav.main-menu"
+      },
+      {
+        "name": "SearchIcon",
+        "description": "Search icon in header",
+        "locatorType": "css",
+        "locatorValue": "header .search-icon"
+      },
+      {
+        "name": "LoginButton",
+        "description": "Login button in header",
+        "locatorType": "xpath",
+        "locatorValue": "//header//button[contains(text(),'Login')]"
+      },
+      {
+        "name": "LanguageSelector",
+        "description": "Language selector dropdown",
+        "locatorType": "css",
+        "locatorValue": "header .lang-selector"
+      }
+    ],
+    "HeaderComponents": {
+      "Logo": {
+        "isVisible": true,
+        "expectedAlt": "ASTM Logo"
+      },
+      "MenuItems": [
+        "Home",
+        "About ASTM",
+        "Membership & Participation",
+        "Standards & Solutions",
+        "News",
+        "Help"
+      ],
+      "Search": {
+        "isVisible": true
+      },
+      "Login": {
+        "isVisible": true
+      },
+      "LanguageSelector": {
+        "isVisible": true,
+        "options": ["EN", "ES", "FR"]
+      }
+    },
+    "EdgeCases": [
+      {
+        "scenario": "Header not loaded",
+        "expected": "Test should fail and log error: Header not present"
+      },
+      {
+        "scenario": "Menu items missing",
+        "expected": "Test should fail and log missing menu items"
+      },
+      {
+        "scenario": "Responsive viewport (mobile)",
+        "expected": "Header components should collapse into hamburger menu"
+      },
+      {
+        "scenario": "User not logged in",
+        "expected": "Login button should be visible"
+      },
+      {
+        "scenario": "User logged in",
+        "expected": "Login button replaced by user profile icon"
+      }
+    ],
+    "BoundaryValues": [
+      {
+        "scenario": "Minimum menu items",
+        "menuItems": ["Home"]
+      },
+      {
+        "scenario": "Maximum menu items",
+        "menuItems": ["Home", "About ASTM", "Membership & Participation", "Standards & Solutions", "News", "Help", "Extra1", "Extra2", "Extra3", "Extra4", "Extra5"]
+      }
+    ]
+  }
+}

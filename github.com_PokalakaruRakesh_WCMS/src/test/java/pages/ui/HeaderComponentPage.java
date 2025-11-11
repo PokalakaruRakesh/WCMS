@@ -49,3 +49,40 @@
             throw new AssertionError("FAQ link is not displayed in header");
         }
     }
+
+    // Locators for header components as per test case INT-124
+    private By aboutASTMButton = By.xpath("//button[text()='About ASTM']");
+    private By collapseSubmenuButton = By.xpath("//button[@data-testid='collapse-submenu-button']");
+
+    /**
+     * Comprehensive method to validate all header components are displayed as per INT-124
+     * This method checks visibility of all major header elements.
+     */
+    public boolean validateAllHeaderComponents() {
+        boolean result = true;
+        try {
+            waitForElementPresent(homeLink);
+            result &= getElement(homeLink).isDisplayed();
+
+            waitForElementPresent(aboutASTMButton);
+            result &= getElement(aboutASTMButton).isDisplayed();
+
+            waitForElementPresent(membershipParticipationButton);
+            result &= getElement(membershipParticipationButton).isDisplayed();
+
+            waitForElementPresent(standardsSolutionsButton);
+            result &= getElement(standardsSolutionsButton).isDisplayed();
+
+            waitForElementPresent(newsButton);
+            result &= getElement(newsButton).isDisplayed();
+
+            waitForElementPresent(helpButton);
+            result &= getElement(helpButton).isDisplayed();
+
+            waitForElementPresent(faqLink);
+            result &= getElement(faqLink).isDisplayed();
+        } catch (Exception e) {
+            result = false;
+        }
+        return result;
+    }
