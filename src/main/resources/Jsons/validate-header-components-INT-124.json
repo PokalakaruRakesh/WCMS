@@ -1,0 +1,126 @@
+{
+  "INT-124": {
+    "TestCaseID": "INT-124",
+    "TestCaseName": "valiadate header components",
+    "Priority": "Medium",
+    "Type": "N/A",
+    "Objective": "No Objective specified",
+    "ExpectedResult": "User should be able to see the header components successfully",
+    "Locators": [
+      {
+        "name": "HeaderLogo",
+        "description": "ASTM logo in header",
+        "locatorType": "xpath",
+        "locatorValue": "//header//img[@alt='ASTM Logo']"
+      },
+      {
+        "name": "MainMenu",
+        "description": "Main navigation menu",
+        "locatorType": "css",
+        "locatorValue": ".main-header-menu"
+      },
+      {
+        "name": "SearchIcon",
+        "description": "Search icon in header",
+        "locatorType": "xpath",
+        "locatorValue": "//header//button[contains(@class,'search')]"
+      },
+      {
+        "name": "LoginButton",
+        "description": "Login button in header",
+        "locatorType": "css",
+        "locatorValue": ".header-login-btn"
+      },
+      {
+        "name": "LanguageSelector",
+        "description": "Language selector dropdown",
+        "locatorType": "css",
+        "locatorValue": ".header-language-selector"
+      }
+    ],
+    "HeaderComponents": {
+      "MenuItems": [
+        "Home",
+        "About ASTM",
+        "Membership & Participation",
+        "Standards & Solutions",
+        "News",
+        "Help",
+        "FAQ"
+      ],
+      "Icons": [
+        "Search",
+        "Login",
+        "LanguageSelector"
+      ],
+      "Logo": {
+        "altText": "ASTM Logo",
+        "isVisible": true
+      }
+    },
+    "TestData": [
+      {
+        "scenario": "Verify all header menu items are visible",
+        "expectedMenuItems": [
+          "Home",
+          "About ASTM",
+          "Membership & Participation",
+          "Standards & Solutions",
+          "News",
+          "Help",
+          "FAQ"
+        ]
+      },
+      {
+        "scenario": "Check logo presence",
+        "expected": "Logo should be visible with correct alt text"
+      },
+      {
+        "scenario": "Check search icon visibility",
+        "expected": "Search icon should be visible and clickable"
+      },
+      {
+        "scenario": "Check login button visibility",
+        "expected": "Login button should be visible and clickable"
+      },
+      {
+        "scenario": "Check language selector visibility",
+        "expected": "Language selector should be present and functional"
+      }
+    ],
+    "EdgeCases": [
+      {
+        "scenario": "Header not loaded",
+        "expected": "Test should fail with appropriate error message"
+      },
+      {
+        "scenario": "Menu item missing",
+        "expected": "Test should report missing menu item"
+      },
+      {
+        "scenario": "Logo not visible",
+        "expected": "Test should report logo not visible"
+      },
+      {
+        "scenario": "Responsive view - mobile",
+        "viewport": "375x667",
+        "expected": "Header components should collapse into hamburger menu, all items accessible"
+      },
+      {
+        "scenario": "Responsive view - tablet",
+        "viewport": "768x1024",
+        "expected": "Header components should be visible and properly aligned"
+      }
+    ],
+    "BoundaryValues": [
+      {
+        "scenario": "Maximum menu items",
+        "menuItems": 10
+      },
+      {
+        "scenario": "Minimum menu items",
+        "menuItems": 1
+      }
+    ]
+  }
+}
