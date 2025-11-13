@@ -1,0 +1,227 @@
+{
+  "INT-111": {
+    "TestCaseID": "INT-111",
+    "TestCaseName": "valiadate header and footer components",
+    "Priority": "Medium",
+    "Objective": "No Objective specified",
+    "ExpectedResult": "User should be able to see the footer components successfully",
+    "Locators": [
+      {
+        "name": "headerContainer",
+        "description": "Main header container",
+        "locatorType": "xpath",
+        "locatorValue": "//header[@id='main-header']"
+      },
+      {
+        "name": "footerContainer",
+        "description": "Main footer container",
+        "locatorType": "xpath",
+        "locatorValue": "//footer[@id='main-footer']"
+      },
+      {
+        "name": "footerLinks",
+        "description": "All footer navigation links",
+        "locatorType": "css",
+        "locatorValue": "footer#main-footer a.footer-link"
+      },
+      {
+        "name": "socialIcons",
+        "description": "Footer social media icons",
+        "locatorType": "css",
+        "locatorValue": "footer#main-footer .social-icons a"
+      },
+      {
+        "name": "copyrightText",
+        "description": "Footer copyright text",
+        "locatorType": "css",
+        "locatorValue": "footer#main-footer .copyright"
+      }
+    ],
+    "HeaderComponents": {
+      "MenuItems": [
+        "Home",
+        "About",
+        "Membership",
+        "Standards",
+        "News",
+        "Help"
+      ],
+      "Icons": [
+        "search",
+        "user",
+        "cart"
+      ],
+      "Logo": {
+        "altText": "ASTM International Logo",
+        "isVisible": true
+      }
+    },
+    "FooterComponents": {
+      "FooterLinks": [
+        {
+          "label": "Contact Us",
+          "expectedUrl": "/contact-us",
+          "isVisible": true
+        },
+        {
+          "label": "Privacy Policy",
+          "expectedUrl": "/privacy-policy",
+          "isVisible": true
+        },
+        {
+          "label": "Terms of Use",
+          "expectedUrl": "/terms-of-use",
+          "isVisible": true
+        },
+        {
+          "label": "Sitemap",
+          "expectedUrl": "/sitemap",
+          "isVisible": true
+        },
+        {
+          "label": "Accessibility",
+          "expectedUrl": "/accessibility",
+          "isVisible": true
+        }
+      ],
+      "SocialIcons": [
+        {
+          "platform": "facebook",
+          "expectedUrl": "https://www.facebook.com/astminternational",
+          "isVisible": true
+        },
+        {
+          "platform": "twitter",
+          "expectedUrl": "https://twitter.com/astmintl",
+          "isVisible": true
+        },
+        {
+          "platform": "linkedin",
+          "expectedUrl": "https://www.linkedin.com/company/astm-international/",
+          "isVisible": true
+        },
+        {
+          "platform": "youtube",
+          "expectedUrl": "https://www.youtube.com/user/ASTMIntlVideo",
+          "isVisible": true
+        }
+      ],
+      "Copyright": {
+        "expectedTextPattern": "^© [0-9]{4} ASTM International.*$",
+        "isVisible": true
+      }
+    },
+    "TestData": [
+      {
+        "scenario": "Footer is present and all links are visible",
+        "expectedFooterLinks": [
+          "Contact Us",
+          "Privacy Policy",
+          "Terms of Use",
+          "Sitemap",
+          "Accessibility"
+        ],
+        "expectedSocialIcons": [
+          "facebook",
+          "twitter",
+          "linkedin",
+          "youtube"
+        ],
+        "expectedCopyright": "© 2024 ASTM International. All rights reserved."
+      },
+      {
+        "scenario": "Header is present and menu items are visible",
+        "expectedMenuItems": [
+          "Home",
+          "About",
+          "Membership",
+          "Standards",
+          "News",
+          "Help"
+        ],
+        "expectedIcons": [
+          "search",
+          "user",
+          "cart"
+        ],
+        "expectedLogoAlt": "ASTM International Logo"
+      }
+    ],
+    "EdgeCases": [
+      {
+        "scenario": "No footer present on the page",
+        "expected": "Test should fail and report missing footer components"
+      },
+      {
+        "scenario": "Partial footer is rendered (some links missing)",
+        "expected": "Test should fail and report missing links"
+      },
+      {
+        "scenario": "Broken footer links (404)",
+        "expected": "Test should fail and report broken links"
+      },
+      {
+        "scenario": "Header is missing",
+        "expected": "Test should fail and report missing header components"
+      },
+      {
+        "scenario": "Header menu items are not visible",
+        "expected": "Test should fail and report missing menu items"
+      }
+    ],
+    "BoundaryValues": [
+      {
+        "scenario": "Minimum footer links (only 1 link)",
+        "footerLinks": ["Contact Us"]
+      },
+      {
+        "scenario": "Maximum footer links (all 42 data items)",
+        "footerLinks": [
+          "Contact Us",
+          "Privacy Policy",
+          "Terms of Use",
+          "Sitemap",
+          "Accessibility",
+          "Cookie Policy",
+          "Careers",
+          "Press Releases",
+          "Events",
+          "Membership",
+          "Standards",
+          "Publications",
+          "FAQ",
+          "Help Center",
+          "Support",
+          "Feedback",
+          "Newsletter",
+          "Blog",
+          "Resources",
+          "Partners",
+          "Vendors",
+          "Legal",
+          "Compliance",
+          "Security",
+          "Data Protection",
+          "GDPR",
+          "Contact Sales",
+          "Investor Relations",
+          "Media Kit",
+          "Brand Guidelines",
+          "Community",
+          "Forums",
+          "User Groups",
+          "Developers",
+          "API Docs",
+          "Mobile App",
+          "Download",
+          "Site Feedback",
+          "Report Issue",
+          "Donate",
+          "Volunteer",
+          "Alumni",
+          "Sustainability"
+        ]
+      }
+    ]
+  }
+}
