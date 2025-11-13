@@ -86,3 +86,37 @@
         }
         return result;
     }
+
+    // Locators for header components based on provided test case INT-124
+    // Only add missing locators and methods (avoid duplicates)
+    // homeLink, aboutASTMButton, membershipParticipationButton, standardsSolutionsButton, newsButton, helpButton, faqLink, collapseSubmenuButton already declared above, so do not redeclare.
+
+    /**
+     * Comprehensive method to validate all header components as per INT-124
+     * Validates presence of Home, About ASTM, Membership & Participation, Standards & Solutions, News, Help, and FAQ
+     *
+     * @return true if all header components are displayed, false otherwise
+     */
+    public boolean validateAllHeaderComponentsINT124() {
+        try {
+            waitForElementPresent(homeLink);
+            waitForElementPresent(aboutASTMButton);
+            waitForElementPresent(membershipParticipationButton);
+            waitForElementPresent(standardsSolutionsButton);
+            waitForElementPresent(newsButton);
+            waitForElementPresent(helpButton);
+            waitForElementPresent(faqLink);
+            // Optionally validate collapse submenu button if submenu is open
+            // waitForElementPresent(collapseSubmenuButton);
+            return getElement(homeLink).isDisplayed()
+                && getElement(aboutASTMButton).isDisplayed()
+                && getElement(membershipParticipationButton).isDisplayed()
+                && getElement(standardsSolutionsButton).isDisplayed()
+                && getElement(newsButton).isDisplayed()
+                && getElement(helpButton).isDisplayed()
+                && getElement(faqLink).isDisplayed();
+        } catch (Exception e) {
+            // Log error if needed
+            return false;
+        }
+    }
