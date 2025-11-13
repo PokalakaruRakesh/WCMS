@@ -1,0 +1,158 @@
+{
+  "INT-111": {
+    "TestCaseID": "INT-111",
+    "TestCaseName": "valiadate header and footer components",
+    "Priority": "Medium",
+    "Objective": "No Objective specified",
+    "ExpectedResult": "User should be able to see the header and footer components successfully",
+    "Locators": [
+      {
+        "name": "headerContainer",
+        "description": "Main header container",
+        "locatorType": "xpath",
+        "locatorValue": "//header[@id='main-header']"
+      },
+      {
+        "name": "footerContainer",
+        "description": "Main footer container",
+        "locatorType": "xpath",
+        "locatorValue": "//footer[@id='main-footer']"
+      },
+      {
+        "name": "menuNav",
+        "description": "Header navigation menu",
+        "locatorType": "css",
+        "locatorValue": "nav.header-menu"
+      },
+      {
+        "name": "footerLinks",
+        "description": "Footer links section",
+        "locatorType": "css",
+        "locatorValue": "footer .footer-links"
+      },
+      {
+        "name": "footerCopyright",
+        "description": "Footer copyright text",
+        "locatorType": "css",
+        "locatorValue": "footer .copyright"
+      }
+    ],
+    "HeaderComponents": {
+      "MenuItems": [
+        "Home",
+        "About ASTM",
+        "Membership & Participation",
+        "Standards & Solutions",
+        "News",
+        "Help",
+        "FAQ"
+      ],
+      "Icons": [
+        "search",
+        "user",
+        "cart"
+      ],
+      "Logo": {
+        "altText": "ASTM International Logo",
+        "isVisible": true
+      }
+    },
+    "FooterComponents": {
+      "FooterLinks": [
+        { "label": "Contact Us", "expectedUrl": "/contact", "isVisible": true },
+        { "label": "Privacy Policy", "expectedUrl": "/privacy-policy", "isVisible": true },
+        { "label": "Terms of Use", "expectedUrl": "/terms-of-use", "isVisible": true },
+        { "label": "Sitemap", "expectedUrl": "/sitemap", "isVisible": true },
+        { "label": "Careers", "expectedUrl": "/careers", "isVisible": true }
+      ],
+      "SocialIcons": [
+        { "platform": "facebook", "isVisible": true },
+        { "platform": "twitter", "isVisible": true },
+        { "platform": "linkedin", "isVisible": true },
+        { "platform": "youtube", "isVisible": true }
+      ],
+      "Copyright": {
+        "expectedTextPattern": "^©\\s?20\\d{2} ASTM International.*$",
+        "isVisible": true
+      }
+    },
+    "TestData": [
+      {
+        "scenario": "Standard desktop viewport",
+        "expectedMenuItems": [
+          "Home",
+          "About ASTM",
+          "Membership & Participation",
+          "Standards & Solutions",
+          "News",
+          "Help",
+          "FAQ"
+        ],
+        "expectedFooterLinks": [
+          "Contact Us",
+          "Privacy Policy",
+          "Terms of Use",
+          "Sitemap",
+          "Careers"
+        ]
+      },
+      {
+        "scenario": "Mobile viewport",
+        "expectedMenuItems": [
+          "Home",
+          "About ASTM",
+          "Membership & Participation",
+          "Standards & Solutions",
+          "News"
+        ],
+        "expectedFooterLinks": [
+          "Contact Us",
+          "Privacy Policy",
+          "Terms of Use"
+        ]
+      }
+    ],
+    "EdgeCases": [
+      {
+        "scenario": "Header not loaded",
+        "expected": "Test should fail and log missing header component"
+      },
+      {
+        "scenario": "Footer partially loaded",
+        "expected": "Test should fail and log missing footer links or copyright"
+      },
+      {
+        "scenario": "Broken footer link",
+        "expected": "Test should fail and log the broken link with label and url"
+      },
+      {
+        "scenario": "Extra/unexpected menu item in header",
+        "expected": "Test should fail and log the unexpected menu item"
+      },
+      {
+        "scenario": "Missing social icon",
+        "expected": "Test should fail and log the missing social platform"
+      }
+    ],
+    "BoundaryValues": [
+      {
+        "scenario": "Maximum menu items displayed",
+        "menuItems": [
+          "Home",
+          "About ASTM",
+          "Membership & Participation",
+          "Standards & Solutions",
+          "News",
+          "Help",
+          "FAQ"
+        ]
+      },
+      {
+        "scenario": "Minimum footer links displayed",
+        "footerLinks": [
+          "Contact Us"
+        ]
+      }
+    ]
+  }
+}
