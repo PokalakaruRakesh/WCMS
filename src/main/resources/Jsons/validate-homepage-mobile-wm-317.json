@@ -1,0 +1,305 @@
+{
+  "WM-317": {
+    "TestCaseID": "WM-317",
+    "TestCaseName": "Microsites|| Functional || Release 1 ||Mobile :Validate Home Page – Content, Assets, Navigation, and Components",
+    "Priority": "Medium",
+    "Type": "Functional",
+    "Objective": "Validate that the home page on mobile matches the approved document for content, assets, navigation, and components.",
+    "ExpectedResult": "Layout, spacing, typography, and colors should match the approved Document exactly.",
+    "Locators": [
+      {
+        "name": "HomePageBanner",
+        "description": "Main banner image or carousel at the top of the homepage",
+        "locatorType": "xpath",
+        "locatorValue": "//div[contains(@class, 'home-banner')]"
+      },
+      {
+        "name": "NavigationMenuButton",
+        "description": "Hamburger menu button for mobile navigation",
+        "locatorType": "css",
+        "locatorValue": ".mobile-nav-toggle"
+      },
+      {
+        "name": "PrimaryNavLinks",
+        "description": "Primary navigation links in the mobile menu",
+        "locatorType": "css",
+        "locatorValue": ".mobile-nav-menu .nav-link"
+      },
+      {
+        "name": "FooterSection",
+        "description": "Footer section at the bottom of the homepage",
+        "locatorType": "xpath",
+        "locatorValue": "//footer"
+      },
+      {
+        "name": "MainContentBlocks",
+        "description": "Main content blocks/components on the homepage",
+        "locatorType": "css",
+        "locatorValue": ".home-content-block"
+      }
+    ],
+    "TestData": [
+      {
+        "scenario": "Validate banner image loads and is visible",
+        "expectedImageUrl": "https://example.com/assets/banner-mobile.jpg",
+        "expectedAltText": "Welcome to Microsite Home"
+      },
+      {
+        "scenario": "Validate navigation menu opens on tap",
+        "menuButtonVisible": true,
+        "expectedMenuItems": ["Home", "About", "Membership", "Standards", "News", "Help"]
+      },
+      {
+        "scenario": "Validate presence of key content blocks",
+        "expectedBlocks": ["TheLatest", "Standards & Solutions", "Market Insights & Innovation", "Footer"]
+      },
+      {
+        "scenario": "Validate typography and color for main header",
+        "selector": ".main-header",
+        "expectedFontFamily": "Roboto, Arial, sans-serif",
+        "expectedFontSize": "24px",
+        "expectedColor": "#222222"
+      },
+      {
+        "scenario": "Validate spacing between content blocks",
+        "selector": ".home-content-block + .home-content-block",
+        "expectedMarginTop": "24px"
+      },
+      {
+        "scenario": "Validate footer links",
+        "expectedFooterLinks": [
+          {"label": "Privacy Policy", "url": "/privacy-policy"},
+          {"label": "Terms of Use", "url": "/terms-of-use"},
+          {"label": "Contact", "url": "/contact"}
+        ]
+      },
+      {
+        "scenario": "Validate mobile responsiveness",
+        "viewportWidth": 375,
+        "viewportHeight": 667,
+        "expectedLayout": "single-column"
+      },
+      {
+        "scenario": "Validate all images have alt text",
+        "selector": "img",
+        "expectedAltPresent": true
+      },
+      {
+        "scenario": "Validate color contrast for buttons",
+        "selector": ".btn-primary",
+        "expectedContrastRatio": ">=4.5:1"
+      },
+      {
+        "scenario": "Validate presence of logo",
+        "selector": ".site-logo",
+        "expectedVisible": true,
+        "expectedImageUrl": "https://example.com/assets/logo-mobile.svg"
+      },
+      {
+        "scenario": "Validate navigation closes on menu item tap",
+        "action": "tapMenuItem",
+        "expectedMenuClosed": true
+      },
+      {
+        "scenario": "Validate accessibility landmarks",
+        "expectedLandmarks": ["banner", "navigation", "main", "contentinfo"]
+      },
+      {
+        "scenario": "Validate main call-to-action button",
+        "selector": ".cta-btn",
+        "expectedText": "Join Now",
+        "expectedColor": "#0072CE"
+      },
+      {
+        "scenario": "Validate asset loading times",
+        "asset": "banner-image",
+        "maxLoadTimeMs": 2000
+      },
+      {
+        "scenario": "Validate font size for body text",
+        "selector": "body",
+        "expectedFontSize": "16px"
+      },
+      {
+        "scenario": "Validate social media icons in footer",
+        "expectedIcons": ["facebook", "twitter", "linkedin"]
+      },
+      {
+        "scenario": "Validate error message for missing asset",
+        "asset": "non-existent-image.jpg",
+        "expectedError": "404 Not Found"
+      },
+      {
+        "scenario": "Validate navigation with long menu items",
+        "menuItems": ["Home", "About Us and Our Mission Statement That Is Very Long", "Membership", "Standards"],
+        "expectedMenuScroll": true
+      },
+      {
+        "scenario": "Validate button tap area is at least 48x48px",
+        "selector": ".btn-primary",
+        "expectedMinTapArea": "48x48"
+      },
+      {
+        "scenario": "Validate homepage loads under 3 seconds",
+        "maxLoadTimeMs": 3000
+      },
+      {
+        "scenario": "Validate all links are reachable",
+        "selector": "a",
+        "expectedStatusCodes": [200]
+      },
+      {
+        "scenario": "Validate background color of header",
+        "selector": ".main-header",
+        "expectedBackgroundColor": "#F8F8F8"
+      },
+      {
+        "scenario": "Validate logo links to homepage",
+        "selector": ".site-logo",
+        "expectedHref": "/"
+      },
+      {
+        "scenario": "Validate menu closes on outside tap",
+        "action": "tapOutsideMenu",
+        "expectedMenuClosed": true
+      },
+      {
+        "scenario": "Validate content block order",
+        "expectedOrder": ["TheLatest", "Standards & Solutions", "Market Insights & Innovation"]
+      },
+      {
+        "scenario": "Validate presence of search icon",
+        "selector": ".icon-search",
+        "expectedVisible": true
+      },
+      {
+        "scenario": "Validate header remains sticky on scroll",
+        "selector": ".main-header",
+        "expectedSticky": true
+      },
+      {
+        "scenario": "Validate no horizontal scroll",
+        "viewportWidth": 375,
+        "expectedHorizontalScroll": false
+      },
+      {
+        "scenario": "Validate minimum tap area for navigation links",
+        "selector": ".mobile-nav-menu .nav-link",
+        "expectedMinTapArea": "48x48"
+      },
+      {
+        "scenario": "Validate all SVG icons are loaded",
+        "selector": "svg",
+        "expectedCount": 8
+      },
+      {
+        "scenario": "Validate color for primary buttons",
+        "selector": ".btn-primary",
+        "expectedBackgroundColor": "#0072CE"
+      },
+      {
+        "scenario": "Validate font weight for headings",
+        "selector": "h1, h2, h3",
+        "expectedFontWeight": "700"
+      },
+      {
+        "scenario": "Validate all images are responsive",
+        "selector": "img",
+        "expectedResponsive": true
+      },
+      {
+        "scenario": "Validate footer copyright",
+        "selector": "footer .copyright",
+        "expectedTextPattern": "© [0-9]{4} Microsite Inc. All rights reserved."
+      },
+      {
+        "scenario": "Validate navigation menu accessibility",
+        "selector": ".mobile-nav-menu",
+        "expectedAriaLabel": "Main Navigation"
+      },
+      {
+        "scenario": "Validate presence of skip to content link",
+        "selector": "a.skip-to-content",
+        "expectedVisible": true
+      },
+      {
+        "scenario": "Validate main content area uses role=main",
+        "selector": "main",
+        "expectedRole": "main"
+      },
+      {
+        "scenario": "Validate all external links open in new tab",
+        "selector": "a.external",
+        "expectedTarget": "_blank"
+      },
+      {
+        "scenario": "Validate navigation menu closes on ESC key",
+        "action": "pressEscape",
+        "expectedMenuClosed": true
+      },
+      {
+        "scenario": "Validate color palette matches design tokens",
+        "expectedColors": ["#0072CE", "#222222", "#F8F8F8", "#FFFFFF"]
+      },
+      {
+        "scenario": "Validate focus outline is visible on tab navigation",
+        "selector": ".focusable",
+        "expectedFocusOutline": true
+      },
+      {
+        "scenario": "Validate minimum contrast ratio for text",
+        "selector": "body, .main-header, .btn-primary",
+        "expectedContrastRatio": ">=4.5:1"
+      },
+      {
+        "scenario": "Validate homepage renders correctly in landscape mode",
+        "viewportWidth": 667,
+        "viewportHeight": 375,
+        "expectedLayout": "single-column"
+      },
+      {
+        "scenario": "Validate no broken images",
+        "selector": "img",
+        "expectedBrokenImages": 0
+      }
+    ],
+    "EdgeCases": [
+      {
+        "description": "Homepage loads with slow network (3G)",
+        "networkCondition": "3G",
+        "expectedLoadTimeMs": 6000
+      },
+      {
+        "description": "Banner image fails to load",
+        "asset": "banner-image",
+        "expectedFallback": "Show placeholder image"
+      },
+      {
+        "description": "No navigation links present",
+        "expectedBehavior": "Show error or fallback navigation"
+      },
+      {
+        "description": "Very long menu item text",
+        "menuItem": "Membership and Participation in International Committees and Subcommittees",
+        "expectedTruncation": true
+      },
+      {
+        "description": "No footer section rendered",
+        "expectedBehavior": "Page should still be accessible and usable"
+      },
+      {
+        "description": "All images missing alt text",
+        "expectedBehavior": "Accessibility violation is flagged"
+      },
+      {
+        "description": "User taps menu rapidly multiple times",
+        "action": "rapidTapMenu",
+        "expectedMenuStable": true
+      },
+      {
+        "description": "Device in dark mode",
+        "expectedColors": ["#222222", "#FFFFFF", "#0072CE"]
+      }
+    ]
+  }
+}
