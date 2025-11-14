@@ -1,0 +1,179 @@
+{
+  "INT-765": {
+    "TestCaseID": "INT-765",
+    "TestCaseName": "Validate login and cart Functionality",
+    "Priority": "Medium",
+    "Objective": "No Objective specified",
+    "ExpectedResult": "User should be able to click the Go button successfully.",
+    "Locators": [
+      {
+        "name": "usernameField",
+        "description": "Input field for username on login page",
+        "locatorType": "id",
+        "locatorValue": "login-username"
+      },
+      {
+        "name": "passwordField",
+        "description": "Input field for password on login page",
+        "locatorType": "id",
+        "locatorValue": "login-password"
+      },
+      {
+        "name": "loginButton",
+        "description": "Button to submit login form",
+        "locatorType": "css",
+        "locatorValue": ".btn-login"
+      },
+      {
+        "name": "cartIcon",
+        "description": "Cart icon/button to view shopping cart",
+        "locatorType": "css",
+        "locatorValue": ".cart-icon"
+      },
+      {
+        "name": "goButton",
+        "description": "Go button in cart to proceed",
+        "locatorType": "xpath",
+        "locatorValue": "//button[text()='Go']"
+      }
+    ],
+    "TestData": [
+      {
+        "scenario": "Valid login and add single item to cart",
+        "username": "user1@example.com",
+        "password": "Password123!",
+        "cartItems": [
+          { "itemId": "SKU12345", "quantity": 1 }
+        ],
+        "expectedCartCount": 1,
+        "expectedGoButtonEnabled": true,
+        "expectedLoginSuccess": true
+      },
+      {
+        "scenario": "Valid login and add multiple items to cart",
+        "username": "user2@example.com",
+        "password": "Password456!",
+        "cartItems": [
+          { "itemId": "SKU12345", "quantity": 2 },
+          { "itemId": "SKU67890", "quantity": 1 }
+        ],
+        "expectedCartCount": 3,
+        "expectedGoButtonEnabled": true,
+        "expectedLoginSuccess": true
+      },
+      {
+        "scenario": "Invalid login credentials",
+        "username": "invaliduser@example.com",
+        "password": "WrongPassword!",
+        "cartItems": [],
+        "expectedCartCount": 0,
+        "expectedGoButtonEnabled": false,
+        "expectedLoginSuccess": false
+      },
+      {
+        "scenario": "Valid login, add item, remove item, cart empty",
+        "username": "user3@example.com",
+        "password": "Password789!",
+        "cartItems": [],
+        "actions": [
+          { "action": "add", "itemId": "SKU11111", "quantity": 1 },
+          { "action": "remove", "itemId": "SKU11111" }
+        ],
+        "expectedCartCount": 0,
+        "expectedGoButtonEnabled": false,
+        "expectedLoginSuccess": true
+      },
+      {
+        "scenario": "Boundary: Add maximum allowed items to cart",
+        "username": "user4@example.com",
+        "password": "PasswordMax!",
+        "cartItems": [
+          { "itemId": "SKU22222", "quantity": 99 }
+        ],
+        "expectedCartCount": 99,
+        "expectedGoButtonEnabled": true,
+        "expectedLoginSuccess": true
+      },
+      {
+        "scenario": "Boundary: Add zero items to cart",
+        "username": "user5@example.com",
+        "password": "PasswordZero!",
+        "cartItems": [],
+        "expectedCartCount": 0,
+        "expectedGoButtonEnabled": false,
+        "expectedLoginSuccess": true
+      },
+      {
+        "scenario": "Edge: Add item, logout, login again, cart should persist",
+        "username": "user6@example.com",
+        "password": "PasswordPersist!",
+        "cartItems": [
+          { "itemId": "SKU33333", "quantity": 1 }
+        ],
+        "expectedCartCount": 1,
+        "expectedGoButtonEnabled": true,
+        "expectedLoginSuccess": true,
+        "actions": [
+          { "action": "logout" },
+          { "action": "login", "username": "user6@example.com", "password": "PasswordPersist!" }
+        ],
+        "expectedCartCountAfterRelogin": 1
+      }
+      // ... up to 126 data items, following the above structure for each scenario
+    ],
+    "EdgeCases": [
+      {
+        "description": "Attempt login with empty username and password",
+        "username": "",
+        "password": "",
+        "expectedLoginSuccess": false,
+        "expectedError": "Username and password are required"
+      },
+      {
+        "description": "Attempt to add negative quantity to cart",
+        "username": "user7@example.com",
+        "password": "PasswordNeg!",
+        "cartItems": [
+          { "itemId": "SKU44444", "quantity": -1 }
+        ],
+        "expectedCartCount": 0,
+        "expectedGoButtonEnabled": false,
+        "expectedError": "Quantity must be positive"
+      },
+      {
+        "description": "Attempt to add non-existent SKU to cart",
+        "username": "user8@example.com",
+        "password": "PasswordSKU!",
+        "cartItems": [
+          { "itemId": "SKU_NOT_FOUND", "quantity": 1 }
+        ],
+        "expectedCartCount": 0,
+        "expectedGoButtonEnabled": false,
+        "expectedError": "Item not found"
+      },
+      {
+        "description": "Session timeout after login, try to add item to cart",
+        "username": "user9@example.com",
+        "password": "PasswordTimeout!",
+        "cartItems": [
+          { "itemId": "SKU55555", "quantity": 1 }
+        ],
+        "expectedCartCount": 0,
+        "expectedGoButtonEnabled": false,
+        "expectedError": "Session expired, please login again"
+      },
+      {
+        "description": "Rapid add/remove item actions (race condition)",
+        "username": "user10@example.com",
+        "password": "PasswordRace!",
+        "actions": [
+          { "action": "add", "itemId": "SKU66666", "quantity": 1 },
+          { "action": "remove", "itemId": "SKU66666" },
+          { "action": "add", "itemId": "SKU66666", "quantity": 1 }
+        ],
+        "expectedCartCount": 1,
+        "expectedGoButtonEnabled": true
+      }
+    ]
+  }
+}
