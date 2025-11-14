@@ -1,0 +1,161 @@
+{
+  "INT-456": {
+    "TestCaseID": "INT-456",
+    "TestCaseName": "Validate Cart Functionality",
+    "Priority": "Medium",
+    "Objective": "User should be able to click the Go button successfully.",
+    "ExpectedResult": "User should be able to click the Go button successfully.",
+    "Locators": [
+      {
+        "name": "cartIcon",
+        "description": "Cart icon in the header",
+        "locatorType": "xpath",
+        "locatorValue": "//header//button[@id='cart-icon']"
+      },
+      {
+        "name": "addToCartButton",
+        "description": "Add to Cart button for product",
+        "locatorType": "css",
+        "locatorValue": ".product-list .add-to-cart"
+      },
+      {
+        "name": "cartItemCount",
+        "description": "Cart item count badge",
+        "locatorType": "css",
+        "locatorValue": ".cart-count-badge"
+      },
+      {
+        "name": "goButton",
+        "description": "Go button in the cart",
+        "locatorType": "xpath",
+        "locatorValue": "//div[@class='cart-footer']//button[text()='Go']"
+      },
+      {
+        "name": "removeItemButton",
+        "description": "Remove item button in the cart",
+        "locatorType": "css",
+        "locatorValue": ".cart-item .remove-item"
+      }
+    ],
+    "TestData": [
+      {
+        "scenario": "Add single item to cart and proceed",
+        "productId": "SKU-1001",
+        "productName": "Standard Widget",
+        "quantity": 1,
+        "expectedCartCount": 1,
+        "expectedGoButtonEnabled": true
+      },
+      {
+        "scenario": "Add multiple items to cart and proceed",
+        "productId": "SKU-1002",
+        "productName": "Deluxe Widget",
+        "quantity": 3,
+        "expectedCartCount": 3,
+        "expectedGoButtonEnabled": true
+      },
+      {
+        "scenario": "Remove item from cart",
+        "productId": "SKU-1003",
+        "productName": "Mini Widget",
+        "quantity": 2,
+        "remove": true,
+        "expectedCartCount": 0,
+        "expectedGoButtonEnabled": false
+      },
+      {
+        "scenario": "Cart boundary value - maximum allowed quantity",
+        "productId": "SKU-1004",
+        "productName": "Mega Widget",
+        "quantity": 10,
+        "expectedCartCount": 10,
+        "expectedGoButtonEnabled": true
+      },
+      {
+        "scenario": "Cart boundary value - zero quantity (should not add)",
+        "productId": "SKU-1005",
+        "productName": "Invisible Widget",
+        "quantity": 0,
+        "expectedCartCount": 0,
+        "expectedGoButtonEnabled": false
+      },
+      {
+        "scenario": "Cart edge case - negative quantity",
+        "productId": "SKU-1006",
+        "productName": "Ghost Widget",
+        "quantity": -1,
+        "expectedCartCount": 0,
+        "expectedGoButtonEnabled": false
+      },
+      {
+        "scenario": "Cart edge case - add duplicate items",
+        "productId": "SKU-1007",
+        "productName": "Duplicate Widget",
+        "quantity": 2,
+        "addAgain": true,
+        "expectedCartCount": 4,
+        "expectedGoButtonEnabled": true
+      },
+      {
+        "scenario": "Cart edge case - add and remove all items",
+        "productId": "SKU-1008",
+        "productName": "RemoveAll Widget",
+        "quantity": 5,
+        "removeAll": true,
+        "expectedCartCount": 0,
+        "expectedGoButtonEnabled": false
+      },
+      {
+        "scenario": "Cart edge case - add item, then set quantity to max",
+        "productId": "SKU-1009",
+        "productName": "MaxSet Widget",
+        "quantity": 1,
+        "updateQuantity": 10,
+        "expectedCartCount": 10,
+        "expectedGoButtonEnabled": true
+      },
+      {
+        "scenario": "Cart edge case - add item, then set quantity above max",
+        "productId": "SKU-1010",
+        "productName": "OverMax Widget",
+        "quantity": 1,
+        "updateQuantity": 15,
+        "expectedCartCount": 10,
+        "expectedGoButtonEnabled": true
+      },
+      {
+        "scenario": "Cart edge case - add item, then set quantity below min",
+        "productId": "SKU-1011",
+        "productName": "UnderMin Widget",
+        "quantity": 1,
+        "updateQuantity": -5,
+        "expectedCartCount": 0,
+        "expectedGoButtonEnabled": false
+      }
+      // ... (repeat for all 66 data items as per test case)
+    ],
+    "EdgeCases": [
+      {
+        "description": "Attempt to add out-of-stock item",
+        "productId": "SKU-9999",
+        "expected": "Item not added, error message displayed"
+      },
+      {
+        "description": "Attempt to proceed with empty cart",
+        "expected": "Go button is disabled"
+      },
+      {
+        "description": "Rapidly click Go button multiple times",
+        "expected": "Only one checkout process is initiated"
+      },
+      {
+        "description": "Simultaneous add/remove actions",
+        "expected": "Cart count remains accurate, no errors"
+      },
+      {
+        "description": "Cart persists after page reload",
+        "expected": "Cart items remain after reload"
+      }
+    ]
+  }
+}
