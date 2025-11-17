@@ -1,0 +1,68 @@
+// Test Data for: Validate Home Page Functionality (WM-317)
+// This file defines the expected buttons and links to be validated on the Home Page.
+{
+  "WM-317": {
+    "TestCaseID": "WM-317",
+    "TestCaseName": "Validate Home Page Functionality",
+    "Priority": "Medium",
+    "ExpectedResult": "User should be able to verify that all buttons and links on the page are working correctly."
+  },
+  "HomePage": {
+    "ButtonsAndLinks": [
+      {
+        "elementName": "MainBannerButton",
+        "locatorType": "xpath",
+        "locatorValue": "//div[@class='banner']//a[contains(@class,'btn-primary')]",
+        "description": "Main banner call-to-action button",
+        "edgeCases": ["Button disabled", "Button not visible"],
+        "boundaryValues": ["Empty href", "#"]
+      },
+      {
+        "elementName": "HeaderMenuHome",
+        "locatorType": "css",
+        "locatorValue": "nav.menu li.home > a",
+        "description": "Header menu Home link",
+        "edgeCases": ["Link not clickable", "Link opens in new tab"],
+        "boundaryValues": ["Empty href", "#"]
+      },
+      {
+        "elementName": "FooterContactUsLink",
+        "locatorType": "linkText",
+        "locatorValue": "Contact Us",
+        "description": "Footer Contact Us link",
+        "edgeCases": ["Link broken", "Link missing"],
+        "boundaryValues": ["mailto:", "tel:"]
+      },
+      {
+        "elementName": "WhatsNewSectionButton",
+        "locatorType": "xpath",
+        "locatorValue": "//section[@id='whats-new']//a[contains(@class,'btn-secondary')]",
+        "description": "What's New section button",
+        "edgeCases": ["Button disabled", "Button not present"],
+        "boundaryValues": ["Empty href", "#"]
+      },
+      {
+        "elementName": "MarketInsightsLink",
+        "locatorType": "partialLinkText",
+        "locatorValue": "Market Insights",
+        "description": "Market Insights & Innovation link",
+        "edgeCases": ["Link text changed", "Link not visible"],
+        "boundaryValues": ["Empty href", "#"]
+      }
+    ],
+    "NegativeScenarios": [
+      {
+        "scenario": "Button is present but not clickable",
+        "expectedBehavior": "Test should fail and log the non-clickable state."
+      },
+      {
+        "scenario": "Link redirects to 404 page",
+        "expectedBehavior": "Test should fail and log the broken link."
+      },
+      {
+        "scenario": "Button/link missing from DOM",
+        "expectedBehavior": "Test should fail and log missing element."
+      }
+    ]
+  }
+}

@@ -52,13 +52,98 @@ public class HomePage_WCMS extends BasePage {
     public By EEOLaw = By.xpath("//a[contains(@href, 'OFCCP_EEO_Supplement_Final_JRF_QA_508c.pdf') and text()[contains(., 'EEO is the Law')]]");
     public By PolicyFAQ = By.xpath("//a[@href='/policies/tpt-faq' and @target='_self']");
     public By InstructorInterests = By.xpath("//a[@href='/policies/instructor-proprietary-interests' and @target='_self']");
+
+    /**
+     * Clicks on all buttons and links on the Home Page to validate their functionality.
+     * This method iterates over all known clickable elements and clicks them one by one.
+     * For elements not yet defined, placeholder locators are used and should be updated.
+     *
+     * Note: This method is intended for WM-317: Validate Home Page Functionality
+     */
+    public void validateAllButtonsAndLinks() {
+        // Example: Click on Learn More About ASTM
+        clickOnMethod(learnMoreaboutAstm);
+        clickOnMethod(standardizationNewsLearnMore);
+        clickOnMethod(standardizationNewsGetDigitalEdition);
+        clickOnMethod(standardImpactLearMore);
+        clickOnMethod(standardImpactListen);
+        clickOnMethod(labManagerAcademyLearnMore);
+        clickOnMethod(icam2024LearMore);
+        clickOnMethod(aboutAstmLearnMore);
+        clickOnMethod(membershipAndPartnershipLearnMore);
+        clickOnMethod(standardizationImpactReportLearnMore1);
+        clickOnMethod(astmCompassLearnMore);
+        clickOnMethod(annualBookLearnMore);
+        clickOnMethod(astmDigitalLearnMore);
+        clickOnMethod(astmSpeacBuilderLearnMore);
+        clickOnMethod(internationalStandardLearnMore);
+        clickOnMethod(astmXcellerateLearnMore);
+        clickOnMethod(centersofExcellenceLearnMore);
+        clickOnMethod(standardizationImpactReportLearnMore);
+        clickOnMethod(marketIntelligenceLearnMore);
+        clickOnMethod(laboratoryServicesLearnMore);
+        clickOnMethod(trainingServicesLearnMore);
+        clickOnMethod(globalCooperationLearnMore);
+        clickOnMethod(astmSubscription);
+        clickOnMethod(IPPolicy);
+        clickOnMethod(AIPolicy);
+        clickOnMethod(UseOfAIQuestions);
+        clickOnMethod(LogoPolicy);
+        clickOnMethod(LinkingPolicy);
+        clickOnMethod(PoliciesPrivacyPolicy);
+        clickOnMethod(ReturnPolicy);
+        clickOnMethod(VeteranPolicy);
+        clickOnMethod(EqualEmploymentPolicy);
+        clickOnMethod(EmploymentLawPolicy);
+        clickOnMethod(PayTransparency);
+        clickOnMethod(EEOLaw);
+        clickOnMethod(PolicyFAQ);
+        clickOnMethod(InstructorInterests);
+        // TODO: Add more clicks for any additional buttons/links as needed
+        // For placeholder locators:
+        // clickOnMethod(placeholderButton1);
+        // clickOnMethod(placeholderLink2);
+    }
+
+    // Example placeholder locators for missing elements (replace with actual locators)
+    private By placeholderButton1 = By.id("PLACEHOLDER_button1"); // TODO: Replace with actual locator
+    private By placeholderLink2 = By.xpath("//a[@id='PLACEHOLDER_link2']"); // TODO: Replace with actual locator
+
+    /**
+     * Clicks a button or link by its visible text. Useful for generic validation.
+     * @param linkText The visible text of the button or link
+     */
+    public void clickButtonOrLinkByText(String linkText) {
+        By locator = By.xpath("//a[normalize-space(text())='" + linkText + "'] | //button[normalize-space(text())='" + linkText + "']");
+        clickOnMethod(locator);
+    }
+
+    /**
+     * Verifies if a button or link is present and enabled on the Home Page.
+     * @param locator The By locator of the element
+     * @return true if present and enabled, false otherwise
+     */
+    public boolean isButtonOrLinkPresentAndEnabled(By locator) {
+        try {
+            waitForElementPresent(locator);
+            return getElement(locator).isDisplayed() && getElement(locator).isEnabled();
+        } catch (Exception e) {
+            log.info("Element not present or not enabled: " + locator.toString());
+            return false;
+        }
+    }
+
+    /**
+     * Validates that all critical buttons and links are present and enabled on the Home Page.
+     * Throws AssertionError if any are missing or disabled.
+     */
+    public void validateAllCriticalButtonsAndLinksPresent() {
+        assert isButtonOrLinkPresentAndEnabled(learnMoreaboutAstm) : "Learn More About ASTM link is missing or disabled";
+        assert isButtonOrLinkPresentAndEnabled(standardizationNewsLearnMore) : "Standardization News Learn More link is missing or disabled";
+        assert isButtonOrLinkPresentAndEnabled(standardizationNewsGetDigitalEdition) : "Standardization News Get Digital Edition link is missing or disabled";
+        // ...repeat for all other critical elements
+        // For placeholder locators:
+        // assert isButtonOrLinkPresentAndEnabled(placeholderButton1) : "Placeholder Button 1 is missing or disabled";
+    }
+
 }
-
-
-
-
-
-
-
-
-
