@@ -1,0 +1,342 @@
+{
+  "WM-317": {
+    "TestCaseID": "WM-317",
+    "TestCaseName": "Validate Home Page Functionality",
+    "Priority": "Medium",
+    "Objective": "User should be able to verify that all buttons and links on the page are working correctly.",
+    "Type": "Functional",
+    "Locators": [
+      {
+        "name": "HomePageBannerButton",
+        "description": "Main banner call-to-action button on the home page",
+        "locatorType": "xpath",
+        "locatorValue": "//div[@class='banner']//button"
+      },
+      {
+        "name": "PrimaryNavigationMenu",
+        "description": "Top navigation menu bar",
+        "locatorType": "css",
+        "locatorValue": ".main-nav .nav-link"
+      },
+      {
+        "name": "FooterLinks",
+        "description": "All links in the page footer",
+        "locatorType": "css",
+        "locatorValue": "footer a"
+      },
+      {
+        "name": "FeaturedSectionButton",
+        "description": "Featured section action button",
+        "locatorType": "xpath",
+        "locatorValue": "//section[contains(@class,'featured')]//button"
+      },
+      {
+        "name": "SocialMediaIcons",
+        "description": "Social media icon links in the footer",
+        "locatorType": "css",
+        "locatorValue": "footer .social-icons a"
+      }
+    ],
+    "TestData": [
+      {
+        "buttonName": "Banner CTA",
+        "expectedNavigationUrl": "/get-started",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "Featured Learn More",
+        "expectedNavigationUrl": "/features/learn-more",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "linkText": "About Us",
+        "expectedNavigationUrl": "/about",
+        "isVisible": true
+      },
+      {
+        "linkText": "Contact",
+        "expectedNavigationUrl": "/contact",
+        "isVisible": true
+      },
+      {
+        "linkText": "Membership",
+        "expectedNavigationUrl": "/membership",
+        "isVisible": true
+      },
+      {
+        "linkText": "News",
+        "expectedNavigationUrl": "/news",
+        "isVisible": true
+      },
+      {
+        "linkText": "Help",
+        "expectedNavigationUrl": "/help",
+        "isVisible": true
+      },
+      {
+        "linkText": "FAQ",
+        "expectedNavigationUrl": "/faq",
+        "isVisible": true
+      },
+      {
+        "footerLinkText": "Privacy Policy",
+        "expectedNavigationUrl": "/privacy-policy",
+        "isVisible": true
+      },
+      {
+        "footerLinkText": "Terms of Use",
+        "expectedNavigationUrl": "/terms-of-use",
+        "isVisible": true
+      },
+      {
+        "footerLinkText": "Sitemap",
+        "expectedNavigationUrl": "/sitemap",
+        "isVisible": true
+      },
+      {
+        "socialIcon": "Facebook",
+        "expectedNavigationUrl": "https://facebook.com/astm",
+        "isVisible": true
+      },
+      {
+        "socialIcon": "Twitter",
+        "expectedNavigationUrl": "https://twitter.com/astm",
+        "isVisible": true
+      },
+      {
+        "socialIcon": "LinkedIn",
+        "expectedNavigationUrl": "https://linkedin.com/company/astm",
+        "isVisible": true
+      },
+      {
+        "menuItem": "Standards & Solutions",
+        "expectedNavigationUrl": "/standards-solutions",
+        "isVisible": true
+      },
+      {
+        "menuItem": "Market Insights & Innovation",
+        "expectedNavigationUrl": "/market-insights",
+        "isVisible": true
+      },
+      {
+        "menuItem": "Membership & Participation",
+        "expectedNavigationUrl": "/membership-participation",
+        "isVisible": true
+      },
+      {
+        "menuItem": "About ASTM",
+        "expectedNavigationUrl": "/about-astm",
+        "isVisible": true
+      },
+      {
+        "menuItem": "Home",
+        "expectedNavigationUrl": "/",
+        "isVisible": true
+      },
+      {
+        "buttonName": "Footer Contact Us",
+        "expectedNavigationUrl": "/contact",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "Footer Subscribe",
+        "expectedNavigationUrl": "/subscribe",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "Latest News",
+        "expectedNavigationUrl": "/news/latest",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "Join Now",
+        "expectedNavigationUrl": "/membership/join",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "Learn More",
+        "expectedNavigationUrl": "/learn-more",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "Explore Solutions",
+        "expectedNavigationUrl": "/solutions",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "Get Started",
+        "expectedNavigationUrl": "/get-started",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "Contact Sales",
+        "expectedNavigationUrl": "/contact-sales",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "Request Demo",
+        "expectedNavigationUrl": "/request-demo",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "Download Brochure",
+        "expectedNavigationUrl": "/download-brochure",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "View All News",
+        "expectedNavigationUrl": "/news/all",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "See All Events",
+        "expectedNavigationUrl": "/events",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "Submit Feedback",
+        "expectedNavigationUrl": "/feedback",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "Search",
+        "expectedNavigationUrl": "/search",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "Sign In",
+        "expectedNavigationUrl": "/login",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "Register",
+        "expectedNavigationUrl": "/register",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "Forgot Password",
+        "expectedNavigationUrl": "/forgot-password",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "ASTM Compass",
+        "expectedNavigationUrl": "/astm-compass",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "ASTM Digital Library",
+        "expectedNavigationUrl": "/digital-library",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "ASTM Standards Tracker",
+        "expectedNavigationUrl": "/standards-tracker",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "ASTM SpecBuilder",
+        "expectedNavigationUrl": "/specbuilder",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "ASTM Membership",
+        "expectedNavigationUrl": "/membership",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "ASTM Training",
+        "expectedNavigationUrl": "/training",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "ASTM Events",
+        "expectedNavigationUrl": "/events",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "ASTM Publications",
+        "expectedNavigationUrl": "/publications",
+        "isEnabled": true,
+        "isVisible": true
+      },
+      {
+        "buttonName": "ASTM Contact",
+        "expectedNavigationUrl": "/contact",
+        "isEnabled": true,
+        "isVisible": true
+      }
+    ],
+    "EdgeCases": [
+      {
+        "description": "Button is visible but disabled",
+        "buttonName": "Join Now",
+        "isEnabled": false,
+        "expected": "Button should not be clickable and no navigation should occur."
+      },
+      {
+        "description": "Link is missing href attribute",
+        "linkText": "Privacy Policy",
+        "expected": "Link should not navigate anywhere and should be reported as broken."
+      },
+      {
+        "description": "Button/link is present but not visible",
+        "buttonName": "Download Brochure",
+        "isVisible": false,
+        "expected": "Button should not be interactable and should be reported as hidden."
+      },
+      {
+        "description": "Link points to a 404 page",
+        "linkText": "Sitemap",
+        "expectedNavigationUrl": "/sitemap",
+        "expected": "Navigation should result in 404 error and should be reported as broken link."
+      },
+      {
+        "description": "Multiple links with same text",
+        "linkText": "Contact",
+        "expected": "All links should be checked for correct navigation and uniqueness."
+      },
+      {
+        "description": "Button triggers modal instead of navigation",
+        "buttonName": "Subscribe",
+        "expected": "Modal should appear and be validated for correct content."
+      },
+      {
+        "description": "Link opens in a new tab",
+        "linkText": "LinkedIn",
+        "expectedNavigationUrl": "https://linkedin.com/company/astm",
+        "expected": "Link should open in new tab and navigate to correct URL."
+      },
+      {
+        "description": "Button/link with slow response",
+        "buttonName": "Request Demo",
+        "expected": "Navigation or action should complete within acceptable timeout (e.g., 5 seconds)."
+      }
+    ]
+  }
+}
