@@ -1,0 +1,173 @@
+{
+  "WM-317": {
+    "TestCaseID": "WM-317",
+    "TestCaseName": "Validate Home Page Functionality",
+    "Priority": "Medium",
+    "Objective": "Verify that all buttons and links on the home page are working correctly.",
+    "ExpectedResult": "User should be able to verify that all buttons and links on the page are working correctly.",
+    "Locators": [
+      {
+        "name": "mainNavigationMenu",
+        "description": "Main navigation menu bar on the home page",
+        "locatorType": "xpath",
+        "locatorValue": "//nav[@id='main-nav']"
+      },
+      {
+        "name": "bannerButton",
+        "description": "Primary call-to-action button in the home page banner",
+        "locatorType": "css",
+        "locatorValue": ".home-banner .cta-btn"
+      },
+      {
+        "name": "footerLinkContactUs",
+        "description": "Contact Us link in the footer",
+        "locatorType": "linkText",
+        "locatorValue": "Contact Us"
+      },
+      {
+        "name": "searchBox",
+        "description": "Search box on the home page header",
+        "locatorType": "id",
+        "locatorValue": "search-input"
+      },
+      {
+        "name": "featuredSectionButton",
+        "description": "Button in the featured section",
+        "locatorType": "xpath",
+        "locatorValue": "//section[@id='featured']//button"
+      }
+    ],
+    "TestData": [
+      {
+        "scenario": "Click all main navigation menu items",
+        "menuItems": [
+          "Home",
+          "About ASTM",
+          "Membership & Participation",
+          "Standards & Solutions",
+          "News",
+          "Help",
+          "FAQ"
+        ],
+        "expectedNavigation": true
+      },
+      {
+        "scenario": "Click banner button",
+        "buttonLabel": "Learn More",
+        "expectedRedirectUrl": "/about"
+      },
+      {
+        "scenario": "Click all featured section buttons",
+        "featuredButtons": [
+          { "label": "Explore Standards", "expectedUrl": "/standards" },
+          { "label": "Join ASTM", "expectedUrl": "/membership" },
+          { "label": "View News", "expectedUrl": "/news" }
+        ]
+      },
+      {
+        "scenario": "Click all footer links",
+        "footerLinks": [
+          { "label": "Contact Us", "expectedUrl": "/contact" },
+          { "label": "Privacy Policy", "expectedUrl": "/privacy-policy" },
+          { "label": "Terms of Use", "expectedUrl": "/terms" }
+        ]
+      },
+      {
+        "scenario": "Search functionality",
+        "searchTerms": [
+          "standards",
+          "membership",
+          "training"
+        ],
+        "expectedResults": [
+          "Standards Listing Page",
+          "Membership Overview Page",
+          "Training Programs Page"
+        ]
+      },
+      {
+        "scenario": "Validate all social media icons",
+        "socialIcons": [
+          { "platform": "LinkedIn", "expectedUrlPattern": "linkedin.com" },
+          { "platform": "Twitter", "expectedUrlPattern": "twitter.com" },
+          { "platform": "Facebook", "expectedUrlPattern": "facebook.com" }
+        ]
+      },
+      {
+        "scenario": "Validate quick links section",
+        "quickLinks": [
+          { "label": "ASTM Compass", "expectedUrl": "/compass" },
+          { "label": "Digital Library", "expectedUrl": "/digital-library" }
+        ]
+      },
+      {
+        "scenario": "Validate banner image loads",
+        "bannerImageSelector": ".home-banner img",
+        "expectedVisible": true
+      },
+      {
+        "scenario": "Validate home page loads in under 2 seconds",
+        "maxLoadTimeMs": 2000
+      }
+    ],
+    "EdgeCases": [
+      {
+        "description": "Menu item with no target URL",
+        "menuItem": "Broken Link",
+        "expected": "Should display error or not navigate"
+      },
+      {
+        "description": "Button with missing click handler",
+        "buttonLabel": "No Action",
+        "expected": "Should not throw JS error, no navigation occurs"
+      },
+      {
+        "description": "Footer link opens in new tab",
+        "footerLink": "External Resource",
+        "expected": "Should open correct URL in new tab"
+      },
+      {
+        "description": "Search with no results",
+        "searchTerm": "nonexistentterm123",
+        "expected": "Should display 'No results found' message"
+      },
+      {
+        "description": "Rapid clicking on navigation",
+        "action": "Click all menu items rapidly",
+        "expected": "No UI freeze or JS errors"
+      },
+      {
+        "description": "Very long search term",
+        "searchTerm": "a".repeat(256),
+        "expected": "Should handle gracefully, no crash"
+      },
+      {
+        "description": "Button with special characters in label",
+        "buttonLabel": "Join Now! @#$%",
+        "expected": "Button click works, navigation as expected"
+      },
+      {
+        "description": "Navigation with slow network",
+        "networkCondition": "Slow 3G",
+        "expected": "Page still loads, buttons/links eventually work"
+      }
+    ],
+    "BoundaryValues": [
+      {
+        "scenario": "Minimum menu items",
+        "menuItems": ["Home"],
+        "expected": "Menu renders and is clickable"
+      },
+      {
+        "scenario": "Maximum menu items",
+        "menuItems": Array(20).fill("MenuItem"),
+        "expected": "Menu is scrollable or wraps correctly"
+      },
+      {
+        "scenario": "Maximum footer links",
+        "footerLinks": Array(30).fill({ "label": "FooterLink", "expectedUrl": "/footer-link" }),
+        "expected": "Footer renders all links, no overflow"
+      }
+    ]
+  }
+}
