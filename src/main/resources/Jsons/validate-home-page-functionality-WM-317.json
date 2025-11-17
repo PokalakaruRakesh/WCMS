@@ -1,0 +1,344 @@
+{
+  "WM-317": {
+    "TestCaseID": "WM-317",
+    "TestCaseName": "Validate Home Page Functionality",
+    "Priority": "Medium",
+    "Type": "Functional",
+    "Objective": "Validate the functionality and accessibility of all links and buttons on the home page.",
+    "ExpectedResult": "All links on the page should be verified and confirmed to be working correctly.",
+    "Locators": [
+      {
+        "name": "HomePageMainNav",
+        "description": "Main navigation bar on home page",
+        "locatorType": "xpath",
+        "locatorValue": "//nav[@id='main-nav']"
+      },
+      {
+        "name": "HomePageFooter",
+        "description": "Footer section on home page",
+        "locatorType": "xpath",
+        "locatorValue": "//footer"
+      },
+      {
+        "name": "HomePageBannerButton",
+        "description": "Primary banner button on home page",
+        "locatorType": "css",
+        "locatorValue": ".banner .cta-button"
+      },
+      {
+        "name": "HomePageLatestNewsLink",
+        "description": "First link in Latest News section",
+        "locatorType": "css",
+        "locatorValue": ".latest-news a:first-child"
+      },
+      {
+        "name": "HomePageAllLinks",
+        "description": "All anchor tags on home page",
+        "locatorType": "css",
+        "locatorValue": "a"
+      }
+    ],
+    "TestData": [
+      {
+        "element": "Main Navigation Bar",
+        "linkText": "About ASTM",
+        "expectedUrl": "/about-astm",
+        "isVisible": true
+      },
+      {
+        "element": "Main Navigation Bar",
+        "linkText": "Membership & Participation",
+        "expectedUrl": "/membership-participation",
+        "isVisible": true
+      },
+      {
+        "element": "Main Navigation Bar",
+        "linkText": "Standards & Solutions",
+        "expectedUrl": "/standards-solutions",
+        "isVisible": true
+      },
+      {
+        "element": "Main Navigation Bar",
+        "linkText": "News",
+        "expectedUrl": "/news",
+        "isVisible": true
+      },
+      {
+        "element": "Main Navigation Bar",
+        "linkText": "Help",
+        "expectedUrl": "/help",
+        "isVisible": true
+      },
+      {
+        "element": "Banner",
+        "buttonText": "Learn More",
+        "expectedUrl": "/about-astm",
+        "isVisible": true
+      },
+      {
+        "element": "The Latest",
+        "linkText": "Latest Article 1",
+        "expectedUrl": "/news/latest-article-1",
+        "isVisible": true
+      },
+      {
+        "element": "The Latest",
+        "linkText": "Latest Article 2",
+        "expectedUrl": "/news/latest-article-2",
+        "isVisible": true
+      },
+      {
+        "element": "Standards & Solutions",
+        "buttonText": "Explore Standards",
+        "expectedUrl": "/standards-solutions",
+        "isVisible": true
+      },
+      {
+        "element": "Market Insights & Innovation",
+        "buttonText": "See Insights",
+        "expectedUrl": "/market-insights",
+        "isVisible": true
+      },
+      {
+        "element": "Footer",
+        "linkText": "Contact Us",
+        "expectedUrl": "/contact",
+        "isVisible": true
+      },
+      {
+        "element": "Footer",
+        "linkText": "Privacy Policy",
+        "expectedUrl": "/privacy-policy",
+        "isVisible": true
+      },
+      {
+        "element": "Footer",
+        "linkText": "Terms of Use",
+        "expectedUrl": "/terms-of-use",
+        "isVisible": true
+      },
+      {
+        "element": "Footer",
+        "linkText": "Sitemap",
+        "expectedUrl": "/sitemap",
+        "isVisible": true
+      },
+      {
+        "element": "Footer",
+        "linkText": "Accessibility",
+        "expectedUrl": "/accessibility",
+        "isVisible": true
+      },
+      {
+        "element": "Footer",
+        "linkText": "Cookie Policy",
+        "expectedUrl": "/cookie-policy",
+        "isVisible": true
+      },
+      {
+        "element": "Social Icons",
+        "platform": "LinkedIn",
+        "expectedUrl": "https://www.linkedin.com/company/astm-international/",
+        "isVisible": true
+      },
+      {
+        "element": "Social Icons",
+        "platform": "Twitter",
+        "expectedUrl": "https://twitter.com/ASTMIntl",
+        "isVisible": true
+      },
+      {
+        "element": "Social Icons",
+        "platform": "Facebook",
+        "expectedUrl": "https://www.facebook.com/ASTMInternational/",
+        "isVisible": true
+      },
+      {
+        "element": "Social Icons",
+        "platform": "YouTube",
+        "expectedUrl": "https://www.youtube.com/user/ASTMIntl",
+        "isVisible": true
+      },
+      {
+        "element": "All Links",
+        "linkText": "All page links",
+        "expectedUrl": "*",
+        "isVisible": true
+      },
+      {
+        "element": "All Buttons",
+        "buttonText": "All page buttons",
+        "expectedUrl": "*",
+        "isVisible": true
+      },
+      {
+        "element": "Header",
+        "linkText": "FAQ",
+        "expectedUrl": "/faq",
+        "isVisible": true
+      },
+      {
+        "element": "Header",
+        "linkText": "Login",
+        "expectedUrl": "/login",
+        "isVisible": true
+      },
+      {
+        "element": "Header",
+        "linkText": "Create Account",
+        "expectedUrl": "/create-account",
+        "isVisible": true
+      },
+      {
+        "element": "Header",
+        "linkText": "Search",
+        "expectedUrl": "#search",
+        "isVisible": true
+      },
+      {
+        "element": "Banner",
+        "buttonText": "Join Now",
+        "expectedUrl": "/membership-participation/join",
+        "isVisible": true
+      },
+      {
+        "element": "Banner",
+        "buttonText": "Contact Sales",
+        "expectedUrl": "/contact-sales",
+        "isVisible": true
+      },
+      {
+        "element": "Market Insights & Innovation",
+        "linkText": "Innovation Blog",
+        "expectedUrl": "/market-insights/innovation-blog",
+        "isVisible": true
+      },
+      {
+        "element": "Market Insights & Innovation",
+        "linkText": "White Papers",
+        "expectedUrl": "/market-insights/white-papers",
+        "isVisible": true
+      },
+      {
+        "element": "The Latest",
+        "linkText": "Press Releases",
+        "expectedUrl": "/news/press-releases",
+        "isVisible": true
+      },
+      {
+        "element": "The Latest",
+        "linkText": "Podcasts",
+        "expectedUrl": "/news/podcasts",
+        "isVisible": true
+      },
+      {
+        "element": "The Latest",
+        "linkText": "Events",
+        "expectedUrl": "/news/events",
+        "isVisible": true
+      },
+      {
+        "element": "Standards & Solutions",
+        "linkText": "ASTM Compass",
+        "expectedUrl": "/standards-solutions/astm-compass",
+        "isVisible": true
+      },
+      {
+        "element": "Standards & Solutions",
+        "linkText": "Digital Library",
+        "expectedUrl": "/standards-solutions/digital-library",
+        "isVisible": true
+      },
+      {
+        "element": "Standards & Solutions",
+        "linkText": "SpecBuilder",
+        "expectedUrl": "/standards-solutions/specbuilder",
+        "isVisible": true
+      },
+      {
+        "element": "Standards & Solutions",
+        "linkText": "Reference Materials",
+        "expectedUrl": "/standards-solutions/reference-materials",
+        "isVisible": true
+      },
+      {
+        "element": "Footer",
+        "linkText": "ASTM International",
+        "expectedUrl": "/",
+        "isVisible": true
+      },
+      {
+        "element": "Footer",
+        "linkText": "Careers",
+        "expectedUrl": "/careers",
+        "isVisible": true
+      },
+      {
+        "element": "Footer",
+        "linkText": "Media Kit",
+        "expectedUrl": "/media-kit",
+        "isVisible": true
+      },
+      {
+        "element": "Footer",
+        "linkText": "Subscribe",
+        "expectedUrl": "/subscribe",
+        "isVisible": true
+      },
+      {
+        "element": "Footer",
+        "linkText": "Feedback",
+        "expectedUrl": "/feedback",
+        "isVisible": true
+      },
+      {
+        "element": "Footer",
+        "linkText": "Site Feedback",
+        "expectedUrl": "/site-feedback",
+        "isVisible": true
+      }
+    ],
+    "EdgeCases": [
+      {
+        "description": "Link is present but not clickable (disabled state)",
+        "expected": "Link should not be counted as working; report as not accessible."
+      },
+      {
+        "description": "Link points to a 404 or broken page",
+        "expected": "Test should fail and log the broken link."
+      },
+      {
+        "description": "Button triggers a modal or dynamic content",
+        "expected": "Test should verify the modal/dynamic content appears as expected."
+      },
+      {
+        "description": "Link opens in a new tab/window",
+        "expected": "Test should verify the new tab/window opens and the URL is correct."
+      },
+      {
+        "description": "Link with JavaScript handler only (no href)",
+        "expected": "Test should verify the correct JS action is triggered."
+      },
+      {
+        "description": "Multiple links with same text but different URLs",
+        "expected": "Test should verify each link instance separately."
+      },
+      {
+        "description": "Links/buttons hidden behind dropdowns or accordions",
+        "expected": "Test should expand dropdowns/accordions and verify all links/buttons."
+      },
+      {
+        "description": "Very long link text or button text (boundary value)",
+        "expected": "Test should verify UI handles long text gracefully and link/button is accessible."
+      },
+      {
+        "description": "Links/buttons with special characters in text",
+        "expected": "Test should verify correct rendering and accessibility."
+      },
+      {
+        "description": "No links/buttons present on the page",
+        "expected": "Test should report as a failure (unexpected state)."
+      }
+    ]
+  }
+}
