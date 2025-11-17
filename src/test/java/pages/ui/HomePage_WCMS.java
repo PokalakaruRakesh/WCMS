@@ -52,13 +52,47 @@ public class HomePage_WCMS extends BasePage {
     public By EEOLaw = By.xpath("//a[contains(@href, 'OFCCP_EEO_Supplement_Final_JRF_QA_508c.pdf') and text()[contains(., 'EEO is the Law')]]");
     public By PolicyFAQ = By.xpath("//a[@href='/policies/tpt-faq' and @target='_self']");
     public By InstructorInterests = By.xpath("//a[@href='/policies/instructor-proprietary-interests' and @target='_self']");
+
+    /**
+     * Comprehensive method to validate all main buttons and links on the Home Page as per WM-317.
+     * This method clicks and verifies the presence or navigation of all major actionable elements.
+     * It is intended to be used in the Validate Home Page Functionality scenario.
+     */
+    public void validateAllHomePageButtonsAndLinks() {
+        // ASTM Main Site Link ("Click here")
+        clickOnMethod(By.linkText("Click here"));
+        // Meet With An ASTM Representative Button
+        clickOnMethod(By.linkText("Meet With An ASTM Representative"));
+        // UNE EN-ISO Standards Card Learn More Link
+        clickOnMethod(By.xpath("(//a[text()='Learn More →'])[1]"));
+        // ASTM Diesel Fuel #2 Training Program Card Learn More Link
+        clickOnMethod(By.xpath("(//a[text()='Learn More →'])[2]"));
+        // ASTM Medical & Surgical Devices Card Learn More Link
+        clickOnMethod(By.xpath("(//a[text()='Learn More →'])[3]"));
+        // Contact Sales Button
+        clickOnMethod(By.linkText("Contact Sales"));
+        // Download ASTM Advantage Button
+        clickOnMethod(By.linkText("Download ASTM Advantage"));
+        // Download Compass E-book Button
+        clickOnMethod(By.linkText("Download Compass E-book"));
+        // ASTM SpecBuilder® Learn More Link
+        clickOnMethod(By.linkText("Learn More About ASTM SpecBuilder®"));
+        // ASTM Digital Library® Learn More Link
+        clickOnMethod(By.linkText("Learn More About ASTM Digital Library®"));
+        // ASTM Compass® Learn More Link
+        clickOnMethod(By.linkText("Learn More About ASTM Compass®"));
+        // ASTM Lab Services Learn More Link
+        clickOnMethod(By.linkText("Learn More About ASTM Lab Services"));
+        // ASTM Training Learn More Link
+        clickOnMethod(By.linkText("Learn More About ASTM Training"));
+        // Emerging Technology Learn More Link
+        clickOnMethod(By.linkText("Learn More About Emerging Technology"));
+        // Learn More Button - Global Cooperation
+        clickOnMethod(By.xpath("//a[@href='/about/global-cooperation' and text()='Learn More']"));
+        // Contact Us Button - Footer
+        clickOnMethod(By.linkText("Contact Us"));
+        // Email Link - Footer
+        clickOnMethod(By.linkText("sales@astm.org"));
+    }
+
 }
-
-
-
-
-
-
-
-
-
