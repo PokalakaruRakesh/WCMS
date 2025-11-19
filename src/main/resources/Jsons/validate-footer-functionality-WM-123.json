@@ -1,0 +1,330 @@
+{
+  "WM-123": {
+    "TestCaseID": "WM-123",
+    "TestCaseName": "Validate Footer Functionality",
+    "Priority": "Medium",
+    "Type": "Functional",
+    "Objective": "Validate the footer functionality including social links and copyright.",
+    "ExpectedResult": "Twitter page loads successfully",
+    "Locators": [
+      {
+        "name": "footerSection",
+        "description": "Main footer container",
+        "locatorType": "xpath",
+        "locatorValue": "//footer"
+      },
+      {
+        "name": "twitterIcon",
+        "description": "Twitter social icon in footer",
+        "locatorType": "css",
+        "locatorValue": ".footer-social .twitter"
+      },
+      {
+        "name": "footerLinks",
+        "description": "All visible footer links",
+        "locatorType": "css",
+        "locatorValue": ".footer-links a"
+      },
+      {
+        "name": "copyrightText",
+        "description": "Footer copyright text",
+        "locatorType": "css",
+        "locatorValue": ".footer-copyright"
+      },
+      {
+        "name": "footerLogo",
+        "description": "Footer logo image",
+        "locatorType": "css",
+        "locatorValue": ".footer-logo img"
+      }
+    ],
+    "TestData": [
+      {
+        "scenario": "Valid Twitter link",
+        "footerLinkLabel": "Twitter",
+        "expectedUrl": "https://twitter.com/astmintl",
+        "isVisible": true
+      },
+      {
+        "scenario": "Valid Facebook link",
+        "footerLinkLabel": "Facebook",
+        "expectedUrl": "https://facebook.com/astmintl",
+        "isVisible": true
+      },
+      {
+        "scenario": "Valid LinkedIn link",
+        "footerLinkLabel": "LinkedIn",
+        "expectedUrl": "https://linkedin.com/company/astm-international",
+        "isVisible": true
+      },
+      {
+        "scenario": "Valid Instagram link",
+        "footerLinkLabel": "Instagram",
+        "expectedUrl": "https://instagram.com/astmintl",
+        "isVisible": true
+      },
+      {
+        "scenario": "Valid YouTube link",
+        "footerLinkLabel": "YouTube",
+        "expectedUrl": "https://youtube.com/astmintl",
+        "isVisible": true
+      },
+      {
+        "scenario": "Footer privacy policy link",
+        "footerLinkLabel": "Privacy Policy",
+        "expectedUrl": "https://www.astm.org/privacy-policy.html",
+        "isVisible": true
+      },
+      {
+        "scenario": "Footer terms of use link",
+        "footerLinkLabel": "Terms of Use",
+        "expectedUrl": "https://www.astm.org/terms-of-use.html",
+        "isVisible": true
+      },
+      {
+        "scenario": "Footer copyright text",
+        "expectedTextPattern": "Copyright \\u00A9 [0-9]{4} ASTM International. All Rights Reserved.",
+        "isVisible": true
+      },
+      {
+        "scenario": "Footer logo visibility",
+        "isVisible": true
+      },
+      {
+        "scenario": "Footer link opens in new tab",
+        "footerLinkLabel": "Twitter",
+        "expectedTarget": "_blank"
+      },
+      {
+        "scenario": "Footer link is broken",
+        "footerLinkLabel": "BrokenLink",
+        "expectedUrl": "https://www.astm.org/broken-link",
+        "isVisible": false
+      },
+      {
+        "scenario": "Footer link with redirect",
+        "footerLinkLabel": "RedirectLink",
+        "expectedUrl": "https://www.astm.org/redirected",
+        "isVisible": true
+      },
+      {
+        "scenario": "Footer visible on all pages",
+        "page": "Home",
+        "isVisible": true
+      },
+      {
+        "scenario": "Footer visible on all pages",
+        "page": "About",
+        "isVisible": true
+      },
+      {
+        "scenario": "Footer visible on all pages",
+        "page": "Contact",
+        "isVisible": true
+      },
+      {
+        "scenario": "Footer not visible on login page",
+        "page": "Login",
+        "isVisible": false
+      },
+      {
+        "scenario": "Footer with minimum links",
+        "footerLinksCount": 3
+      },
+      {
+        "scenario": "Footer with maximum links",
+        "footerLinksCount": 20
+      },
+      {
+        "scenario": "Footer with no social icons",
+        "socialIconsPresent": false
+      },
+      {
+        "scenario": "Footer with all social icons",
+        "socialIconsPresent": true
+      },
+      {
+        "scenario": "Footer link with special characters",
+        "footerLinkLabel": "Café",
+        "expectedUrl": "https://www.astm.org/café"
+      },
+      {
+        "scenario": "Footer link with long label",
+        "footerLinkLabel": "ThisIsAnExtremelyLongFooterLinkLabelForTestingPurposes",
+        "expectedUrl": "https://www.astm.org/long-link"
+      },
+      {
+        "scenario": "Footer link with empty label",
+        "footerLinkLabel": "",
+        "expectedUrl": ""
+      },
+      {
+        "scenario": "Footer link with null label",
+        "footerLinkLabel": null,
+        "expectedUrl": null
+      },
+      {
+        "scenario": "Footer with duplicate links",
+        "footerLinkLabel": "Twitter",
+        "duplicateCount": 2
+      },
+      {
+        "scenario": "Footer with case-sensitive label",
+        "footerLinkLabel": "twitter",
+        "expectedUrl": "https://twitter.com/astmintl"
+      },
+      {
+        "scenario": "Footer with mixed-case label",
+        "footerLinkLabel": "TwItTeR",
+        "expectedUrl": "https://twitter.com/astmintl"
+      },
+      {
+        "scenario": "Footer with whitespace in label",
+        "footerLinkLabel": " Twitter ",
+        "expectedUrl": "https://twitter.com/astmintl"
+      },
+      {
+        "scenario": "Footer link with trailing slash",
+        "footerLinkLabel": "Twitter",
+        "expectedUrl": "https://twitter.com/astmintl/"
+      },
+      {
+        "scenario": "Footer link with http",
+        "footerLinkLabel": "Twitter",
+        "expectedUrl": "http://twitter.com/astmintl"
+      },
+      {
+        "scenario": "Footer link with https",
+        "footerLinkLabel": "Twitter",
+        "expectedUrl": "https://twitter.com/astmintl"
+      },
+      {
+        "scenario": "Footer link with invalid url",
+        "footerLinkLabel": "InvalidURL",
+        "expectedUrl": "htp://invalid-url"
+      },
+      {
+        "scenario": "Footer link with javascript void",
+        "footerLinkLabel": "VoidLink",
+        "expectedUrl": "javascript:void(0);"
+      },
+      {
+        "scenario": "Footer link with mailto",
+        "footerLinkLabel": "Email",
+        "expectedUrl": "mailto:support@astm.org"
+      },
+      {
+        "scenario": "Footer link with tel",
+        "footerLinkLabel": "Phone",
+        "expectedUrl": "tel:+18001234567"
+      },
+      {
+        "scenario": "Footer link with anchor",
+        "footerLinkLabel": "Top",
+        "expectedUrl": "#top"
+      },
+      {
+        "scenario": "Footer link with relative path",
+        "footerLinkLabel": "Home",
+        "expectedUrl": "/home"
+      },
+      {
+        "scenario": "Footer link with external domain",
+        "footerLinkLabel": "External",
+        "expectedUrl": "https://external.com/page"
+      },
+      {
+        "scenario": "Footer link with subdomain",
+        "footerLinkLabel": "Subdomain",
+        "expectedUrl": "https://sub.astm.org/page"
+      },
+      {
+        "scenario": "Footer link with query params",
+        "footerLinkLabel": "Query",
+        "expectedUrl": "https://www.astm.org/page?param=value"
+      },
+      {
+        "scenario": "Footer link with fragment",
+        "footerLinkLabel": "Fragment",
+        "expectedUrl": "https://www.astm.org/page#section"
+      },
+      {
+        "scenario": "Footer link with unicode",
+        "footerLinkLabel": "Ünicode",
+        "expectedUrl": "https://www.astm.org/unicode"
+      },
+      {
+        "scenario": "Footer link with emoji",
+        "footerLinkLabel": "Smile😊",
+        "expectedUrl": "https://www.astm.org/smile"
+      },
+      {
+        "scenario": "Footer link with percent encoding",
+        "footerLinkLabel": "Percent%20Encoding",
+        "expectedUrl": "https://www.astm.org/percent%20encoding"
+      },
+      {
+        "scenario": "Footer link with ampersand",
+        "footerLinkLabel": "R&D",
+        "expectedUrl": "https://www.astm.org/r-and-d"
+      },
+      {
+        "scenario": "Footer link with plus sign",
+        "footerLinkLabel": "C++",
+        "expectedUrl": "https://www.astm.org/cplusplus"
+      },
+      {
+        "scenario": "Footer link with min length",
+        "footerLinkLabel": "A",
+        "expectedUrl": "https://www.astm.org/a"
+      },
+      {
+        "scenario": "Footer link with max length",
+        "footerLinkLabel": "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "expectedUrl": "https://www.astm.org/longlabel"
+      },
+      {
+        "scenario": "Footer with 0 links",
+        "footerLinksCount": 0
+      },
+      {
+        "scenario": "Footer with 50 links",
+        "footerLinksCount": 50
+      }
+    ],
+    "EdgeCases": [
+      {
+        "description": "Footer is not rendered on the page",
+        "expected": "Test should fail and log missing footer."
+      },
+      {
+        "description": "Footer is partially loaded (missing some links)",
+        "expected": "Test should log missing links and fail."
+      },
+      {
+        "description": "Footer links are broken (404)",
+        "expected": "Test should log broken links and fail."
+      },
+      {
+        "description": "Footer social icon does not open Twitter",
+        "expected": "Test should fail and log incorrect URL."
+      },
+      {
+        "description": "Footer copyright text missing",
+        "expected": "Test should fail and log missing copyright."
+      },
+      {
+        "description": "Footer link opens in same tab",
+        "expected": "Test should log as warning if not as per requirement."
+      },
+      {
+        "description": "Footer visible but not sticky",
+        "expected": "Test should log as info; may not fail."
+      },
+      {
+        "description": "Footer overlaps with page content",
+        "expected": "Test should log as UI bug."
+      }
+    ]
+  }
+}
