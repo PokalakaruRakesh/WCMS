@@ -1,0 +1,293 @@
+{
+  "WM-555": {
+    "TestCaseID": "WM-555",
+    "TestCaseName": "Validate facebook Functionality",
+    "Priority": "Medium",
+    "Type": "N/A",
+    "Objective": "No Objective specified",
+    "ExpectedResult": "Facebook page loads successfully with company profile",
+    "Locators": [
+      {
+        "name": "facebookFooterIcon",
+        "description": "Facebook icon in the website footer",
+        "locatorType": "css",
+        "locatorValue": ".footer .social-icons .facebook"
+      },
+      {
+        "name": "facebookLink",
+        "description": "Anchor tag for Facebook link",
+        "locatorType": "xpath",
+        "locatorValue": "//a[contains(@href, 'facebook.com') and contains(@class, 'social')]"
+      },
+      {
+        "name": "facebookPageProfilePic",
+        "description": "Profile picture on company Facebook page",
+        "locatorType": "css",
+        "locatorValue": "img.profilePic"
+      },
+      {
+        "name": "facebookPageCompanyName",
+        "description": "Company name on Facebook page header",
+        "locatorType": "xpath",
+        "locatorValue": "//h1[contains(text(), 'Company Name')]"
+      },
+      {
+        "name": "facebookPageLikeButton",
+        "description": "Like button on the Facebook page",
+        "locatorType": "css",
+        "locatorValue": "div[aria-label='Like']"
+      }
+    ],
+    "TestData": [
+      {
+        "scenario": "Validate Facebook icon is visible in footer",
+        "isVisible": true
+      },
+      {
+        "scenario": "Validate Facebook link redirects to correct company page",
+        "expectedUrl": "https://www.facebook.com/YourCompanyPage",
+        "expectedTarget": "_blank"
+      },
+      {
+        "scenario": "Validate Facebook page loads successfully",
+        "expectedStatusCode": 200
+      },
+      {
+        "scenario": "Validate company profile picture is displayed on Facebook page",
+        "profilePicVisible": true
+      },
+      {
+        "scenario": "Validate company name is displayed on Facebook page header",
+        "expectedCompanyName": "Your Company Name"
+      },
+      {
+        "scenario": "Validate Like button is visible on Facebook page",
+        "likeButtonVisible": true
+      },
+      {
+        "scenario": "Validate Facebook page contains About section",
+        "aboutSectionVisible": true
+      },
+      {
+        "scenario": "Validate Facebook page contains Contact info",
+        "contactInfoVisible": true
+      },
+      {
+        "scenario": "Validate Facebook page contains Posts section",
+        "postsSectionVisible": true
+      },
+      {
+        "scenario": "Validate Facebook page contains Photos section",
+        "photosSectionVisible": true
+      },
+      {
+        "scenario": "Validate Facebook page contains Videos section",
+        "videosSectionVisible": true
+      },
+      {
+        "scenario": "Validate Facebook page contains Community section",
+        "communitySectionVisible": true
+      },
+      {
+        "scenario": "Validate Facebook page contains Events section",
+        "eventsSectionVisible": true
+      },
+      {
+        "scenario": "Validate Facebook page contains Reviews section",
+        "reviewsSectionVisible": true
+      },
+      {
+        "scenario": "Validate Facebook page contains Company website link",
+        "websiteLinkVisible": true,
+        "expectedWebsiteUrl": "https://www.yourcompany.com"
+      },
+      {
+        "scenario": "Validate Facebook page contains correct number of followers",
+        "minFollowers": 1
+      },
+      {
+        "scenario": "Validate Facebook page loads within 5 seconds",
+        "maxLoadTimeSeconds": 5
+      },
+      {
+        "scenario": "Validate Facebook page does not show 404 or error message",
+        "noError": true
+      },
+      {
+        "scenario": "Validate Facebook link opens in new tab",
+        "expectedTarget": "_blank"
+      },
+      {
+        "scenario": "Validate Facebook link is not broken",
+        "linkStatus": "active"
+      },
+      {
+        "scenario": "Validate Facebook icon has correct aria-label",
+        "expectedAriaLabel": "Facebook"
+      },
+      {
+        "scenario": "Validate Facebook icon has alt text",
+        "expectedAltText": "Facebook"
+      },
+      {
+        "scenario": "Validate Facebook icon is clickable",
+        "isClickable": true
+      },
+      {
+        "scenario": "Validate Facebook icon color matches brand",
+        "expectedColor": "#4267B2"
+      },
+      {
+        "scenario": "Validate Facebook icon size is 24x24px",
+        "expectedWidth": 24,
+        "expectedHeight": 24
+      },
+      {
+        "scenario": "Validate Facebook link is present in sitemap",
+        "inSitemap": true
+      },
+      {
+        "scenario": "Validate Facebook link is present in mobile view",
+        "mobileVisible": true
+      },
+      {
+        "scenario": "Validate Facebook link is present in desktop view",
+        "desktopVisible": true
+      },
+      {
+        "scenario": "Validate Facebook link is present in tablet view",
+        "tabletVisible": true
+      },
+      {
+        "scenario": "Validate Facebook link is not duplicated in footer",
+        "duplicateCount": 1
+      },
+      {
+        "scenario": "Validate Facebook link is not present in header",
+        "headerVisible": false
+      },
+      {
+        "scenario": "Validate Facebook link is not present in body",
+        "bodyVisible": false
+      },
+      {
+        "scenario": "Validate Facebook link is HTTPS",
+        "isHttps": true
+      },
+      {
+        "scenario": "Validate Facebook page About section contains company description",
+        "aboutDescriptionPresent": true
+      },
+      {
+        "scenario": "Validate Facebook page Contact info contains email",
+        "contactEmailPresent": true
+      },
+      {
+        "scenario": "Validate Facebook page Contact info contains phone",
+        "contactPhonePresent": true
+      },
+      {
+        "scenario": "Validate Facebook page has at least one post",
+        "minPosts": 1
+      },
+      {
+        "scenario": "Validate Facebook page has at least one photo",
+        "minPhotos": 1
+      },
+      {
+        "scenario": "Validate Facebook page has at least one video",
+        "minVideos": 1
+      },
+      {
+        "scenario": "Validate Facebook page has at least one review",
+        "minReviews": 1
+      },
+      {
+        "scenario": "Validate Facebook page has at least one event",
+        "minEvents": 0
+      },
+      {
+        "scenario": "Validate Facebook page has correct page category",
+        "expectedCategory": "Company"
+      },
+      {
+        "scenario": "Validate Facebook page is public",
+        "isPublic": true
+      },
+      {
+        "scenario": "Validate Facebook page is not restricted",
+        "isRestricted": false
+      },
+      {
+        "scenario": "Validate Facebook page is not under review",
+        "isUnderReview": false
+      },
+      {
+        "scenario": "Validate Facebook page is not deleted",
+        "isDeleted": false
+      },
+      {
+        "scenario": "Validate Facebook page is not blocked",
+        "isBlocked": false
+      },
+      {
+        "scenario": "Validate Facebook page is not suspended",
+        "isSuspended": false
+      },
+      {
+        "scenario": "Validate Facebook page does not prompt for login",
+        "loginPrompt": false
+      },
+      {
+        "scenario": "Validate Facebook page loads in incognito mode",
+        "incognitoAccessible": true
+      },
+      {
+        "scenario": "Validate Facebook page loads on mobile browser",
+        "mobileAccessible": true
+      }
+    ],
+    "EdgeCases": [
+      {
+        "description": "Facebook link is missing from footer",
+        "expected": "Test fails with missing element error"
+      },
+      {
+        "description": "Facebook link redirects to wrong page",
+        "expected": "Test fails with URL mismatch"
+      },
+      {
+        "description": "Facebook page returns 404",
+        "expected": "Test fails with page not found error"
+      },
+      {
+        "description": "Facebook icon is not visible",
+        "expected": "Test fails with visibility assertion"
+      },
+      {
+        "description": "Facebook link opens in same tab",
+        "expected": "Test fails with target attribute assertion"
+      },
+      {
+        "description": "Facebook page prompts for login",
+        "expected": "Test fails with login prompt detected"
+      },
+      {
+        "description": "Facebook page is restricted or blocked",
+        "expected": "Test fails with access denied error"
+      },
+      {
+        "description": "Facebook icon is not clickable",
+        "expected": "Test fails with click action error"
+      },
+      {
+        "description": "Facebook icon color does not match brand",
+        "expected": "Test fails with color assertion"
+      },
+      {
+        "description": "Facebook icon size is not as expected",
+        "expected": "Test fails with size assertion"
+      }
+    ]
+  }
+}
