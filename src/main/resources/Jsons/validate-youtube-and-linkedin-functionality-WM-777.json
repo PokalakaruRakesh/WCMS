@@ -1,0 +1,168 @@
+{
+  "WM-777": {
+    "TestCaseID": "WM-777",
+    "TestCaseName": "Validate Youtube and LinkedIn Functionality",
+    "Priority": "Medium",
+    "Type": "N/A",
+    "Objective": "No Objective specified",
+    "ExpectedResult": "LinkedIn page loads with company information and posts",
+    "Locators": [
+      {
+        "name": "youtubeIcon",
+        "description": "YouTube social icon in footer",
+        "locatorType": "css",
+        "locatorValue": ".footer-social .icon-youtube"
+      },
+      {
+        "name": "linkedinIcon",
+        "description": "LinkedIn social icon in footer",
+        "locatorType": "css",
+        "locatorValue": ".footer-social .icon-linkedin"
+      },
+      {
+        "name": "youtubeLink",
+        "description": "YouTube link anchor",
+        "locatorType": "xpath",
+        "locatorValue": "//a[contains(@href, 'youtube.com')]"
+      },
+      {
+        "name": "linkedinLink",
+        "description": "LinkedIn link anchor",
+        "locatorType": "xpath",
+        "locatorValue": "//a[contains(@href, 'linkedin.com')]"
+      },
+      {
+        "name": "companyInfoSection",
+        "description": "Company info section on LinkedIn page",
+        "locatorType": "css",
+        "locatorValue": ".org-top-card-summary-info-list"
+      }
+    ],
+    "TestData": [
+      {
+        "scenario": "Validate YouTube icon is visible and clickable",
+        "isVisible": true,
+        "isClickable": true,
+        "expectedUrl": "https://www.youtube.com/channel/ASTMInternational",
+        "expectedTarget": "_blank",
+        "expectedStatusCode": 200,
+        "expectedAriaLabel": "YouTube",
+        "expectedAltText": "YouTube",
+        "expectedColor": "#FF0000",
+        "expectedWidth": 32,
+        "expectedHeight": 32,
+        "inSitemap": true,
+        "mobileVisible": true,
+        "desktopVisible": true,
+        "tabletVisible": true,
+        "duplicateCount": 1,
+        "headerVisible": true,
+        "bodyVisible": true,
+        "isHttps": true,
+        "linkStatus": "active"
+      },
+      {
+        "scenario": "Validate LinkedIn icon is visible and clickable",
+        "isVisible": true,
+        "isClickable": true,
+        "expectedUrl": "https://www.linkedin.com/company/astm-international/",
+        "expectedTarget": "_blank",
+        "expectedStatusCode": 200,
+        "expectedAriaLabel": "LinkedIn",
+        "expectedAltText": "LinkedIn",
+        "expectedColor": "#0077B5",
+        "expectedWidth": 32,
+        "expectedHeight": 32,
+        "inSitemap": true,
+        "mobileVisible": true,
+        "desktopVisible": true,
+        "tabletVisible": true,
+        "duplicateCount": 1,
+        "headerVisible": true,
+        "bodyVisible": true,
+        "isHttps": true,
+        "linkStatus": "active"
+      },
+      {
+        "scenario": "Validate LinkedIn company page loads with info and posts",
+        "expectedCompanyName": "ASTM International",
+        "aboutSectionVisible": true,
+        "contactInfoVisible": true,
+        "postsSectionVisible": true,
+        "minFollowers": 10000,
+        "minPosts": 10,
+        "maxLoadTimeSeconds": 10,
+        "noError": true,
+        "isPublic": true,
+        "isRestricted": false,
+        "isUnderReview": false,
+        "isDeleted": false,
+        "isBlocked": false,
+        "isSuspended": false,
+        "loginPrompt": false,
+        "incognitoAccessible": true,
+        "mobileAccessible": true
+      },
+      {
+        "scenario": "Validate YouTube channel loads and displays videos",
+        "expectedChannelName": "ASTM International",
+        "videosSectionVisible": true,
+        "minVideos": 10,
+        "aboutSectionVisible": true,
+        "profilePicVisible": true,
+        "expectedStatusCode": 200,
+        "isPublic": true,
+        "isRestricted": false,
+        "isUnderReview": false,
+        "isDeleted": false,
+        "isBlocked": false,
+        "isSuspended": false,
+        "loginPrompt": false,
+        "incognitoAccessible": true,
+        "mobileAccessible": true
+      }
+    ],
+    "EdgeCases": [
+      {
+        "description": "YouTube link is broken (404)",
+        "expected": "Test should fail and log broken link error"
+      },
+      {
+        "description": "LinkedIn page is private or access restricted",
+        "expected": "Test should fail and log access restriction"
+      },
+      {
+        "description": "Social icon is missing from footer",
+        "expected": "Test should fail and log missing element"
+      },
+      {
+        "description": "YouTube/LinkedIn opens in same tab instead of new tab",
+        "expected": "Test should fail and log incorrect target attribute"
+      },
+      {
+        "description": "LinkedIn company page loads but company info section missing",
+        "expected": "Test should fail and log missing company info section"
+      },
+      {
+        "description": "YouTube channel loads but no videos present",
+        "expected": "Test should fail and log missing videos section"
+      },
+      {
+        "description": "LinkedIn page loads with login prompt",
+        "expected": "Test should fail and log login prompt present"
+      },
+      {
+        "description": "YouTube/LinkedIn icon is present but not clickable",
+        "expected": "Test should fail and log not clickable"
+      },
+      {
+        "description": "YouTube/LinkedIn icon color does not match brand",
+        "expected": "Test should fail and log color mismatch"
+      },
+      {
+        "description": "Multiple YouTube/LinkedIn icons present (duplicates)",
+        "expected": "Test should fail and log duplicate icon count"
+      }
+    ]
+  }
+}

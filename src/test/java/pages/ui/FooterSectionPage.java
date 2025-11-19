@@ -137,4 +137,80 @@ public class FooterSectionPage extends BasePage {
             return false;
         }
     }
+
+    /**
+     * Comprehensive method to validate YouTube and LinkedIn footer link functionality as per WM-777:
+     * - Scrolls to footer
+     * - Verifies YouTube and LinkedIn link presence and href
+     * - Clicks the YouTube link, verifies new tab URL, closes tab
+     * - Clicks the LinkedIn link, verifies new tab URL and page title, closes tab
+     * - Returns to original window
+     *
+     * @param expectedYouTubeUrl The expected YouTube URL (e.g., "https://www.youtube.com/ASTMIntl")
+     * @param expectedLinkedInUrl The expected LinkedIn URL (e.g., "https://www.linkedin.com/company/astm-international")
+     * @param expectedLinkedInTitleSubstring Substring expected in the LinkedIn page title (e.g., "ASTM International")
+     * @return true if both validations pass, false otherwise
+     */
+    public boolean validateYouTubeAndLinkedInFooterLinks(String expectedYouTubeUrl, String expectedLinkedInUrl, String expectedLinkedInTitleSubstring) {
+        try {
+            // ---- YouTube Link Validation ----
+            ReusableMethods.scrollToElement(driver, youtubeLink);
+            WaitStatementUtils.explicitWaitForVisibility(driver, getElement(youtubeLink), 10);
+            WebElement youtube = getElement(youtubeLink);
+            String youtubeHref = youtube.getAttribute("href");
+            if (!expectedYouTubeUrl.equals(youtubeHref)) {
+                return false;
+            }
+            String originalWindow = driver.getWindowHandle();
+            Set<String> oldWindows = driver.getWindowHandles();
+            youtube.click();
+            WCMSICommon.waitForSec(2);
+            Set<String> newWindows = driver.getWindowHandles();
+            newWindows.removeAll(oldWindows);
+            if (newWindows.size() != 1) {
+                return false;
+            }
+            String youtubeTab = newWindows.iterator().next();
+            driver.switchTo().window(youtubeTab);
+            WaitStatementUtils.waitForPageLoad(driver, 15);
+            String actualYouTubeUrl = driver.getCurrentUrl();
+            boolean youtubeResult = actualYouTubeUrl.startsWith(expectedYouTubeUrl);
+            driver.close();
+            driver.switchTo().window(originalWindow);
+            if (!youtubeResult) {
+                return false;
+            }
+
+            // ---- LinkedIn Link Validation ----
+            ReusableMethods.scrollToElement(driver, linkedinLink);
+            WaitStatementUtils.explicitWaitForVisibility(driver, getElement(linkedinLink), 10);
+            WebElement linkedin = getElement(linkedinLink);
+            String linkedinHref = linkedin.getAttribute("href");
+            if (!expectedLinkedInUrl.equals(linkedinHref)) {
+                return false;
+            }
+            Set<String> oldWindows2 = driver.getWindowHandles();
+            linkedin.click();
+            WCMSICommon.waitForSec(2);
+            Set<String> newWindows2 = driver.getWindowHandles();
+            newWindows2.removeAll(oldWindows2);
+            if (newWindows2.size() != 1) {
+                return false;
+            }
+            String linkedinTab = newWindows2.iterator().next();
+            driver.switchTo().window(linkedinTab);
+            WaitStatementUtils.waitForPageLoad(driver, 15);
+            String actualLinkedInUrl = driver.getCurrentUrl();
+            boolean linkedinUrlResult = actualLinkedInUrl.startsWith(expectedLinkedInUrl);
+            String actualLinkedInTitle = driver.getTitle();
+            boolean linkedinTitleResult = actualLinkedInTitle.contains(expectedLinkedInTitleSubstring);
+            driver.close();
+            driver.switchTo().window(originalWindow);
+            return linkedinUrlResult && linkedinTitleResult;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 }
