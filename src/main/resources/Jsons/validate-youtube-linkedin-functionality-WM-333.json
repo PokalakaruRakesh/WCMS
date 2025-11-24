@@ -1,0 +1,140 @@
+{
+  "WM-333": {
+    "TestCaseID": "WM-333",
+    "TestCaseName": "Validate Youtube and LinkedIn Functionality",
+    "Priority": "Medium",
+    "Objective": "Validate the presence, order, and functionality of Youtube and LinkedIn related elements, headers, and links on the IEC Standards page.",
+    "ExpectedResult": "1. The page URL should be: https://qa-regional.astm.org/standards/iec\n2. The page should display the following headers in order:\n   - Main Page Heading (H2): 'IEC Standards'\n   - Section 1 Heading (H3): 'What is International Electrotechnical Commission (IEC)?'\n   - Section 2 Heading (H3): 'Digital and PDF Access to IEC Standards'\n   - Section 3 Heading (H3): 'Create a Technical Document Library'\n   - Category Section Heading (H2): 'IEC Standards By Category'\n   - Footer Heading (H2): 'For more information'\n3. Button/Link Verification Below Headers:\n   - Below 'What is International Electrotechnical Commission (IEC)?' header:\n     - Button/Link: 'Contact Us' (links to /contact-us)\n   - Below 'Digital and PDF Access to IEC Standards' header:\n     - Button/Link: 'Meet with an ASTM representative' (links to booking page)\n   - Below 'Create a Technical Document Library' header:\n     - Button/Link: 'Learn More about ASTM Compass' (links to /standards/compass)\n   - Below 'For more information' header:\n     - Button/Link: 'Contact Us' (links to salesforce page)\n     - Email Link: 'sales@astm.org' (mailto link)",
+    "Locators": [
+      {
+        "name": "MainPageHeading",
+        "description": "Main H2 heading for IEC Standards",
+        "locatorType": "xpath",
+        "locatorValue": "//h2[text()='IEC Standards']"
+      },
+      {
+        "name": "Section1Heading",
+        "description": "Section 1 H3 heading",
+        "locatorType": "xpath",
+        "locatorValue": "//h3[text()='What is International Electrotechnical Commission (IEC)?']"
+      },
+      {
+        "name": "Section2Heading",
+        "description": "Section 2 H3 heading",
+        "locatorType": "xpath",
+        "locatorValue": "//h3[text()='Digital and PDF Access to IEC Standards']"
+      },
+      {
+        "name": "Section3Heading",
+        "description": "Section 3 H3 heading",
+        "locatorType": "xpath",
+        "locatorValue": "//h3[text()='Create a Technical Document Library']"
+      },
+      {
+        "name": "FooterHeading",
+        "description": "Footer H2 heading",
+        "locatorType": "xpath",
+        "locatorValue": "//h2[text()='For more information']"
+      }
+    ],
+    "TestData": [
+      {
+        "section": "MainPageHeading",
+        "headerType": "H2",
+        "expectedText": "IEC Standards"
+      },
+      {
+        "section": "Section1Heading",
+        "headerType": "H3",
+        "expectedText": "What is International Electrotechnical Commission (IEC)?",
+        "button": {
+          "label": "Contact Us",
+          "expectedUrl": "/contact-us",
+          "isVisible": true,
+          "isClickable": true
+        }
+      },
+      {
+        "section": "Section2Heading",
+        "headerType": "H3",
+        "expectedText": "Digital and PDF Access to IEC Standards",
+        "button": {
+          "label": "Meet with an ASTM representative",
+          "expectedUrl": "https://astm.org/booking-page", 
+          "isVisible": true,
+          "isClickable": true
+        }
+      },
+      {
+        "section": "Section3Heading",
+        "headerType": "H3",
+        "expectedText": "Create a Technical Document Library",
+        "button": {
+          "label": "Learn More about ASTM Compass",
+          "expectedUrl": "/standards/compass",
+          "isVisible": true,
+          "isClickable": true
+        }
+      },
+      {
+        "section": "CategorySectionHeading",
+        "headerType": "H2",
+        "expectedText": "IEC Standards By Category"
+      },
+      {
+        "section": "FooterHeading",
+        "headerType": "H2",
+        "expectedText": "For more information",
+        "button": {
+          "label": "Contact Us",
+          "expectedUrl": "https://astm.salesforce.com/contact", 
+          "isVisible": true,
+          "isClickable": true
+        },
+        "emailLink": {
+          "label": "sales@astm.org",
+          "expectedUrl": "mailto:sales@astm.org",
+          "isVisible": true
+        }
+      }
+    ],
+    "VerificationPoints": [
+      "All headers are displayed with correct text content",
+      "All buttons/links are visible and clickable",
+      "Header hierarchy is correct (H2 for main sections, H3 for subsections)",
+      "Buttons are positioned immediately below or within their respective sections"
+    ],
+    "EdgeCases": [
+      {
+        "description": "Header missing or incorrect text",
+        "expected": "Test should fail and log missing/incorrect header"
+      },
+      {
+        "description": "Button/link not visible or not clickable",
+        "expected": "Test should fail and log missing or disabled button/link"
+      },
+      {
+        "description": "Button/link navigates to incorrect URL",
+        "expected": "Test should fail and log actual vs expected URL"
+      },
+      {
+        "description": "Header hierarchy incorrect (e.g., H3 used instead of H2)",
+        "expected": "Test should fail and log hierarchy issue"
+      },
+      {
+        "description": "Email link missing or incorrect",
+        "expected": "Test should fail and log missing/incorrect mailto link"
+      }
+    ],
+    "BoundaryValues": [
+      {
+        "scenario": "Minimum content: Only required headers and one button present",
+        "expected": "Page should still pass if all required elements are present and functional"
+      },
+      {
+        "scenario": "Maximum content: Additional unrelated buttons/links present",
+        "expected": "Test should only validate required elements and ignore extras"
+      }
+    ]
+  }
+}
