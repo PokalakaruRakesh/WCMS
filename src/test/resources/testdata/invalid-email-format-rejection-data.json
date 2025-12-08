@@ -1,0 +1,97 @@
+// Test data for TC-N002: Invalid Email Format Rejection
+// Purpose: To verify system rejects invalid email formats and displays appropriate error message.
+{
+  "testCaseId": "TC-N002",
+  "testCaseName": "Invalid Email Format Rejection",
+  "module": null,
+  "submodule": null,
+  "objective": "Verify system rejects invalid email formats and displays appropriate error message.",
+  "preconditions": [
+    "User is logged into the CRM system.",
+    "User navigates to the contact creation screen."
+  ],
+  "priority": "Medium",
+  "locators": [
+    { "field": "emailInput", "description": "Email input field", "locator": "#email" },
+    { "field": "saveButton", "description": "Save/Submit button", "locator": "#saveContact" },
+    { "field": "errorMessage", "description": "Error message display", "locator": ".error-message" },
+    { "field": "contactForm", "description": "Contact creation form", "locator": "#contactForm" },
+    { "field": "cancelButton", "description": "Cancel button", "locator": "#cancelContact" }
+  ],
+  "testData": [
+    {
+      "description": "Missing @ symbol",
+      "email": "john.doe.example.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "Missing domain",
+      "email": "jane@",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "Missing username",
+      "email": "@example.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "Double @ symbols",
+      "email": "john@@example.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "No TLD",
+      "email": "john@example",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "Special characters in domain",
+      "email": "john@exa!mple.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "Space in email",
+      "email": "john doe@example.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "Leading dot in address",
+      "email": ".john@example.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "Trailing dot in address",
+      "email": "john.@example.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "Multiple consecutive dots",
+      "email": "john..doe@example.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "Empty string",
+      "email": "",
+      "expectedError": "Email address is required."
+    },
+    {
+      "description": "Only whitespace",
+      "email": "    ",
+      "expectedError": "Email address is required."
+    },
+    {
+      "description": "Excessively long email",
+      "email": "averylongemailaddressbeyondnormalusecasebeyondnormalusecasebeyondnormalusecasebeyondnormalusecasebeyondnormalusecasebeyondnormalusecasebeyondnormalusecasebeyondnormalusecasebeyondnormalusecasebeyondnormalusecase@example.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "Email with invalid characters",
+      "email": "john<>doe@example.com",
+      "expectedError": "Please enter a valid email address."
+    }
+  ],
+  "expectedResult": "System displays an error message indicating the email format is invalid.",
+  "postConditions": [
+    "No contact is saved in the CRM system."
+  ]
+}
