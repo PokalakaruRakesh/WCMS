@@ -1,0 +1,69 @@
+{
+  "testCaseId": "INT-123",
+  "testCaseName": "valiadate header components",
+  "priority": "Medium",
+  "expectedResult": "User should be able to see the header components successfully after logging in.",
+  "url": "https://stage-secure.astm.org/login?redirectUrl=aHR0cHM6Ly9zdGFnZS13d3cuYXN0bS5vcmcv",
+  "headerComponents": [
+    {
+      "componentName": "Logo",
+      "description": "ASTM logo is visible and clickable, redirects to home page",
+      "edgeCases": [
+        "Logo not loaded",
+        "Logo not clickable"
+      ]
+    },
+    {
+      "componentName": "Navigation Menu",
+      "description": "Primary navigation menu is visible with all top-level links",
+      "edgeCases": [
+        "Menu collapsed on desktop",
+        "Missing navigation links"
+      ]
+    },
+    {
+      "componentName": "Search Bar",
+      "description": "Search bar is present and accepts input",
+      "edgeCases": [
+        "Search bar disabled",
+        "Search bar missing"
+      ]
+    },
+    {
+      "componentName": "User Profile",
+      "description": "User profile icon is shown after login with dropdown options",
+      "edgeCases": [
+        "Profile icon missing",
+        "Dropdown not opening"
+      ]
+    },
+    {
+      "componentName": "Notifications",
+      "description": "Notifications bell is visible and shows unread count",
+      "edgeCases": [
+        "No notifications displayed",
+        "Unread count incorrect"
+      ]
+    }
+  ],
+  "boundaryConditions": [
+    {
+      "description": "Header components on minimum supported screen width (mobile)",
+      "expected": "Header collapses into hamburger menu, all components accessible"
+    },
+    {
+      "description": "Header components on maximum supported screen width (desktop)",
+      "expected": "All header components are visible and aligned"
+    }
+  ],
+  "negativeScenarios": [
+    {
+      "description": "User not logged in",
+      "expected": "Login/Sign Up buttons are shown instead of user profile"
+    },
+    {
+      "description": "Session expired",
+      "expected": "Header prompts user to log in again"
+    }
+  ]
+}
