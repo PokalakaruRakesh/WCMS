@@ -1,0 +1,74 @@
+{
+  "testCaseId": "INT-123",
+  "testCaseName": "valiadate header components",
+  "priority": "Medium",
+  "expectedResult": "User should be able to see the header components successfully",
+  "url": "N/A",
+  "headerComponents": [
+    {
+      "componentName": "Logo",
+      "locator": "//header//img[@alt='ASTM Logo']",
+      "expectedVisible": true,
+      "edgeCases": [
+        { "description": "Logo missing", "expectedVisible": false },
+        { "description": "Logo broken image", "expectedVisible": false }
+      ]
+    },
+    {
+      "componentName": "Navigation Menu",
+      "locator": "//header//nav",
+      "expectedVisible": true,
+      "edgeCases": [
+        { "description": "Menu collapsed", "expectedVisible": false },
+        { "description": "Menu expanded", "expectedVisible": true }
+      ]
+    },
+    {
+      "componentName": "Search Bar",
+      "locator": "//header//input[@type='search']",
+      "expectedVisible": true,
+      "edgeCases": [
+        { "description": "Search bar disabled", "expectedEnabled": false },
+        { "description": "Search bar empty", "expectedValue": "" },
+        { "description": "Search bar max length", "expectedMaxLength": 255 }
+      ]
+    },
+    {
+      "componentName": "Login Button",
+      "locator": "//header//button[contains(text(),'Login')]",
+      "expectedVisible": true,
+      "edgeCases": [
+        { "description": "Login button hidden", "expectedVisible": false },
+        { "description": "Login button disabled", "expectedEnabled": false }
+      ]
+    },
+    {
+      "componentName": "Language Selector",
+      "locator": "//header//select[@name='language']",
+      "expectedVisible": true,
+      "edgeCases": [
+        { "description": "No languages available", "expectedOptions": [] },
+        { "description": "All supported languages", "expectedOptions": ["English", "Spanish", "French", "German"] }
+      ]
+    }
+  ],
+  "boundaryValues": {
+    "searchBarMaxLength": 255,
+    "menuMinItems": 1,
+    "menuMaxItems": 20
+  },
+  "negativeScenarios": [
+    {
+      "description": "Header not loaded",
+      "expectedResult": "Header components not visible"
+    },
+    {
+      "description": "All header components missing",
+      "expectedResult": "Test should fail with missing elements"
+    }
+  ],
+  "meta": {
+    "generatedFor": "selenium-testng",
+    "generatedOn": "2024-06-09"
+  }
+}
