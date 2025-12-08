@@ -1,0 +1,77 @@
+{
+  "testCaseId": "INT-123",
+  "name": "valiadate header components",
+  "description": "User should be able to log in and see the header components successfully.",
+  "priority": "Medium",
+  "type": "Functional",
+  "url": "N/A",
+  "headerComponents": [
+    {
+      "component": "Logo",
+      "expected": true,
+      "edgeCases": [
+        { "display": false, "reason": "Logo missing due to network issue" },
+        { "display": true, "reason": "Logo loads with delay" }
+      ]
+    },
+    {
+      "component": "Navigation Menu",
+      "expected": true,
+      "edgeCases": [
+        { "display": false, "reason": "Menu not rendered due to JS error" },
+        { "display": true, "reason": "Menu renders with partial items" }
+      ]
+    },
+    {
+      "component": "Search Bar",
+      "expected": true,
+      "edgeCases": [
+        { "display": false, "reason": "Search bar hidden on mobile" },
+        { "display": true, "reason": "Search bar overlaps with other elements" }
+      ]
+    },
+    {
+      "component": "User Profile Icon",
+      "expected": true,
+      "edgeCases": [
+        { "display": false, "reason": "User not logged in" },
+        { "display": true, "reason": "User icon not clickable" }
+      ]
+    },
+    {
+      "component": "Notifications",
+      "expected": true,
+      "edgeCases": [
+        { "display": false, "reason": "No notifications available" },
+        { "display": true, "reason": "Notification count not updating" }
+      ]
+    }
+  ],
+  "locators": [
+    {
+      "name": "Logo",
+      "type": "css",
+      "value": ".header-logo"
+    },
+    {
+      "name": "Navigation Menu",
+      "type": "css",
+      "value": ".header-nav"
+    },
+    {
+      "name": "Search Bar",
+      "type": "css",
+      "value": ".header-search"
+    },
+    {
+      "name": "User Profile Icon",
+      "type": "css",
+      "value": ".header-user-profile"
+    },
+    {
+      "name": "Notifications",
+      "type": "css",
+      "value": ".header-notifications"
+    }
+  ]
+}
