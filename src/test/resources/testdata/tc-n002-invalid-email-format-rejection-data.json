@@ -1,0 +1,92 @@
+{
+  "testCaseId": "TC-N002",
+  "testCaseName": "Invalid Email Format Rejection",
+  "objective": "Verify system rejects invalid email formats and displays appropriate error message.",
+  "preconditions": [
+    "User is logged into the CRM system.",
+    "User navigates to the contact creation screen."
+  ],
+  "priority": "Medium",
+  "postConditions": [
+    "No contact is saved in the CRM system."
+  ],
+  "locators": [
+    { "field": "emailInput", "description": "Email input field", "locatorType": "id", "locatorValue": "contact-email" },
+    { "field": "saveButton", "description": "Save button", "locatorType": "id", "locatorValue": "save-contact" },
+    { "field": "errorMessage", "description": "Email error message", "locatorType": "css", "locatorValue": ".email-error" },
+    { "field": "contactForm", "description": "Contact creation form", "locatorType": "id", "locatorValue": "contact-form" },
+    { "field": "cancelButton", "description": "Cancel button", "locatorType": "id", "locatorValue": "cancel-contact" }
+  ],
+  "testData": [
+    {
+      "description": "Missing @ symbol",
+      "email": "userexample.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "Missing domain",
+      "email": "user@",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "Missing username",
+      "email": "@example.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "Double @@",
+      "email": "user@@example.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "Special characters not allowed",
+      "email": "user!@example.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "Space in email",
+      "email": "user @example.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "No TLD",
+      "email": "user@example",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "Dot at start",
+      "email": ".user@example.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "Dot at end",
+      "email": "user.@example.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "Multiple dots",
+      "email": "user..name@example.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "description": "Empty string",
+      "email": "",
+      "expectedError": "Email address is required."
+    },
+    {
+      "description": "Only whitespace",
+      "email": "   ",
+      "expectedError": "Email address is required."
+    },
+    {
+      "description": "Exceeds max length (edge case)",
+      "email": "usernamethatiswaytoolongtobevalidandshouldfailvalidationbecauseitexceedsthemaximumlengthallowedbythefield@example.com",
+      "expectedError": "Email address exceeds maximum length."
+    },
+    {
+      "description": "Invalid characters (unicode)",
+      "email": "usér@example.com",
+      "expectedError": "Please enter a valid email address."
+    }
+  ]
+}
