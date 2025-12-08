@@ -1,0 +1,119 @@
+{
+  "testCaseId": "INT-123",
+  "testCaseName": "valiadate header components",
+  "priority": "Medium",
+  "objective": "User should be able to see the header components successfully",
+  "url": null,
+  "locators": [
+    {
+      "name": "headerLogo",
+      "type": "xpath",
+      "value": "//header//img[@alt='Logo']"
+    },
+    {
+      "name": "mainNavMenu",
+      "type": "css",
+      "value": "header nav.main-menu"
+    },
+    {
+      "name": "searchBox",
+      "type": "id",
+      "value": "header-search"
+    },
+    {
+      "name": "loginButton",
+      "type": "css",
+      "value": "header .login-btn"
+    },
+    {
+      "name": "languageSelector",
+      "type": "xpath",
+      "value": "//header//select[@name='language']"
+    }
+  ],
+  "testData": [
+    {
+      "headerLogoExpectedSrc": "/assets/images/logo.png",
+      "mainNavMenuItems": [
+        "Home",
+        "About",
+        "Standards",
+        "Membership",
+        "News",
+        "Contact"
+      ],
+      "searchBoxPlaceholder": "Search...",
+      "loginButtonText": "Login",
+      "languageSelectorOptions": [
+        "English",
+        "Español",
+        "Français"
+      ]
+    },
+    {
+      "headerLogoExpectedSrc": "",
+      "mainNavMenuItems": [],
+      "searchBoxPlaceholder": "",
+      "loginButtonText": "",
+      "languageSelectorOptions": []
+    },
+    {
+      "headerLogoExpectedSrc": "/assets/images/logo.png",
+      "mainNavMenuItems": ["H", "A", "S", "M", "N", "C"],
+      "searchBoxPlaceholder": "S",
+      "loginButtonText": "L",
+      "languageSelectorOptions": [""]
+    },
+    {
+      "headerLogoExpectedSrc": null,
+      "mainNavMenuItems": null,
+      "searchBoxPlaceholder": null,
+      "loginButtonText": null,
+      "languageSelectorOptions": null
+    },
+    {
+      "headerLogoExpectedSrc": "/assets/images/logo.png",
+      "mainNavMenuItems": [
+        "Home",
+        "About",
+        "Standards",
+        "Membership",
+        "News",
+        "Contact",
+        "ExtraLongMenuItemNameToTestBoundaryConditions"
+      ],
+      "searchBoxPlaceholder": "Search for standards, news, or members...",
+      "loginButtonText": "Log in to your account",
+      "languageSelectorOptions": [
+        "English",
+        "Español",
+        "Français",
+        "Deutsch",
+        "中文",
+        "日本語"
+      ]
+    }
+  ],
+  "edgeCases": [
+    {
+      "description": "Header logo is missing",
+      "headerLogoExpectedSrc": null
+    },
+    {
+      "description": "Main navigation menu has no items",
+      "mainNavMenuItems": []
+    },
+    {
+      "description": "Search box placeholder is empty",
+      "searchBoxPlaceholder": ""
+    },
+    {
+      "description": "Login button text is missing",
+      "loginButtonText": null
+    },
+    {
+      "description": "Language selector has only one option",
+      "languageSelectorOptions": ["English"]
+    }
+  ]
+}
