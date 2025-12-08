@@ -1,0 +1,123 @@
+{
+  "testCaseId": "INT-123",
+  "testCaseName": "valiadate header components",
+  "priority": "Medium",
+  "expectedResult": "User should be able to see the header components successfully.",
+  "url": "N/A",
+  "locators": [
+    {
+      "name": "headerLogo",
+      "type": "xpath",
+      "value": "//header//img[@alt='Logo']"
+    },
+    {
+      "name": "mainNavigation",
+      "type": "css",
+      "value": "header nav.main-navigation"
+    },
+    {
+      "name": "searchBox",
+      "type": "id",
+      "value": "header-search-input"
+    },
+    {
+      "name": "userProfileIcon",
+      "type": "css",
+      "value": "header .user-profile"
+    },
+    {
+      "name": "notificationsBell",
+      "type": "xpath",
+      "value": "//header//button[@aria-label='Notifications']"
+    }
+  ],
+  "testData": [
+    {
+      "headerLogoAlt": "Logo",
+      "mainNavigationLinks": [
+        "Home",
+        "About",
+        "Services",
+        "Contact",
+        "Help"
+      ],
+      "searchBoxPlaceholder": "Search...",
+      "userProfileMenuOptions": [
+        "Profile",
+        "Settings",
+        "Logout"
+      ],
+      "notificationsCount": 0
+    },
+    {
+      "headerLogoAlt": "",
+      "mainNavigationLinks": [],
+      "searchBoxPlaceholder": "",
+      "userProfileMenuOptions": [],
+      "notificationsCount": 0
+    },
+    {
+      "headerLogoAlt": "LOGO",
+      "mainNavigationLinks": ["Home"],
+      "searchBoxPlaceholder": "Search",
+      "userProfileMenuOptions": ["Profile"],
+      "notificationsCount": 99
+    },
+    {
+      "headerLogoAlt": null,
+      "mainNavigationLinks": null,
+      "searchBoxPlaceholder": null,
+      "userProfileMenuOptions": null,
+      "notificationsCount": null
+    },
+    {
+      "headerLogoAlt": "Logo",
+      "mainNavigationLinks": ["Home", "About", "Services", "Contact", "Help", "Extra"],
+      "searchBoxPlaceholder": "Search for anything...",
+      "userProfileMenuOptions": ["Profile", "Settings", "Logout", "Admin"],
+      "notificationsCount": -1
+    }
+  ],
+  "edgeCases": [
+    {
+      "description": "Header logo missing",
+      "headerLogoAlt": "",
+      "mainNavigationLinks": ["Home", "About"],
+      "searchBoxPlaceholder": "Search...",
+      "userProfileMenuOptions": ["Profile"],
+      "notificationsCount": 0
+    },
+    {
+      "description": "Navigation links empty",
+      "headerLogoAlt": "Logo",
+      "mainNavigationLinks": [],
+      "searchBoxPlaceholder": "Search...",
+      "userProfileMenuOptions": ["Profile", "Logout"],
+      "notificationsCount": 1
+    },
+    {
+      "description": "Search box missing placeholder",
+      "headerLogoAlt": "Logo",
+      "mainNavigationLinks": ["Home", "About", "Contact"],
+      "searchBoxPlaceholder": "",
+      "userProfileMenuOptions": ["Profile"],
+      "notificationsCount": 2
+    },
+    {
+      "description": "User profile menu not present",
+      "headerLogoAlt": "Logo",
+      "mainNavigationLinks": ["Home", "About", "Contact"],
+      "searchBoxPlaceholder": "Search...",
+      "userProfileMenuOptions": [],
+      "notificationsCount": 3
+    },
+    {
+      "description": "Negative notifications count",
+      "headerLogoAlt": "Logo",
+      "mainNavigationLinks": ["Home", "About", "Contact"],
+      "searchBoxPlaceholder": "Search...",
+      "userProfileMenuOptions": ["Profile"],
+      "notificationsCount": -5
+    }
+  ]
+}
