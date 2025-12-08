@@ -1,0 +1,11 @@
+{
+  "testCaseId": "INT-123",
+  "testCaseName": "valiadate header components",
+  "url": "N/A",
+  "priority": "Medium",
+  "expectedResult": "User should be able to see the header components successfully after logging in.",
+  "locators": [
+    // List of 5 locators would be included here if provided in the test case details
+  ],
+  "notes": "No additional test data specified in the test case. URL is set to 'N/A' as per the provided test case details."
+}
