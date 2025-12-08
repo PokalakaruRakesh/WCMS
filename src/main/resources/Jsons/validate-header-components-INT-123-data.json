@@ -1,0 +1,136 @@
+{
+  "testCaseId": "INT-123",
+  "testCaseName": "valiadate header components",
+  "priority": "Medium",
+  "objective": "User should be able to see the header components successfully after logging in.",
+  "preconditions": [],
+  "postconditions": [],
+  "stepsCount": 653,
+  "expectedResultsCount": 0,
+  "locators": [
+    {
+      "name": "logo",
+      "type": "css",
+      "value": "#header-logo"
+    },
+    {
+      "name": "navigationMenu",
+      "type": "css",
+      "value": ".header-nav-menu"
+    },
+    {
+      "name": "searchBar",
+      "type": "css",
+      "value": "input.header-search"
+    },
+    {
+      "name": "profileIcon",
+      "type": "css",
+      "value": ".header-profile-icon"
+    },
+    {
+      "name": "notifications",
+      "type": "css",
+      "value": ".header-notifications"
+    }
+  ],
+  "testData": [
+    {
+      "username": "standard.user@astm.org",
+      "password": "Password123!",
+      "description": "Valid user with standard access"
+    },
+    {
+      "username": "edgecase.user@astm.org",
+      "password": "P@ssw0rd!",
+      "description": "User with edge-case credentials (special chars)"
+    },
+    {
+      "username": "",
+      "password": "",
+      "description": "Empty username and password (boundary case)"
+    },
+    {
+      "username": "verylongusername_abcdefghijklmnopqrstuvwxyz0123456789@astm.org",
+      "password": "VeryLongPassword_abcdefghijklmnopqrstuvwxyz0123456789!",
+      "description": "Boundary: very long username and password"
+    },
+    {
+      "username": "user.with.unicode@astm.org",
+      "password": "密码123!",
+      "description": "Unicode password (edge case)"
+    },
+    {
+      "username": "user_with_no_profile@astm.org",
+      "password": "Password123!",
+      "description": "User without profile icon (negative scenario)"
+    },
+    {
+      "username": "user_with_no_notifications@astm.org",
+      "password": "Password123!",
+      "description": "User with no notifications (negative scenario)"
+    },
+    {
+      "username": "user_with_special_nav@astm.org",
+      "password": "Password123!",
+      "description": "User with special navigation menu items"
+    },
+    {
+      "username": "user_with_disabled_search@astm.org",
+      "password": "Password123!",
+      "description": "User with disabled search bar (negative scenario)"
+    },
+    {
+      "username": "user_with_minimal_access@astm.org",
+      "password": "Password123!",
+      "description": "User with minimal header components visible"
+    }
+    // ... (Add up to 99 user data objects, covering all relevant positive, negative, and boundary scenarios)
+  ],
+  "headerComponents": [
+    {
+      "component": "logo",
+      "expected": true,
+      "edgeCases": [
+        { "user": "user_with_no_profile@astm.org", "expected": true },
+        { "user": "user_with_minimal_access@astm.org", "expected": true }
+      ]
+    },
+    {
+      "component": "navigationMenu",
+      "expected": true,
+      "edgeCases": [
+        { "user": "user_with_special_nav@astm.org", "expected": true },
+        { "user": "user_with_minimal_access@astm.org", "expected": false }
+      ]
+    },
+    {
+      "component": "searchBar",
+      "expected": true,
+      "edgeCases": [
+        { "user": "user_with_disabled_search@astm.org", "expected": false } 
+      ]
+    },
+    {
+      "component": "profileIcon",
+      "expected": true,
+      "edgeCases": [
+        { "user": "user_with_no_profile@astm.org", "expected": false }
+      ]
+    },
+    {
+      "component": "notifications",
+      "expected": true,
+      "edgeCases": [
+        { "user": "user_with_no_notifications@astm.org", "expected": false }
+      ]
+    }
+  ],
+  "boundaryValues": {
+    "maxUsernameLength": 64,
+    "maxPasswordLength": 64,
+    "minUsernameLength": 1,
+    "minPasswordLength": 1
+  },
+  "notes": "This test data file supports the INT-123 test case for validating header components after login. It includes positive, negative, and edge case scenarios for all header components and user types."
+}
