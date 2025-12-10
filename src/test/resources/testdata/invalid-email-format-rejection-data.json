@@ -1,0 +1,110 @@
+{
+  "testCaseId": "TC-N002",
+  "testCaseName": "Invalid Email Format Rejection",
+  "module": null,
+  "submodule": null,
+  "objective": "Verify system rejects invalid email formats and displays appropriate error message.",
+  "priority": "Medium",
+  "preconditions": [
+    "User is logged into the CRM system.",
+    "User navigates to the contact creation screen."
+  ],
+  "postconditions": [
+    "No contact is saved in the CRM system."
+  ],
+  "url": null,
+  "invalidEmails": [
+    // Common invalid email formats
+    {
+      "description": "Missing at symbol",
+      "value": "userexample.com"
+    },
+    {
+      "description": "Missing username",
+      "value": "@example.com"
+    },
+    {
+      "description": "Missing domain",
+      "value": "user@.com"
+    },
+    {
+      "description": "Missing top-level domain",
+      "value": "user@example"
+    },
+    {
+      "description": "Multiple at symbols",
+      "value": "user@@example.com"
+    },
+    {
+      "description": "Space in email",
+      "value": "user name@example.com"
+    },
+    {
+      "description": "Special characters not allowed",
+      "value": "user!#%&*{}=+~|^@example.com"
+    },
+    {
+      "description": "Consecutive dots",
+      "value": "user..name@example.com"
+    },
+    {
+      "description": "Dot at start",
+      "value": ".username@example.com"
+    },
+    {
+      "description": "Dot at end of local part",
+      "value": "username.@example.com"
+    },
+    {
+      "description": "Empty string",
+      "value": ""
+    },
+    {
+      "description": "Only whitespace",
+      "value": "   "
+    },
+    {
+      "description": "Only at symbol",
+      "value": "@"
+    },
+    {
+      "description": "Only domain",
+      "value": "example.com"
+    },
+    {
+      "description": "Only username",
+      "value": "username@"
+    },
+    {
+      "description": "Unicode characters",
+      "value": "usér@example.com"
+    },
+    {
+      "description": "Email with emoji",
+      "value": "user😀@example.com"
+    }
+  ],
+  "expectedErrorMessage": "Please enter a valid email address.",
+  "locators": [
+    {
+      "name": "emailInput",
+      "description": "Email input field locator"
+    },
+    {
+      "name": "saveButton",
+      "description": "Save/Submit button locator"
+    },
+    {
+      "name": "errorMessage",
+      "description": "Error message display locator"
+    },
+    {
+      "name": "contactForm",
+      "description": "Contact creation form locator"
+    },
+    {
+      "name": "cancelButton",
+      "description": "Cancel button locator"
+    }
+  ]
+}
