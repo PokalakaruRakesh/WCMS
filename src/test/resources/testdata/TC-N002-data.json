@@ -1,0 +1,72 @@
+{
+  "testCaseId": "TC-N002",
+  "testCaseName": "Invalid Email Format Rejection",
+  "url": "N/A",
+  "description": "Verify system rejects invalid email formats and displays appropriate error message.",
+  "preconditions": [
+    "User is logged into the CRM system.",
+    "User navigates to the contact creation screen."
+  ],
+  "priority": "Medium",
+  "locators": 5,
+  "testData": [
+    {
+      "scenario": "Missing @ symbol",
+      "email": "invalidemail.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "scenario": "Missing domain",
+      "email": "user@",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "scenario": "Missing username",
+      "email": "@domain.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "scenario": "Multiple @ symbols",
+      "email": "user@@domain.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "scenario": "Special characters in domain",
+      "email": "user@domain!com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "scenario": "Space in email",
+      "email": "user name@domain.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "scenario": "No top-level domain",
+      "email": "user@domain",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "scenario": "Dot at start",
+      "email": ".user@domain.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "scenario": "Dot at end",
+      "email": "user.@domain.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "scenario": "Consecutive dots",
+      "email": "user..name@domain.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "scenario": "Empty email",
+      "email": "",
+      "expectedError": "Email address is required."
+    }
+  ],
+  "postConditions": [
+    "No contact is saved in the CRM system."
+  ]
+}
