@@ -1,0 +1,88 @@
+{
+  "testCaseId": "TC-N005",
+  "testCaseName": "Empty Required Fields Validation",
+  "objective": "Verify system prevents saving a contact when required fields are left empty.",
+  "preconditions": [
+    "User is logged into the CRM system.",
+    "User navigates to the contact creation screen."
+  ],
+  "url": "N/A",
+  "testData": [
+    {
+      "description": "All required fields left empty",
+      "input": {
+        "name": "",
+        "email": "",
+        "phone": "",
+        "address": "",
+        "company": ""
+      },
+      "expectedErrors": [
+        {
+          "field": "name",
+          "message": "Name is required."
+        },
+        {
+          "field": "email",
+          "message": "Email is required."
+        }
+      ]
+    },
+    {
+      "description": "Name field empty, email filled",
+      "input": {
+        "name": "",
+        "email": "test@example.com",
+        "phone": "",
+        "address": "",
+        "company": ""
+      },
+      "expectedErrors": [
+        {
+          "field": "name",
+          "message": "Name is required."
+        }
+      ]
+    },
+    {
+      "description": "Email field empty, name filled",
+      "input": {
+        "name": "John Doe",
+        "email": "",
+        "phone": "",
+        "address": "",
+        "company": ""
+      },
+      "expectedErrors": [
+        {
+          "field": "email",
+          "message": "Email is required."
+        }
+      ]
+    },
+    {
+      "description": "Name and email fields filled with whitespace only",
+      "input": {
+        "name": "   ",
+        "email": "   ",
+        "phone": "",
+        "address": "",
+        "company": ""
+      },
+      "expectedErrors": [
+        {
+          "field": "name",
+          "message": "Name is required."
+        },
+        {
+          "field": "email",
+          "message": "Email is required."
+        }
+      ]
+    }
+  ],
+  "postConditions": [
+    "No contact is saved in the CRM system."
+  ],
+  "priority": "Medium"
+}
