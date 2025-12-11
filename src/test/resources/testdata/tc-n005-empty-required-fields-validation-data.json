@@ -1,0 +1,60 @@
+{
+  "testCaseId": "TC-N005",
+  "testCaseName": "Empty Required Fields Validation",
+  "url": "N/A",
+  "preconditions": [
+    "User is logged into the CRM system.",
+    "User navigates to the contact creation screen."
+  ],
+  "inputData": {
+    "name": "",
+    "email": "",
+    "otherFields": {
+      "phone": "",
+      "address": "",
+      "company": ""
+    }
+  },
+  "expectedErrors": [
+    {
+      "field": "name",
+      "message": "Name is required."
+    },
+    {
+      "field": "email",
+      "message": "Email is required."
+    }
+  ],
+  "postConditions": [
+    "No contact is saved in the CRM system."
+  ],
+  "priority": "Medium",
+  "locators": [
+    {
+      "element": "nameInput",
+      "locatorType": "id",
+      "locatorValue": "contact-name"
+    },
+    {
+      "element": "emailInput",
+      "locatorType": "id",
+      "locatorValue": "contact-email"
+    },
+    {
+      "element": "saveButton",
+      "locatorType": "id",
+      "locatorValue": "save-contact"
+    },
+    {
+      "element": "nameError",
+      "locatorType": "css",
+      "locatorValue": ".error-message.name"
+    },
+    {
+      "element": "emailError",
+      "locatorType": "css",
+      "locatorValue": ".error-message.email"
+    }
+  ],
+  "description": "Test data for verifying that the system prevents saving a contact when required fields (Name and Email) are left empty. Includes locators for form fields and error messages."
+}
