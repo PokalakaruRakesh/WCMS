@@ -1,0 +1,96 @@
+{
+  "testCaseId": "TC-N002",
+  "name": "Invalid Email Format Rejection",
+  "description": "Verify system rejects invalid email formats and displays appropriate error message.",
+  "url": "N/A",
+  "priority": "Medium",
+  "module": null,
+  "submodule": null,
+  "preconditions": [
+    "User is logged into the CRM system.",
+    "User navigates to the contact creation screen."
+  ],
+  "postconditions": [
+    "No contact is saved in the CRM system."
+  ],
+  "expectedResult": "System displays an error message indicating the email format is invalid.",
+  "invalidEmailTestCases": [
+    {
+      "label": "No at symbol",
+      "email": "invalidemail.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "label": "No domain",
+      "email": "invalid@",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "label": "No username",
+      "email": "@domain.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "label": "Special characters",
+      "email": "invalid!@domain.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "label": "Multiple at symbols",
+      "email": "invalid@@domain.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "label": "Space in email",
+      "email": "invalid email@domain.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "label": "No TLD",
+      "email": "invalid@domain",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "label": "Dot at start",
+      "email": ".invalid@domain.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "label": "Dot at end",
+      "email": "invalid.@domain.com",
+      "expectedError": "Please enter a valid email address."
+    },
+    {
+      "label": "Consecutive dots",
+      "email": "invalid..email@domain.com",
+      "expectedError": "Please enter a valid email address."
+    }
+  ],
+  "locators": [
+    {
+      "name": "Email Input Field",
+      "type": "id",
+      "value": "email"
+    },
+    {
+      "name": "Save Button",
+      "type": "id",
+      "value": "saveContact"
+    },
+    {
+      "name": "Error Message",
+      "type": "css",
+      "value": ".email-error-message"
+    },
+    {
+      "name": "Contact Name Field",
+      "type": "id",
+      "value": "contactName"
+    },
+    {
+      "name": "Cancel Button",
+      "type": "id",
+      "value": "cancelContact"
+    }
+  ]
+}
