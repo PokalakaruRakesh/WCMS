@@ -1,0 +1,68 @@
+{
+  "testCaseId": "TC-N001",
+  "testCaseName": "Create a new contact",
+  "url": null,
+  "objective": "Verify system accepts valid inputs and displays appropriate message.",
+  "preconditions": [
+    "User is logged into the CRM system.",
+    "User navigates to the contact creation screen."
+  ],
+  "priority": "Medium",
+  "expectedResultSummary": "System displays appropriate message.",
+  "postConditions": [
+    "New contact is saved in the CRM system."
+  ],
+  "contactData": [
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "phone": "1234567890",
+      "company": "ExampleCorp",
+      "address": "123 Main St, Springfield, USA",
+      "notes": "Standard valid input."
+    },
+    {
+      "firstName": "A",
+      "lastName": "B",
+      "email": "a.b@example.com",
+      "phone": "1",
+      "company": "A",
+      "address": "1",
+      "notes": "Boundary: minimum field lengths."
+    },
+    {
+      "firstName": "FirstnameWithMaxAllowedCharactersFirstnameWithMaxAllowedCharactersFirstnameWithMaxAllowedCharacters",
+      "lastName": "LastnameWithMaxAllowedCharactersLastnameWithMaxAllowedCharactersLastnameWithMaxAllowedCharacters",
+      "email": "verylongemailaddresswithmaxcharactersallowed@exampledomainwithmaxcharacters.com",
+      "phone": "999999999999999",
+      "company": "CompanyNameWithMaxAllowedCharactersCompanyNameWithMaxAllowedCharacters",
+      "address": "12345 Long Address Street Name That Exceeds Normal Length, City, Country, 1234567890",
+      "notes": "Boundary: maximum field lengths."
+    },
+    {
+      "firstName": "O'Neil",
+      "lastName": "Smith-Jones",
+      "email": "oneil.smith-jones+test@example.com",
+      "phone": "+1-800-555-0199",
+      "company": "O'Reilly & Sons, Inc.",
+      "address": "456 Elm St., Apt #7, New York, NY",
+      "notes": "Edge: special characters in fields."
+    },
+    {
+      "firstName": "李",
+      "lastName": "雷",
+      "email": "li.lei@example.cn",
+      "phone": "008613800000000",
+      "company": "北京公司",
+      "address": "北京市朝阳区建国路88号",
+      "notes": "Edge: Unicode/International input."
+    }
+  ],
+  "validationMessages": {
+    "success": "Contact created successfully.",
+    "duplicate": "A contact with this email already exists.",
+    "invalidEmail": "Please enter a valid email address.",
+    "requiredField": "This field is required."
+  }
+}
