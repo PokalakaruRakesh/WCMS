@@ -1,0 +1,92 @@
+{
+  "testCaseId": "TC-N002",
+  "name": "Invalid Email Format Rejection",
+  "url": null,
+  "objective": "Verify system rejects invalid email formats and displays appropriate error message.",
+  "preconditions": [
+    "User is logged into the CRM system.",
+    "User navigates to the contact creation screen."
+  ],
+  "priority": "Medium",
+  "postConditions": [
+    "No contact is saved in the CRM system."
+  ],
+  "emailFieldTestData": [
+    {
+      "description": "Missing @ symbol",
+      "input": "invalidemail.com",
+      "expectedError": "Invalid email format."
+    },
+    {
+      "description": "Missing domain",
+      "input": "user@",
+      "expectedError": "Invalid email format."
+    },
+    {
+      "description": "Missing username",
+      "input": "@domain.com",
+      "expectedError": "Invalid email format."
+    },
+    {
+      "description": "Multiple @ symbols",
+      "input": "user@@domain.com",
+      "expectedError": "Invalid email format."
+    },
+    {
+      "description": "Special characters not allowed",
+      "input": "user!#%&*()=+{}[]|;:'\",<>?@domain.com",
+      "expectedError": "Invalid email format."
+    },
+    {
+      "description": "Space in email",
+      "input": "user name@domain.com",
+      "expectedError": "Invalid email format."
+    },
+    {
+      "description": "No top-level domain",
+      "input": "user@domain",
+      "expectedError": "Invalid email format."
+    },
+    {
+      "description": "Dot at start",
+      "input": ".user@domain.com",
+      "expectedError": "Invalid email format."
+    },
+    {
+      "description": "Dot at end",
+      "input": "user.@domain.com",
+      "expectedError": "Invalid email format."
+    },
+    {
+      "description": "Double dots",
+      "input": "user..name@domain.com",
+      "expectedError": "Invalid email format."
+    },
+    {
+      "description": "Empty email",
+      "input": "",
+      "expectedError": "Email is required."
+    },
+    {
+      "description": "Boundary: 1 character before @",
+      "input": "a@domain.com",
+      "expectedError": null
+    },
+    {
+      "description": "Boundary: 1 character after @",
+      "input": "user@d.com",
+      "expectedError": null
+    },
+    {
+      "description": "Boundary: max length (254 chars)",
+      "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@domain.com",
+      "expectedError": null
+    },
+    {
+      "description": "Boundary: over max length (255 chars)",
+      "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@domain.com",
+      "expectedError": "Invalid email format."
+    }
+  ],
+  "expectedResultSummary": "System displays an error message indicating the email format is invalid."
+}
